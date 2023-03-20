@@ -1,0 +1,50 @@
+
+
+-- component footer:
+ftd.image-src logo:
+footer-link list links: $footer-links
+
+
+-- ftd.column:
+width: 
+-- ftd.column:
+
+-- ftd.row:
+
+-- end: ftd.row:
+
+-- end: ftd.column:
+
+-- end: ftd.column:
+
+-- end: footer
+
+
+
+
+
+
+
+-- record footer-link:
+caption title:
+string link:
+
+
+-- footer-link list footer-links:
+
+-- footer-link: About Us
+link: /
+
+-- footer-link: Terms & Condition
+link: /
+
+-- footer-link: Privacy Policy
+link: /
+
+-- footer-link: Pricing
+link: /
+
+-- footer-link: Learning
+link: /
+
+-- end: footer-links
