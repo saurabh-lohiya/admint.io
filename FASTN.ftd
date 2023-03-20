@@ -2,8 +2,6 @@
 
 -- fastn.package: fifthtry.github.io/admint.io
 
--- fastn.dependency: fifthtry.github.io/doc-site as ds
--- fastn.dependency: fifthtry.github.io/bling as bling
+-- fastn.dependency: fifthtry.github.io/admint-cs
+-- fastn.dependency: fifthtry.github.io/admint-typography
 
--- fastn.auto-import: bling/chat as chat
--- fastn.auto-import: ds
