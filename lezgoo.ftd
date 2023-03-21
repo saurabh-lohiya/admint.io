@@ -1,0 +1,108 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+colors: $cs.main
+types: $typo.types
+
+
+-- lezgoo: Confused about everything Web 3.0? 
+cta-label: Let's Learn
+cta-url: /
+image: $assets.files.static.lezgoo.lezgoo-img.svg
+body1: Don't 
+
+worry, we will help you ! Lezzzgoooooo!
+
+
+-- end: ftd.column
+
+
+
+
+-- component lezgoo:
+caption title:
+body body:
+string body1:
+string cta-label:
+string cta-url:
+ftd.image-src image:
+
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.percent: 10
+width: fill-container
+align-content: center 
+
+-- ftd.image:
+src: $lezgoo.image
+
+-- ftd.column:
+
+-- ftd.row:
+margin-bottom.px: 24
+wrap: true
+
+-- ftd.text: $lezgoo.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.cta-primary.base
+
+-- ftd.text: 
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+padding-left.px: 10
+
+$lezgoo.body1
+
+-- ftd.text: 
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+$lezgoo.body
+
+-- end: ftd.row
+
+-- ftd.text: $lezgoo.cta-label
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+border-radius.px: 50
+color: $inherited.colors.cta-primary.text
+link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
+
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+
+-- end: lezgoo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
