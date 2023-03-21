@@ -72,7 +72,7 @@ width.fixed.percent: 30
 height.fixed.percent: 30
 anchor: parent
 right.px: 0
-bottom.px: -56
+bottom.px: -58
 
 -- ftd.column:
 max-width.fixed.px: 1320
@@ -88,8 +88,8 @@ src: $assets.files.static.hero.web3-round.svg
 width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
-top.px: 50
-left.px: 240
+top.px: 48
+left.px: 245
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
@@ -97,8 +97,8 @@ src: $assets.files.static.hero.web3-round.svg
 width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
-top.px: 142
-left.px: -19
+top.px: 140
+left.px: -20
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
@@ -113,6 +113,7 @@ region: h1
 role: $inherited.types.copy-large
 color: $inherited.colors.custom.one
 margin-top.px: 32
+margin-top.px if {ftd.device == "mobile"}: 31
 margin-bottom.px: 8
 text-align: center
 
@@ -125,7 +126,8 @@ background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
 link: $hero.cta-link
-margin-top.px: 53
+margin-top.px: 56
+margin-top.px if {ftd.device == "mobile"}: 55
 margin-bottom.px: 53
 border-radius.px: 50
 
