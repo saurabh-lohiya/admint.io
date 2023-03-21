@@ -24,6 +24,10 @@ width: 700
 -- paragraph: We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Free Privacy Policy Generator.
 width: 700
 
+-- logo:
+image: $assets.files.static.lezgoo.privacy-policy.svg 
+-- end: logo
+
 -- Heading: Interpretation and Definitions
 -- subHeading: Interpretation
 -- paragraph: The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
@@ -222,10 +226,10 @@ optional ftd.image-src image:
 width: fill-container
 background.solid: $inherited.colors.background.base
 
-
 -- ftd.column:
 max-width.fixed.px: $wrapper.width
 padding.px: 30
+margin-horizontal.px if { ftd.device == "mobile" }: 12
 margin-vertical.px: 75
 border-color: $inherited.colors.custom.one
 border-width.px: 1
@@ -239,7 +243,7 @@ children: $wrapper.child
 
 
 -- ftd.image:
-if: { wrapper.image != NULL }
+if: { ftd.device != "mobile"}
 src: $wrapper.image
 height.fixed.px: 256
 anchor: parent 
@@ -252,6 +256,40 @@ right.px: 27
 -- end: ftd.column
 
 -- end: wrapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo:
+optional ftd.image-src image:
+
+-- ftd.column:
+width: auto
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $logo.image
+max-width.fixed.px: 256
+margin-top.px: 50
+
+-- end: ftd.column
+
+-- end: logo
+
+
 
 
 
