@@ -1,4 +1,532 @@
 -- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/header as header
+
+
+-- component page:
+children wrap:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
+
+-- ftd.column:
+children: $page.wrap
+width: fill-container
 
 
 
+-- end: ftd.column
+
+-- end: page
+
+
+
+-- integer $current-active: 1
+
+-- integer min: 1
+
+-- integer max: 6
+
+-- component card:
+caption integer title:
+body body:
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-2
+border-color: $inherited.colors.cta-primary.base
+border-width.px: 1
+border-top-right-radius.px: 20
+border-bottom-left-radius.px: 20
+border-bottom-right-radius.px: 20
+padding-top.px: 43
+padding-bottom.px: 54
+padding-horizontal.px: 47
+
+
+
+-- ftd.text: 
+text: $card.body
+color: $inherited.colors.text
+role: $inherited.types.copy-large
+margin-bottom.px: 60
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 13
+background.solid: $inherited.colors.custom.three
+align-content: center
+
+-- ftd.integer: $card.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.background.step-1
+border-radius.percent: 100
+padding-vertical.px: 14
+padding-horizontal.px: 28
+background.solid: $inherited.colors.cta-primary.base
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: card
+
+-- page:
+
+-- header.header:
+
+-- slider:
+
+-- slide: WHY ADMINT?
+subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
+src: $assets.files.static.lezgoo.simple.svg
+index: 1
+reset: $current-active
+
+-- card: 1
+
+ Reach out to existing audience base via known channels. 
+
+
+-- card: 2
+
+ Identify & segregate your “web 3.0 ready” audience pool. 
+
+
+-- card: 3
+
+ Extend real-world benefits & build your metaverse fanbase! 
+
+
+-- end: slide
+
+-- full-slide: WHY ADMINT?
+subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis
+src: $assets.files.static.lezgoo.structured.svg
+index: 2
+reset: $current-active
+
+
+Follow along our guided walkthroughs to sequentially construct
+all the necessary components to launch a campaign.
+
+
+-- mid-slide: WHY ADMINT?
+subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
+src: $assets.files.static.lezgoo.keymedia.svg
+index: 3
+reset: $current-active
+
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+
+-- full-slide: WHY ADMINT?
+subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack!
+src: $assets.files.static.lezgoo.ditribuut.svg
+index: 4
+reset: $current-active
+
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+
+
+
+-- mid-slide: WHY ADMINT?
+subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
+src: $assets.files.static.lezgoo.analyze.svg
+index: 5
+reset: $current-active
+
+Watch the numbers. See the plan take shape. Measure that ROI. 
+Stake your claim across the Metaverses!
+
+-- end: slider
+
+-- end: page
+
+-- component slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { slide.index == slide.reset }
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+
+
+-- ftd.text:
+if: {slide.body != NULL}
+text: $slide.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.image:
+src: $slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $slide.slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: slide
+
+
+
+-- component slider:
+children wrap:
+
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 40
+padding-horizontal.px: 12
+max-width.fixed.px: 1320
+align-self: center
+
+-- ftd.image:
+if: {current-active != 1}
+src: $assets.files.static.lezgoo.right.svg
+$on-click$: $decclamp($a = $current-active, by = 1, min = $min, max = $max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.cta-primary.base
+anchor: parent
+left.px: -72
+
+-- ftd.image:
+if: {current-active == 1}
+src: $assets.files.static.lezgoo.right.svg
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.custom.three
+anchor: parent
+left.px: -72
+
+-- ftd.row:
+children: $slider.wrap
+width: fill-container
+padding-horizontal.px: 12
+
+-- end: ftd.row
+
+-- ftd.image:
+if: {current-active != 5}
+src: $assets.files.static.lezgoo.left.svg
+$on-click$: $clamp($a = $current-active, by = 1, min = $min, max = $max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.cta-primary.base
+right.px: -74
+anchor: parent
+
+-- ftd.image:
+if: {current-active == 5}
+src: $assets.files.static.lezgoo.left.svg
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.custom.three
+anchor: parent
+right.px: -74
+
+
+-- end: ftd.row
+
+-- end: slider
+
+
+
+-- void clamp(a,by,min,max):
+integer $a:
+integer by: 1
+integer min: 0
+integer max: 5
+
+
+a = (((a - min) + by) % (max - min)) + min
+
+
+
+-- void decclamp(a,by,min,max):
+integer $a:
+integer by: 1
+integer min: 0
+integer max: 5
+
+
+a = (((a + min) - by) % (max - min)) + min
+
+
+
+
+
+-- component slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { slide.index == slide.reset }
+height.fixed.px: 650
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+
+
+-- ftd.text:
+if: {slide.body != NULL}
+text: $slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.image:
+src: $slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $slide.slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: slide
+
+
+
+
+
+-- component full-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children full-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { full-slide.index == full-slide.reset }
+height.fixed.px: 650
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $full-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $full-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+
+
+-- ftd.text:
+if: {full-slide.body != NULL}
+text: $full-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.px: 750
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $full-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $full-slide.full-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: full-slide
+
+
+
+
+
+-- component mid-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children mid-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { mid-slide.index == mid-slide.reset }
+height.fixed.px: 650
+width: fill-container
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $mid-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 28
+max-width.fixed.percent: 70
+width: fill-container
+
+-- ftd.text: $mid-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 20
+region: h3
+width: fill-container
+max-width.fixed.percent: 70
+
+-- ftd.text:
+if: {mid-slide.body != NULL}
+text: $mid-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.percent: 70
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $mid-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $mid-slide.mid-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: mid-slide
