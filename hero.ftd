@@ -1,0 +1,136 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+colors: $cs.main
+types: $typo.types
+
+-- hero: Deliver refreshing Web 3.0 campaigns!
+cta-text: Get Started
+cta-link: index.html
+
+Build your brand's fan-base in web 3.0 with us!
+
+
+-- end: ftd.column
+
+
+
+
+
+
+
+-- component hero:
+caption title:
+body body: 
+string cta-text: 
+string cta-link:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 10
+padding-vertical.px: 97
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.px: 122
+height.fixed.px: 232
+anchor: parent
+left.px: 0
+top.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.percent: 20
+height.fixed.percent: 30
+anchor: parent
+left.px: 0
+top.px: -45
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.px: 322
+height.fixed.px: 356
+anchor: parent
+right.px: 0
+bottom.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.percent: 30
+height.fixed.percent: 30
+anchor: parent
+right.px: 0
+bottom.px: -56
+
+-- ftd.column:
+max-width.fixed.px: 1320
+align-content: center
+align-self: center
+
+-- ftd.column:
+align-content: center
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 50
+left.px: 240
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 142
+left.px: -19
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+text-align: center
+width.fixed.percent if {ftd.device != "mobile"}: 55
+region: h1
+
+-- end: ftd.column
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.custom.one
+margin-top.px: 32
+margin-bottom.px: 8
+text-align: center
+
+$hero.body
+
+-- ftd.text: $hero.cta-text
+role: $inherited.types.button-large
+color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+link: $hero.cta-link
+margin-top.px: 53
+margin-bottom.px: 53
+border-radius.px: 50
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero
