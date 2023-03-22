@@ -53,18 +53,18 @@ margin-bottom.px: 24
 wrap: true
 
 -- ftd.text: $lezgoo.title
-role: $inherited.types.heading-medium
+role: $inherited.types.heading-small
 color: $inherited.colors.cta-primary.base
 
 -- ftd.text: 
-role: $inherited.types.heading-medium
+role: $inherited.types.heading-small
 color: $inherited.colors.text
 padding-left.px: 10
 
 $lezgoo.body1
 
 -- ftd.text: 
-role: $inherited.types.heading-medium
+role: $inherited.types.heading-small
 color: $inherited.colors.text
 
 $lezgoo.body
