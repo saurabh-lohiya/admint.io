@@ -1,0 +1,177 @@
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+-- footer:
+
+-- end: footer
+
+-- component footer:
+ftd.image-src logo: https://admint.io/assets/images/admint-logo-footer.svg
+footer-link list links: $footer-links
+social-icon list icons: $social-icons
+ftd.image-src bg-image: https://admint.io/footer-hand-thumb.48e6e2ea052bb6cf0beb.svg
+
+-- ftd.column:
+colors: $cs.main
+types: $typo.types
+width: fill-container
+background.solid: green
+align-content: center
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+max-width.fixed.px: 1320
+
+-- ftd.column:
+align-self: end
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+align-self: end
+
+-- ftd.row:
+margin-top.px: 48
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 80
+align-self: end
+
+-- ftd.image:
+$loop$: $footer.icons as $obj
+src: $obj.src
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 0
+
+-- end: ftd.column
+
+
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 16
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+
+-- ftd.column:
+margin-top.px: 48
+padding-left.px: 16
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.row:
+margin-top.px: 80
+padding-left.px: 16
+
+-- ftd.image:
+margin-right.px: 16
+$loop$: $footer.icons as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 32
+width.fixed.px: 200
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+-- record footer-link:
+caption title:
+string link: /
+
+
+-- footer-link list footer-links:
+
+-- footer-link: About Us
+link: /
+
+-- footer-link: Terms & Condition
+link: /
+
+-- footer-link: Privacy Policy
+link: /
+
+-- footer-link: Pricing
+link: /
+
+-- footer-link: Learn
+link: /
+
+-- end: footer-links
+
+
+
+
+-- record social-icon:
+ftd.image-src src:
+string link: /
+
+-- social-icon list social-icons:
+
+-- social-icon:
+link: /
+src: https://admint.io/instagram.6dfc5cafd7516572a269.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/linkedin.5c208bfde7ff079b9f35.svg
+
+-- social-icon:
+link: /
+src: https://admint.io/twitter.d3071d3132f19afb426e.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
+
+-- end: social-icons
