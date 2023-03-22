@@ -6,24 +6,6 @@
 
 
 
--- ftd.column:
-width: fill-container
-colors: $cs.main
-types: $typo.types
-
--- hero: Deliver refreshing Web 3.0 campaigns!
-cta-text: Get Started
-cta-link: index.html
-
-Build your brand's fan-base in web 3.0 with us!
-
-
--- end: ftd.column
-
-
-
-
-
 
 
 -- component hero:
