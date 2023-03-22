@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
-
+-- import: fifthtry.github.io/admint.io/lib
 
 
 
@@ -119,17 +119,8 @@ text-align: center
 
 $hero.body
 
--- ftd.text: $hero.cta-text
-role: $inherited.types.button-large
-color: $inherited.colors.background.step-1
-background.solid: $inherited.colors.cta-primary.base
-padding-horizontal.px: 41
-padding-vertical.px: 11
+-- lib.button: $hero.cta-text
 link: $hero.cta-link
-margin-top.px: 56
-margin-top.px if {ftd.device == "mobile"}: 55
-margin-bottom.px: 53
-border-radius.px: 50
 
 -- end: ftd.column
 

@@ -1,0 +1,25 @@
+-- import: fifthtry.github.io/admint.io/assets
+
+
+
+
+
+
+
+-- component button:
+caption title:
+string link: 
+
+-- ftd.text: $button.title
+role: $inherited.types.button-large
+color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+link: $button.link
+margin-top.px: 56
+margin-top.px if {ftd.device == "mobile"}: 55
+margin-bottom.px: 53
+border-radius.px: 50
+
+-- end: button
