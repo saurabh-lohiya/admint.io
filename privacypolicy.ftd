@@ -196,6 +196,8 @@ marginTop: 0
 -- paragraph: If you have any questions about this Privacy Policy, You can contact us:
 marginTop: 0
 -- paragraph: - By email: support@admint.io
+marginTop: 8
+
 -- end: privacypolicy
 
 -- end: wrapper
@@ -278,6 +280,7 @@ optional ftd.image-src image:
 
 -- ftd.column:
 width: auto
+align-self: center
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
