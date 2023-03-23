@@ -1,0 +1,23 @@
+-- import: fifthtry.github.io/nunito-font
+-- import: fifthtry.github.io/nunito-font/assets as nunito-assets
+
+;; :::: Custom Fonts ::::
+
+-- ftd.type size-29-mobile:
+line-height.px: 40
+size.px: 29
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-29-desktop:
+line-height.px: 28
+size.px: 24
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-29:
+desktop: $size-29-desktop
+mobile: $size-29-mobile

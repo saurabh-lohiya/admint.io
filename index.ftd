@@ -8,6 +8,7 @@
 
 
 
+
 -- page:
 
 -- header.header:
@@ -143,7 +144,7 @@ ftd.color-scheme colors: $cs.main
 -- ftd.column:
 children: $page.wrap
 width: fill-container
-
+$on-mouse-enter$: $functions.globalEvent()
 
 
 -- end: ftd.column
@@ -241,6 +242,7 @@ text: $slide.body
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
+
 
 
 -- end: ftd.column
