@@ -1,27 +1,5 @@
 -- import: fifthtry.github.io/admint.io/assets
--- import: fifthtry.github.io/nunito-font
--- import: fifthtry.github.io/nunito-font/assets as nunito-assets
-
-;; :::: Custom Fonts ::::
-
--- ftd.type size-29-mobile:
-line-height.px: 40
-size.px: 29
-letter-spacing.px: 0
-weight: 500
-font-family: $nunito-assets.fonts.Nunito
-
-
--- ftd.type size-29-desktop:
-line-height.px: 28
-size.px: 24
-letter-spacing.px: 0
-weight: 500
-font-family: $nunito-assets.fonts.Nunito
-
--- ftd.responsive-type size-29:
-desktop: $size-29-desktop
-mobile: $size-29-mobile
+-- import: fifthtry.github.io/admint.io/common/fonts
 
 
 
@@ -166,7 +144,7 @@ width.fixed.percent: 80
 padding.px: 35
 
 -- ftd.text: $ad-card.title
-role: $size-29
+role: $fonts.size-29
 color: $inherited.colors.text
 margin-bottom.px: 8
 
