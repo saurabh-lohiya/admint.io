@@ -5,7 +5,8 @@
 -- fastn.dependency: fifthtry.github.io/admint-cs
 -- fastn.dependency: fifthtry.github.io/nunito-font
 -- fastn.dependency: fifthtry.github.io/admint-typography
-
+-- fastn.dependency: fifthtry.github.io/bling
+-- fastn.auto-import: fifthtry.github.io/bling/dropdown
 
 -- fastn.sitemap:
 

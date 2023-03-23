@@ -1,27 +1,27 @@
+-- import: fifthtry.github.io/admint.io/signup-form as sf
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
--- import: fifthtry.github.io/admint.io/lib as lp
 
--- integer $width: 1300
 
 -- ftd.column:
 width: fill-container
+height: fill-container
 colors: $cs.main
 types: $typo.types
 
--- signup-form: Join the waitlist to get updated when we go live!
+-- signup-form-popup: Join the waitlist to get updated when we go live!
 input-label1: Name
 input-label2: Who are you?
 input-label3: Organization Name
 input-label4: Email id
 cta-text: Join waitlist
 
--- end: signup-form
+-- end: signup-form-popup
 
 -- end: ftd.column
 
 
--- component signup-form:
+-- component signup-form-popup:
 caption title:
 string input-label1:
 string input-label2:
@@ -29,20 +29,16 @@ string input-label3:
 string input-label4:
 role-record list roles: $roles
 string cta-text:
-integer width: $width
 
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
 align-content: center
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: $signup-form.width
+height: fill-container
 
 -- ftd.column:
 background.solid: white
-max-width.fixed.px: 850
+max-width.fixed.px: 548
 width: fill-container
 padding.px: 50
 z-index: 1
@@ -52,12 +48,12 @@ role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
 
--- ftd.text: $signup-form.title
-role: $inherited.types.heading-large
+-- ftd.text: $signup-form-popup.title
+role: $inherited.types.heading-medium
 color: $inherited.colors.cta-primary.base
 region: h1
 
--- ftd.text: $signup-form.input-label1
+-- ftd.text: $signup-form-popup.input-label1
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 30
@@ -83,7 +79,7 @@ width: fill-container
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label2
+-- ftd.text: $signup-form-popup.input-label2
 margin-top.px: 16
 role: $inherited.types.source-code
 color: $inherited.colors.text
@@ -105,7 +101,7 @@ margin-top.px: 8
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label3
+-- ftd.text: $signup-form-popup.input-label3
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 16
@@ -125,7 +121,7 @@ margin-top.px: 8
 
 -- end: ftd.row
 
--- ftd.text: $signup-form.input-label4
+-- ftd.text: $signup-form-popup.input-label4
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 16
@@ -143,7 +139,7 @@ margin-top.px: 8
 
 -- end: ftd.text-input
 
--- cta-button: $signup-form.cta-text
+-- sf.cta-button: $signup-form-popup.cta-text
 bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
@@ -154,16 +150,10 @@ text-color: white
 
 -- end: ftd.column
 
--- ftd.image:
-if: { ftd.device == "desktop" }
-src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
-anchor: parent
-right.px: 0
-bottom.px: 0
+-- end: signup-form-popup
 
--- end: ftd.column
 
--- end: signup-form
+
 
 
 
@@ -186,98 +176,3 @@ caption title:
 -- role-record: Startup
 
 -- end: roles
-
-
-
-
-
-
-
-
-
-
--- component cta-button:
-caption title:
-optional string role: tertiary
-ftd.color bg-color: transparent
-ftd.color text-color: black
-ftd.color border-color: $inherited.colors.border
-integer border-radius: 30
-optional string link: /
-optional boolean medium: false
-boolean show-arrow: false
-optional ftd.image-src cta-icon:
-optional integer width:
-boolean align-center: false
-integer padding-vertical: 10
-integer padding-horizontal: 28
-decimal marginTop: 0
-boolean transparent: false
-integer border-width: 1
-optional ftd.image-src src:
-
--- ftd.column:
-align-self if { cta-button.align-center }: center
-margin-top.rem: $cta-button.marginTop
-
--- ftd.row:
-if: {!cta-button.medium}
-width.fixed.px if { cta-button.width != NULL}: $cta-button.width
-spacing.fixed.px: 10
-link if { cta-button.link != NULL }: $cta-button.link
-background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
-background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
-background.solid: $cta-button.bg-color
-border-radius.px: $cta-button.border-radius
-border-color: $cta-button.border-color
-padding-vertical.px: $cta-button.padding-vertical
-padding-horizontal.px: $cta-button.padding-horizontal
-align-content: center
-
--- ftd.text: $cta-button.title
-role: $inherited.types.button-large
-color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
-color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
-color: $cta-button.text-color
-white-space: nowrap
-text-align: center
-
--- ftd.image:
-if: { cta-button.src != NULL }
-src: $cta-button.src
-width: auto
-height: auto
-align-self: center
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: cta-button
-
-
-
-
-
-
-;;-- dropdown:
-;;options-list: $option-list
-;;
-;;
-;;
-;;-- string $selected-item: Option 1
-;;
-;;
-;;-- drodown.options list option-list:
-;;
-;;-- drodown.options: Option 1
-;;
-;;-- drodown.options: Option 2
-;;
-;;-- drodown.options: Option 3
-;;
-;;-- drodown.options: Option 4
-;;
-;;-- drodown.options: Option 5
-;;
-;;-- end: option-list
