@@ -27,6 +27,7 @@ mobile: $size-29-mobile
 
 
 
+
 -- ftd.type roboto-18-mobile:
 line-height.px: 33
 size.px: 18
@@ -117,4 +118,88 @@ mobile: $montserrat-14-mobile
 
 
 
+
+
+-- ftd.type size-18-mobile:
+line-height.px: 24
+size.px: 16
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-18-desktop:
+line-height.px: 24
+size.px: 18
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type size-18:
+desktop: $size-18-desktop
+mobile: $size-18-mobile
+
+
+
+-- ftd.type size-24-mobile:
+line-height.px: 28
+size.px: 24
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-24-desktop:
+line-height.px: 28
+size.px: 24
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type size-24:
+desktop: $size-24-desktop
+mobile: $size-24-mobile
+
+
+
+
+
+-- ftd.type size-19-mobile:
+line-height.px: 24
+size.px: 19
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-19-desktop:
+line-height.px: 27
+size.px: 19
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type size-19:
+desktop: $size-19-desktop
+mobile: $size-19-mobile
+
+
+-- ftd.type size-23-mobile:
+line-height.px: 31
+size.px: 23
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-23-desktop:
+line-height.px: 31
+size.px: 23
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type size-23:
+desktop: $size-23-desktop
+mobile: $size-23-mobile
 
