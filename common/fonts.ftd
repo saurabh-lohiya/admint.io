@@ -203,3 +203,22 @@ weight: 700
 desktop: $size-23-desktop
 mobile: $size-23-mobile
 
+-- ftd.type montserrat-18-mobile:
+line-height.px: 21
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+
+-- ftd.type montserrat-18-desktop:
+line-height.px: 21
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-18:
+desktop: $montserrat-18-desktop
+mobile: $montserrat-18-mobile
+
