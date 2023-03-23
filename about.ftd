@@ -10,6 +10,8 @@
 -- about-us: About AdMint
 image: $assets.files.static.about-us.about-us.svg
 
+-- about-us.body:
+
 AdMint happened out of curiosity. Pure & simple.
 
 A mutual interest in the weird, wonderful world of web 3.0, & a penchant for
@@ -21,8 +23,12 @@ With AdMint our intention is provide necessary starter-kits for brands &
 agencies to successfully navigate the mysterious unknowns of web 3.0. AdMint's
 long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 
+-- about-us.our-team:
+
 -- our-team: Our Team.
 members-list: $functions.members
+
+-- end: about-us.our-team
 
 -- end: main.page
 
