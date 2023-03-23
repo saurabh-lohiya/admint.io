@@ -1,0 +1,405 @@
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/assets
+
+-- integer $width: 1140
+-- integer $active-tab: 0
+-- integer $mobileCompPadd: 20
+
+
+
+
+-- ftd.column:
+width: fill-container
+colors: $cs.main
+types: $typo.types
+align-content: center
+
+-- tabs-wrapper:
+
+-- tabs:
+
+-- end: tabs
+
+-- faq:
+
+-- question-accordion: What is Web 3.0?
+
+Web 3.0 is the next level of the internet, just like how you will go to high school after finishing grade school. The first version of the internet is like Web 1.0, where people just put up websites for others to read. But as the internet grew, more things were added like videos, social media, and online shopping. This is like Web 2.0, it’s more interactive and fun, but still needs people to tell it what to do.
+
+Web 3.0 is like having a robot helper that can do things for you online, like finding the best videos or helping you buy things. It’s still being developed, but it will make the internet even more helpful and fun to use. And this is where Blockchain comes in, it’s like a special notebook where you can write things down that everyone can see and trust, so the computers can talk to each other and make decisions without needing people to tell them what to do. So, it’s like the internet is growing and getting smarter, just like how you are growing and learning new things as you go through school or life, in general.
+
+-- question-accordion: What is Blockchain?
+
+Blockchain is a decentralized, digital ledger that records transactions across a network of computers. Think of it as a way to keep track of things online, like a digital notebook. Imagine you have a notebook and you want to share it with your friends, but you don’t want them to change what you wrote. So, you give them each a copy of the notebook and whenever you make a new entry, you tell all of your friends and they add the same entry to their notebook. This way, everyone has the same information and no one can change it without everyone else knowing.
+
+This could be a candy sharing game with your friends. You can use blockchain like a digital notebook to keep track of how many candy you have and how many candy you give to each friend. Each time you give candy to a friend or receive candy from a friend, you add it to the notebook. This way, everyone knows how many candy they have and no one can cheat by saying they gave or received more candy than they actually did.
+
+-- question-accordion: What is Cryptocurrency?
+
+Cryptocurrency is a type of digital or virtual money that uses special technology called blockchain to make sure that transactions are secure and anonymous. It’s like using cash, but it’s all done online. Bitcoin is the most well-known type of cryptocurrency, but there are many others as well.
+
+To use cryptocurrency, you need a special digital wallet to store it in. You can use this digital wallet to send and receive cryptocurrency just like you would with cash or credit card. The transactions are recorded on a public ledger called blockchain, which makes sure that the money is legitimate and no one is cheating.
+
+It’s also decentralized, meaning that it is not controlled by any government or organization, so it gives users more control and autonomy over their money. Cryptocurrency is still relatively new, and its value can fluctuate greatly, so it’s important to do your research before investing.
+
+-- question-accordion: What is NFT?
+
+An NFT, or non-fungible token, is a unique digital asset that is stored on a blockchain. It is a type of digital asset that represents ownership of a digital item, such as a piece of art, a video, a virtual land, or even a tweet. Unlike cryptocurrencies like Bitcoin, which are fungible, meaning that each unit is interchangeable with any other unit, NFTs are unique and cannot be replaced by another identical item.
+
+NFTs can be created by anyone, it can be bought and sold on marketplaces like OpenSea, Rarible, and SuperRare, and it can be stored in digital wallets. When you own an NFT, you own a unique digital asset that can’t be replicated or taken away. The ownership of the NFT is recorded on the blockchain. This allows for transparency and security in the ownership and transfer of the NFT.
+
+An NFT can be represented in various forms like a digital image, video, music, 3D models, virtual lands, tweets, etc. They can also be used to represent in-game items, virtual real estate, and other unique digital assets.
+
+As an example, imagine you are a digital artist and you want to sell a digital painting you created. You could sell a copy of the image file to multiple people, but with NFTs, you can create a unique token that represents ownership of the original painting and sell it to only one person. That person would then be the proud owner of the original digital painting and can prove it with the token they own.
+
+-- question-accordion: What is Minting?
+
+Minting in the context of NFTs refers to the process of creating a new non-fungible token (NFT) and adding it to the blockchain. In simple terms, it’s the process of creating a unique digital asset and making it available for ownership.
+
+In the process of mingting NFTs, you can represent an NFT by any digital image, video, audio file, 3D model or any other type of digital content. Adding metadata to the digital asset entails providing details about the asset’s name, its creator, and any other relevant information that you want to include.
+
+Minting is a key feature of NFTs, as it allows for the creation of unique digital assets and the ability to prove ownership through the blockchain.
+
+-- question-accordion: What is Cypto Wallet?
+
+A crypto wallet is a digital wallet that is used to store, send and receive cryptocurrency like Bitcoin, Ethereum, or other altcoins. It’s like a virtual bank account that you use to manage your digital money. It’s similar to a physical wallet that you carry around with you, but instead of cash and credit cards, it holds digital currency.
+
+A crypto wallet is also used to manage and store NFTs (non-fungible tokens), which are unique digital assets that can represent anything from art to music to videos. NFTs are stored on blockchain, and can be bought, sold, and traded like other cryptocurrencies.
+
+There are different types of crypto wallets, each with their own features and security level. Some examples include software wallets, which are apps that you download to your computer or mobile device, hardware wallets, which are physical devices that store your cryptocurrency offline, and web wallets, which are online wallets that you access through a website. Each has its own pros and cons, and it’s important to choose one that is secure and suits your needs.
+
+-- question-accordion: What is Metaverse?
+
+In relation to blockchain and non-fungible tokens (NFTs), a metaverse is a virtual world that is built and powered by blockchain technology and uses NFTs to represent digital assets within the metaverse. In this context, a metaverse is a decentralized and immersive digital space where users can interact with each other, with digital assets, and with smart contracts in a trustless and transparent way. The use of blockchain technology allows for secure and transparent ownership and transfer of digital assets, as well as the ability to create and execute smart contracts that govern the rules and interactions within the metaverse. NFTs, on the other hand, allow for unique digital assets to be created and owned by individuals, rather than just being a copy of a digital asset, thus allowing for true digital ownership and scarcity within the metaverse. This combination of blockchain technology and NFTs opens up new possibilities for ownership, monetization, and experiences in the virtual world.
+
+-- question-accordion: What is Web 3.0?
+
+Entering a metaverse that is related to blockchain and non-fungible tokens (NFTs) is similar to entering other types of metaverses, but there are a few additional steps involved. Here is an overview of the process:
+
+1. Choose a metaverse platform: There are several metaverse platforms that are built on blockchain technology and use NFTs, such as Decentraland, Somnium Space, and The Sandbox. Each platform has its own unique features and characteristics, so you’ll want to research and choose one that aligns with your interests and goals.
+
+2. Create a wallet: To participate in a blockchain-based metaverse, you will need to create a digital wallet to store your cryptocurrency and NFTs. There are many different types of wallets available, such as MetaMask, Trust Wallet, and Ledger. It is important to do your research and choose a reputable wallet that has good security features.
+
+3. Purchase cryptocurrency: You will need to purchase cryptocurrency, such as Ethereum, to use in the metaverse. This can be done through a cryptocurrency exchange, such as Coinbase, Binance, or Kraken.
+
+4. Claim your land: In some blockchain-based metaverses, such as Decentraland, users can purchase virtual land using cryptocurrency. This land can then be used to build and host virtual experiences, such as games, galleries, or shops.
+
+5. Create and upload your NFTs: Some blockchain-based metaverses also allow you to create and upload your own NFTs, such as digital art, 3D models, or other digital assets.
+
+6. Participate in the metaverse: Once you have your wallet set up, cryptocurrency purchased, land claimed, and NFTs uploaded, you can start participating in the metaverse. This can include exploring, building, and socializing with other users, as well as participating in in-world activities and events.
+
+It’s important to note that the metaverse is a constantly evolving space and new platforms, features, and integrations are being added all the time so it’s good to keep an eye on the latest developments.
+
+-- question-accordion: What is Smart Contract?
+
+A smart contract is a computer program that automatically executes the terms of a contract when certain conditions are met. It is a way to digitally facilitate, verify, and enforce the negotiation or performance of a contract. Smart contracts are stored on a blockchain. This makes them secure, transparent, and tamper-proof. Smart contracts can be used for a wide range of applications, such as financial transactions, supply chain management, and voting systems.
+
+-- end: faq
+
+-- end: tabs-wrapper
+
+-- end: ftd.column
+
+
+
+
+
+
+
+
+
+-- component tabs-wrapper:
+children child:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs-wrapper.width
+children: $tabs-wrapper.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs-wrapper
+
+
+
+
+
+
+
+
+
+-- component tabs:
+integer active-tab-index: 0
+tab-record list tabs-list: $tabs-list
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 32
+padding-horizontal.px: 20
+padding-vertical.px: 10
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs.width
+border-width.px: 2
+padding.px: 16
+border-color: #5f5f5f
+
+-- ftd.row:
+width: fill-container
+align-content: center
+wrap: true
+
+-- ftd.text: $obj.title
+$loop$: $tabs.tabs-list as $obj
+border-color: $inherited.colors.custom.four
+border-radius.px: 50
+border-width.px: 2
+padding-vertical.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.four
+role: $inherited.types.button-large
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 2
+right.px: 12
+background.solid: #5f5f5f
+width.fixed.percent if { ftd.device == "desktop" }: 96
+width.fixed.percent if { ftd.device == "mobile" }: 87
+height.fixed.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 10
+right.px: 12
+background.solid: #5f5f5f
+height.fixed.percent: 80
+width.fixed.px: 8
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs
+
+
+
+
+
+
+
+
+
+-- component faq:
+optional caption title:
+children child:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 70
+
+-- ftd.column:
+max-width.fixed.px: $faq.width
+width: fill-container
+padding.px if { ftd.device == "mobile" }: $mobileCompPadd
+align-self: center
+
+-- ftd.text: $faq.title
+if: { faq.title != NULL }
+margin-bottom.px: 70
+align-self: center
+role: $inherited.types.heading-medium
+
+-- ftd.column:
+width: fill-container
+children: $faq.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: Hi
+body body:
+boolean $open: false
+ftd.image-src src1: $assets.files.static.faq.down.svg
+ftd.image-src src2: $assets.files.static.faq.up.svg
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 24
+background.solid: $inherited.colors.background.step-1
+align-content: center
+classes: markdown
+
+-- ftd.row:
+background.solid: #eeeeee80
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 16
+padding-vertical.px: 13
+$on-click$: $ftd.toggle($a = $question-accordion.open)
+
+-- ftd.text: $question-accordion.title
+role: $inherited.types.button-large
+color if { question-accordion.open }: $inherited.colors.custom.four
+color if { !question-accordion.open }: $inherited.colors.custom.one
+align-self: center
+
+-- ftd.image:
+if: { !question-accordion.open }
+src: $question-accordion.src1
+width.fixed.px: 24
+
+-- ftd.image:
+if: { question-accordion.open }
+src: $question-accordion.src2
+width.fixed.px: 24
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { question-accordion.open }
+padding-vertical.px: 16
+width: fill-container
+padding.px: 16
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+
+$question-accordion.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
+
+
+
+
+
+
+
+-- record tab-record:
+caption title:
+boolean active:
+
+-- tab-record list tabs-list:
+
+-- tab-record: Web 3.0 Basics
+active: true
+
+-- tab-record: Brand Campaign
+active: false
+
+-- tab-record: Advertising & Web 3.0
+active: false
+
+-- end: tabs-list
+
+
+
+
+
+
+
+
+
+
+-- component cta-button-2:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 50
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+boolean active: false
+
+-- ftd.column:
+align-self if { cta-button-2.align-center }: center
+margin-top.rem: $cta-button-2.marginTop
+
+-- ftd.row:
+if: { !cta-button-2.medium }
+width.fixed.px if { cta-button-2.width != NULL}: $cta-button-2.width
+spacing.fixed.px: 10
+link if { cta-button-2.link != NULL }: $cta-button-2.link
+background.solid if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button-2.bg-color
+border-radius.px: $cta-button-2.border-radius
+border-color: $cta-button-2.border-color
+border-width.px if { $cta-button-2.active }: $cta-button-2.border-width
+padding-vertical.px: $cta-button-2.padding-vertical
+padding-horizontal.px: $cta-button-2.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button-2.title
+role: $inherited.types.button-large
+color if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.text
+color if { !cta-button-2.active }: $inherited.colors.custom.one
+color if { cta-button-2.active }: $inherited.colors.custom.four
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button-2.src != NULL }
+src: $cta-button-2.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button-2

@@ -1,6 +1,7 @@
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
 -- import: fifthtry.github.io/admint.io/lib as lp
+-- import: fifthtry.github.io/admint.io/functions
 
 -- integer $width: 1300
 
@@ -72,6 +73,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $functions.formValidate()
 
 
 -- ftd.row:
