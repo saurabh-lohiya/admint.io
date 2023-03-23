@@ -1,0 +1,47 @@
+-- import: fifthtry.github.io/admint.io/assets
+
+
+-- void clamp(a,by,min,max):
+integer $a:
+integer by: 1
+integer min: 0
+integer max: 5
+
+
+a = (((a - min) + by) % (max - min)) + min
+
+
+
+-- void decclamp(a,by,min,max):
+integer $a:
+integer by: 1
+integer min: 0
+integer max: 5
+
+
+a = (((a + min) - by) % (max - min)) + min
+
+
+
+
+
+-- record team:
+caption title:
+string designation:
+ftd.image-src avatar:
+string link:
+
+
+-- team list members:
+
+-- team: **Harish Shankaran**
+designation: Founder
+avatar: $assets.files.static.about-us.hareesh.jpeg
+link: https://www.linkedin.com/in/harishshankaran/
+
+-- team: **Jaylah Consejo**
+designation: Founder
+avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
+link: https://www.linkedin.com/in/jaylahconsejo/
+
+-- end: members

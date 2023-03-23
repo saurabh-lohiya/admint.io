@@ -3,5 +3,19 @@
 -- fastn.package: fifthtry.github.io/admint.io
 
 -- fastn.dependency: fifthtry.github.io/admint-cs
+-- fastn.dependency: fifthtry.github.io/nunito-font
 -- fastn.dependency: fifthtry.github.io/admint-typography
 
+
+-- fastn.sitemap:
+
+# Home: /
+
+# Why NFT?: 
+
+# About Us: about-us/
+
+
+# Pricing:
+
+# Learn: 
