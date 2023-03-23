@@ -159,3 +159,232 @@ $ad-card.body
 -- end: ftd.column
 
 -- end: ad-card
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component post-list:
+ftd.ui list articles:
+ftd.ui list side-bar:
+children search-bar:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1140
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 66.66
+
+-- ftd.column:
+width: fill-container
+children: $post-list.search-bar
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+children: $post-list.articles
+padding.px: 30
+
+;; all short-articles goes here
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 33.33
+children: $post-list.side-bar
+background.solid: $inherited.colors.background.base
+border-radius.px: 20
+padding.px: 25
+height: fill-container
+
+;; recent post side-bar goes here
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 66.66
+
+-- ftd.column:
+width: fill-container
+children: $post-list.search-bar
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+children: $post-list.articles
+
+;; all short-articles goes here
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 33.33
+children: $post-list.side-bar
+background.solid: $inherited.colors.background.base
+border-radius.px: 20
+padding.px: 25
+height: fill-container
+
+;; recent post side-bar goes here
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: post-list
+
+
+
+
+
+
+
+
+
+
+-- component article-item:
+caption title:
+body body:
+optional ftd.image-src thumbnail:
+string link: 
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 55
+
+-- ftd.image:
+src: $article-item.thumbnail
+width: fill-container
+link: $article-item.link
+
+-- ftd.text: $article-item.title
+role: $fonts.roboto-18
+region: h3
+color: $inherited.colors.custom.nine
+link: $article-item.link
+margin-top.px: 20
+
+-- ftd.text: 
+role: $fonts.montserrat-14
+color: $inherited.colors.custom.ten
+classes: markdown
+
+$article-item.body
+
+-- end: ftd.column
+
+-- end: article-item
+
+
+
+
+
+
+
+
+
+
+-- component sidebar:
+caption title:
+children children:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $sidebar.title
+role: $fonts.roboto-22
+color: #131313
+margin-bottom.px: 20
+
+-- ftd.column:
+margin-bottom.px: 20
+border-bottom-width.px: 2
+width.fixed.percent: 17
+border-color: $inherited.colors.custom.one
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+children: $sidebar.children
+spacing.fixed.px: 35
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: sidebar
+
+
+
+
+
+
+
+
+
+
+-- component recent-post:
+caption title:
+body body:
+string link:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $recent-post.title
+role: $fonts.roboto-18
+color: $inherited.colors.custom.nine
+link: $recent-post.link
+
+-- ftd.text: 
+role: $fonts.roboto-14
+color: $inherited.colors.cta-secondary.disabled
+margin-bottom.px: 10
+
+$recent-post.body
+
+-- end: ftd.column
+
+-- end: recent-post
