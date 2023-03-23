@@ -1,0 +1,111 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/lib
+
+
+
+
+
+
+-- component hero:
+caption title:
+body body: 
+string cta-text: 
+string cta-link:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 10
+padding-vertical.px: 97
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.px: 122
+height.fixed.px: 232
+anchor: parent
+left.px: 0
+top.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.percent: 20
+height.fixed.percent: 30
+anchor: parent
+left.px: 0
+top.px: -45
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.px: 322
+height.fixed.px: 356
+anchor: parent
+right.px: 0
+bottom.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.percent: 30
+height.fixed.percent: 30
+anchor: parent
+right.px: 0
+bottom.px: -58
+
+-- ftd.column:
+max-width.fixed.px: 1320
+align-content: center
+align-self: center
+
+-- ftd.column:
+align-content: center
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 48
+left.px: 245
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 140
+left.px: -20
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+text-align: center
+width.fixed.percent if {ftd.device != "mobile"}: 55
+region: h1
+
+-- end: ftd.column
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.custom.one
+margin-top.px: 32
+margin-top.px if {ftd.device == "mobile"}: 31
+margin-bottom.px: 8
+text-align: center
+
+$hero.body
+
+-- lib.button: $hero.cta-text
+link: $hero.cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero
