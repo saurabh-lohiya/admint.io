@@ -66,6 +66,8 @@ src: $about-us.image
 -- ftd.column:
 width: fill-container
 children: $about-us.our-team
+background.solid: $inherited.colors.background.base
+align-content: center
 
 -- end: ftd.column
 
