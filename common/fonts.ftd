@@ -119,6 +119,28 @@ mobile: $montserrat-14-mobile
 
 
 
+-- ftd.type montserrat-14-19-mobile:
+line-height.px: 21
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+
+-- ftd.type montserrat-14-19-desktop:
+line-height.px: 21
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-14-19:
+desktop: $montserrat-14-19-desktop
+mobile: $montserrat-14-19-mobile
+
+
+
+
 
 -- ftd.type size-18-mobile:
 line-height.px: 24
@@ -203,6 +225,9 @@ weight: 700
 desktop: $size-23-desktop
 mobile: $size-23-mobile
 
+
+
+
 -- ftd.type montserrat-18-mobile:
 line-height.px: 21
 size.px: 18
@@ -222,3 +247,106 @@ font-family: $montserrat-assets.fonts.Montserrat
 desktop: $montserrat-18-desktop
 mobile: $montserrat-18-mobile
 
+
+
+
+
+-- ftd.type montserrat-15-19-mobile:
+line-height.px: 19
+size.px: 15
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+
+-- ftd.type montserrat-15-19-desktop:
+line-height.px: 19
+size.px: 15
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-15-19:
+desktop: $montserrat-15-19-desktop
+mobile: $montserrat-15-19-mobile
+
+
+
+
+
+-- ftd.type montserrat-15-27-mobile:
+line-height.px: 27
+size.px: 15
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+
+-- ftd.type montserrat-15-27-desktop:
+line-height.px: 27
+size.px: 15
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-15-27:
+desktop: $montserrat-15-27-desktop
+mobile: $montserrat-15-27-mobile
+
+
+
+
+
+-- ftd.type roboto-12-mobile:
+line-height.px: 14
+size.px: 12
+letter-spacing.px: 0
+weight: 700
+font-family: $roboto-assets.fonts.Roboto
+
+
+-- ftd.type roboto-12-desktop:
+line-height.px: 14
+size.px: 12
+letter-spacing.px: 0
+weight: 700
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-12:
+desktop: $roboto-12-desktop
+mobile: $roboto-12-mobile
+
+
+
+
+
+-- ftd.type montserrat-28-mobile:
+line-height.px: 28
+size.px: 28
+letter-spacing.px: 0
+font-family: $montserrat-assets.fonts.Montserrat
+
+
+-- ftd.type montserrat-28-desktop:
+line-height.px: 28
+size.px: 28
+letter-spacing.px: 0
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-28:
+desktop: $montserrat-28-desktop
+mobile: $montserrat-28-mobile
+
+
+
+
+
+;; Colors
+
+-- ftd.color adadad:
+light: #adadad
+dark: #adadad
+
+-- ftd.color 44ce9a:
+light: #44ce9a
+dark: #44ce9a

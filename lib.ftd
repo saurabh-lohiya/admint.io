@@ -183,6 +183,7 @@ $ad-card.body
 ftd.ui list articles:
 ftd.ui list side-bar:
 children search-bar:
+boolean post-page: false
 
 -- ftd.column:
 width: fill-container
@@ -210,6 +211,7 @@ children: $post-list.search-bar
 width: fill-container
 children: $post-list.articles
 padding.px: 30
+padding.px if { $post-list.post-page }: 10
 
 ;; all short-articles goes here
 
@@ -221,8 +223,11 @@ padding.px: 30
 width.fixed.percent: 33.33
 children: $post-list.side-bar
 background.solid: $inherited.colors.background.base
+background.solid if { !$post-list.post-page }: $inherited.colors.background.base
+background.solid if { $post-list.post-page }: $inherited.colors.background.step-1
 border-radius.px: 20
-padding.px: 25
+padding.px if { !$post-list.post-page }: 25
+padding.px if { $post-list.post-page }: 10
 height: fill-container
 
 ;; recent post side-bar goes here
@@ -236,7 +241,8 @@ if: { ftd.device == "mobile" }
 width: fill-container
 
 -- ftd.column:
-width.fixed.percent: 66.66
+width: fill-container
+padding.px: 10
 
 -- ftd.column:
 width: fill-container
@@ -255,11 +261,13 @@ children: $post-list.articles
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.percent: 33.33
+width: fill-container
 children: $post-list.side-bar
-background.solid: $inherited.colors.background.base
+background.solid if { !$post-list.post-page }: $inherited.colors.background.base
+background.solid if { $post-list.post-page }: $inherited.colors.background.step-1
 border-radius.px: 20
-padding.px: 25
+padding.px if { !$post-list.post-page }: 25 
+padding.px if { $post-list.post-page }: 10
 height: fill-container
 
 ;; recent post side-bar goes here
@@ -288,10 +296,15 @@ caption title:
 body body:
 optional ftd.image-src thumbnail:
 string link: 
+boolean post-page: false
 
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 55
+
+-- ftd.column:
+if: { !$article-item.post-page }
+width: fill-container
 
 -- ftd.image:
 src: $article-item.thumbnail
@@ -314,6 +327,33 @@ $article-item.body
 
 -- end: ftd.column
 
+-- ftd.column:
+if: { $article-item.post-page }
+width: fill-container
+
+-- ftd.text: $article-item.title
+role: $fonts.montserrat-28
+region: h3
+color: $fonts.44ce9a
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $article-item.thumbnail
+width: fill-container
+margin-bottom.px: 20
+
+-- ftd.text: 
+role: $fonts.montserrat-15-27
+color: $inherited.colors.custom.ten
+classes: markdown
+padding.px: 10
+
+$article-item.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: article-item
 
 
@@ -328,13 +368,21 @@ $article-item.body
 -- component sidebar:
 caption title:
 children children:
+boolean post-page: false
 
 -- ftd.column:
 width: fill-container
 
 -- ftd.text: $sidebar.title
+if: { !sidebar.post-page }
 role: $fonts.roboto-22
 color: #131313
+margin-bottom.px: 20
+
+-- ftd.text: $sidebar.title
+if: { sidebar.post-page }
+role: $fonts.montserrat-15-19
+color: $inherited.colors.cta-primary.base
 margin-bottom.px: 20
 
 -- ftd.column:
@@ -369,8 +417,15 @@ spacing.fixed.px: 35
 caption title:
 body body:
 string link:
+optional ftd.image-src thumbnail:
+optional string timestamp:
+optional string comments: No comments
 
 -- ftd.column:
+width: fill-container
+
+-- ftd.column:
+if: { recent-post.thumbnail == NULL }
 width: fill-container
 
 -- ftd.text: $recent-post.title
@@ -387,4 +442,84 @@ $recent-post.body
 
 -- end: ftd.column
 
+-- ftd.column:
+if: { recent-post.thumbnail != NULL }
+width: fill-container
+
+-- ftd.image:
+src: $recent-post.thumbnail
+width: fill-container
+height: auto
+
+-- ftd.text: $recent-post.title
+role: $fonts.montserrat-18
+color: $inherited.colors.custom.four
+link: $recent-post.link
+margin-top.px: 20
+
+-- ftd.row:
+margin-bottom.px: 13
+spacing.fixed.px: 6
+
+-- ftd.text: $recent-post.timestamp
+role: $fonts.montserrat-15-19
+color: $fonts.adadad
+
+-- ftd.text: /
+role: $fonts.montserrat-15-19
+color: $fonts.adadad
+
+-- ftd.text: $recent-post.comments
+role: $fonts.montserrat-15-19
+color: $fonts.adadad
+
+-- end: ftd.row
+
+-- ftd.text: 
+role: $fonts.montserrat-14-19
+color: #020101a1
+margin-bottom.px: 10
+
+$recent-post.body
+
+-- button-small: Read More
+link: $recent-post.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: recent-post
+
+
+
+
+
+
+
+
+
+
+-- component button-small:
+caption title: 
+string link:
+
+-- ftd.row:
+padding-horizontal.px: 12
+padding-vertical.px: 5
+background.solid: $fonts.44ce9a
+border-radius.px: 32
+spacing.fixed.px: 5
+link: $button-small.link
+
+-- ftd.text: $button-small.title
+role: $fonts.roboto-12
+color: $inherited.colors.cta-primary.text
+
+-- ftd.text: »
+role: $fonts.roboto-12
+color: $inherited.colors.cta-primary.text
+
+-- end: ftd.row
+
+-- end: button-small
