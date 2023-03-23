@@ -38,15 +38,21 @@ ftd.image-src image:
 -- ftd.column:
 width: fill-container
 
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $lezgoo.image
+
 -- ftd.row:
 spacing.fixed.percent: 10
 width: fill-container
 align-content: center 
 
 -- ftd.image:
+if: { ftd.device != "mobile" }
 src: $lezgoo.image
 
 -- ftd.column:
+padding.px if { ftd.device == "mobile" }: 48
 
 -- ftd.row:
 margin-bottom.px: 24
