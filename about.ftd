@@ -258,7 +258,7 @@ if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 260
-margin-left.px: 2
+margin-left.px: 12
 
 -- end: ftd.column
 
