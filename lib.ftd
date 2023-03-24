@@ -201,6 +201,7 @@ boolean post-page: false
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 align-content: center
+margin-top.px: 30
 
 -- ftd.column:
 width: fill-container
@@ -2241,13 +2242,14 @@ wrap: true
 
 -- ftd.text: $obj.title
 $loop$: $tabs.tabs-list as $obj
-border-color: $inherited.colors.custom.four
-border-radius.px: 50
-border-width.px: 2
+;;border-color if { $obj.active }: $inherited.colors.custom.four
+;;border-radius.px if { $obj.active }: 50
+;;border-width.px if { $obj.active }: 2
 padding-vertical.px: 20
 padding-horizontal.px: 30
 color: $inherited.colors.custom.four
 role: $inherited.types.button-large
+link: $obj.link
 
 -- end: ftd.row
 
@@ -2398,17 +2400,21 @@ $question-accordion.body
 -- record tab-record:
 caption title:
 boolean active:
+string link:
 
 -- tab-record list tabs-list:
 
 -- tab-record: Web 3.0 Basics
 active: true
+link: learn/
 
 -- tab-record: Brand Campaign
 active: false
+link: learn/brand-campaign/
 
 -- tab-record: Advertising & Web 3.0
 active: false
+link: learn/advertising-web-3-0/
 
 -- end: tabs-list
 

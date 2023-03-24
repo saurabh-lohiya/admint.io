@@ -5,13 +5,21 @@
 
 -- lib.page:
 
--- lib.header:
+-- lib.tabs-wrapper:
 
--- post-list:
+-- lib.tabs:
+active-tab-index: 1
 
--- post-list.articles:
+-- end: lib.tabs
 
--- article-item: Lorem Ipsum is simply dummy text
+-- end: lib.tabs-wrapper
+
+
+-- lib.post-list:
+
+-- lib.post-list.articles:
+
+-- lib.article-item: Lorem Ipsum is simply dummy text
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
 link: learn/brand-campaign/
 
@@ -42,7 +50,7 @@ the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
 and more recently with desktop publishing software like Aldus PageMaker
 including versions of Lorem Ipsum.
 
--- article-item: Lorem Ipsum is simply dummy text
+-- lib.article-item: Lorem Ipsum is simply dummy text
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
 link: learn/brand-campaign/
 
@@ -73,29 +81,29 @@ the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
 and more recently with desktop publishing software like Aldus PageMaker
 including versions of Lorem Ipsum.
 
--- end: post-list.articles
+-- end: lib.post-list.articles
 
--- post-list.side-bar:
+-- lib.post-list.side-bar:
 
--- sidebar: Recent Posts
+-- lib.sidebar: Recent Posts
 
--- recent-post: Lorem Ipsum is simply dummy text
+-- lib.recent-post: Lorem Ipsum is simply dummy text
 link: learn/brand-campaign/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy
 
--- recent-post: Lorem Ipsum is simply dummy text
+-- lib.recent-post: Lorem Ipsum is simply dummy text
 link: learn/brand-campaign/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy
 
--- end: sidebar
+-- end: lib.sidebar
 
--- end: post-list.side-bar
+-- end: lib.post-list.side-bar
 
--- end: post-list
+-- end: lib.post-list
 
 -- end: lib.page
 
@@ -108,347 +116,3 @@ Ipsum has been the industry’s standard dummy
 
 
 
--- component post-list:
-ftd.ui list articles:
-ftd.ui list side-bar:
-children search-bar:
-boolean post-page: false
-
--- ftd.column:
-width: fill-container
-background.solid: $inherited.colors.background.step-1
-align-content: center
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: 1140
-
--- ftd.row:
-if: { ftd.device != "mobile" }
-width: fill-container
-
--- ftd.column:
-width.fixed.percent: 66.66
-
--- ftd.column:
-width: fill-container
-children: $post-list.search-bar
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-children: $post-list.articles
-padding.px: 30
-padding.px if { $post-list.post-page }: 10
-
-;; all short-articles goes here
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.percent: 33.33
-children: $post-list.side-bar
-background.solid: $inherited.colors.background.base
-background.solid if { !$post-list.post-page }: $inherited.colors.background.base
-background.solid if { $post-list.post-page }: $inherited.colors.background.step-1
-border-radius.px: 20
-padding.px if { !$post-list.post-page }: 25
-padding.px if { $post-list.post-page }: 10
-height: fill-container
-
-;; recent post side-bar goes here
-
--- end: ftd.column
-
--- end: ftd.row
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-width: fill-container
-
--- ftd.column:
-width: fill-container
-padding.px: 10
-
--- ftd.column:
-width: fill-container
-children: $post-list.search-bar
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-children: $post-list.articles
-
-;; all short-articles goes here
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-children: $post-list.side-bar
-background.solid if { !$post-list.post-page }: $inherited.colors.background.base
-background.solid if { $post-list.post-page }: $inherited.colors.background.step-1
-border-radius.px: 20
-padding.px if { !$post-list.post-page }: 25 
-padding.px if { $post-list.post-page }: 10
-height: fill-container
-
-;; recent post side-bar goes here
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: post-list
-
-
-
-
-
-
-
-
-
-
--- component article-item:
-caption title:
-body body:
-optional ftd.image-src thumbnail:
-string link: 
-boolean post-page: false
-
--- ftd.column:
-width: fill-container
-margin-bottom.px: 55
-
--- ftd.column:
-if: { !$article-item.post-page }
-width: fill-container
-
--- ftd.image:
-src: $article-item.thumbnail
-width: fill-container
-link: $article-item.link
-
--- ftd.text: $article-item.title
-role: $fonts.roboto-18
-region: h3
-color: $inherited.colors.custom.nine
-link: $article-item.link
-margin-top.px: 20
-
--- ftd.text: 
-role: $fonts.montserrat-14
-color: $inherited.colors.custom.ten
-classes: markdown
-
-$article-item.body
-
--- end: ftd.column
-
--- ftd.column:
-if: { $article-item.post-page }
-width: fill-container
-
--- ftd.text: $article-item.title
-role: $fonts.montserrat-28
-region: h3
-color: $fonts.44ce9a
-margin-bottom.px: 20
-
--- ftd.image:
-src: $article-item.thumbnail
-width: fill-container
-margin-bottom.px: 20
-
--- ftd.text: 
-role: $fonts.montserrat-15-27
-color: $inherited.colors.custom.ten
-classes: markdown
-padding.px: 10
-
-$article-item.body
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: article-item
-
-
-
-
-
-
-
-
-
-
--- component sidebar:
-caption title:
-children children:
-boolean post-page: false
-
--- ftd.column:
-width: fill-container
-
--- ftd.text: $sidebar.title
-if: { !sidebar.post-page }
-role: $fonts.roboto-22
-color: #131313
-margin-bottom.px: 20
-
--- ftd.text: $sidebar.title
-if: { sidebar.post-page }
-role: $fonts.montserrat-15-19
-color: $inherited.colors.cta-primary.base
-margin-bottom.px: 20
-
--- ftd.column:
-margin-bottom.px: 20
-border-bottom-width.px: 2
-width.fixed.percent: 17
-border-color: $inherited.colors.custom.one
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-children: $sidebar.children
-spacing.fixed.px: 35
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: sidebar
-
-
-
-
-
-
-
-
-
-
--- component recent-post:
-caption title:
-body body:
-string link:
-optional ftd.image-src thumbnail:
-optional string timestamp:
-optional string comments: No comments
-
--- ftd.column:
-width: fill-container
-
--- ftd.column:
-if: { recent-post.thumbnail == NULL }
-width: fill-container
-
--- ftd.text: $recent-post.title
-role: $fonts.roboto-18
-color: $inherited.colors.custom.nine
-link: $recent-post.link
-
--- ftd.text: 
-role: $fonts.roboto-14
-color: $inherited.colors.cta-secondary.disabled
-margin-bottom.px: 10
-
-$recent-post.body
-
--- end: ftd.column
-
--- ftd.column:
-if: { recent-post.thumbnail != NULL }
-width: fill-container
-
--- ftd.image:
-src: $recent-post.thumbnail
-width: fill-container
-height: auto
-
--- ftd.text: $recent-post.title
-role: $fonts.montserrat-18
-color: $inherited.colors.custom.four
-link: $recent-post.link
-margin-top.px: 20
-
--- ftd.row:
-margin-bottom.px: 13
-spacing.fixed.px: 6
-
--- ftd.text: $recent-post.timestamp
-role: $fonts.montserrat-15-19
-color: $fonts.adadad
-
--- ftd.text: /
-role: $fonts.montserrat-15-19
-color: $fonts.adadad
-
--- ftd.text: $recent-post.comments
-role: $fonts.montserrat-15-19
-color: $fonts.adadad
-
--- end: ftd.row
-
--- ftd.text: 
-role: $fonts.montserrat-14-19
-color: #020101a1
-margin-bottom.px: 10
-
-$recent-post.body
-
--- button-small: Read More
-link: $recent-post.link
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: recent-post
-
-
-
-
-
-
-
-
-
-
--- component button-small:
-caption title: 
-string link:
-
--- ftd.row:
-padding-horizontal.px: 12
-padding-vertical.px: 5
-background.solid: $fonts.44ce9a
-border-radius.px: 32
-spacing.fixed.px: 5
-link: $button-small.link
-
--- ftd.text: $button-small.title
-role: $fonts.roboto-12
-color: $inherited.colors.cta-primary.text
-
--- ftd.text: »
-role: $fonts.roboto-12
-color: $inherited.colors.cta-primary.text
-
--- end: ftd.row
-
--- end: button-small

@@ -5,7 +5,14 @@
 
 -- lib.page:
 
--- header.header:
+-- lib.tabs-wrapper:
+
+-- lib.tabs:
+active-tab-index: 1
+
+-- end: lib.tabs
+
+-- end: lib.tabs-wrapper
 
 -- lib.post-list:
 
@@ -13,7 +20,7 @@
 
 -- lib.article-item: Metaverse Is The New Playground For Advertisement.
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-link: learn/advertising-web-3-0/
+link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much does digital smartness matter? It
@@ -71,7 +78,7 @@ dedicated army behind each product, which is an established story in itself.
 
 -- lib.article-item: Metaverse Is The New Playground For Advertisement.
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-link: learn/advertising-web-3-0/
+link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much does digital smartness matter? It
@@ -134,7 +141,7 @@ dedicated army behind each product, which is an established story in itself.
 -- lib.sidebar: Recent Posts
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
-link: learn/advertising-web-3-0/
+link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 timestamp: December 6, 2022
 comments: No comments
@@ -143,7 +150,7 @@ Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
-link: learn/advertising-web-3-0/
+link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 timestamp: December 6, 2022
 comments: No comments
