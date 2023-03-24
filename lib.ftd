@@ -2407,15 +2407,15 @@ string link:
 
 -- tab-record list tabs-list:
 
--- tab-record: Web 3.0 Basics
+-- tab-record: Web 3.0 Basics🚧
 active: true
 link: learn/
 
--- tab-record: Brand Campaign
+-- tab-record: Brand Campaign🚧
 active: false
 link: learn/brand-campaign/
 
--- tab-record: Advertising & Web 3.0
+-- tab-record: Advertising & Web 3.0🚧
 active: false
 link: learn/advertising-web-3-0/
 
