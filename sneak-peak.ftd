@@ -90,7 +90,6 @@ align-self: end
 
 -- end: ftd.row
 
-
 -- ftd.column:
 if: { ftd.device == "mobile" }
 
@@ -111,12 +110,6 @@ color: $inherited.colors.text
 
 -- end: ftd.column
 
-
-
-
-
-
-
 -- ftd.column:
 align-self: start
 margin-left.rem if { ftd.device != "mobile" }: 5
@@ -132,7 +125,6 @@ color: $inherited.colors.cta-primary.text
 link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 
 -- end: ftd.column
-
 
 -- end: ftd.column
 

@@ -26,6 +26,15 @@ worry, we will help you ! Lezzzgoooooo!
 
 
 
+
+
+
+
+
+
+
+
+
 -- component lezgoo:
 caption title:
 body body:
@@ -33,7 +42,6 @@ string body1:
 string cta-label:
 string cta-url:
 ftd.image-src image:
-
 
 -- ftd.column:
 width: fill-container
@@ -85,15 +93,11 @@ border-radius.px: 50
 color: $inherited.colors.cta-primary.text
 link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
 
-
 -- end: ftd.column
-
 
 -- end: ftd.row
 
-
 -- end: ftd.column
-
 
 -- end: lezgoo
 
