@@ -1,18 +1,9 @@
 -- import: fifthtry.github.io/admint.io/assets
--- import: fifthtry.github.io/admint.io as main
--- import: fifthtry.github.io/admint.io/header
+-- import: fifthtry.github.io/admint.io/lib
 
 
 
--- main.page:
-
--- header.header:
-
-
-
-
-
-
+-- lib.page:
 
 -- wrapper:
 
@@ -196,7 +187,7 @@ If you have any questions about these Terms and Conditions, You can contact us:
 
 -- end: wrapper
 
--- end: main.page
+-- end: lib.page
 
 
 
