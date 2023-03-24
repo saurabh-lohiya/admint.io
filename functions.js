@@ -20,9 +20,6 @@ function formValidation(event) {
     document.getElementById("warning1").style.display = 'block';
     return
   }
-  console.log(check1)
-  console.log(check2)
-  console.log(check3)
   document.getElementById("warning1").style.display = 'none';
   if (!check2) {
     document.getElementById("warning3").style.display = 'block';
@@ -41,3 +38,6 @@ function formValidation(event) {
   //document.getElementById(errorField).style.display = 'none';
   //console.log("Validation", event)
 }
+// document.getElementById("blurMe").style.filter = "blur(6px)";
+  document.getElementById("opacityme").style.filter = "blur(6px)";
+};
