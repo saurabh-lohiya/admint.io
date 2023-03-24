@@ -1,11 +1,11 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/common/fonts
--- import: fifthtry.github.io/admint.io as main
 -- import: fifthtry.github.io/admint.io/header
+-- import: fifthtry.github.io/admint.io/lib
 
--- main.page:
+-- lib.page:
 
--- header.header:
+-- lib.header:
 
 -- post-list:
 
@@ -97,7 +97,7 @@ Ipsum has been the industry’s standard dummy
 
 -- end: post-list
 
--- end: main.page
+-- end: lib.page
 
 
 
