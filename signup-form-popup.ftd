@@ -32,7 +32,7 @@ string cta-text:
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.base
+background.solid: $inherited.colors.background.overlay
 align-content: center
 height: fill-container
 
@@ -139,7 +139,7 @@ margin-top.px: 8
 
 -- end: ftd.text-input
 
--- sf.cta-button: $signup-form-popup.cta-text
+-- cta-button: $signup-form-popup.cta-text
 bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
@@ -176,3 +176,71 @@ caption title:
 -- role-record: Startup
 
 -- end: roles
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 30
+optional string link:
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+margin-top.rem: $cta-button.marginTop
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button.bg-color
+border-radius.px: $cta-button.border-radius
+border-color: $cta-button.border-color
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-large
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
