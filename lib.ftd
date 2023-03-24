@@ -1,7 +1,19 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/common/fonts
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/functions
+-- import: fastn/processors as pr
 
 
+
+
+
+-- integer $active-tab: 0
+-- integer $mobileCompPadd: 20
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.full-sitemap
 
 
 
@@ -523,3 +535,1950 @@ color: $inherited.colors.cta-primary.text
 -- end: ftd.row
 
 -- end: button-small
+
+
+
+
+
+
+
+
+
+
+-- component page:
+optional string site-name:
+optional string site-url: /
+optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
+optional string contact-txt: Get Started
+optional string contact-url: /
+pr.toc-item list sections: $sitemap.sections
+boolean $sidebar-open: false
+children wrap:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+
+-- header:
+site-name: $page.site-name
+site-url: $page.site-url
+logo: $page.logo
+contact-txt: $page.contact-txt
+contact-url: $page.contact-url
+sections: $page.sections
+$sidebar-open: $page.sidebar-open
+
+-- end: ftd.column
+
+-- ftd.column:
+children: $page.wrap
+width: fill-container
+$on-mouse-enter$: $functions.globalEvent()
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+
+-- footer:
+
+-- end: footer
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+-- integer $current-active: 1
+
+-- integer min: 1
+
+-- integer max: 6
+
+-- component card:
+caption integer title:
+body body:
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-2
+border-color: $inherited.colors.cta-primary.base
+border-width.px: 1
+border-top-right-radius.px: 20
+border-bottom-left-radius.px: 20
+border-bottom-right-radius.px: 20
+padding-top.px: 43
+padding-bottom.px: 54
+padding-horizontal.px: 47
+
+
+
+-- ftd.text: 
+text: $card.body
+color: $inherited.colors.text
+role: $inherited.types.copy-large
+margin-bottom.px: 60
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 13
+background.solid: $inherited.colors.custom.three
+align-content: center
+
+-- ftd.integer: $card.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.background.step-1
+border-radius.percent: 100
+padding-vertical.px: 14
+padding-horizontal.px: 28
+background.solid: $inherited.colors.cta-primary.base
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: card
+
+-- component slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { slide.index == slide.reset }
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+
+
+-- ftd.text:
+if: {slide.body != NULL}
+text: $slide.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.image:
+src: $slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $slide.slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: slide
+
+
+
+-- component slider:
+children wrap:
+integer $active-cell:
+
+-- ftd.row:
+width: fill-container
+padding-horizontal.px: 12
+align-content: center
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 40
+padding-horizontal.px: 12
+max-width.fixed.px: 1320
+align-self: center
+
+-- ftd.image:
+if: {current-active != 1}
+src: $assets.files.static.lezgoo.right.svg
+$on-click$: $functions.decclamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.cta-primary.base
+anchor: parent
+left.px: -78
+
+-- ftd.image:
+if: {current-active == 1}
+src: $assets.files.static.lezgoo.right.svg
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.custom.three
+anchor: parent
+left.px: -78
+
+-- ftd.row:
+children: $slider.wrap
+width: fill-container
+padding-horizontal.px: 12
+
+-- end: ftd.row
+
+-- ftd.image:
+if: {current-active != 5}
+src: $assets.files.static.lezgoo.left.svg
+$on-click$: $functions.clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.cta-primary.base
+right.px: -74
+anchor: parent
+
+-- ftd.image:
+if: {current-active == 5}
+src: $assets.files.static.lezgoo.left.svg
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.custom.three
+anchor: parent
+right.px: -74
+
+
+-- end: ftd.row
+
+
+-- end: ftd.row
+
+-- end: slider
+
+
+
+
+
+
+
+
+-- component slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { slide.index == slide.reset }
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+width.fixed.px: 650
+
+
+-- ftd.text:
+if: {slide.body != NULL}
+text: $slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.image:
+src: $slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $slide.slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: slide
+
+
+
+
+
+-- component full-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children full-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { full-slide.index == full-slide.reset }
+height.fixed.px: 650
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $full-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.text: $full-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+
+
+-- ftd.text:
+if: {full-slide.body != NULL}
+text: $full-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.px: 750
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $full-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $full-slide.full-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: full-slide
+
+
+
+
+
+-- component mid-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children mid-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { mid-slide.index == mid-slide.reset }
+height.fixed.px: 650
+width: fill-container
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $mid-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 28
+max-width.fixed.percent: 70
+width: fill-container
+
+-- ftd.text: $mid-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 20
+region: h3
+width: fill-container
+max-width.fixed.percent: 70
+
+-- ftd.text:
+if: {mid-slide.body != NULL}
+text: $mid-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.percent: 70
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $mid-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $mid-slide.mid-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: mid-slide
+
+
+
+
+-- component four-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children four-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { four-slide.index == four-slide.reset }
+height.fixed.px: 650
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $four-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+width: fill-container
+
+-- ftd.text: $four-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 24
+region: h3
+width: fill-container
+
+
+-- ftd.text:
+if: {four-slide.body != NULL}
+text: $four-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.percent: 70
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $four-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $four-slide.four-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: four-slide
+
+
+
+
+
+
+
+
+
+-- component last-slide:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children last-slide-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { last-slide.index == last-slide.reset }
+height.fixed.px: 650
+width: fill-container
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.text: $last-slide.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.percent: 75
+width: fill-container
+
+-- ftd.text: $last-slide.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 28
+region: h3
+width: fill-container
+max-width.fixed.percent: 75
+
+-- ftd.text:
+if: {last-slide.body != NULL}
+text: $last-slide.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+max-width.fixed.percent: 70
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px:0
+top.px: 220
+z-index: -1 
+
+-- ftd.image:
+src: $last-slide.src
+align-self: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+children: $last-slide.last-slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: last-slide
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component header:
+optional string site-name:
+optional string site-url:
+optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
+optional string contact-txt: Get Started
+optional string contact-url: /
+pr.toc-item list sections: $sitemap.sections
+boolean $sidebar-open: false
+
+-- ftd.column:
+width: fill-container
+
+
+-- header-desktop:
+if: { ftd.device != "mobile" }
+site-name: $header.site-name
+site-url: $header.site-url
+logo: $header.logo
+contact-txt: $header.contact-txt
+contact-url: $header.contact-url
+sections: $header.sections
+
+
+-- header-mobile:
+if: { ftd.device == "mobile" }
+site-name: $header.site-name
+site-url: $header.site-url
+logo: $header.logo
+contact-txt: $header.contact-txt
+contact-url: $header.contact-url
+sections: $header.sections
+$sidebar-open: $header.sidebar-open
+
+-- end: ftd.column
+
+-- end: header
+
+
+
+
+
+
+
+-- component header-desktop:
+optional string site-name:
+optional string site-url:
+optional ftd.image-src logo: 
+optional string contact-txt:
+optional string contact-url:
+pr.toc-item list sections:
+
+
+-- ftd.row:
+width: fill-container
+padding-vertical.px: 31
+margin-left.px if { ftd.device == "mobile" }: 23
+margin-left.px if { ftd.device == "mobile" }: 23
+spacing: space-between
+max-width.fixed.px: 1296
+align-self: center
+padding-horizontal.px: 12
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image:
+if: {header-desktop.logo != NULL}
+src: $header-desktop.logo
+width: auto
+height: auto
+height.fixed.px if {ftd.device == "mobile"}: 30
+link: $header-desktop.site-url
+padding-vertical.px: 5
+
+-- ftd.text: $header-desktop.site-name
+if: {header-desktop.site-name != NULL}
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+link: $header-desktop.site-url 
+
+-- end: ftd.row
+
+-- ftd.row:
+align-self: center
+spacing.fixed.px: 34
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 42
+
+
+-- sections-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+$loop$: $header-desktop.sections as $obj
+
+-- end: ftd.row
+
+-- header-button: $header-desktop.contact-txt
+url: $header-desktop.contact-url
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: header-desktop
+
+
+
+
+
+
+-- component header-button:
+caption title:
+string url: /
+boolean $is-active: false
+
+-- ftd.row:
+
+-- ftd.row:
+background.solid: $inherited.colors.cta-primary.base
+border-color if {header-button.is-active}: $inherited.colors.cta-primary.hover
+border-radius.px: 50
+$on-mouse-enter$: $ftd.set-bool($a = $header-button.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $header-button.is-active, v = false)
+padding-vertical.px: 12
+padding-vertical.px if {ftd.device == " mobile"}: 5
+padding-horizontal.px: 35
+link: $header-button.url
+align-self: center
+
+-- ftd.text: $header-button.title
+if: {header-button.title != NULL}
+role: $inherited.types.button-large
+color: $inherited.colors.background.step-1
+white-space: nowrap
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: header-button
+
+
+
+
+
+
+
+
+
+
+-- component header-mobile:
+optional string site-name:
+optional string site-url:
+optional ftd.image-src logo:
+optional string contact-txt:
+optional string contact-url:
+pr.toc-item list sections:
+boolean $sidebar-open:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+padding-horizontal.px: 24
+padding-vertical.px: 29
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.row:
+width: fill-container 
+spacing: space-between
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image:
+if: { header-mobile.logo != NULL }
+src: $header-mobile.logo
+width: auto
+height.fixed.px: 44
+padding-vertical.px: 5
+link: $header-mobile.site-url
+
+-- ftd.text: $header-mobile.site-name
+if: { header-mobile.site-name != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+link: $header-mobile.site-url 
+
+-- end: ftd.row
+
+-- ftd.row:
+align-self: center
+padding-vertical.px: 4
+padding-horizontal.px: 12
+border-radius.px: 6
+border-color: $inherited.colors.text
+border-width.px: 1
+
+
+-- ftd.image:
+src: $assets.files.static.lezgoo.hamberger.svg
+width.fixed.px: 30
+height: auto
+align-self: center
+$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.column:
+if: {header-mobile.sidebar-open}
+
+
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 14
+
+-- sections-list: $obj.title
+url: $obj.url
+is-active: $obj.is-active
+$loop$: $header-mobile.sections as $obj
+
+-- end: ftd.column
+
+-- header-button: $header-mobile.contact-txt
+url: $header-mobile.contact-url
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: header-mobile
+
+
+
+
+-- component sections-list:
+caption title:
+optional string url: /
+boolean is-active: false
+
+-- ftd.column:
+
+-- ftd.text: $sections-list.title
+color:$inherited.colors.text-strong
+color if {sections-list.is-active}: $inherited.colors.cta-primary.base
+role: $inherited.types.label-large
+link: $sections-list.url
+width: fill-container
+white-space: nowrap
+padding-vertical.px: 8
+
+
+-- end: ftd.column
+
+-- end: sections-list
+
+
+
+
+
+
+
+
+-- component hero:
+caption title:
+body body: 
+string cta-text: 
+string cta-link:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 10
+padding-vertical.px: 97
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.px: 122
+height.fixed.px: 232
+anchor: parent
+left.px: 0
+top.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-drone.svg
+width.fixed.percent: 20
+height.fixed.percent: 30
+anchor: parent
+left.px: 0
+top.px: -45
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.px: 322
+height.fixed.px: 356
+anchor: parent
+right.px: 0
+bottom.px: 0
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.banner-astronet.svg
+width.fixed.percent: 30
+height.fixed.percent: 30
+anchor: parent
+right.px: 0
+bottom.px: -58
+
+-- ftd.column:
+max-width.fixed.px: 1320
+align-content: center
+align-self: center
+
+-- ftd.column:
+align-content: center
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 48
+left.px: 245
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 140
+left.px: -20
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+text-align: center
+width.fixed.percent if {ftd.device != "mobile"}: 55
+region: h1
+
+-- end: ftd.column
+
+-- ftd.text: 
+role: $inherited.types.copy-large
+color: $inherited.colors.custom.one
+margin-top.px: 32
+margin-top.px if {ftd.device == "mobile"}: 31
+margin-bottom.px: 8
+text-align: center
+
+$hero.body
+
+-- button: $hero.cta-text
+link: $hero.cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+
+
+-- component how-it-works:
+caption title:
+string subtitle:
+body body:
+children works-wrap:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 42
+padding-bottom.px: 80
+max-width.fixed.px: 1320
+align-self: center
+
+-- ftd.text: $how-it-works.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
+margin-bottom.px: 41
+
+-- ftd.text: $how-it-works.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+region: h2
+margin-bottom.px: 28
+
+-- ftd.text:
+text: $how-it-works.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 20
+width.fixed.percent: 65
+
+-- ftd.column:
+children: $how-it-works.works-wrap
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: how-it-works
+
+
+
+
+
+
+
+
+
+
+-- component works-cell:
+caption title:
+integer number:
+ftd.image-src left-src:
+ftd.image-src right-src:
+string top-cell:
+string bottom-cell:
+optional integer index:
+optional integer reset:
+
+-- ftd.row:
+if: { works-cell.index == works-cell.reset }
+width: fill-container
+max-width.fixed.px: 1320
+
+-- ftd.image:
+src: $works-cell.left-src
+padding-horizontal.px: 12
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 12
+
+-- ftd.row:
+width: fill-container
+align-content: center
+
+-- ftd.text: Step
+role: $inherited.types.fine-print
+color: $inherited.colors.custom.four
+
+-- ftd.integer: $works-cell.number
+role: $inherited.types.fine-print
+color: $inherited.colors.custom.four
+
+-- end: ftd.row
+
+-- ftd.text: $works-cell.title
+role: $inherited.types.fine-print
+color: $inherited.colors.custom.four
+margin-bottom.px: 10
+text-align: center
+
+-- ftd.column:
+anchor: parent
+top.percent: 24
+z-index: -1
+width.fixed.px: 300
+align-content: center
+align-self: center
+
+-- ftd.image:
+width: fill-container
+src: $assets.files.static.lezgoo.how-it-works.svg
+align-self: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 85
+align-content: center
+min-width.fixed.px: 300
+
+-- ftd.text: $works-cell.top-cell
+role: $inherited.types.blockquote
+color: $inherited.colors.text-strong
+padding-vertical.px: 13
+padding-horizontal.px: 17
+width.fixed.percent: 100
+margin-left.percent: 24
+
+-- ftd.text: $works-cell.bottom-cell
+role: $inherited.types.blockquote
+color: $inherited.colors.background.step-1
+padding-vertical.px: 13
+padding-horizontal.px: 17
+width.fixed.percent: 100
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $works-cell.right-src
+padding-horizontal.px: 12
+align-self: center
+
+-- end: ftd.row
+
+-- end: works-cell
+
+
+
+
+
+
+
+
+
+-- component footer:
+ftd.image-src logo: https://admint.io/assets/images/admint-logo-footer.svg
+footer-link list links: $footer-links
+social-icon list icons: $social-icons
+ftd.image-src bg-image: https://admint.io/footer-hand-thumb.48e6e2ea052bb6cf0beb.svg
+
+-- ftd.column:
+colors: $cs.main
+types: $typo.types
+width: fill-container
+background.solid: green
+align-content: center
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+max-width.fixed.px: 1320
+
+-- ftd.column:
+align-self: end
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+align-self: end
+
+-- ftd.row:
+margin-top.px: 48
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 80
+align-self: end
+
+-- ftd.image:
+$loop$: $footer.icons as $obj
+src: $obj.src
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 0
+
+-- end: ftd.column
+
+
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 16
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+
+-- ftd.column:
+margin-top.px: 48
+padding-left.px: 16
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.row:
+margin-top.px: 80
+padding-left.px: 16
+
+-- ftd.image:
+margin-right.px: 16
+$loop$: $footer.icons as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 32
+width.fixed.px: 200
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+-- record footer-link:
+caption title:
+string link: /
+
+
+-- footer-link list footer-links:
+
+-- footer-link: About Us
+link: /
+
+-- footer-link: Terms & Condition
+link: /
+
+-- footer-link: Privacy Policy
+link: /
+
+-- footer-link: Pricing
+link: /
+
+-- footer-link: Learn
+link: /
+
+-- end: footer-links
+
+
+
+
+-- record social-icon:
+ftd.image-src src:
+string link: /
+
+-- social-icon list social-icons:
+
+-- social-icon:
+link: /
+src: https://admint.io/instagram.6dfc5cafd7516572a269.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/linkedin.5c208bfde7ff079b9f35.svg
+
+-- social-icon:
+link: /
+src: https://admint.io/twitter.d3071d3132f19afb426e.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
+
+-- end: social-icons
+
+
+
+
+
+
+
+
+
+-- component signup-form:
+caption title:
+string input-label1:
+string input-warning1: Name is required
+string input-label2:
+string input-label3:
+string input-warning3: Organization is required
+string input-label4:
+string input-warning4: Email is requied
+role-record list roles: $roles
+string cta-text:
+integer width: 1300
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+padding-vertical.px: 50
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $signup-form.width
+
+-- ftd.column:
+background.solid: white
+max-width.fixed.px: 850
+width: fill-container
+padding.px: 50
+z-index: 1
+
+-- ftd.text: CLOSE
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+
+-- ftd.text: $signup-form.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+width.fixed.percent: 80
+
+-- ftd.text: $signup-form.input-label1
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 30
+
+-- ftd.text-input:
+id: input-field1
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning1
+id: warning1
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label2
+margin-top.px: 16
+role: $inherited.types.source-code
+color: $inherited.colors.text
+
+-- ftd.text-input:
+id: input-field2
+padding.px: 6
+width.fixed.percent: 100
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label3
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field3
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning3
+id: warning3
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text: $signup-form.input-label4
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field4
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- end: ftd.text-input
+
+-- ftd.text: $signup-form.input-warning4
+id: warning4
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
+
+-- cta-button: $signup-form.cta-text
+bg-color: $inherited.colors.custom.four
+padding-horizontal: 41
+padding-vertical: 11
+marginTop: 2
+text-color: white
+$on-click$: $functions.formValidate()
+
+-- ftd.text: 
+id: label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+classes: markdown
+width.fixed.percent: 30
+text-align: end
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+if: { ftd.device == "desktop" }
+src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
+anchor: parent
+right.px: 0
+bottom.px: 50
+
+-- end: ftd.column
+
+-- end: signup-form
+
+
+
+-- record role-record:
+caption title:
+
+
+-- role-record list roles:
+
+-- role-record: Advertiser
+
+-- role-record: Agency
+
+-- role-record: Brand Owner
+
+-- role-record: Executive
+
+-- role-record: SMB
+
+-- role-record: Startup
+
+-- end: roles
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 30
+optional string link:
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+margin-top.rem: $cta-button.marginTop
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button.bg-color
+border-radius.px: $cta-button.border-radius
+border-color: $cta-button.border-color
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-large
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
+
+
+
+
+
+
+
+
+-- component tabs-wrapper:
+children child:
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs-wrapper.width
+children: $tabs-wrapper.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs-wrapper
+
+
+
+
+
+
+
+
+
+-- component tabs:
+integer active-tab-index: 0
+tab-record list tabs-list: $tabs-list
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 32
+padding-horizontal.px: 20
+padding-vertical.px: 10
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs.width
+border-width.px: 2
+padding.px: 16
+border-color: #5f5f5f
+
+-- ftd.row:
+width: fill-container
+align-content: center
+wrap: true
+
+-- ftd.text: $obj.title
+$loop$: $tabs.tabs-list as $obj
+border-color: $inherited.colors.custom.four
+border-radius.px: 50
+border-width.px: 2
+padding-vertical.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.four
+role: $inherited.types.button-large
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 2
+right.px: 12
+background.solid: #5f5f5f
+width.fixed.percent if { ftd.device == "desktop" }: 96
+width.fixed.percent if { ftd.device == "mobile" }: 87
+height.fixed.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 10
+right.px: 12
+background.solid: #5f5f5f
+height.fixed.percent: 80
+width.fixed.px: 8
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs
+
+
+
+
+
+
+
+
+
+-- component faq:
+optional caption title:
+children child:
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 70
+
+-- ftd.column:
+max-width.fixed.px: $faq.width
+width: fill-container
+padding.px if { ftd.device == "mobile" }: $mobileCompPadd
+align-self: center
+
+-- ftd.text: $faq.title
+if: { faq.title != NULL }
+margin-bottom.px: 70
+align-self: center
+role: $inherited.types.heading-medium
+
+-- ftd.column:
+width: fill-container
+children: $faq.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: Hi
+body body:
+boolean $open: false
+ftd.image-src src1: $assets.files.static.faq.down.svg
+ftd.image-src src2: $assets.files.static.faq.up.svg
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 24
+background.solid: $inherited.colors.background.step-1
+align-content: center
+classes: markdown
+
+-- ftd.row:
+background.solid: #eeeeee80
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 16
+padding-vertical.px: 13
+$on-click$: $ftd.toggle($a = $question-accordion.open)
+
+-- ftd.text: $question-accordion.title
+role: $inherited.types.button-large
+color if { question-accordion.open }: $inherited.colors.custom.four
+color if { !question-accordion.open }: $inherited.colors.custom.one
+align-self: center
+
+-- ftd.image:
+if: { !question-accordion.open }
+src: $question-accordion.src1
+width.fixed.px: 24
+
+-- ftd.image:
+if: { question-accordion.open }
+src: $question-accordion.src2
+width.fixed.px: 24
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { question-accordion.open }
+padding-vertical.px: 16
+width: fill-container
+padding.px: 16
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+
+$question-accordion.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
+
+
+
+
+
+
+
+-- record tab-record:
+caption title:
+boolean active:
+
+-- tab-record list tabs-list:
+
+-- tab-record: Web 3.0 Basics
+active: true
+
+-- tab-record: Brand Campaign
+active: false
+
+-- tab-record: Advertising & Web 3.0
+active: false
+
+-- end: tabs-list
+
+
+
+
+
+
+
+
+
+
+-- component cta-button-2:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 50
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+boolean active: false
+
+-- ftd.column:
+align-self if { cta-button-2.align-center }: center
+margin-top.rem: $cta-button-2.marginTop
+
+-- ftd.row:
+if: { !cta-button-2.medium }
+width.fixed.px if { cta-button-2.width != NULL}: $cta-button-2.width
+spacing.fixed.px: 10
+link if { cta-button-2.link != NULL }: $cta-button-2.link
+background.solid if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button-2.bg-color
+border-radius.px: $cta-button-2.border-radius
+border-color: $cta-button-2.border-color
+border-width.px if { $cta-button-2.active }: $cta-button-2.border-width
+padding-vertical.px: $cta-button-2.padding-vertical
+padding-horizontal.px: $cta-button-2.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button-2.title
+role: $inherited.types.button-large
+color if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.text
+color if { !cta-button-2.active }: $inherited.colors.custom.one
+color if { cta-button-2.active }: $inherited.colors.custom.four
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button-2.src != NULL }
+src: $cta-button-2.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button-2

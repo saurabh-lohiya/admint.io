@@ -1,10 +1,9 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/common/fonts
--- import: fifthtry.github.io/admint.io as main
 -- import: fifthtry.github.io/admint.io/header
 -- import: fifthtry.github.io/admint.io/lib
 
--- main.page:
+-- lib.page:
 
 -- header.header:
 
@@ -158,4 +157,4 @@ leader, professional, or student; how much
 
 -- end: lib.post-list
 
--- end: main.page
+-- end: lib.page
