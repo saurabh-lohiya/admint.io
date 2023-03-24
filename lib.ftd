@@ -1735,7 +1735,7 @@ ftd.image-src bg-image: https://admint.io/footer-hand-thumb.48e6e2ea052bb6cf0beb
 colors: $cs.main
 types: $typo.types
 width: fill-container
-background.solid: green
+background.solid: $inherited.colors.cta-primary.base
 align-content: center
 
 -- ftd.column:
@@ -1750,15 +1750,17 @@ padding-vertical.px: 53
 -- ftd.image:
 src: $footer.logo
 align-self: end
+link: index.html
 
 -- ftd.row:
 margin-top.px: 48
 
 -- ftd.text: $obj.title
 $loop$: $footer.links as $obj
-role: $inherited.types.heading-tiny
-color: $inherited.colors.text
+role: $inherited.types.label-large
+color: $inherited.colors.cta-primary.text
 padding-left.px: 16
+link: $obj.link
 
 -- end: ftd.row
 
@@ -1770,6 +1772,7 @@ align-self: end
 $loop$: $footer.icons as $obj
 src: $obj.src
 padding-left.px: 16
+cursor: pointer
 
 -- end: ftd.row
 
@@ -1851,19 +1854,19 @@ string link: /
 -- footer-link list footer-links:
 
 -- footer-link: About Us
-link: /
+link: about/
 
 -- footer-link: Terms & Condition
-link: /
+link: terms-conditions/
 
 -- footer-link: Privacy Policy
-link: /
+link: privacy-policy/
 
 -- footer-link: Pricing
 link: /
 
 -- footer-link: Learn
-link: /
+link: learn/
 
 -- end: footer-links
 
