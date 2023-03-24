@@ -1,174 +1,103 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/common/fonts
-
-
-
-
-
-
-
-
-
-
--- component button:
-caption title:
-optional string link: 
-
--- ftd.column:
-
--- ftd.text: $button.title
-if: {button.link != NULL}
-role: $inherited.types.button-large
-color: $inherited.colors.background.step-1
-background.solid: $inherited.colors.cta-primary.base
-padding-horizontal.px: 41
-padding-vertical.px: 11
-link: $button.link
-margin-top.px: 56
-margin-top.px if {ftd.device == "mobile"}: 55
-margin-bottom.px: 53
-border-radius.px: 50
-
--- ftd.text: $button.title
-if: {button.link == NULL}
-role: $inherited.types.button-large
-color: $inherited.colors.background.step-1
-background.solid: $inherited.colors.cta-primary.base
-padding-horizontal.px: 41
-padding-vertical.px: 11
-margin-top.px: 56
-margin-top.px if {ftd.device == "mobile"}: 55
-margin-bottom.px: 53
-border-radius.px: 50
-
--- end: ftd.column
-
--- end: button
-
-
-
-
-
-
-
-
-
-
--- component advertising:
-caption title:
-string tagline: 
-children cards:
-
--- ftd.column:
-width: fill-container
-background.solid: $inherited.colors.background.base
-align-content: center
-padding-vertical.px: 60
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: 1320
-padding-horizontal.px: 12
-padding-vertical.px: 12
-align-content: left
-
--- ftd.text: $advertising.tagline
-role: $inherited.types.label-large
-color: $inherited.colors.custom.two
-margin-bottom.px: 41
-
--- ftd.text: $advertising.title
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 86
-
--- end: ftd.column
-
--- ftd.row:
-if: { ftd.device != "mobile" }
-width: fill-container
-max-width.fixed.px: 1320
-padding-horizontal.px: 12
-children: $advertising.cards
-spacing.fixed.px: 24
-wrap: true
-
--- end: ftd.row
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-width: fill-container
-padding-horizontal.px: 12
-children: $advertising.cards
-spacing.fixed.px: 20
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: advertising
-
-
-
-
-
-
-
-
-
-
--- component ad-card: 
-caption title: 
-body body:
-ftd.image-src src:
-boolean $hover-me: false
-
--- ftd.column:
-width.fixed.percent if { ftd.device != "mobile" }: 49
-width.fixed.percent if { ftd.device == "mobile" }: 100
-$on-mouse-enter$: $ftd.set-bool($a = $ad-card.hover-me, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $ad-card.hover-me, v = false)
-border-bottom-width.px if {$ad-card.hover-me}: 11
-border-width.px: 1
-border-color: $inherited.colors.custom.one
-border-bottom-color if {$ad-card.hover-me}: #005fbb
-margin-top.px if {$ad-card.hover-me}: -15
-background.solid: $inherited.colors.background.step-1
-
--- ftd.image: 
-src: $ad-card.src
-max-width.fixed.percent: 100
-
--- ftd.column:
-width.fixed.percent: 80
-padding.px: 35
-
--- ftd.text: $ad-card.title
-role: $fonts.size-29
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-$ad-card.body
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ad-card
-
-
-
-
-
-
-
-
-
-
+-- import: fifthtry.github.io/admint.io as main
+-- import: fifthtry.github.io/admint.io/header
+
+-- main.page:
+
+-- header.header:
+
+-- post-list:
+
+-- post-list.articles:
+
+-- article-item: Lorem Ipsum is simply dummy text
+thumbnail: $assets.files.static.blog.StockSnap.jpeg
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+-- article-item: Lorem Ipsum is simply dummy text
+thumbnail: $assets.files.static.blog.StockSnap.jpeg
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+-- end: post-list.articles
+
+-- post-list.side-bar:
+
+-- sidebar: Recent Posts
+
+-- recent-post: Lorem Ipsum is simply dummy text
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+-- recent-post: Lorem Ipsum is simply dummy text
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+-- end: sidebar
+
+-- end: post-list.side-bar
+
+-- end: post-list
+
+-- end: main.page
 
 
 

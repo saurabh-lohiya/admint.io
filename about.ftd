@@ -3,32 +3,34 @@
 -- import: fifthtry.github.io/admint.io as main
 -- import: fifthtry.github.io/admint.io/header
 
-
 -- main.page:
 
 -- header.header:
 
-
-
 -- about-us: About AdMint
 image: $assets.files.static.about-us.about-us.svg
 
-AdMint happened out of curiosity. Pure & simple.
+-- about-us.body:
 
+AdMint happened out of curiosity. Pure & simple.
 
 A mutual interest in the weird, wonderful world of web 3.0, & a penchant for
 AdTech is what got Jay & Harish connect with each other in a hackathon. A few
 months & lot of experiments on, they felt it was time they consolidate all
 their findings into a product. That really was the beginning.
 
-
 With AdMint our intention is provide necessary starter-kits for brands &
 agencies to successfully navigate the mysterious unknowns of web 3.0. AdMint's
 long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 
+-- about-us.our-team:
+
+-- our-team: Our Team.
+members-list: $functions.members
+
+-- end: about-us.our-team
 
 -- end: main.page
-
 
 
 
@@ -42,7 +44,8 @@ long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 -- component about-us:
 caption title:
 body body: 
-optional ftd.image-src image: 
+optional ftd.image-src image:
+children our-team: 
 
 -- ftd.column:
 width: fill-container
@@ -55,19 +58,24 @@ padding-horizontal.px: 12
 padding-vertical.px: 12
 
 -- about-us-desktop: $about-us.title
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 body: $about-us.body
 src: $about-us.image
 
 -- about-us-mobile: $about-us.title
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 body: $about-us.body
 src: $about-us.image
 
 -- end: ftd.column
 
--- our-team: Our Team.
-members-list: $functions.members
+-- ftd.column:
+width: fill-container
+children: $about-us.our-team
+background.solid: $inherited.colors.background.base
+align-content: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -86,7 +94,6 @@ members-list: $functions.members
 caption title:
 body body: 
 optional ftd.image-src src:
-
 
 -- ftd.row:
 width: fill-container
@@ -149,7 +156,6 @@ margin-top.px: 0
 caption title:
 body body: 
 optional ftd.image-src src:
-
 
 -- ftd.column:
 width: fill-container
@@ -227,37 +233,37 @@ width: fill-container
 min-height.fixed.px: 244
 
 -- ftd.image: 
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 src: $assets.files.static.about-us.our-team.svg
 anchor: parent
 right.px: 22
 top.px: -16
 
 -- ftd.image: 
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 src: $assets.files.static.about-us.our-team.svg
 anchor: parent
 right.px: 0
 top.px: 0
 
 -- ftd.text: $our-team.title
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 188
 margin-left.px: 2
 
 -- ftd.text: $our-team.title
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 260
-margin-left.px: 2
+margin-left.px: 12
 
 -- end: ftd.column
 
 -- ftd.row:
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
@@ -271,7 +277,7 @@ link: $obj.link
 -- end: ftd.row
 
 -- ftd.column:
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
@@ -317,12 +323,12 @@ padding.px: 20
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image:
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 src: $member-card.avatar
 width.fixed.px: 376
 
 -- ftd.image:
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 src: $member-card.avatar
 width: fill-container
 

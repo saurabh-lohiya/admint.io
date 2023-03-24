@@ -1,6 +1,13 @@
 -- import: fifthtry.github.io/admint.io/assets
 
 
+-- void globalEvent():
+js: $assets.files.functions.js
+
+loadWindow();
+
+
+
 -- void clamp(a,by,min,max):
 integer $a:
 integer by: 1
@@ -19,7 +26,7 @@ integer min: 0
 integer max: 5
 
 
-a = (((a + min) - by) % (max - min)) + min
+a = (((a - min) - by) % (max - min)) + min
 
 
 
