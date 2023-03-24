@@ -7,8 +7,6 @@
 
 -- lib.page:
 
--- lib.header:
-
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
 cta-text: Get Started
 cta-link: index.html
@@ -39,37 +37,34 @@ reset: $current-active
 -- end: lib.slide
 
 -- lib.full-slide: WHY ADMINT?
-subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis
+subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
 src: $assets.files.static.lezgoo.structured.svg
-index: 2
+index: 2 
 reset: $current-active
 
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
 -- lib.mid-slide: WHY ADMINT?
-subtitle: NFTs are our key media vehicle to run  campaigns.
-You can even mint your own! 
-src: $assets.files.static.lezgoo.keymedia.svg
-index: 3
+subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
+src: $assets.files.static.lezgoo.keymedia.svg 
+index: 3 
 reset: $current-active
 
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
 -- lib.four-slide: WHY ADMINT?
-subtitle: We help you distribute, validate & track  
-your NFTs via custom tools & templates. A one-stop ad stack!
+subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
 src: $assets.files.static.lezgoo.ditribut.svg
-index: 4
+index: 4 
 reset: $current-active
 
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
 -- lib.last-slide: WHY ADMINT?
-subtitle: Analyze & consolidate the strategy that works 
-best for your brand! Run your web 3.0 experiments. 
+subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.lezgoo.analyze.svg
 index: 5
 reset: $current-active
@@ -135,8 +130,7 @@ number: 1
 right-src: $assets.files.static.lezgoo.planning-right-img.svg 
 left-src: $assets.files.static.lezgoo.planning-left-img.svg
 top-cell: You choose your brand’s campaign objective 
-bottom-cell: AdMint provides relevant web 3.0 context on 
-the campaign execution.
+bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
 index: 1
 reset: $current-cell
 

@@ -540,15 +540,40 @@ color: $inherited.colors.cta-primary.text
 
 
 -- component page:
+optional string site-name:
+optional string site-url: /
+optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
+optional string contact-txt: Get Started
+optional string contact-url: /
+pr.toc-item list sections: $sitemap.sections
+boolean $sidebar-open: false
 children wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+
+-- header:
+site-name: $page.site-name
+site-url: $page.site-url
+logo: $page.logo
+contact-txt: $page.contact-txt
+contact-url: $page.contact-url
+sections: $page.sections
+$sidebar-open: $page.sidebar-open
+
+-- end: ftd.column
 
 -- ftd.column:
 children: $page.wrap
 width: fill-container
 $on-mouse-enter$: $functions.globalEvent()
 
+-- end: ftd.column
 
 -- end: ftd.column
 

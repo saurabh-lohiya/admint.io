@@ -1,11 +1,8 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/functions
--- import: fifthtry.github.io/admint.io as main
--- import: fifthtry.github.io/admint.io/header
+-- import: fifthtry.github.io/admint.io/lib
 
--- main.page:
-
--- header.header:
+-- lib.page:
 
 -- about-us: About AdMint
 image: $assets.files.static.about-us.about-us.svg
@@ -30,7 +27,7 @@ members-list: $functions.members
 
 -- end: about-us.our-team
 
--- end: main.page
+-- end: lib.page
 
 
 
