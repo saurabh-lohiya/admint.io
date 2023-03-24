@@ -189,8 +189,11 @@ role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
 classes: markdown
-width.fixed.percent: 30
+width.fixed.percent if { ftd.device == "desktop" }: 30
+width.fixed.percent if { ftd.device == "mobile" }: 80
 text-align: end
+text-align if { ftd.device == "mobile" }: center
+margin-top.px: 16
 
 Thanks for your interest...We will update you
 
@@ -327,3 +330,120 @@ align-self: center
 ;;-- drodown.options: Option 5
 ;;
 ;;-- end: option-list
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;-- string $selected-item: Option 1
+;;
+;;
+;;-- record options:
+;;caption title:
+;;
+;;
+;;-- options list option-list:
+;;
+;;-- options: Option 1
+;;
+;;-- options: Option 2
+;;
+;;-- options: Option 3
+;;
+;;-- options: Option 4
+;;
+;;-- options: Option 5
+;;
+;;-- end: option-list
+;;
+;;
+;;
+;;
+;;
+;;-- component dropdown:
+;;caption title: $selected-item
+;;boolean show-options: true
+;;options list options-list:
+;;
+;;-- ftd.column:
+;;width: fill-container
+;;
+;;-- ftd.row:
+;;background.solid: $inherited.colors.background.base
+;;padding-vertical.px: 11
+;;padding-horizontal.px: 14
+;;border-radius.px: 30
+;;min-width.fixed.px: 152
+;;$on-click$: $ftd.toggle($a = $dropdown.show-options)
+;;border-color: $inherited.colors.border
+;;border-width.px: 1
+;;
+;;
+;;-- ftd.text: $selected-item
+;;role: $inherited.types.button-large
+;;color: $inherited.colors.accent.primary
+;;padding-right.px: 52
+;;min-width.fixed.px: 112
+;;
+;;-- ftd.image:
+;;src: https://fifthtry.github.io/fastn-ui/-/fifthtry.github.io/fastn-ui/static/footer/down-dark.svg
+;;width.fixed.px: 24
+;;height: auto
+;;align-self: center
+;;
+;;-- ftd.column:
+;;if: { $dropdown.show-options }
+;;
+;;-- options-block: $dropdown.title
+;;options-list: $dropdown.options-list
+;;
+;;-- end: ftd.column
+;;
+;;-- end: ftd.row
+;;
+;;-- end: ftd.column
+;;
+;;-- end: dropdown
+;;
+;;
+;;
+;;
+;;-- component options-block:
+;;caption title:
+;;options list options-list:
+;;boolean $mouse-in: false
+;;
+;;-- ftd.column:
+;;background.solid: $inherited.colors.background.base
+;;padding-vertical.px: 11
+;;padding-horizontal.px: 14
+;;anchor: parent
+;;top.px: 38
+;;right.px: 0
+;;min-width.fixed.px: 152
+;;spacing.fixed.px: 20
+;;border-color: $inherited.colors.border
+;;border-width.px: 1
+;;border-radius.px: 10
+;;
+;;-- ftd.column:
+;;spacing.fixed.px: 24
+;;
+;;-- ftd.text: $obj.title
+;;$loop$: $options-block.options-list as $obj
+;;role: $inherited.types.copy-regular
+;;color: $inherited.colors.accent.primary
+;;padding-right.px: 52
+;;min-width.fixed.px: 112
+;;$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+;;;;$on-click$: $ftd.enable-dark-mode()
+;;
+;;-- end: ftd.column
+;;
+;;-- end: ftd.column
+;;
+;;-- end: options-block
