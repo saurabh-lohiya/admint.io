@@ -2482,3 +2482,195 @@ align-self: center
 -- end: ftd.column
 
 -- end: cta-button-2
+
+
+
+
+
+
+
+
+
+
+-- component lezgoo:
+caption title:
+body body:
+string body1:
+string cta-label:
+string cta-url:
+ftd.image-src image:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1320
+align-self: center
+margin-top.px: 60
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $lezgoo.image
+
+-- ftd.row:
+spacing.fixed.percent: 10
+width: fill-container
+align-content: center 
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $lezgoo.image
+
+-- ftd.column:
+padding.px if { ftd.device == "mobile" }: 48
+
+-- ftd.row:
+margin-bottom.px: 24
+wrap: true
+
+-- ftd.text: $lezgoo.title
+role: $inherited.types.heading-small
+color: $inherited.colors.cta-primary.base
+
+-- ftd.text: 
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+padding-left.px: 10
+
+$lezgoo.body1
+
+-- ftd.text: 
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+$lezgoo.body
+
+-- end: ftd.row
+
+-- ftd.text: $lezgoo.cta-label
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+border-radius.px: 50
+color: $inherited.colors.cta-primary.text
+link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: lezgoo
+
+
+
+
+
+
+
+
+
+
+
+
+-- component sneak-peak:
+caption title:
+ftd.image-src image:
+ftd.image-src bg-image:
+integer width: 1320
+string cta-text:
+string cta-url:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.base
+padding-vertical.px: 60
+
+-- ftd.column:
+width: fill-container
+align-content: center
+max-width.fixed.px: $sneak-peak.width
+
+-- ftd.column:
+width if { ftd.device != "mobile" }: fill-container
+align-content: center
+margin-horizontal.px if { ftd.device == "mobile" }: 50
+
+-- ftd.image:
+src: $sneak-peak.image
+border-color: $inherited.colors.custom.one
+border-width.px if { ftd.device != "mobile" }: 20
+border-width.px if { ftd.device == "mobile" }: 11
+border-radius.px: 44
+width.fixed.percent: 100
+max-width.fixed.px: 1020
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+top.percent: 55
+
+-- ftd.text: $sneak-peak.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+width.fixed.px: 750
+margin-left.rem: 5
+anchor: parent
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $sneak-peak.bg-image
+align-self: end
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+
+-- ftd.image:
+src: $sneak-peak.bg-image
+align-self: end
+width.fixed.percent: 100
+
+-- ftd.column:
+margin-horizontal.px: 12
+margin-vertical.px: 32
+
+-- ftd.text: $sneak-peak.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+align-self: start
+margin-left.rem if { ftd.device != "mobile" }: 5
+margin-left.px if { ftd.device == "mobile" }: 12
+
+-- ftd.text: $sneak-peak.cta-text
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+border-radius.px: 50
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.text
+link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: sneak-peak
+
+
+
