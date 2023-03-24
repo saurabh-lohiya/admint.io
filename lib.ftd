@@ -550,7 +550,7 @@ color: $inherited.colors.cta-primary.text
 optional string site-name:
 optional string site-url: /
 optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
-optional string contact-txt: Get Started
+optional string contact-txt: Get Started🚧
 optional string contact-url: /
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
@@ -1194,10 +1194,10 @@ spacing.fixed.px: 24
 
 -- component header:
 optional string site-name:
-optional string site-url:
+optional string site-url: index.html
 optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
-optional string contact-txt: Get Started
-optional string contact-url: /
+optional string contact-txt: Get Started🚧
+optional string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
 
@@ -1862,7 +1862,7 @@ link: terms-conditions/
 -- footer-link: Privacy Policy
 link: privacy-policy/
 
--- footer-link: Pricing
+-- footer-link: Pricing🚧
 link: /
 
 -- footer-link: Learn
