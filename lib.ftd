@@ -6,6 +6,12 @@
 -- import: fastn/processors as pr
 
 
+
+
+
+-- integer $active-tab: 0
+-- integer $mobileCompPadd: 20
+
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
 
@@ -574,6 +580,16 @@ width: fill-container
 $on-mouse-enter$: $functions.globalEvent()
 
 -- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+
+-- footer:
+
+-- end: footer
+
+-- end: ftd.column
+
 
 -- end: ftd.column
 
@@ -1699,3 +1715,770 @@ align-self: center
 -- end: ftd.row
 
 -- end: works-cell
+
+
+
+
+
+
+
+
+
+-- component footer:
+ftd.image-src logo: https://admint.io/assets/images/admint-logo-footer.svg
+footer-link list links: $footer-links
+social-icon list icons: $social-icons
+ftd.image-src bg-image: https://admint.io/footer-hand-thumb.48e6e2ea052bb6cf0beb.svg
+
+-- ftd.column:
+colors: $cs.main
+types: $typo.types
+width: fill-container
+background.solid: green
+align-content: center
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+max-width.fixed.px: 1320
+
+-- ftd.column:
+align-self: end
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+align-self: end
+
+-- ftd.row:
+margin-top.px: 48
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 80
+align-self: end
+
+-- ftd.image:
+$loop$: $footer.icons as $obj
+src: $obj.src
+padding-left.px: 16
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 0
+
+-- end: ftd.column
+
+
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 16
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+padding-vertical.px: 53
+
+-- ftd.image:
+src: $footer.logo
+
+-- ftd.column:
+margin-top.px: 48
+padding-left.px: 16
+
+-- ftd.text: $obj.title
+$loop$: $footer.links as $obj
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.row:
+margin-top.px: 80
+padding-left.px: 16
+
+-- ftd.image:
+margin-right.px: 16
+$loop$: $footer.icons as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $footer.bg-image
+anchor: parent
+bottom.px: 0
+left.px: 32
+width.fixed.px: 200
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+-- record footer-link:
+caption title:
+string link: /
+
+
+-- footer-link list footer-links:
+
+-- footer-link: About Us
+link: /
+
+-- footer-link: Terms & Condition
+link: /
+
+-- footer-link: Privacy Policy
+link: /
+
+-- footer-link: Pricing
+link: /
+
+-- footer-link: Learn
+link: /
+
+-- end: footer-links
+
+
+
+
+-- record social-icon:
+ftd.image-src src:
+string link: /
+
+-- social-icon list social-icons:
+
+-- social-icon:
+link: /
+src: https://admint.io/instagram.6dfc5cafd7516572a269.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/linkedin.5c208bfde7ff079b9f35.svg
+
+-- social-icon:
+link: /
+src: https://admint.io/twitter.d3071d3132f19afb426e.svg
+
+-- social-icon: 
+link: /
+src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
+
+-- end: social-icons
+
+
+
+
+
+
+
+
+
+-- component signup-form:
+caption title:
+string input-label1:
+string input-warning1: Name is required
+string input-label2:
+string input-label3:
+string input-warning3: Organization is required
+string input-label4:
+string input-warning4: Email is requied
+role-record list roles: $roles
+string cta-text:
+integer width: 1300
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+padding-vertical.px: 50
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $signup-form.width
+
+-- ftd.column:
+background.solid: white
+max-width.fixed.px: 850
+width: fill-container
+padding.px: 50
+z-index: 1
+
+-- ftd.text: CLOSE
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+
+-- ftd.text: $signup-form.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+width.fixed.percent: 80
+
+-- ftd.text: $signup-form.input-label1
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 30
+
+-- ftd.text-input:
+id: input-field1
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning1
+id: warning1
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label2
+margin-top.px: 16
+role: $inherited.types.source-code
+color: $inherited.colors.text
+
+-- ftd.text-input:
+id: input-field2
+padding.px: 6
+width.fixed.percent: 100
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label3
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field3
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning3
+id: warning3
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text: $signup-form.input-label4
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field4
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- end: ftd.text-input
+
+-- ftd.text: $signup-form.input-warning4
+id: warning4
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
+
+-- cta-button: $signup-form.cta-text
+bg-color: $inherited.colors.custom.four
+padding-horizontal: 41
+padding-vertical: 11
+marginTop: 2
+text-color: white
+$on-click$: $functions.formValidate()
+
+-- ftd.text: 
+id: label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+classes: markdown
+width.fixed.percent: 30
+text-align: end
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+if: { ftd.device == "desktop" }
+src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
+anchor: parent
+right.px: 0
+bottom.px: 50
+
+-- end: ftd.column
+
+-- end: signup-form
+
+
+
+-- record role-record:
+caption title:
+
+
+-- role-record list roles:
+
+-- role-record: Advertiser
+
+-- role-record: Agency
+
+-- role-record: Brand Owner
+
+-- role-record: Executive
+
+-- role-record: SMB
+
+-- role-record: Startup
+
+-- end: roles
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 30
+optional string link:
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+margin-top.rem: $cta-button.marginTop
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button.bg-color
+border-radius.px: $cta-button.border-radius
+border-color: $cta-button.border-color
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-large
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
+
+
+
+
+
+
+
+
+-- component tabs-wrapper:
+children child:
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs-wrapper.width
+children: $tabs-wrapper.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs-wrapper
+
+
+
+
+
+
+
+
+
+-- component tabs:
+integer active-tab-index: 0
+tab-record list tabs-list: $tabs-list
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 32
+padding-horizontal.px: 20
+padding-vertical.px: 10
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $tabs.width
+border-width.px: 2
+padding.px: 16
+border-color: #5f5f5f
+
+-- ftd.row:
+width: fill-container
+align-content: center
+wrap: true
+
+-- ftd.text: $obj.title
+$loop$: $tabs.tabs-list as $obj
+border-color: $inherited.colors.custom.four
+border-radius.px: 50
+border-width.px: 2
+padding-vertical.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.four
+role: $inherited.types.button-large
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 2
+right.px: 12
+background.solid: #5f5f5f
+width.fixed.percent if { ftd.device == "desktop" }: 96
+width.fixed.percent if { ftd.device == "mobile" }: 87
+height.fixed.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+bottom.px: 10
+right.px: 12
+background.solid: #5f5f5f
+height.fixed.percent: 80
+width.fixed.px: 8
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tabs
+
+
+
+
+
+
+
+
+
+-- component faq:
+optional caption title:
+children child:
+integer width: 1320
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 70
+
+-- ftd.column:
+max-width.fixed.px: $faq.width
+width: fill-container
+padding.px if { ftd.device == "mobile" }: $mobileCompPadd
+align-self: center
+
+-- ftd.text: $faq.title
+if: { faq.title != NULL }
+margin-bottom.px: 70
+align-self: center
+role: $inherited.types.heading-medium
+
+-- ftd.column:
+width: fill-container
+children: $faq.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: Hi
+body body:
+boolean $open: false
+ftd.image-src src1: $assets.files.static.faq.down.svg
+ftd.image-src src2: $assets.files.static.faq.up.svg
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 24
+background.solid: $inherited.colors.background.step-1
+align-content: center
+classes: markdown
+
+-- ftd.row:
+background.solid: #eeeeee80
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 16
+padding-vertical.px: 13
+$on-click$: $ftd.toggle($a = $question-accordion.open)
+
+-- ftd.text: $question-accordion.title
+role: $inherited.types.button-large
+color if { question-accordion.open }: $inherited.colors.custom.four
+color if { !question-accordion.open }: $inherited.colors.custom.one
+align-self: center
+
+-- ftd.image:
+if: { !question-accordion.open }
+src: $question-accordion.src1
+width.fixed.px: 24
+
+-- ftd.image:
+if: { question-accordion.open }
+src: $question-accordion.src2
+width.fixed.px: 24
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { question-accordion.open }
+padding-vertical.px: 16
+width: fill-container
+padding.px: 16
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+
+$question-accordion.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
+
+
+
+
+
+
+
+-- record tab-record:
+caption title:
+boolean active:
+
+-- tab-record list tabs-list:
+
+-- tab-record: Web 3.0 Basics
+active: true
+
+-- tab-record: Brand Campaign
+active: false
+
+-- tab-record: Advertising & Web 3.0
+active: false
+
+-- end: tabs-list
+
+
+
+
+
+
+
+
+
+
+-- component cta-button-2:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 50
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+boolean active: false
+
+-- ftd.column:
+align-self if { cta-button-2.align-center }: center
+margin-top.rem: $cta-button-2.marginTop
+
+-- ftd.row:
+if: { !cta-button-2.medium }
+width.fixed.px if { cta-button-2.width != NULL}: $cta-button-2.width
+spacing.fixed.px: 10
+link if { cta-button-2.link != NULL }: $cta-button-2.link
+background.solid if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button-2.bg-color
+border-radius.px: $cta-button-2.border-radius
+border-color: $cta-button-2.border-color
+border-width.px if { $cta-button-2.active }: $cta-button-2.border-width
+padding-vertical.px: $cta-button-2.padding-vertical
+padding-horizontal.px: $cta-button-2.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button-2.title
+role: $inherited.types.button-large
+color if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.text
+color if { !cta-button-2.active }: $inherited.colors.custom.one
+color if { cta-button-2.active }: $inherited.colors.custom.four
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button-2.src != NULL }
+src: $cta-button-2.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button-2
