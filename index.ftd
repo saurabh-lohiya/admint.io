@@ -16,7 +16,7 @@ Build your brand's fan-base in web 3.0 with us!
 -- lib.slider:
 $active-cell: $current-active
 
--- lib.slide: WHY ADMINT?
+-- lib.slide: WHY ADMINT? 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
 src: $assets.files.static.lezgoo.simple.svg
 index: 1
@@ -36,7 +36,7 @@ reset: $current-active
 
 -- end: lib.slide
 
--- lib.full-slide: WHY ADMINT?
+-- lib.full-slide: WHY ADMINT? 🚧
 subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
 src: $assets.files.static.lezgoo.structured.svg
 index: 2 
@@ -45,7 +45,7 @@ reset: $current-active
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
--- lib.mid-slide: WHY ADMINT?
+-- lib.mid-slide: WHY ADMINT? 🚧
 subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
 src: $assets.files.static.lezgoo.keymedia.svg 
 index: 3 
@@ -54,7 +54,7 @@ reset: $current-active
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
--- lib.four-slide: WHY ADMINT?
+-- lib.four-slide: WHY ADMINT? 🚧
 subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
 src: $assets.files.static.lezgoo.ditribut.svg
 index: 4 
@@ -63,7 +63,7 @@ reset: $current-active
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
--- lib.last-slide: WHY ADMINT?
+-- lib.last-slide: WHY ADMINT? 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.lezgoo.analyze.svg
 index: 5
@@ -115,7 +115,7 @@ web 3.0 budget?
 
 -- end: lib.advertising
 
--- lib.how-it-works: HOW IT WORKS
+-- lib.how-it-works: HOW IT WORKS🚧
 subtitle: Web 3.0 campaigns  set up made simple.
 
 AdMint offsets most of the technological challenges 
@@ -175,8 +175,8 @@ reset: $current-cell
 -- end: lib.how-it-works
 
 
--- lib.lezgoo: Confused about everything Web 3.0? 
-cta-label: Let's Learn
+-- lib.lezgoo: Confused about everything Web 3.0? 🚧
+cta-label: Let's Learn🚧
 cta-url: index.html
 image: $assets.files.static.lezgoo.lezgoo-img.svg
 body1: Don't 
