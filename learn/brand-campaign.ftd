@@ -1,0 +1,118 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/common/fonts
+-- import: fifthtry.github.io/admint.io/header
+-- import: fifthtry.github.io/admint.io/lib
+
+-- lib.page:
+
+-- lib.tabs-wrapper:
+
+-- lib.tabs:
+active-tab-index: 1
+
+-- end: lib.tabs
+
+-- end: lib.tabs-wrapper
+
+
+-- lib.post-list:
+
+-- lib.post-list.articles:
+
+-- lib.article-item: Lorem Ipsum is simply dummy text
+thumbnail: $assets.files.static.blog.StockSnap.jpeg
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+-- lib.article-item: Lorem Ipsum is simply dummy text
+thumbnail: $assets.files.static.blog.StockSnap.jpeg
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen
+book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker
+including versions of Lorem Ipsum.
+
+-- end: lib.post-list.articles
+
+-- lib.post-list.side-bar:
+
+-- lib.sidebar: Recent Posts
+
+-- lib.recent-post: Lorem Ipsum is simply dummy text
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+-- lib.recent-post: Lorem Ipsum is simply dummy text
+link: learn/brand-campaign/
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+-- end: lib.sidebar
+
+-- end: lib.post-list.side-bar
+
+-- end: lib.post-list
+
+-- end: lib.page
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,203 @@
 -- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/lib
+
+-- integer $current-active: 1
+
+-- integer $current-cell: 1
+
+-- lib.page:
+
+-- lib.hero: Deliver refreshing Web 3.0 campaigns!
+cta-text: Get Started
+cta-link: index.html
+
+Build your brand's fan-base in web 3.0 with us!
+
+-- lib.slider:
+$active-cell: $current-active
+
+-- lib.slide: WHY ADMINT?
+subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
+src: $assets.files.static.lezgoo.simple.svg
+index: 1
+reset: $current-active
+
+-- lib.card: 1
+
+ Reach out to existing audience base via known channels. 
+
+-- lib.card: 2
+
+ Identify & segregate your “web 3.0 ready” audience pool. 
+
+-- lib.card: 3
+
+ Extend real-world benefits & build your metaverse fanbase! 
+
+-- end: lib.slide
+
+-- lib.full-slide: WHY ADMINT?
+subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
+src: $assets.files.static.lezgoo.structured.svg
+index: 2 
+reset: $current-active
+
+Follow along our guided walkthroughs to sequentially construct
+all the necessary components to launch a campaign.
+
+-- lib.mid-slide: WHY ADMINT?
+subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
+src: $assets.files.static.lezgoo.keymedia.svg 
+index: 3 
+reset: $current-active
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+-- lib.four-slide: WHY ADMINT?
+subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
+src: $assets.files.static.lezgoo.ditribut.svg
+index: 4 
+reset: $current-active
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+-- lib.last-slide: WHY ADMINT?
+subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
+src: $assets.files.static.lezgoo.analyze.svg
+index: 5
+reset: $current-active
+
+Watch the numbers. See the plan take shape. Measure that ROI. 
+Stake your claim across the Metaverses!
+
+-- end: lib.slider
+
+-- lib.advertising: How advertising in web 3.0 different....
+tagline: **ADVERTISING IN WEB 3.0**
+
+-- lib.ad-card: Transparent Yet Private
+src: $assets.files.static.advertising.Transparent-Yet-Private.svg
+
+In the decentralized web, there's no room for cookies, device
+Ids or tracking individuals. New user data is protected, 
+anonymized, and yet accessible for all, via simple clicks 
+across blockchain explorers. As a brand, what do you
+measure & how?
+
+-- lib.ad-card: New Data is Universal
+src: $assets.files.static.advertising.newData.svg
+
+Data no longer sits under one roof, to be used or misused 
+without proper consent from the individual users. But we 
+do get to see any and all trasactions across
+wallets, brand tokens, NFTs & crypto currencies. As a brand,
+focus on behavioral traits rather than individuals?
+
+-- lib.ad-card: The target is always moving
+src: $assets.files.static.advertising.target-is-always-moving.svg
+
+Your NFTs are transitionary! Here today, there tomorrow. Your
+high value customer-base is no longer "male, 22-40, SEC A+" 
+but "wallets on Polygon, having BAYC NFT, with $500+ liquid 
+crypto holdings". As a brand, how do you get them to use 
+your NFTs?
+
+-- lib.ad-card: Everyone is everywhere
+src: $assets.files.static.advertising.everyone-is-everywhere.svg
+
+Metaverse and other web 3.0 destinations are global. You no 
+longer have audiences restricted to local & hyperlocal cohorts.
+Your brand now caters to a slew of anonymized wallets across 
+global platforms. As a brand, how will you use your regional
+web 3.0 budget?
+
+-- end: lib.advertising
+
+-- lib.how-it-works: HOW IT WORKS
+subtitle: Web 3.0 campaigns  set up made simple.
+
+AdMint offsets most of the technological challenges 
+associated with Web 3.0, allowing advertisers to focus 
+on strategy & campaign execution
+
+-- lib.slider:
+$active-cell: $current-cell
+
+-- lib.works-cell: PLANNING
+number: 1
+right-src: $assets.files.static.lezgoo.planning-right-img.svg 
+left-src: $assets.files.static.lezgoo.planning-left-img.svg
+top-cell: You choose your brand’s campaign objective 
+bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
+index: 1
+reset: $current-cell
+
+-- lib.works-cell: FUNDS
+number: 2
+left-src: $assets.files.static.lezgoo.fund-left-img.svg 
+right-src: $assets.files.static.lezgoo.fund-right-img.svg
+top-cell: You set up funds via standard payment options 
+bottom-cell: AdMint handles your crypto wallets & transfers 
+index: 2
+reset: $current-cell
+
+-- lib.works-cell: NFTs
+number: 3
+left-src: $assets.files.static.lezgoo.nft-left-img.svg 
+right-src: $assets.files.static.lezgoo.nft-right-img.svg
+top-cell: You provide us creatives to run the campaign
+bottom-cell: AdMint preps & converts them into NFT collections
+index: 3
+reset: $current-cell
+
+-- lib.works-cell: DISTRIBUTION
+number: 4
+left-src: $assets.files.static.lezgoo.dist-left-img.svg 
+right-src: $assets.files.static.lezgoo.dist-right-img.svg
+top-cell: You identify target audience to receive the NFTs
+bottom-cell: AdMint provides tools and templates to enable distribution. execution.
+index: 4
+reset: $current-cell
+
+-- lib.works-cell: UTILITY
+number: 5
+left-src: $assets.files.static.lezgoo.utility-left-img.svg 
+right-src: $assets.files.static.lezgoo.utility-right-img.svg
+top-cell: You determine the real world value offering to consumers
+bottom-cell: AdMint helps validate NFT ownership & extends access 
+index: 5
+reset: $current-cell
+
+-- end: lib.slider
+
+-- end: lib.how-it-works
 
 
+-- lib.lezgoo: Confused about everything Web 3.0? 
+cta-label: Let's Learn
+cta-url: /
+image: $assets.files.static.lezgoo.lezgoo-img.svg
+body1: Don't 
 
+worry, we will help you ! Lezzzgoooooo!
+
+-- end: lib.lezgoo
+
+-- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
+image: $assets.files.static.lezgoo.sneak-peak.png
+bg-image: $assets.files.static.lezgoo.sneak-bg.png
+cta-text: Get Started
+cta-url: /
+
+-- lib.signup-form: Join the waitlist to get updated when we go live!
+input-label1: Name
+input-label2: Who are you?
+input-label3: Organization Name
+input-label4: Email id
+cta-text: Join waitlist
+
+-- end: lib.signup-form
+
+-- end: lib.page
