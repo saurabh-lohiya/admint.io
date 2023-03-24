@@ -177,7 +177,7 @@ reset: $current-cell
 
 -- lib.lezgoo: Confused about everything Web 3.0? 
 cta-label: Let's Learn
-cta-url: /
+cta-url: index.html
 image: $assets.files.static.lezgoo.lezgoo-img.svg
 body1: Don't 
 
@@ -189,7 +189,7 @@ worry, we will help you ! Lezzzgoooooo!
 image: $assets.files.static.lezgoo.sneak-peak.png
 bg-image: $assets.files.static.lezgoo.sneak-bg.png
 cta-text: Get Started🚧
-cta-url: /
+cta-url: index.html
 
 -- lib.signup-form: Join the waitlist to get updated when we go live!
 input-label1: Name
