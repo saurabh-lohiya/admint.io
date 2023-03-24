@@ -1,0 +1,178 @@
+-- import: fifthtry.github.io/admint.io/signup-form as sf
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+colors: $cs.main
+types: $typo.types
+
+-- signup-form-popup: Join the waitlist to get updated when we go live!
+input-label1: Name
+input-label2: Who are you?
+input-label3: Organization Name
+input-label4: Email id
+cta-text: Join waitlist
+
+-- end: signup-form-popup
+
+-- end: ftd.column
+
+
+-- component signup-form-popup:
+caption title:
+string input-label1:
+string input-label2:
+string input-label3:
+string input-label4:
+role-record list roles: $roles
+string cta-text:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+height: fill-container
+
+-- ftd.column:
+background.solid: white
+max-width.fixed.px: 548
+width: fill-container
+padding.px: 50
+z-index: 1
+
+-- ftd.text: CLOSE
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+
+-- ftd.text: $signup-form-popup.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.cta-primary.base
+region: h1
+
+-- ftd.text: $signup-form-popup.input-label1
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 30
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+
+-- ftd.row:
+wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form-popup.input-label2
+margin-top.px: 16
+role: $inherited.types.source-code
+color: $inherited.colors.text
+
+-- ftd.text-input:
+padding.px: 6
+width.fixed.percent: 100
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form-popup.input-label3
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text: $signup-form-popup.input-label4
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.text-input
+
+-- sf.cta-button: $signup-form-popup.cta-text
+bg-color: $inherited.colors.custom.four
+padding-horizontal: 41
+padding-vertical: 11
+marginTop: 2
+text-color: white
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: signup-form-popup
+
+
+
+
+
+
+-- record role-record:
+caption title:
+
+
+-- role-record list roles:
+
+-- role-record: Advertiser
+
+-- role-record: Agency
+
+-- role-record: Brand Owner
+
+-- role-record: Executive
+
+-- role-record: SMB
+
+-- role-record: Startup
+
+-- end: roles

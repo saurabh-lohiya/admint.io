@@ -1,0 +1,329 @@
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/lib as lp
+-- import: fifthtry.github.io/admint.io/functions
+
+-- integer $width: 1300
+
+-- ftd.column:
+width: fill-container
+colors: $cs.main
+types: $typo.types
+
+-- signup-form: Join the waitlist to get updated when we go live!
+input-label1: Name
+input-label2: Who are you?
+input-label3: Organization Name
+input-label4: Email id
+cta-text: Join waitlist
+
+-- end: signup-form
+
+-- end: ftd.column
+
+
+-- component signup-form:
+caption title:
+string input-label1:
+string input-warning1: Name is required
+string input-label2:
+string input-label3:
+string input-warning3: Organization is required
+string input-label4:
+string input-warning4: Email is requied
+role-record list roles: $roles
+string cta-text:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+padding-vertical.px: 50
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $signup-form.width
+
+-- ftd.column:
+background.solid: white
+max-width.fixed.px: 850
+width: fill-container
+padding.px: 50
+z-index: 1
+
+-- ftd.text: CLOSE
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+
+-- ftd.text: $signup-form.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+width.fixed.percent: 80
+
+-- ftd.text: $signup-form.input-label1
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 30
+
+-- ftd.text-input:
+id: input-field1
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning1
+id: warning1
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label2
+margin-top.px: 16
+role: $inherited.types.source-code
+color: $inherited.colors.text
+
+-- ftd.text-input:
+id: input-field2
+padding.px: 6
+width.fixed.percent: 100
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent if { ftd.device == "mobile" }: 100
+
+-- ftd.text: $signup-form.input-label3
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field3
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- ftd.text: $signup-form.input-warning3
+id: warning3
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text: $signup-form.input-label4
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- ftd.text-input:
+id: input-field4
+padding.px: 6
+width: fill-container
+background.solid: transparent
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $functions.formValidate()
+
+-- end: ftd.text-input
+
+-- ftd.text: $signup-form.input-warning4
+id: warning4
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
+
+-- cta-button: $signup-form.cta-text
+bg-color: $inherited.colors.custom.four
+padding-horizontal: 41
+padding-vertical: 11
+marginTop: 2
+text-color: white
+$on-click$: $functions.formValidate()
+
+-- ftd.text: 
+id: label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+classes: markdown
+width.fixed.percent: 30
+text-align: end
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+if: { ftd.device == "desktop" }
+src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
+anchor: parent
+right.px: 0
+bottom.px: 50
+
+-- end: ftd.column
+
+-- end: signup-form
+
+
+
+-- record role-record:
+caption title:
+
+
+-- role-record list roles:
+
+-- role-record: Advertiser
+
+-- role-record: Agency
+
+-- role-record: Brand Owner
+
+-- role-record: Executive
+
+-- role-record: SMB
+
+-- role-record: Startup
+
+-- end: roles
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role: tertiary
+ftd.color bg-color: transparent
+ftd.color text-color: black
+ftd.color border-color: $inherited.colors.border
+integer border-radius: 30
+optional string link:
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon:
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+decimal marginTop: 0
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src:
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+margin-top.rem: $cta-button.marginTop
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+background.solid: $cta-button.bg-color
+border-radius.px: $cta-button.border-radius
+border-color: $cta-button.border-color
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-large
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+color: $cta-button.text-color
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
+
+
+
+
+
+;;-- dropdown:
+;;options-list: $option-list
+;;
+;;
+;;
+;;-- string $selected-item: Option 1
+;;
+;;
+;;-- drodown.options list option-list:
+;;
+;;-- drodown.options: Option 1
+;;
+;;-- drodown.options: Option 2
+;;
+;;-- drodown.options: Option 3
+;;
+;;-- drodown.options: Option 4
+;;
+;;-- drodown.options: Option 5
+;;
+;;-- end: option-list
