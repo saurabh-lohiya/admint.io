@@ -32,6 +32,15 @@ a = (((a - min) - by) % (max - min)) + min
 
 
 
+-- void formValidate():
+js: $assets.files.functions.js
+
+formValidation();
+
+
+
+
+
 -- record team:
 caption title:
 string designation:
@@ -52,10 +61,3 @@ avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
 link: https://www.linkedin.com/in/jaylahconsejo/
 
 -- end: members
-
-
-
--- void formValidate():
-js: $assets.files.functions.js
-
-formValidation();
