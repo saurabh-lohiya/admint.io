@@ -10,6 +10,9 @@
 
 
 -- integer $active-tab: 0
+
+-- integer $current-active: 1
+
 -- integer $mobileCompPadd: 20
 
 -- pr.sitemap-data sitemap:
@@ -548,12 +551,16 @@ color: $inherited.colors.cta-primary.text
 
 -- component page:
 optional string site-name:
-optional string site-url: index.html
-optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
-optional string contact-txt: Get Started🚧
-optional string contact-url: index.html
+string site-url: index.html
+ftd.image-src site-logo: $assets.files.static.lezgoo.admint-logo.svg
+string contact: Get Started🚧
+string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
+ftd.image-src footer-site-logo: $assets.files.static.footer.admint-logo-footer.svg
+pr.toc-item list footer-list: $common.footer-list
+common.social-media list media: $common.media
+ftd.image-src team-thumb: $assets.files.static.footer.footer-hand-thumb.svg
 children wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
@@ -561,19 +568,14 @@ ftd.color-scheme colors: $cs.main
 -- ftd.column:
 width: fill-container
 
--- ftd.column:
-width: fill-container
-
 -- header:
 site-name: $page.site-name
 site-url: $page.site-url
-logo: $page.logo
-contact-txt: $page.contact-txt
+site-logo: $page.site-logo
+contact: $page.contact
 contact-url: $page.contact-url
 sections: $page.sections
 $sidebar-open: $page.sidebar-open
-
--- end: ftd.column
 
 -- ftd.column:
 children: $page.wrap
@@ -582,15 +584,12 @@ $on-mouse-enter$: $common.global-event()
 
 -- end: ftd.column
 
--- ftd.column:
-width: fill-container
-
 -- footer:
-
--- end: footer
-
--- end: ftd.column
-
+site-logo: $page.footer-site-logo
+site-url: $page.site-url
+footer-list: $page.footer-list
+media: $page.media
+team-thumb: $page.team-thumb
 
 -- end: ftd.column
 
@@ -600,11 +599,9 @@ width: fill-container
 
 
 
--- integer $current-active: 1
 
--- integer min: 1
 
--- integer max: 6
+
 
 -- component card:
 caption integer title:
@@ -722,6 +719,8 @@ spacing.fixed.px: 24
 -- component slider:
 children wrap:
 integer $active-cell:
+integer $max: 6
+integer $min: 1
 
 -- ftd.row:
 width: fill-container
@@ -733,23 +732,23 @@ width: fill-container
 spacing.fixed.px: 24
 padding-vertical.px: 40
 padding-horizontal.px: 12
-max-width.fixed.px: 1320
+max-width.fixed.percent: 85
 align-self: center
 
 -- ftd.image:
-if: {current-active != 1}
+if: { slider.active-cell != 1}
 src: $assets.files.static.lezgoo.right.svg
-$on-click$: $common.decrement-and-clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $common.decrement-and-clamp($a = $slider.active-cell, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: -78
+left.percent: -9
 
 -- ftd.image:
-if: {current-active == 1}
+if: { slider.active-cell == 1}
 src: $assets.files.static.lezgoo.right.svg
 align-self: center
 border-radius.px: 100
@@ -757,7 +756,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-left.px: -78
+left.percent: -9
 
 -- ftd.row:
 children: $slider.wrap
@@ -767,19 +766,19 @@ padding-horizontal.px: 12
 -- end: ftd.row
 
 -- ftd.image:
-if: {current-active != 5}
+if: { slider.active-cell != 5}
 src: $assets.files.static.lezgoo.left.svg
-$on-click$: $common.increment-and-clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $common.increment-and-clamp($a = $slider.active-cell, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: -74
+right.percent: -9
 anchor: parent
 
 -- ftd.image:
-if: {current-active == 5}
+if: { slider.active-cell == 5}
 src: $assets.files.static.lezgoo.left.svg
 align-self: center
 border-radius.px: 100
@@ -787,7 +786,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-right.px: -74
+right.percent: -9
 
 
 -- end: ftd.row
@@ -833,7 +832,7 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 87
 region: h3
-width.fixed.px: 650
+width.fixed.percent: 60
 
 
 -- ftd.text:
@@ -902,7 +901,7 @@ margin-bottom.px: 41
 -- ftd.text: $full-slide.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 87
+margin-bottom.px: 28
 region: h3
 
 
@@ -912,7 +911,7 @@ text: $full-slide.body
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.px: 750
+max-width.fixed.percent: 58
 
 -- end: ftd.column
 
@@ -920,8 +919,8 @@ max-width.fixed.px: 750
 align-content: center
 align-self: center
 anchor: parent 
-right.px:0
-top.px: 220
+right.percent: -9
+top.percent: 30
 z-index: -1 
 
 -- ftd.image:
@@ -1116,7 +1115,6 @@ optional integer reset:
 
 -- ftd.column:
 if: { last-slide.index == last-slide.reset }
-height.fixed.px: 650
 width: fill-container
 
 
@@ -1195,8 +1193,8 @@ spacing.fixed.px: 24
 -- component header:
 optional string site-name:
 optional string site-url: index.html
-optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
-optional string contact-txt: Get Started🚧
+optional ftd.image-src site-logo: $assets.files.static.lezgoo.admint-site-logo.svg
+optional string contact: Get Started🚧
 optional string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
@@ -1204,23 +1202,21 @@ boolean $sidebar-open: false
 -- ftd.column:
 width: fill-container
 
-
 -- header-desktop:
 if: { ftd.device != "mobile" }
 site-name: $header.site-name
 site-url: $header.site-url
-logo: $header.logo
-contact-txt: $header.contact-txt
+site-logo: $header.site-logo
+contact: $header.contact
 contact-url: $header.contact-url
 sections: $header.sections
-
 
 -- header-mobile:
 if: { ftd.device == "mobile" }
 site-name: $header.site-name
 site-url: $header.site-url
-logo: $header.logo
-contact-txt: $header.contact-txt
+site-logo: $header.site-logo
+contact: $header.contact
 contact-url: $header.contact-url
 sections: $header.sections
 $sidebar-open: $header.sidebar-open
@@ -1238,33 +1234,30 @@ $sidebar-open: $header.sidebar-open
 -- component header-desktop:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo: 
-optional string contact-txt:
+optional ftd.image-src site-logo: 
+optional string contact:
 optional string contact-url:
 pr.toc-item list sections:
 
-
 -- ftd.row:
 width: fill-container
-padding-vertical.px: 31
-margin-left.px if { ftd.device == "mobile" }: 23
-margin-left.px if { ftd.device == "mobile" }: 23
+padding-vertical.px: 29
 spacing: space-between
-max-width.fixed.px: 1296
+max-width.fixed.px: 1320
 align-self: center
-padding-horizontal.px: 12
+padding-horizontal.px: 24
 
 -- ftd.row:
-width: fill-container
+align-self: center
+padding-vertical.px: 5
 
 -- ftd.image:
-if: {header-desktop.logo != NULL}
-src: $header-desktop.logo
+if: {header-desktop.site-logo != NULL}
+src: $header-desktop.site-logo
 width: auto
 height: auto
-height.fixed.px if {ftd.device == "mobile"}: 30
 link: $header-desktop.site-url
-padding-vertical.px: 5
+
 
 -- ftd.text: $header-desktop.site-name
 if: {header-desktop.site-name != NULL}
@@ -1275,13 +1268,13 @@ link: $header-desktop.site-url
 -- end: ftd.row
 
 -- ftd.row:
-align-self: center
-spacing.fixed.px: 34
+align-self: end
+spacing.fixed.px: 24
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 42
-
+spacing.fixed.px: 44
+align-self: center
 
 -- sections-list: $obj.title
 url: $obj.url
@@ -1290,7 +1283,7 @@ $loop$: $header-desktop.sections as $obj
 
 -- end: ftd.row
 
--- header-button: $header-desktop.contact-txt
+-- header-button: $header-desktop.contact
 url: $header-desktop.contact-url
 
 -- end: ftd.row
@@ -1317,7 +1310,7 @@ border-color if {header-button.is-active}: $inherited.colors.cta-primary.hover
 border-radius.px: 50
 $on-mouse-enter$: $ftd.set-bool($a = $header-button.is-active, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $header-button.is-active, v = false)
-padding-vertical.px: 12
+padding-vertical.px: 11
 padding-vertical.px if {ftd.device == " mobile"}: 5
 padding-horizontal.px: 35
 link: $header-button.url
@@ -1325,7 +1318,7 @@ align-self: center
 
 -- ftd.text: $header-button.title
 if: {header-button.title != NULL}
-role: $inherited.types.button-large
+role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
 
@@ -1347,8 +1340,8 @@ white-space: nowrap
 -- component header-mobile:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo:
-optional string contact-txt:
+optional ftd.image-src site-logo:
+optional string contact:
 optional string contact-url:
 pr.toc-item list sections:
 boolean $sidebar-open:
@@ -1370,8 +1363,8 @@ spacing: space-between
 width: fill-container
 
 -- ftd.image:
-if: { header-mobile.logo != NULL }
-src: $header-mobile.logo
+if: { header-mobile.site-logo != NULL }
+src: $header-mobile.site-logo
 width: auto
 height.fixed.px: 44
 padding-vertical.px: 5
@@ -1423,7 +1416,7 @@ $loop$: $header-mobile.sections as $obj
 
 -- end: ftd.column
 
--- header-button: $header-mobile.contact-txt
+-- header-button: $header-mobile.contact
 url: $header-mobile.contact-url
 
 -- end: ftd.column
@@ -1726,115 +1719,31 @@ align-self: center
 
 
 -- component footer:
-ftd.image-src logo: https://admint.io/assets/images/admint-logo-footer.svg
-footer-link list links: $footer-links
-social-icon list icons: $social-icons
-ftd.image-src bg-image: https://admint.io/footer-hand-thumb.48e6e2ea052bb6cf0beb.svg
+ftd.image-src site-logo:
+string site-url:
+pr.toc-item list footer-list:
+common.social-media list media: 
+ftd.image-src team-thumb: 
 
 -- ftd.column:
-colors: $cs.main
-types: $typo.types
 width: fill-container
 background.solid: $inherited.colors.cta-primary.base
-align-content: center
 
--- ftd.column:
-if: { ftd.device == "desktop" }
-width: fill-container
-max-width.fixed.px: 1320
+-- footer-desktop:
+if: {ftd.device != "mobile"}
+site-logo: $footer.site-logo
+site-url: $footer.site-url
+footer-list: $footer.footer-list
+media: $footer.media
+team-thumb: $footer.team-thumb
 
--- ftd.column:
-align-self: end
-padding-vertical.px: 53
-
--- ftd.image:
-src: $footer.logo
-align-self: end
-link: index.html
-
--- ftd.row:
-margin-top.px: 48
-
--- ftd.text: $obj.title
-$loop$: $footer.links as $obj
-role: $inherited.types.label-large
-color: $inherited.colors.cta-primary.text
-padding-left.px: 16
-link: $obj.link
-
--- end: ftd.row
-
--- ftd.row:
-margin-top.px: 80
-align-self: end
-
--- ftd.image:
-$loop$: $footer.icons as $obj
-src: $obj.src
-padding-left.px: 16
-cursor: pointer
-
--- end: ftd.row
-
--- end: ftd.column
-
--- ftd.image:
-src: $footer.bg-image
-anchor: parent
-bottom.px: 0
-left.px: 0
-
--- end: ftd.column
-
-
-
-
-
-
-
--- ftd.column:
-width: fill-container
-padding-left.px: 16
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-padding-vertical.px: 53
-
--- ftd.image:
-src: $footer.logo
-
--- ftd.column:
-margin-top.px: 48
-padding-left.px: 16
-
--- ftd.text: $obj.title
-$loop$: $footer.links as $obj
-role: $inherited.types.heading-tiny
-color: $inherited.colors.text
-
--- end: ftd.column
-
--- ftd.row:
-margin-top.px: 80
-padding-left.px: 16
-
--- ftd.image:
-margin-right.px: 16
-$loop$: $footer.icons as $obj
-src: $obj.src
-
--- end: ftd.row
-
--- ftd.image:
-src: $footer.bg-image
-anchor: parent
-bottom.px: 0
-left.px: 32
-width.fixed.px: 200
-
--- end: ftd.column
-
--- end: ftd.column
+-- footer-mobile:
+if: {ftd.device == "mobile"}
+site-logo: $footer.site-logo
+site-url: $footer.site-url
+footer-list: $footer.footer-list
+media: $footer.media
+team-thumb: $footer.team-thumb
 
 -- end: ftd.column
 
@@ -1846,56 +1755,129 @@ width.fixed.px: 200
 
 
 
--- record footer-link:
-caption title:
-string link: /
-
-
--- footer-link list footer-links:
-
--- footer-link: About Us
-link: about/
-
--- footer-link: Terms & Condition
-link: terms-conditions/
-
--- footer-link: Privacy Policy
-link: privacy-policy/
-
--- footer-link: Pricing🚧
-link: /
-
--- footer-link: Learn
-link: learn/
-
--- end: footer-links
 
 
 
+-- component footer-desktop:
+ftd.image-src site-logo:
+string site-url:
+pr.toc-item list footer-list:
+common.social-media list media: 
+ftd.image-src team-thumb: 
 
--- record social-icon:
-ftd.image-src src:
-string link: /
+-- ftd.column:
+width: fill-container
+align-self: center
+max-width.fixed.px: 1320
+padding-vertical.px: 53
 
--- social-icon list social-icons:
+-- ftd.image:
+src: $footer-desktop.team-thumb
+anchor: parent
+bottom.px: 0
+left.px: -12
 
--- social-icon:
-link: /
-src: https://admint.io/instagram.6dfc5cafd7516572a269.svg
+-- ftd.column:
+align-self: end
+width: fill-container
 
--- social-icon: 
-link: /
-src: https://admint.io/linkedin.5c208bfde7ff079b9f35.svg
+-- ftd.image:
+src: $footer-desktop.site-logo
+align-self: end
+link: $footer-desktop.site-url
+width.fixed.px: 194
 
--- social-icon:
-link: /
-src: https://admint.io/twitter.d3071d3132f19afb426e.svg
+-- ftd.row:
+margin-top.px: 48
+align-self: end
 
--- social-icon: 
-link: /
-src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
+-- ftd.text: $obj.title
+$loop$: $footer-desktop.footer-list as $obj
+role: $inherited.types.label-large
+color: $inherited.colors.background.step-1
+padding-left.px: 32
+link: $obj.url
 
--- end: social-icons
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 80
+align-self: end
+
+-- ftd.image:
+$loop$: $footer-desktop.media as $obj
+src: $obj.src
+padding-left.px: 20
+cursor: pointer
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-desktop
+
+
+
+
+
+
+
+
+
+
+-- component footer-mobile:
+ftd.image-src site-logo:
+string site-url:
+pr.toc-item list footer-list:
+common.social-media list media: 
+ftd.image-src team-thumb: 
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 53
+padding-horizontal.px: 12
+
+-- ftd.image:
+src: $footer-mobile.site-logo
+link: $footer-mobile.site-url
+
+-- ftd.column:
+margin-top.px: 48
+padding-left.px: 16
+
+-- ftd.text: $obj.title
+$loop$: $footer-mobile.footer-list as $obj
+role: $inherited.types.blockquote
+color: $inherited.colors.background.step-1
+margin-bottom.px: 8
+
+-- end: ftd.column
+
+-- ftd.row:
+margin-top.px: 80
+padding-left.px: 16
+
+-- ftd.image:
+margin-right.px: 16
+$loop$: $footer-mobile.media as $obj
+src: $obj.src
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $footer-mobile.team-thumb
+anchor: parent
+bottom.px: 0
+left.px: 32
+width.fixed.px: 200
+
+-- end: ftd.column
+
+-- end: footer-mobile
+
+
 
 
 
