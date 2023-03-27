@@ -578,7 +578,7 @@ $sidebar-open: $page.sidebar-open
 -- ftd.column:
 children: $page.wrap
 width: fill-container
-$on-mouse-enter$: $common.globalEvent()
+$on-mouse-enter$: $common.global-event()
 
 -- end: ftd.column
 
@@ -1962,7 +1962,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $common.formValidate()
+$on-blur$: $common.form-validate()
 
 -- ftd.text: $signup-form.input-warning1
 id: warning1
@@ -2017,7 +2017,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $common.formValidate()
+$on-blur$: $common.form-validate()
 
 -- ftd.text: $signup-form.input-warning3
 id: warning3
@@ -2044,7 +2044,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $common.formValidate()
+$on-blur$: $common.form-validate()
 
 -- end: ftd.text-input
 
@@ -2064,7 +2064,7 @@ padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
 text-color: white
-$on-click$: $common.formValidate()
+$on-click$: $common.form-validate()
 
 -- ftd.text: 
 id: label-success

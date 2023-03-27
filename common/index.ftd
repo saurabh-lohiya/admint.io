@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/admint.io/assets
 
 
--- void globalEvent():
+-- void global-event():
 js: $assets.files.functions.js
 
 loadWindow();
