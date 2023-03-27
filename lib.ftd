@@ -1790,10 +1790,6 @@ left.px: 0
 
 
 
-
-
-
-
 -- ftd.column:
 width: fill-container
 padding-left.px: 16
@@ -1932,7 +1928,7 @@ max-width.fixed.px: $signup-form.width
 
 -- ftd.column:
 background.solid: white
-max-width.fixed.px: 850
+max-width.fixed.px: 856
 width: fill-container
 padding.px: 50
 z-index: 1
@@ -1981,7 +1977,7 @@ width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $signup-form.input-label2
-margin-top.px: 16
+margin-top.px: 23
 role: $inherited.types.source-code
 color: $inherited.colors.text
 
@@ -2006,7 +2002,7 @@ width.fixed.percent if { ftd.device == "mobile" }: 100
 -- ftd.text: $signup-form.input-label3
 role: $inherited.types.source-code
 color: $inherited.colors.text
-margin-top.px: 16
+margin-top.px: 23
 
 -- ftd.text-input:
 id: input-field3
@@ -2033,7 +2029,7 @@ color: #dc3545
 -- ftd.text: $signup-form.input-label4
 role: $inherited.types.source-code
 color: $inherited.colors.text
-margin-top.px: 16
+margin-top.px: 23
 
 -- ftd.text-input:
 id: input-field4

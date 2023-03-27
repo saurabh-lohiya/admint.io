@@ -40,7 +40,7 @@ height: fill-container
 background.solid: white
 max-width.fixed.px: 548
 width: fill-container
-padding.px: 50
+padding.px: 37
 z-index: 1
 
 -- ftd.text: CLOSE
@@ -50,7 +50,7 @@ align-self: end
 
 -- ftd.text: $signup-form-popup.title
 role: $inherited.types.heading-medium
-color: $inherited.colors.cta-primary.base
+color: $inherited.colors.text
 region: h1
 
 -- ftd.text: $signup-form-popup.input-label1
