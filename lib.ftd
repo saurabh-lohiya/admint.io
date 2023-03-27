@@ -1745,12 +1745,14 @@ max-width.fixed.px: 1320
 
 -- ftd.column:
 align-self: end
-padding-vertical.px: 53
+padding-vertical.px: 60
+padding-horizontal.px: 12
 
 -- ftd.image:
 src: $footer.logo
 align-self: end
 link: index.html
+width.fixed.px: 195
 
 -- ftd.row:
 margin-top.px: 48
@@ -1759,7 +1761,7 @@ margin-top.px: 48
 $loop$: $footer.links as $obj
 role: $inherited.types.label-large
 color: $inherited.colors.cta-primary.text
-padding-left.px: 16
+padding-left.px: 32
 link: $obj.link
 
 -- end: ftd.row
@@ -1853,10 +1855,10 @@ string link: /
 
 -- footer-link list footer-links:
 
--- footer-link: About Us
+-- footer-link: About us
 link: about/
 
--- footer-link: Terms & Condition
+-- footer-link: Terms & Conditions
 link: terms-conditions/
 
 -- footer-link: Privacy Policy
