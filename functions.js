@@ -8,8 +8,12 @@ window.onload = (event) => {
   document.getElementById("warning3").style.display = 'none';
   document.getElementById("warning4").style.display = 'none';
   document.getElementById("label-success").style.display = 'none';
+  document.getElementById("popup-warning1").style.display = 'none';
+  document.getElementById("popup-warning3").style.display = 'none';
+  document.getElementById("popup-warning4").style.display = 'none';
+  document.getElementById("popup-label-success").style.display = 'none';
 
-// document.getElementById("blurMe").style.filter = "blur(6px)";
+  // document.getElementById("blurMe").style.filter = "blur(6px)";
 
   document.getElementById("opacityme").style.filter = "blur(6px)";
 };
@@ -35,6 +39,34 @@ function formValidation(event) {
   }
   document.getElementById("warning4").style.display = 'none';
   document.getElementById("label-success").style.display = 'block';
+  // if (!(check1 && check2 && check3)) {
+  //   event.preventDefault()
+  // }
+  //document.getElementById(errorField).style.display = 'none';
+  //console.log("Validation", event)
+}
+
+
+function popupFormValidation(event) {
+  let check1 = document.getElementById("popup-input-field1").value != ""
+  let check2 = document.getElementById("popup-input-field3").value != ""
+  let check3 = document.getElementById("popup-input-field4").value != ""
+  if (!check1) {
+    document.getElementById("popup-warning1").style.display = 'block';
+    return
+  }
+  document.getElementById("popup-warning1").style.display = 'none';
+  if (!check2) {
+    document.getElementById("popup-warning3").style.display = 'block';
+    return
+  }
+  document.getElementById("popup-warning3").style.display = 'none';
+  if (!check3) {
+    document.getElementById("popup-warning4").style.display = 'block';
+    return
+  }
+  document.getElementById("popup-warning4").style.display = 'none';
+  document.getElementById("popup-label-success").style.display = 'block';
   // if (!(check1 && check2 && check3)) {
   //   event.preventDefault()
   // }

@@ -59,3 +59,13 @@ link: https://www.linkedin.com/in/jaylahconsejo/
 js: $assets.files.functions.js
 
 formValidation();
+
+
+
+
+
+
+-- void popupFormValidate():
+js: $assets.files.functions.js
+
+popupFormValidation();

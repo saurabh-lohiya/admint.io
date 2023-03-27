@@ -1,7 +1,7 @@
 -- import: fifthtry.github.io/admint.io/signup-form as sf
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
-
+-- import: fifthtry.github.io/admint.io/functions
 
 -- ftd.column:
 width: fill-container
@@ -24,11 +24,15 @@ cta-text: Join waitlist
 -- component signup-form-popup:
 caption title:
 string input-label1:
+string input-warning1: Name is required
 string input-label2:
 string input-label3:
+string input-warning3: Organization is required
 string input-label4:
+string input-warning4: Email is requied
 role-record list roles: $roles
 string cta-text:
+integer width: 1300
 
 -- ftd.column:
 width: fill-container
@@ -59,6 +63,7 @@ color: $inherited.colors.text
 margin-top.px: 30
 
 -- ftd.text-input:
+id: popup-input-field1
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -69,6 +74,10 @@ color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
 
+-- ftd.text: $signup-form-popup.input-warning1
+id: popup-warning1
+role: $inherited.types.copy-small
+color: #dc3545
 
 -- ftd.row:
 wrap: true
@@ -107,6 +116,7 @@ color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
+id: popup-input-field3
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -116,6 +126,11 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
+
+-- ftd.text: $signup-form-popup.input-warning3
+id: popup-warning3
+role: $inherited.types.copy-small
+color: #dc3545
 
 -- end: ftd.column
 
@@ -127,6 +142,7 @@ color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
+id: popup-input-field4
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -137,7 +153,15 @@ color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
 
--- end: ftd.text-input
+-- ftd.text: $signup-form-popup.input-warning4
+id: popup-warning4
+role: $inherited.types.copy-small
+color: #dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
 
 -- cta-button: $signup-form-popup.cta-text
 bg-color: $inherited.colors.custom.four
@@ -145,6 +169,22 @@ padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
 text-color: white
+$on-click$: $functions.popupFormValidate()
+
+-- ftd.text: 
+id: popup-label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+classes: markdown
+width.fixed.percent if { ftd.device == "desktop" }: 50
+width.fixed.percent if { ftd.device == "mobile" }: 100
+text-align: end
+margin-top.px: 20
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
 
 -- end: ftd.column
 
