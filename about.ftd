@@ -1,5 +1,5 @@
 -- import: fifthtry.github.io/admint.io/assets
--- import: fifthtry.github.io/admint.io/common/commons
+-- import: fifthtry.github.io/admint.io/common
 -- import: fifthtry.github.io/admint.io/lib
 
 -- lib.page:
@@ -23,7 +23,7 @@ long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 -- lib.about-us.our-team:
 
 -- lib.our-team: Our Team.
-members-list: $commons.members
+members-list: $common.members
 
 -- end: lib.about-us.our-team
 

@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
--- import: fifthtry.github.io/admint.io/common/commons
+-- import: fifthtry.github.io/admint.io/common
 -- import: fastn/processors as pr
 
 
@@ -578,7 +578,7 @@ $sidebar-open: $page.sidebar-open
 -- ftd.column:
 children: $page.wrap
 width: fill-container
-$on-mouse-enter$: $commons.globalEvent()
+$on-mouse-enter$: $common.globalEvent()
 
 -- end: ftd.column
 
@@ -739,7 +739,7 @@ align-self: center
 -- ftd.image:
 if: {current-active != 1}
 src: $assets.files.static.lezgoo.right.svg
-$on-click$: $commons.decclamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $common.decrement-and-clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -769,7 +769,7 @@ padding-horizontal.px: 12
 -- ftd.image:
 if: {current-active != 5}
 src: $assets.files.static.lezgoo.left.svg
-$on-click$: $commons.clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $common.increment-and-clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -1962,7 +1962,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $commons.formValidate()
+$on-blur$: $common.formValidate()
 
 -- ftd.text: $signup-form.input-warning1
 id: warning1
@@ -2017,7 +2017,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $commons.formValidate()
+$on-blur$: $common.formValidate()
 
 -- ftd.text: $signup-form.input-warning3
 id: warning3
@@ -2044,7 +2044,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $commons.formValidate()
+$on-blur$: $common.formValidate()
 
 -- end: ftd.text-input
 
@@ -2064,7 +2064,7 @@ padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
 text-color: white
-$on-click$: $commons.formValidate()
+$on-click$: $common.formValidate()
 
 -- ftd.text: 
 id: label-success
@@ -2703,8 +2703,7 @@ align-content: center
 
 -- ftd.column:
 max-width.fixed.px: 1320
-padding-horizontal.px: 12
-padding-vertical.px: 12
+padding.px: 12
 
 -- about-us-desktop: $about-us.title
 if: { ftd.device != "mobile" }
@@ -2768,25 +2767,19 @@ margin-bottom.px: 8
 -- ftd.text: 
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
-classes: markdown
 
 $about-us-desktop.body
 
 -- end: ftd.column
 
--- ftd.column:
-if: { about-us-desktop.src != NULL }
-width.fixed.percent: 33.33
-margin-bottom.px: 12
-
 -- ftd.image:
+if: { about-us-desktop.src != NULL }
 src: $about-us-desktop.src
 width.fixed.px: 373
 height.fixed.px: 340
 margin-left.px: 22
 margin-top.px: 0
-
--- end: ftd.column
+margin-bottom.px: 12
 
 -- end: ftd.row
 
@@ -2820,9 +2813,6 @@ background.solid: $inherited.colors.background.step-1
 padding-bottom.px: 373
 overflow-x: hidden
 
--- ftd.column:
-width: fill-container
-
 -- ftd.text: $about-us-mobile.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -2836,20 +2826,14 @@ classes: markdown
 
 $about-us-mobile.body
 
--- end: ftd.column
-
--- ftd.column:
+-- ftd.image:
 if: { about-us-mobile.src != NULL }
 anchor: parent
 bottom.px: 0
 right.px: -42
-
--- ftd.image:
 src: $about-us-mobile.src
 width.fixed.px: 373
 height.fixed.px: 340
-
--- end: ftd.column
 
 -- end: ftd.column
 
@@ -2866,15 +2850,12 @@ height.fixed.px: 340
 
 -- component our-team:
 caption title:
-$commons.team list members-list:
+common.team list members-list:
 
 -- ftd.column:
 width: fill-container
 align-content: center
 margin-top.px: 86
-
--- ftd.column:
-width: fill-container
 max-width.fixed.px: 1320
 
 -- ftd.column:
@@ -2916,6 +2897,7 @@ if: { ftd.device != "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
+align-self: start
 
 -- member-card: $obj.title
 $loop$: $our-team.members-list as $obj
@@ -2936,8 +2918,6 @@ $loop$: $our-team.members-list as $obj
 designation: $obj.designation
 avatar: $obj.avatar
 link: $obj.link
-
--- end: ftd.column
 
 -- end: ftd.column
 
@@ -2965,6 +2945,7 @@ width: fill-container
 min-width.fixed.percent if {ftd.device != "mobile"}: 33.33
 padding-horizontal.px if {ftd.device != "mobile"}: 12
 padding-horizontal.px if {ftd.device == "mobile"}: 20
+margin-bottom.px if { ftd.device == "mobile" }: 20
 
 -- ftd.column:
 width: fill-container
@@ -2972,14 +2953,9 @@ padding.px: 20
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image:
-if: { ftd.device != "mobile" }
 src: $member-card.avatar
 width.fixed.px: 376
-
--- ftd.image:
-if: { ftd.device == "mobile" }
-src: $member-card.avatar
-width: fill-container
+width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.row:
 width: fill-container
@@ -2999,16 +2975,12 @@ margin-top.px: 4
 
 -- end: ftd.column
 
--- ftd.column:
-
 -- ftd.image:
 src: $assets.files.static.about-us.linkedin-green.svg
 width.fixed.px: 24
 height.fixed.px: 24
 link: $member-card.link
 align-self: start
-
--- end: ftd.column
 
 -- end: ftd.row
 

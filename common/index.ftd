@@ -8,7 +8,7 @@ loadWindow();
 
 
 
--- void clamp(a,by,min,max):
+-- void increment-and-clamp(a,by,min,max):
 integer $a:
 integer by: 1
 integer min: 0
@@ -19,7 +19,7 @@ a = (((a - min) + by) % (max - min)) + min
 
 
 
--- void decclamp(a,by,min,max):
+-- void decrement-and-clamp(a,by,min,max):
 integer $a:
 integer by: 1
 integer min: 0
@@ -32,7 +32,7 @@ a = (((a - min) - by) % (max - min)) + min
 
 
 
--- void formValidate():
+-- void form-validate():
 js: $assets.files.functions.js
 
 formValidation();
