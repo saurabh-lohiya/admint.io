@@ -718,7 +718,7 @@ spacing.fixed.px: 24
 
 -- component slider:
 children wrap:
-integer $active-cell:
+integer $active-item:
 integer $max: 6
 integer $min: 1
 
@@ -736,9 +736,9 @@ max-width.fixed.percent: 85
 align-self: center
 
 -- ftd.image:
-if: { slider.active-cell != 1}
+if: { slider.active-item != 1 }
 src: $assets.files.static.lezgoo.right.svg
-$on-click$: $common.decrement-and-clamp($a = $slider.active-cell, by = 1, min = $slider.min, max = $slider.max)
+$on-click$: $common.decrement-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -748,7 +748,7 @@ anchor: parent
 left.percent: -9
 
 -- ftd.image:
-if: { slider.active-cell == 1}
+if: { slider.active-item == 1 }
 src: $assets.files.static.lezgoo.right.svg
 align-self: center
 border-radius.px: 100
@@ -766,9 +766,9 @@ padding-horizontal.px: 12
 -- end: ftd.row
 
 -- ftd.image:
-if: { slider.active-cell != 5}
+if: { slider.active-item != 5 }
 src: $assets.files.static.lezgoo.left.svg
-$on-click$: $common.increment-and-clamp($a = $slider.active-cell, by = 1, min = $slider.min, max = $slider.max)
+$on-click$: $common.increment-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -778,7 +778,7 @@ right.percent: -9
 anchor: parent
 
 -- ftd.image:
-if: { slider.active-cell == 5}
+if: { slider.active-item == 5 }
 src: $assets.files.static.lezgoo.left.svg
 align-self: center
 border-radius.px: 100
@@ -1245,7 +1245,7 @@ padding-vertical.px: 29
 spacing: space-between
 max-width.fixed.px: 1320
 align-self: center
-padding-horizontal.px: 24
+padding-horizontal.px: 25
 
 -- ftd.row:
 align-self: center

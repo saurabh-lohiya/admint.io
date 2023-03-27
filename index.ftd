@@ -14,7 +14,7 @@ cta-link: index.html
 Build your brand's fan-base in web 3.0 with us!
 
 -- lib.slider:
-$active-cell: $current-active
+$active-item: $current-active
 
 -- lib.slide: WHY ADMINT? 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
@@ -123,7 +123,7 @@ associated with Web 3.0, allowing advertisers to focus
 on strategy & campaign execution
 
 -- lib.slider:
-$active-cell: $current-cell
+$active-item: $current-cell
 
 -- lib.works-cell: PLANNING
 number: 1
