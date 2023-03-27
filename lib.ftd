@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
--- import: fifthtry.github.io/admint.io/functions
+-- import: fifthtry.github.io/admint.io/common/commons
 -- import: fastn/processors as pr
 
 
@@ -578,7 +578,7 @@ $sidebar-open: $page.sidebar-open
 -- ftd.column:
 children: $page.wrap
 width: fill-container
-$on-mouse-enter$: $functions.globalEvent()
+$on-mouse-enter$: $commons.globalEvent()
 
 -- end: ftd.column
 
@@ -739,7 +739,7 @@ align-self: center
 -- ftd.image:
 if: {current-active != 1}
 src: $assets.files.static.lezgoo.right.svg
-$on-click$: $functions.decclamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $commons.decclamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -769,7 +769,7 @@ padding-horizontal.px: 12
 -- ftd.image:
 if: {current-active != 5}
 src: $assets.files.static.lezgoo.left.svg
-$on-click$: $functions.clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
+$on-click$: $commons.clamp($a = $slider.active-cell, by = 1, min = $min, max = $max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -1962,7 +1962,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $functions.formValidate()
+$on-blur$: $commons.formValidate()
 
 -- ftd.text: $signup-form.input-warning1
 id: warning1
@@ -2017,7 +2017,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $functions.formValidate()
+$on-blur$: $commons.formValidate()
 
 -- ftd.text: $signup-form.input-warning3
 id: warning3
@@ -2044,7 +2044,7 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
-$on-blur$: $functions.formValidate()
+$on-blur$: $commons.formValidate()
 
 -- end: ftd.text-input
 
@@ -2064,7 +2064,7 @@ padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
 text-color: white
-$on-click$: $functions.formValidate()
+$on-click$: $commons.formValidate()
 
 -- ftd.text: 
 id: label-success
@@ -2683,3 +2683,337 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 
 
 
+
+
+
+
+
+
+
+-- component about-us:
+caption title:
+body body: 
+optional ftd.image-src image:
+children our-team: 
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+align-content: center
+
+-- ftd.column:
+max-width.fixed.px: 1320
+padding-horizontal.px: 12
+padding-vertical.px: 12
+
+-- about-us-desktop: $about-us.title
+if: { ftd.device != "mobile" }
+body: $about-us.body
+src: $about-us.image
+
+-- about-us-mobile: $about-us.title
+if: { ftd.device == "mobile" }
+body: $about-us.body
+src: $about-us.image
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+children: $about-us.our-team
+background.solid: $inherited.colors.background.base
+align-content: center
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: about-us
+
+
+
+
+
+
+
+
+
+
+-- component about-us-desktop:
+caption title:
+body body: 
+optional ftd.image-src src:
+
+-- ftd.row:
+width: fill-container
+align-self: center
+border-width.px: 1
+border-color: $inherited.colors.custom.one
+border-right-width.px: 10
+border-bottom-width.px: 10
+margin-top.px: 63
+padding-horizontal.px: 30
+padding-top.px: 30
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width.fixed.percent: 66.66
+
+-- ftd.text: $about-us-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h3
+margin-bottom.px: 8
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+classes: markdown
+
+$about-us-desktop.body
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { about-us-desktop.src != NULL }
+width.fixed.percent: 33.33
+margin-bottom.px: 12
+
+-- ftd.image:
+src: $about-us-desktop.src
+width.fixed.px: 373
+height.fixed.px: 340
+margin-left.px: 22
+margin-top.px: 0
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: about-us-desktop
+
+
+
+
+
+
+
+
+
+
+-- component about-us-mobile:
+caption title:
+body body: 
+optional ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+align-self: center
+border-width.px: 1
+border-color: $inherited.colors.custom.one
+border-right-width.px: 10
+border-bottom-width.px: 10
+margin-top.px: 63
+padding-horizontal.px: 30
+padding-top.px: 30
+background.solid: $inherited.colors.background.step-1
+padding-bottom.px: 373
+overflow-x: hidden
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $about-us-mobile.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h3
+margin-bottom.px: 8
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+classes: markdown
+
+$about-us-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { about-us-mobile.src != NULL }
+anchor: parent
+bottom.px: 0
+right.px: -42
+
+-- ftd.image:
+src: $about-us-mobile.src
+width.fixed.px: 373
+height.fixed.px: 340
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: about-us-mobile
+
+
+
+
+
+
+
+
+
+
+-- component our-team:
+caption title:
+$commons.team list members-list:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 86
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1320
+
+-- ftd.column:
+width: fill-container
+min-height.fixed.px: 244
+
+-- ftd.image: 
+if: { ftd.device != "mobile" }
+src: $assets.files.static.about-us.our-team.svg
+anchor: parent
+right.px: 22
+top.px: -16
+
+-- ftd.image: 
+if: { ftd.device == "mobile" }
+src: $assets.files.static.about-us.our-team.svg
+anchor: parent
+right.px: 0
+top.px: 0
+
+-- ftd.text: $our-team.title
+if: { ftd.device != "mobile" }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-top.px: 188
+margin-left.px: 2
+
+-- ftd.text: $our-team.title
+if: { ftd.device == "mobile" }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-top.px: 260
+margin-left.px: 12
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+padding-bottom.px: 150
+margin-top.rem: 3
+margin-left.px: -10
+
+-- member-card: $obj.title
+$loop$: $our-team.members-list as $obj
+designation: $obj.designation
+avatar: $obj.avatar
+link: $obj.link
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+padding-bottom.px: 150
+margin-top.rem: 3
+margin-left.px: -10
+
+-- member-card: $obj.title
+$loop$: $our-team.members-list as $obj
+designation: $obj.designation
+avatar: $obj.avatar
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: our-team
+
+
+
+
+
+
+
+
+
+
+-- component member-card:
+caption title:
+string designation:
+ftd.image-src avatar:
+string link:
+
+-- ftd.column:
+width: fill-container
+min-width.fixed.percent if {ftd.device != "mobile"}: 33.33
+padding-horizontal.px if {ftd.device != "mobile"}: 12
+padding-horizontal.px if {ftd.device == "mobile"}: 20
+
+-- ftd.column:
+width: fill-container
+padding.px: 20 
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.image:
+if: { ftd.device != "mobile" }
+src: $member-card.avatar
+width.fixed.px: 376
+
+-- ftd.image:
+if: { ftd.device == "mobile" }
+src: $member-card.avatar
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 20
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $member-card.title
+role: $inherited.types.copy-large
+color: $inherited.colors.custom.one
+
+-- ftd.text: $member-card.designation
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 4
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.image:
+src: $assets.files.static.about-us.linkedin-green.svg
+width.fixed.px: 24
+height.fixed.px: 24
+link: $member-card.link
+align-self: start
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: member-card
