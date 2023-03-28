@@ -193,7 +193,7 @@ background.solid: $inherited.colors.background.base
 max-width.fixed.px: $wrapper.width
 padding.px: 30
 margin-horizontal.px if { ftd.device == "mobile" }: 12
-margin-vertical.px: 75
+margin-vertical.px: 78
 border-color: $inherited.colors.custom.one
 border-width.px: 1
 align-self: center

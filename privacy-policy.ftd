@@ -304,7 +304,7 @@ background.solid: $inherited.colors.background.base
 max-width.fixed.px: $wrapper.width
 padding.px: 30
 margin-horizontal.px if { ftd.device == "mobile" }: 12
-margin-vertical.px: 75
+margin-vertical.px: 78
 border-color: $inherited.colors.custom.one
 border-width.px: 1
 align-self: center
@@ -445,7 +445,7 @@ role: $inherited.types.blockquote
 color: $inherited.colors.text
 margin-bottom.px: 8
 
--- ftd.text: $title-para.subttle
+-- ftd.text: $title-para.subtitle
 if: { title-para.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
