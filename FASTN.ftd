@@ -8,6 +8,8 @@
 -- fastn.dependency: fifthtry.github.io/montserrat
 -- fastn.dependency: fifthtry.github.io/admint-typography
 -- fastn.dependency: fifthtry.github.io/bling
+-- fastn.dependency: fifthtry.github.io/doc-site
+-- fastn.dependency: fifthtry.github.io/footer
 -- fastn.auto-import: fifthtry.github.io/bling/dropdown
 
 -- fastn.sitemap:
@@ -21,3 +23,10 @@
 # Pricing🚧: 
 
 # Learn: learn/
+
+# Docs: docs/
+skip: true
+
+- Docs: docs/
+- Hero: docs/hero/
+- Header: docs/header/
