@@ -18,7 +18,7 @@
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
 
-
+-- integer max-width: 1320
 
 
 
@@ -72,7 +72,7 @@ border-radius.px: 50
 -- component advertising:
 caption title:
 string tagline: 
-children cards:
+children feature-cards:
 
 -- ftd.column:
 width: fill-container
@@ -82,7 +82,7 @@ padding-vertical.px: 60
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 padding-horizontal.px: 12
 padding-vertical.px: 12
 align-content: left
@@ -102,9 +102,9 @@ margin-bottom.px: 86
 -- ftd.row:
 if: { ftd.device != "mobile" }
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 padding-horizontal.px: 12
-children: $advertising.cards
+children: $advertising.feature-cards
 spacing.fixed.px: 24
 wrap: true
 
@@ -114,7 +114,7 @@ wrap: true
 if: { ftd.device == "mobile" }
 width: fill-container
 padding-horizontal.px: 12
-children: $advertising.cards
+children: $advertising.feature-cards
 spacing.fixed.px: 20
 
 -- end: ftd.column
@@ -132,7 +132,7 @@ spacing.fixed.px: 20
 
 
 
--- component ad-card: 
+-- component ad-feature-card: 
 caption title: 
 body body:
 ftd.image-src src:
@@ -141,24 +141,24 @@ boolean $hover-me: false
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 49
 width.fixed.percent if { ftd.device == "mobile" }: 100
-$on-mouse-enter$: $ftd.set-bool($a = $ad-card.hover-me, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $ad-card.hover-me, v = false)
-border-bottom-width.px if {$ad-card.hover-me}: 11
+$on-mouse-enter$: $ftd.set-bool($a = $ad-feature-card.hover-me, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $ad-feature-card.hover-me, v = false)
+border-bottom-width.px if {$ad-feature-card.hover-me}: 11
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-border-bottom-color if {$ad-card.hover-me}: #005fbb
-margin-top.px if {$ad-card.hover-me}: -15
+border-bottom-color if {$ad-feature-card.hover-me}: #005fbb
+margin-top.px if {$ad-feature-card.hover-me}: -15
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image: 
-src: $ad-card.src
+src: $ad-feature-card.src
 max-width.fixed.percent: 100
 
 -- ftd.column:
 width.fixed.percent: 80
 padding.px: 35
 
--- ftd.text: $ad-card.title
+-- ftd.text: $ad-feature-card.title
 role: $fonts.size-29
 color: $inherited.colors.text
 margin-bottom.px: 8
@@ -167,13 +167,13 @@ margin-bottom.px: 8
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$ad-card.body
+$ad-feature-card.body
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: ad-card
+-- end: ad-feature-card
 
 
 
@@ -552,14 +552,14 @@ color: $inherited.colors.cta-primary.text
 -- component page:
 optional string site-name:
 string site-url: index.html
-ftd.image-src site-logo: $assets.files.static.lezgoo.admint-logo.svg
+ftd.image-src site-logo: $assets.files.static.admint-logo.svg
 string contact: Get Started🚧
 string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
 ftd.image-src footer-site-logo: $assets.files.static.footer.admint-logo-footer.svg
-pr.toc-item list footer-list: $common.footer-list
-common.social-media list media: $common.media
+pr.toc-item list footer-links: $common.footer-links
+common.social-media list social-links: $common.social-links
 ftd.image-src team-thumb: $assets.files.static.footer.footer-hand-thumb.svg
 children wrap:
 ftd.type-data types: $typo.types
@@ -587,8 +587,8 @@ $on-mouse-enter$: $common.global-event()
 -- footer:
 site-logo: $page.footer-site-logo
 site-url: $page.site-url
-footer-list: $page.footer-list
-media: $page.media
+footer-links: $page.footer-links
+social-links: $page.social-links
 team-thumb: $page.team-thumb
 
 -- end: ftd.column
@@ -603,7 +603,7 @@ team-thumb: $page.team-thumb
 
 
 
--- component card:
+-- component feature-card:
 caption integer title:
 body body:
 
@@ -621,7 +621,7 @@ padding-horizontal.px: 47
 
 
 -- ftd.text: 
-text: $card.body
+text: $feature-card.body
 color: $inherited.colors.text
 role: $inherited.types.copy-large
 margin-bottom.px: 60
@@ -632,7 +632,7 @@ height.fixed.px: 13
 background.solid: $inherited.colors.custom.three
 align-content: center
 
--- ftd.integer: $card.title
+-- ftd.integer: $feature-card.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.background.step-1
 border-radius.percent: 100
@@ -645,7 +645,7 @@ background.solid: $inherited.colors.cta-primary.base
 -- end: ftd.column
 
 
--- end: card
+-- end: feature-card
 
 -- component slide:
 caption title:
@@ -719,8 +719,8 @@ spacing.fixed.px: 24
 -- component slider:
 children wrap:
 integer $active-item:
-integer $max: 6
-integer $min: 1
+integer max: 6
+integer min: 1
 
 -- ftd.row:
 width: fill-container
@@ -1192,11 +1192,11 @@ spacing.fixed.px: 24
 
 -- component header:
 optional string site-name:
-optional string site-url: index.html
-optional ftd.image-src site-logo: $assets.files.static.lezgoo.admint-site-logo.svg
-optional string contact: Get Started🚧
-optional string contact-url: index.html
-pr.toc-item list sections: $sitemap.sections
+string site-url: 
+ftd.image-src site-logo: 
+string contact: 
+string contact-url:
+pr.toc-item list sections: 
 boolean $sidebar-open: false
 
 -- ftd.column:
@@ -1243,7 +1243,7 @@ pr.toc-item list sections:
 width: fill-container
 padding-vertical.px: 29
 spacing: space-between
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 align-self: center
 padding-horizontal.px: 25
 
@@ -1252,7 +1252,7 @@ align-self: center
 padding-vertical.px: 5
 
 -- ftd.image:
-if: {header-desktop.site-logo != NULL}
+if: { header-desktop.site-logo != NULL }
 src: $header-desktop.site-logo
 width: auto
 height: auto
@@ -1311,7 +1311,7 @@ border-radius.px: 50
 $on-mouse-enter$: $ftd.set-bool($a = $header-button.is-active, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $header-button.is-active, v = false)
 padding-vertical.px: 11
-padding-vertical.px if {ftd.device == " mobile"}: 5
+padding-vertical.px if { ftd.device == " mobile" }: 5
 padding-horizontal.px: 35
 link: $header-button.url
 align-self: center
@@ -1506,7 +1506,7 @@ right.px: 0
 bottom.px: -58
 
 -- ftd.column:
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 align-content: center
 align-self: center
 
@@ -1579,7 +1579,7 @@ children works-wrap:
 width: fill-container
 padding-top.px: 42
 padding-bottom.px: 80
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 align-self: center
 
 -- ftd.text: $how-it-works.title
@@ -1632,7 +1632,7 @@ optional integer reset:
 -- ftd.row:
 if: { works-cell.index == works-cell.reset }
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 
 -- ftd.image:
 src: $works-cell.left-src
@@ -1721,8 +1721,8 @@ align-self: center
 -- component footer:
 ftd.image-src site-logo:
 string site-url:
-pr.toc-item list footer-list:
-common.social-media list media: 
+pr.toc-item list footer-links:
+common.social-media list social-links: 
 ftd.image-src team-thumb: 
 
 -- ftd.column:
@@ -1730,19 +1730,19 @@ width: fill-container
 background.solid: $inherited.colors.cta-primary.base
 
 -- footer-desktop:
-if: {ftd.device != "mobile"}
+if: { ftd.device != "mobile" }
 site-logo: $footer.site-logo
 site-url: $footer.site-url
-footer-list: $footer.footer-list
-media: $footer.media
+footer-links: $footer.footer-links
+social-links: $footer.social-links
 team-thumb: $footer.team-thumb
 
 -- footer-mobile:
-if: {ftd.device == "mobile"}
+if: { ftd.device == "mobile" }
 site-logo: $footer.site-logo
 site-url: $footer.site-url
-footer-list: $footer.footer-list
-media: $footer.media
+footer-links: $footer.footer-links
+social-links: $footer.social-links
 team-thumb: $footer.team-thumb
 
 -- end: ftd.column
@@ -1761,14 +1761,14 @@ team-thumb: $footer.team-thumb
 -- component footer-desktop:
 ftd.image-src site-logo:
 string site-url:
-pr.toc-item list footer-list:
-common.social-media list media: 
+pr.toc-item list footer-links:
+common.social-media list social-links: 
 ftd.image-src team-thumb: 
 
 -- ftd.column:
 width: fill-container
 align-self: center
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 padding-vertical.px: 53
 
 -- ftd.image:
@@ -1792,7 +1792,7 @@ margin-top.px: 48
 align-self: end
 
 -- ftd.text: $obj.title
-$loop$: $footer-desktop.footer-list as $obj
+$loop$: $footer-desktop.footer-links as $obj
 role: $inherited.types.label-large
 color: $inherited.colors.background.step-1
 padding-left.px: 32
@@ -1805,7 +1805,7 @@ margin-top.px: 80
 align-self: end
 
 -- ftd.image:
-$loop$: $footer-desktop.media as $obj
+$loop$: $footer-desktop.social-links as $obj
 src: $obj.src
 padding-left.px: 20
 cursor: pointer
@@ -1830,8 +1830,8 @@ cursor: pointer
 -- component footer-mobile:
 ftd.image-src site-logo:
 string site-url:
-pr.toc-item list footer-list:
-common.social-media list media: 
+pr.toc-item list footer-links:
+common.social-media list social-links: 
 ftd.image-src team-thumb: 
 
 -- ftd.column:
@@ -1848,7 +1848,7 @@ margin-top.px: 48
 padding-left.px: 16
 
 -- ftd.text: $obj.title
-$loop$: $footer-mobile.footer-list as $obj
+$loop$: $footer-mobile.footer-links as $obj
 role: $inherited.types.blockquote
 color: $inherited.colors.background.step-1
 margin-bottom.px: 8
@@ -1861,7 +1861,7 @@ padding-left.px: 16
 
 -- ftd.image:
 margin-right.px: 16
-$loop$: $footer-mobile.media as $obj
+$loop$: $footer-mobile.social-links as $obj
 src: $obj.src
 
 -- end: ftd.row
@@ -2176,7 +2176,7 @@ align-self: center
 
 -- component tabs-wrapper:
 children child:
-integer width: 1320
+integer width: $max-width
 
 -- ftd.column:
 width: fill-container
@@ -2204,7 +2204,7 @@ children: $tabs-wrapper.child
 -- component tabs:
 integer active-tab-index: 0
 tab-record list tabs-list: $tabs-list
-integer width: 1320
+integer width: $max-width
 
 -- ftd.column:
 width: fill-container
@@ -2275,7 +2275,7 @@ width.fixed.px: 8
 -- component faq:
 optional caption title:
 children child:
-integer width: 1320
+integer width: $max-width
 
 -- ftd.column:
 width: fill-container
@@ -2493,7 +2493,7 @@ ftd.image-src image:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 align-self: center
 margin-top.px: 60
 
@@ -2567,7 +2567,7 @@ link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
 caption title:
 ftd.image-src image:
 ftd.image-src bg-image:
-integer width: 1320
+integer width: $max-width
 string cta-text:
 string cta-url:
 
@@ -2684,7 +2684,7 @@ background.solid: $inherited.colors.background.base
 align-content: center
 
 -- ftd.column:
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 padding.px: 12
 
 -- about-us-desktop: $about-us.title
@@ -2838,7 +2838,7 @@ common.team list members-list:
 width: fill-container
 align-content: center
 margin-top.px: 86
-max-width.fixed.px: 1320
+max-width.fixed.px: $max-width
 
 -- ftd.column:
 width: fill-container
@@ -2881,7 +2881,7 @@ margin-top.rem: 3
 margin-left.px: -10
 align-self: start
 
--- member-card: $obj.title
+-- member-feature-card: $obj.title
 $loop$: $our-team.members-list as $obj
 designation: $obj.designation
 avatar: $obj.avatar
@@ -2895,7 +2895,7 @@ padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
 
--- member-card: $obj.title
+-- member-feature-card: $obj.title
 $loop$: $our-team.members-list as $obj
 designation: $obj.designation
 avatar: $obj.avatar
@@ -2916,7 +2916,7 @@ link: $obj.link
 
 
 
--- component member-card:
+-- component member-feature-card:
 caption title:
 string designation:
 ftd.image-src avatar:
@@ -2935,7 +2935,7 @@ padding.px: 20
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image:
-src: $member-card.avatar
+src: $member-feature-card.avatar
 width.fixed.px: 376
 width if { ftd.device == "mobile" }: fill-container
 
@@ -2946,11 +2946,11 @@ margin-top.px: 20
 -- ftd.column:
 width: fill-container
 
--- ftd.text: $member-card.title
+-- ftd.text: $member-feature-card.title
 role: $inherited.types.copy-large
 color: $inherited.colors.custom.one
 
--- ftd.text: $member-card.designation
+-- ftd.text: $member-feature-card.designation
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-top.px: 4
@@ -2961,7 +2961,7 @@ margin-top.px: 4
 src: $assets.files.static.about-us.linkedin-green.svg
 width.fixed.px: 24
 height.fixed.px: 24
-link: $member-card.link
+link: $member-feature-card.link
 align-self: start
 
 -- end: ftd.row
@@ -2970,4 +2970,4 @@ align-self: start
 
 -- end: ftd.column
 
--- end: member-card
+-- end: member-feature-card

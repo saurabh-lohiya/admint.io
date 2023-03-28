@@ -22,15 +22,15 @@ src: $assets.files.static.lezgoo.simple.svg
 index: 1
 reset: $current-active
 
--- lib.card: 1
+-- lib.feature-card: 1
 
  Reach out to existing audience base via known channels. 
 
--- lib.card: 2
+-- lib.feature-card: 2
 
  Identify & segregate your “web 3.0 ready” audience pool. 
 
--- lib.card: 3
+-- lib.feature-card: 3
 
  Extend real-world benefits & build your metaverse fanbase! 
 
@@ -77,7 +77,7 @@ Stake your claim across the Metaverses!
 -- lib.advertising: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
--- lib.ad-card: Transparent Yet Private
+-- lib.ad-feature-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
@@ -86,7 +86,7 @@ anonymized, and yet accessible for all, via simple clicks
 across blockchain explorers. As a brand, what do you
 measure & how?
 
--- lib.ad-card: New Data is Universal
+-- lib.ad-feature-card: New Data is Universal
 src: $assets.files.static.advertising.newData.svg
 
 Data no longer sits under one roof, to be used or misused 
@@ -95,7 +95,7 @@ do get to see any and all trasactions across
 wallets, brand tokens, NFTs & crypto currencies. As a brand,
 focus on behavioral traits rather than individuals?
 
--- lib.ad-card: The target is always moving
+-- lib.ad-feature-card: The target is always moving
 src: $assets.files.static.advertising.target-is-always-moving.svg
 
 Your NFTs are transitionary! Here today, there tomorrow. Your
@@ -104,7 +104,7 @@ but "wallets on Polygon, having BAYC NFT, with $500+ liquid
 crypto holdings". As a brand, how do you get them to use 
 your NFTs?
 
--- lib.ad-card: Everyone is everywhere
+-- lib.ad-feature-card: Everyone is everywhere
 src: $assets.files.static.advertising.everyone-is-everywhere.svg
 
 Metaverse and other web 3.0 destinations are global. You no 
