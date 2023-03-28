@@ -44,7 +44,7 @@ lang: ftd
 Once you import `lib` inside your `.ftd` file, use `hero` component by adding
 all required attributes of it.
 
-[See on full page](index.html)
+[See it on full page](index.html)
 
 -- ds.rendered:
 
