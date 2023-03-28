@@ -15,6 +15,7 @@ site-logo: $assets.files.static.lezgoo.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
+sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
@@ -27,12 +28,12 @@ $widthfill: true
 This document contains various components we have developed using `ftd`
 language.
 
-Below are few sample components.
+Below are a few sample components.
 
 -- ds.h3: Header Component
 
-We have developed header component of admint.io as per design present currently
-on [admint.io](https://admint.io/)live site.
+We have developed the `header` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
 
 -- ds.rendered:
 
@@ -60,8 +61,8 @@ sections: $lib.sitemap.sections
 
 -- ds.h3: Hero Component
 
-We have developed hero component of admint.io as per design present currently
-on [admint.io](https://admint.io/) live site.
+We have developed the `hero` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
 
 -- ds.rendered:
 

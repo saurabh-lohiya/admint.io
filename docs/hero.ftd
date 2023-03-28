@@ -15,6 +15,7 @@ site-logo: $assets.files.static.lezgoo.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
+sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 

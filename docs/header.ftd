@@ -15,6 +15,7 @@ site-logo: $assets.files.static.lezgoo.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
+sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
@@ -24,8 +25,8 @@ $widthfill: true
 
 -- ds.page.body:
 
-We have developed header component of admint.io as per design present currently
-on [admint.io](https://admint.io/) live site.
+We have developed the `header` component of admint.io as per the design present
+currently on [admint.io](https://admint.io/) live site.
 
 -- ds.h3: How to use?
 
