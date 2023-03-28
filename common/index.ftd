@@ -1,5 +1,5 @@
 -- import: fifthtry.github.io/admint.io/assets
-
+-- import: fastn/processors as pr
 
 -- void global-event():
 js: $assets.files.functions.js
@@ -61,3 +61,44 @@ avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
 link: https://www.linkedin.com/in/jaylahconsejo/
 
 -- end: members
+
+
+
+
+
+-- pr.toc-item list footer-links:
+$processor$: pr.toc
+
+- About Us: about/
+- Terms & Condition: terms-conditions/
+- Privacy Policy: privacy-policy/
+- Pricing🚧: /
+- Learn: learn/
+
+
+
+
+
+-- record social-media:
+ftd.image-src src:
+string link: /
+
+-- social-media list social-links:
+
+-- social-media:
+link: /
+src: https://admint.io/instagram.6dfc5cafd7516572a269.svg
+
+-- social-media: 
+link: /
+src: https://admint.io/linkedin.5c208bfde7ff079b9f35.svg
+
+-- social-media:
+link: /
+src: https://admint.io/twitter.d3071d3132f19afb426e.svg
+
+-- social-media: 
+link: /
+src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
+
+-- end: social-links
