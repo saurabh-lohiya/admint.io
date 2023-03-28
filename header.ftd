@@ -16,7 +16,7 @@ $processor$: pr.full-sitemap
 -- component header:
 optional string site-name:
 optional string site-url:
-optional ftd.image-src logo: $assets.files.static.lezgoo.admint-logo.svg
+optional ftd.image-src logo: $assets.files.static.admint-logo.svg
 optional string contact-txt: Get Started
 optional string contact-url: /
 pr.toc-item list sections: $sitemap.sections
