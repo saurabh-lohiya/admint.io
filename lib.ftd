@@ -132,7 +132,7 @@ spacing.fixed.px: 20
 
 
 
--- component ad-feature-card: 
+-- component ad-card: 
 caption title: 
 body body:
 ftd.image-src src:
@@ -141,24 +141,24 @@ boolean $hover-me: false
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 49
 width.fixed.percent if { ftd.device == "mobile" }: 100
-$on-mouse-enter$: $ftd.set-bool($a = $ad-feature-card.hover-me, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $ad-feature-card.hover-me, v = false)
-border-bottom-width.px if {$ad-feature-card.hover-me}: 11
+$on-mouse-enter$: $ftd.set-bool($a = $ad-card.hover-me, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $ad-card.hover-me, v = false)
+border-bottom-width.px if {$ad-card.hover-me}: 11
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-border-bottom-color if {$ad-feature-card.hover-me}: #005fbb
-margin-top.px if {$ad-feature-card.hover-me}: -15
+border-bottom-color if {$ad-card.hover-me}: #005fbb
+margin-top.px if {$ad-card.hover-me}: -15
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.image: 
-src: $ad-feature-card.src
+src: $ad-card.src
 max-width.fixed.percent: 100
 
 -- ftd.column:
 width.fixed.percent: 80
 padding.px: 35
 
--- ftd.text: $ad-feature-card.title
+-- ftd.text: $ad-card.title
 role: $fonts.size-29
 color: $inherited.colors.text
 margin-bottom.px: 8
@@ -167,13 +167,13 @@ margin-bottom.px: 8
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$ad-feature-card.body
+$ad-card.body
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: ad-feature-card
+-- end: ad-card
 
 
 
