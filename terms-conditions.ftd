@@ -18,11 +18,9 @@ Please read these terms and conditions carefully before using Our Service.
 
 -- Heading: Interpretation and Definitions
 -- title-para: Interpretation
-
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+subtitle: The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
 -- end: page-hero
-
 
 -- title-para: Definitions
 
@@ -39,8 +37,6 @@ For the purposes of these Terms and Conditions:
 **Service** refers to the Website.
 
 **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the Free Terms and Conditions Generator.
-
-**Personal** Data is any information that relates to an identified or identifiable individual.
 
 **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
 
@@ -63,7 +59,6 @@ Your access to and use of the Service is also conditioned on Your acceptance of 
 
 -- end: title-para
 
-
 -- Heading: Links to Other Websites
 -- title-para: 
 
@@ -75,7 +70,6 @@ We strongly advise You to read the terms and conditions and privacy policies of 
 
 -- end: title-para
 
-
 -- Heading: Termination
 -- title-para: 
 
@@ -84,7 +78,6 @@ We may terminate or suspend Your access immediately, without prior notice or lia
 Upon termination, Your right to use the Service will cease immediately
 
 -- end: title-para
-
 
 -- Heading: Limitation of Liability
 -- title-para: 
@@ -97,7 +90,6 @@ Some states do not allow the exclusion of implied warranties or limitation of li
 
 -- end: title-para
 
-
 -- Heading: "AS IS" and "AS AVAILABLE" Disclaimer
 -- title-para: 
 
@@ -109,14 +101,12 @@ Some jurisdictions do not allow the exclusion of certain types of warranties or 
 
 -- end: title-para
 
-
 -- Heading: Governing Law
 -- title-para: 
 
 The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
 
 -- end: title-para
-
 
 -- Heading: Disputes Resolution
 -- title-para: 
@@ -125,14 +115,12 @@ If You have any concern or dispute about the Service, You agree to first try to 
 
 -- end: title-para
 
-
 -- Heading: For European Union (EU) Users
 -- title-para: 
 
 If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
 
 -- end: title-para
-
 
 -- Heading: United States Legal Compliance
 -- title-para: 
@@ -141,11 +129,9 @@ You represent and warrant that (i) You are not located in a country that is subj
 
 -- end: title-para
 
-
 -- Heading: Severability and Waiver
 -- title-para: Severability
-
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+subtitle: If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
 
 -- end: title-para
 
@@ -155,14 +141,12 @@ Except as provided herein, the failure to exercise a right or to require perform
 
 -- end: title-para
 
-
 -- Heading: Translation Interpretation
 -- title-para:
 
 These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
 
 -- end: title-para
-
 
 -- Heading: Changes to These Terms and Conditions
 -- title-para:
@@ -172,7 +156,6 @@ We reserve the right, at Our sole discretion, to modify or replace these Terms a
 By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
 
 -- end: title-para
-
 
 -- Heading: Contact Us
 -- title-para: 
@@ -237,18 +220,6 @@ children: $wrapper.child
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 -- component termsCondition:
 optional caption title:
 optional body body:
@@ -257,7 +228,7 @@ integer width: 1300
 optional ftd.image-src image:
 
 -- ftd.column:
-margin-top.px: 16
+margin-bottom.px: 16
 
 -- ftd.text: $termsCondition.title
 if: { termsCondition.title != NULL }
@@ -292,10 +263,6 @@ children: $termsCondition.child
 
 
 
-
-
-
-
 -- component page-hero:
 optional caption title:
 ftd.image-src image:
@@ -314,7 +281,7 @@ max-width.fixed.percent if { ftd.device != "mobile" }: 57
 -- ftd.text: $page-hero.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 8
+margin-bottom.px: 24
 
 -- ftd.text: 
 if: { page-hero.body != NULL }
@@ -335,6 +302,7 @@ children: $page-hero.child
 if: { ftd.device != "mobile"}
 src: $page-hero.image
 height.fixed.px: 256
+padding-right.px: 3
 
 -- end: ftd.row
 
@@ -346,14 +314,7 @@ margin-top.px: 30
 
 -- end: ftd.column
 
-
 -- end: page-hero
-
-
-
-
-
-
 
 
 
@@ -365,15 +326,22 @@ margin-top.px: 30
 
 -- component title-para:
 optional caption title:
+optional string subtitle:
 optional body body:
 children child:
 
 -- ftd.column:
-margin-top.px: 16
+margin-top.px: 8
 
 -- ftd.text: $title-para.title
 if: { title-para.title != NULL }
 role: $inherited.types.blockquote
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: $title-para.subtitle
+if: { title-para.subtitle != NULL }
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-bottom.px: 8
 
@@ -393,13 +361,6 @@ children: $title-para.child
 -- end: ftd.column
 
 -- end: title-para
-
-
-
-
-
-
-
 
 
 
@@ -446,6 +407,7 @@ margin-left.px if { list-item.active } : 10
 -- end: ftd.column
 
 -- end: list-item
+
 
 
 

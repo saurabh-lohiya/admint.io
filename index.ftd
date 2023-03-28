@@ -175,13 +175,10 @@ reset: $current-cell
 -- end: lib.how-it-works
 
 
--- lib.lezgoo: Confused about everything Web 3.0? 🚧
+-- lib.lezgoo: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
 cta-label: Let's Learn🚧
-cta-url: index.html
+cta-url: /
 image: $assets.files.static.lezgoo.lezgoo-img.svg
-body1: Don't 
-
-worry, we will help you ! Lezzzgoooooo!
 
 -- end: lib.lezgoo
 
