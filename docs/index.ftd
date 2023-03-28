@@ -11,7 +11,7 @@
 
 -- ds.page: Docs
 show-footer: true
-site-logo: $assets.files.static.lezgoo.admint-logo.svg
+site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
@@ -28,7 +28,7 @@ sections: $lib.sitemap.sections
 This document contains various components we have developed using `ftd`
 language.
 
-Below are a few sample components.
+Below are a few sample components:
 
 -- ds.h3: Header Component
 
@@ -50,8 +50,8 @@ sections: $lib.sitemap.sections
 
 -- lib.header:
 site-url: https://admint.io/
-logo: https://admint.io/assets/images/admint-logo.svg
-contact-txt: Get Started
+site-logo: https://admint.io/assets/images/admint-logo.svg
+contact: Get Started
 contact-url: https://admint.io/
 sections: $lib.sitemap.sections
 
@@ -79,6 +79,7 @@ Build your brand's fan-base in web 3.0 with us!
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
 cta-text: Get Started
 cta-link: index.html
+resized: true
 
 Build your brand's fan-base in web 3.0 with us!
 

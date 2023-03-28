@@ -11,11 +11,12 @@
 
 -- ds.page: Header
 show-footer: true
-site-logo: $assets.files.static.lezgoo.admint-logo.svg
+site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
 sections: $lib.sitemap.sections
+
 
 -- ds.page.footer:
 
@@ -25,21 +26,21 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `header` component of admint.io as per the design present
-currently on [admint.io](https://admint.io/) live site.
+We have developed the `header` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use header component you need to `import` `lib.ftd` inside your `.ftd` file.
-`header` component captures `sitemap-data` which is added inside your
+To use the `header` component you need to import `lib.ftd` inside your `.ftd`
+file. `header` component captures `sitemap-data` which is added inside your
 `FASTN.ftd` file.
 
-To use `header` component you need to `import` `fastn/processors`.
+To use the `header` component you need to import the `fastn/processors`,
 `fastn-processors` helps to fetch sitemap-data from `FASTN.ftd` file.
 
-We have already imported `fastn-processors` inside your `lib.ftd` so, you don't
-need to import it again as we are aleady importing `lib` inside your `ftd` file
-as give below:
+We have already imported the `fastn-processors` into your `lib.ftd` file.
+Therefore, there's no need for you to import it again. You can simply utilize
+it as shown below:
 
 -- ds.code:
 lang: ftd
@@ -48,8 +49,8 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use `header` component by adding
-all required attributes of it.
+Once you import `lib` inside your `.ftd` file, use the `header` component by
+adding all required attributes of it.
 
 -- ds.rendered:
 
@@ -57,8 +58,8 @@ all required attributes of it.
 
 \-- header:
 site-url: https://admint.io/
-logo: https://admint.io/assets/images/admint-logo.svg
-contact-txt: Get Started
+site-logo: https://admint.io/assets/images/admint-logo.svg
+contact: Get Started
 contact-url: https://admint.io/
 sections: $lib.sitemap.sections
 
@@ -66,8 +67,8 @@ sections: $lib.sitemap.sections
 
 -- lib.header:
 site-url: https://admint.io/
-logo: https://admint.io/assets/images/admint-logo.svg
-contact-txt: Get Started
+site-logo: https://admint.io/assets/images/admint-logo.svg
+contact: Get Started
 contact-url: https://admint.io/
 sections: $lib.sitemap.sections
 

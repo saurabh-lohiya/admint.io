@@ -11,7 +11,7 @@
 
 -- ds.page: Hero
 show-footer: true
-site-logo: $assets.files.static.lezgoo.admint-logo.svg
+site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
 types: $typo.types
 $widthfill: true
@@ -25,15 +25,13 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-[See it on full page](index.html)
-
-We have developed hero component of admint.io as per design present currently
-on [admint.io](https://admint.io/) live site.
+We have developed the `hero` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use hero component you need to `import` `lib.ftd` inside your `.ftd` file, as
-shown below:
+To use the `hero` component you need to import `lib.ftd` inside your `.ftd`
+file, as shown below:
 
 -- ds.code:
 lang: ftd
@@ -42,10 +40,8 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use `hero` component by adding
-all required attributes of it.
-
-[See it on full page](index.html)
+Once you import the `lib` inside your `.ftd` file, use the `hero` component by
+adding all required attributes of it.
 
 -- ds.rendered:
 
@@ -62,6 +58,7 @@ Build your brand's fan-base in web 3.0 with us!
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
 cta-text: Get Started
 cta-link: https://admint.io/
+resized: true
 
 Build your brand's fan-base in web 3.0 with us!
 

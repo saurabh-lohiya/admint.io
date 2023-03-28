@@ -1468,6 +1468,7 @@ caption title:
 body body: 
 string cta-text: 
 string cta-link:
+boolean resized: false
 
 -- ftd.column:
 width: fill-container
@@ -1520,13 +1521,22 @@ align-self: center
 align-content: center
 
 -- ftd.image:
-if: { ftd.device != "mobile" }
+if: { ftd.device != "mobile"  && !hero.resized }
 src: $assets.files.static.hero.web3-round.svg
 width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
 top.px: 48
 left.px: 245
+
+-- ftd.image:
+if: { ftd.device != "mobile"  && hero.resized }
+src: $assets.files.static.hero.web3-round.svg
+width.fixed.px: 380
+height.fixed.px: 183
+anchor: parent
+top.px: 50
+left.px: 126
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
@@ -1541,7 +1551,8 @@ left.px: -20
 role: $inherited.types.heading-hero
 color: $inherited.colors.custom.one
 text-align: center
-width.fixed.percent if {ftd.device != "mobile"}: 55
+width.fixed.percent if { ftd.device != "mobile" && !hero.resized }: 55
+width.fixed.percent if { ftd.device != "mobile" && hero.resized }: 72
 region: h1
 
 -- end: ftd.column
