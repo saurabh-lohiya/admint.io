@@ -751,7 +751,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.percent: -9
+left.px: -94
 
 -- ftd.image:
 if: { slider.active-item == 1 }
@@ -762,7 +762,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-left.percent: -9
+left.px: -94
 
 -- ftd.row:
 children: $slider.wrap
@@ -780,7 +780,7 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.percent: -9
+right.px: -94
 anchor: parent
 
 -- ftd.image:
@@ -792,7 +792,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-right.percent: -9
+right.px: -94
 
 
 -- end: ftd.row
