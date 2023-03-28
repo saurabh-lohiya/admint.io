@@ -550,6 +550,7 @@ color: $inherited.colors.cta-primary.text
 
 
 -- component page:
+caption title: Admint.io
 optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
@@ -564,6 +565,9 @@ ftd.image-src team-thumb: $assets.files.static.footer.footer-hand-thumb.svg
 children wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
+
+-- ftd.document:
+title: $page.title
 
 -- ftd.column:
 width: fill-container
@@ -592,6 +596,8 @@ social-links: $page.social-links
 team-thumb: $page.team-thumb
 
 -- end: ftd.column
+
+-- end: ftd.document
 
 -- end: page
 
@@ -1252,7 +1258,7 @@ align-self: center
 padding-vertical.px: 5
 
 -- ftd.image:
-if: { header-desktop.site-logo != NULL }
+if: { header-desktop.site-name == NULL }
 src: $header-desktop.site-logo
 width: auto
 height: auto
@@ -1363,7 +1369,7 @@ spacing: space-between
 width: fill-container
 
 -- ftd.image:
-if: { header-mobile.site-logo != NULL }
+if: { header-mobile.site-name == NULL }
 src: $header-mobile.site-logo
 width: auto
 height.fixed.px: 44
