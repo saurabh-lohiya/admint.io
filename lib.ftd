@@ -893,6 +893,7 @@ optional integer reset:
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 16
+padding-top.px: 40
 
 -- ftd.text: $simple-steps-mobile.title
 role: $inherited.types.copy-regular
