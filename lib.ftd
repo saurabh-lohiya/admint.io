@@ -1796,7 +1796,6 @@ left.px: -12
 
 -- ftd.column:
 align-self: end
-padding-vertical.px: 60
 padding-horizontal.px: 12
 
 -- ftd.image:
@@ -1860,25 +1859,25 @@ padding-horizontal.px: 12
 -- ftd.image:
 src: $footer-mobile.site-logo
 link: $footer-mobile.site-url
+width.fixed.px: 194
 
 -- ftd.column:
-margin-top.px: 48
+margin-top.px: 46
 padding-left.px: 16
 
 -- ftd.text: $obj.title
 $loop$: $footer-mobile.footer-links as $obj
-role: $inherited.types.blockquote
+role: $inherited.types.label-large
 color: $inherited.colors.background.step-1
-margin-bottom.px: 8
 
 -- end: ftd.column
 
 -- ftd.row:
 margin-top.px: 80
-padding-left.px: 16
+padding-left.px: 20
 
 -- ftd.image:
-margin-right.px: 16
+margin-right.px: 20
 $loop$: $footer-mobile.social-links as $obj
 src: $obj.src
 
@@ -1888,8 +1887,8 @@ src: $obj.src
 src: $footer-mobile.team-thumb
 anchor: parent
 bottom.px: 0
-left.px: 32
-width.fixed.px: 200
+left.px: 50
+width.fixed.px: 196
 
 -- end: ftd.column
 
