@@ -2811,7 +2811,8 @@ padding-right.px: 3
 -- ftd.image:
 if: { ftd.device == "mobile"}
 src: $legal-page-hero.image
-max-width.fixed.px: 256
+height.fixed.px: 256
+max-width.fixed.percent: 100
 margin-top.px: 30
 
 -- end: ftd.column
@@ -2988,7 +2989,7 @@ integer marginTop: 16
 margin-top.px: $legal-para-heading.marginTop
 
 -- ftd.text: $legal-para-heading.title
-role: $inherited.types.copy-large
+role: $fonts.size-29
 color: $inherited.colors.text
 
 -- end: ftd.column
