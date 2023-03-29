@@ -748,6 +748,7 @@ if: { ftd.device == "mobile"}
 children: $slider.wrap
 width: fill-container
 padding-horizontal.px: 12
+padding-vertical.px: 40
 
 -- end: ftd.column
 
@@ -893,7 +894,7 @@ optional integer reset:
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 16
-padding-top.px: 40
+padding-horizontal.px: 12
 
 -- ftd.text: $simple-steps-mobile.title
 role: $inherited.types.copy-regular
@@ -956,12 +957,12 @@ structured-wrap: $structured.structured-wrap
 index: $structured.index
 reset: $structured.reset
 
--- structured-mobile: $structured.title
+-- slide-mobile: $structured.title
 if: { ftd.device == "mobile" }
 subtitle: $structured.subtitle
 body: $structured.body
 src: $structured.src
-structured-wrap: $structured.structured-wrap
+slide-wrap: $structured.structured-wrap
 index: $structured.index
 reset: $structured.reset
 
@@ -1055,48 +1056,49 @@ spacing.fixed.px: 24
 
 
 
--- component structured-mobile:
+-- component slide-mobile:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children structured-wrap:
+children slide-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 16
+padding-horizontal.px: 12
 
 -- ftd.image:
-src: $structured-mobile.src
+src: $slide-mobile.src
 align-self: center
-width: fill-container
+width.fixed.percent: 60
 height: auto
 
--- ftd.text: $structured-mobile.subtitle
+-- ftd.text: $slide-mobile.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 28
 region: h3
 
 -- ftd.text:
-if: { structured-mobile.body != NULL }
-text: $structured-mobile.body
+if: { slide-mobile.body != NULL }
+text: $slide-mobile.body
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 margin-bottom.px: 16
 
 -- ftd.column:
 width: fill-container
-children: $structured-mobile.structured-wrap
+children: $slide-mobile.slide-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: structured-mobile
+-- end: slide-mobile
 
 
 
@@ -1128,12 +1130,12 @@ keymedia-vehicle-wrap: $keymedia-vehicle.keymedia-vehicle-wrap
 index: $keymedia-vehicle.index
 reset: $keymedia-vehicle.reset
 
--- keymedia-vehicle-mobile: $keymedia-vehicle.title
+-- slide-mobile: $keymedia-vehicle.title
 if: { ftd.device == "mobile" }
 subtitle: $keymedia-vehicle.subtitle
 body: $keymedia-vehicle.body
 src: $keymedia-vehicle.src
-keymedia-vehicle-wrap: $keymedia-vehicle.keymedia-vehicle-wrap
+slide-wrap: $keymedia-vehicle.keymedia-vehicle-wrap
 index: $keymedia-vehicle.index
 reset: $keymedia-vehicle.reset
 
@@ -1232,59 +1234,6 @@ spacing.fixed.px: 24
 
 
 
--- component keymedia-vehicle-mobile:
-caption title:
-string subtitle:
-optional body body:
-ftd.image-src src:
-children keymedia-vehicle-wrap:
-optional integer index:
-optional integer reset:
-
--- ftd.column:
-width: fill-container
-margin-bottom.px: 16
-
--- ftd.image:
-src: $keymedia-vehicle-mobile.src
-align-self: center
-width: fill-container
-height: auto
-
--- ftd.text: $keymedia-vehicle-mobile.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 20
-region: h3
-width: fill-container
-
--- ftd.text:
-if: { keymedia-vehicle-mobile.body != NULL }
-text: $keymedia-vehicle-mobile.body
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-margin-bottom.px: 16
-
--- ftd.column:
-width: fill-container
-children: $keymedia-vehicle-mobile.keymedia-vehicle-wrap
-spacing.fixed.px: 24
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: keymedia-vehicle-mobile
-
-
-
-
-
-
-
-
-
-
 -- component distribute-nft:
 caption title:
 string subtitle:
@@ -1306,12 +1255,12 @@ distribute-nft-wrap: $distribute-nft.distribute-nft-wrap
 index: $distribute-nft.index
 reset: $distribute-nft.reset
 
--- distribute-nft-mobile: $distribute-nft.title
+-- slide-mobile: $distribute-nft.title
 if: { ftd.device == "mobile" }
 subtitle: $distribute-nft.subtitle
 body: $distribute-nft.body
 src: $distribute-nft.src
-distribute-nft-wrap: $distribute-nft.distribute-nft-wrap
+slide-wrap: $distribute-nft.distribute-nft-wrap
 index: $distribute-nft.index
 reset: $distribute-nft.reset
 
@@ -1409,58 +1358,6 @@ spacing.fixed.px: 24
 
 
 
--- component distribute-nft-mobile:
-caption title:
-string subtitle:
-optional body body:
-ftd.image-src src:
-children distribute-nft-wrap:
-optional integer index:
-optional integer reset:
-
--- ftd.column:
-width: fill-container
-margin-bottom.px: 48
-
--- ftd.image:
-src: $distribute-nft-mobile.src
-align-self: center
-width: fill-container
-height: auto
-
--- ftd.text: $distribute-nft-mobile.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 24
-region: h3
-width: fill-container
-
--- ftd.text:
-if: { distribute-nft-mobile.body != NULL }
-text: $distribute-nft-mobile.body
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-margin-bottom.px: 16
-
--- ftd.column:
-width: fill-container
-children: $distribute-nft-mobile.distribute-nft-wrap
-spacing.fixed.px: 24
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: distribute-nft-mobile
-
-
-
-
-
-
-
-
-
 -- component analyze-pane:
 caption title:
 string subtitle:
@@ -1482,12 +1379,12 @@ analyze-pane-wrap: $analyze-pane.analyze-pane-wrap
 index: $analyze-pane.index
 reset: $analyze-pane.reset
 
--- analyze-pane-mobile: $analyze-pane.title
+-- slide-mobile: $analyze-pane.title
 if: { ftd.device == "mobile" }
 subtitle: $analyze-pane.subtitle
 body: $analyze-pane.body
 src: $analyze-pane.src
-analyze-pane-wrap: $analyze-pane.analyze-pane-wrap
+slide-wrap: $analyze-pane.analyze-pane-wrap
 index: $analyze-pane.index
 reset: $analyze-pane.reset
 
@@ -1576,59 +1473,6 @@ spacing.fixed.px: 24
 -- end: ftd.column
 
 -- end: analyze-pane-desktop
-
-
-
-
-
-
-
-
-
-
--- component analyze-pane-mobile:
-caption title:
-string subtitle:
-optional body body:
-ftd.image-src src:
-children analyze-pane-wrap:
-optional integer index:
-optional integer reset:
-
--- ftd.column:
-width: fill-container
-margin-bottom.px: 48
-
--- ftd.image:
-src: $analyze-pane-mobile.src
-align-self: center
-width: fill-container
-height: auto
-
--- ftd.text: $analyze-pane-mobile.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 28
-region: h3
-width: fill-container
-
--- ftd.text:
-if: { analyze-pane-mobile.body != NULL }
-text: $analyze-pane-mobile.body
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-margin-bottom.px: 16
-
--- ftd.column:
-width: fill-container
-children: $analyze-pane-mobile.analyze-pane-wrap
-spacing.fixed.px: 24
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: analyze-pane-mobile
 
 
 
