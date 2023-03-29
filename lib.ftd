@@ -671,37 +671,8 @@ integer min: 1
 -- ftd.column:
 width: fill-container
 
--- slider-desktop:
-if: { ftd.device !=" mobile" }
-wrap: $slider.wrap
-$active-item: $slider.active-item
-max: $slider.max
-min: $slider.min
-
--- slider-mobile:
-if: { ftd.device ==" mobile" }
-wrap: $slider.wrap
-
--- end: ftd.column
-
--- end: slider
-
-
-
-
-
-
-
-
-
-
--- component slider-desktop:
-children wrap:
-integer $active-item:
-integer max: 6
-integer min: 1
-
 -- ftd.row:
+if: { ftd.device != "mobile" }
 width: fill-container
 padding-horizontal.px: 12
 align-content: center
@@ -715,9 +686,9 @@ max-width.fixed.percent: 85
 align-self: center
 
 -- ftd.image:
-if: { slider-desktop.active-item != 1 }
+if: { slider.active-item != 1 }
 src: $assets.files.static.lezgoo.right.svg
-$on-click$: $common.decrement-and-clamp($a = $slider-desktop.active-item, by = 1, min = $slider-desktop.min, max = $slider-desktop.max)
+$on-click$: $common.decrement-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -727,7 +698,7 @@ anchor: parent
 left.px: -94
 
 -- ftd.image:
-if: { slider-desktop.active-item == 1 }
+if: { slider.active-item == 1 }
 src: $assets.files.static.lezgoo.right.svg
 align-self: center
 border-radius.px: 100
@@ -738,7 +709,7 @@ anchor: parent
 left.px: -94
 
 -- ftd.column:
-children: $slider-desktop.wrap
+children: $slider.wrap
 width: fill-container
 padding-horizontal.px: 12
 max-width.fixed.px: $max-width
@@ -746,9 +717,9 @@ max-width.fixed.px: $max-width
 -- end: ftd.column
 
 -- ftd.image:
-if: { slider-desktop.active-item != 5 }
+if: { slider.active-item != 5 }
 src: $assets.files.static.lezgoo.left.svg
-$on-click$: $common.increment-and-clamp($a = $slider-desktop.active-item, by = 1, min = $slider-desktop.min, max = $slider-desktop.max)
+$on-click$: $common.increment-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -758,7 +729,7 @@ right.px: -94
 anchor: parent
 
 -- ftd.image:
-if: { slider-desktop.active-item == 5 }
+if: { slider.active-item == 5 }
 src: $assets.files.static.lezgoo.left.svg
 align-self: center
 border-radius.px: 100
@@ -772,28 +743,18 @@ right.px: -94
 
 -- end: ftd.row
 
--- end: slider-desktop
-
-
-
-
-
-
-
-
-
-
--- component slider-mobile:
-children wrap:
-
 -- ftd.column:
+if: { ftd.device == "mobile"}
 children: $slider-mobile.wrap
 width: fill-container
 padding-horizontal.px: 12
 
 -- end: ftd.column
 
--- end: slider-mobile
+-- ftd.column
+
+-- end: slider
+
 
 
 
