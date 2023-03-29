@@ -356,6 +356,22 @@ mobile: $size-27-desktop
 
 
 
+
+-- ftd.type size-24-regular-desktop:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-24-regular:
+desktop: $size-24-regular-desktop
+mobile: $size-24-regular-desktop
+
+
+
+
+
 ;; Colors
 
 -- ftd.color adadad:
