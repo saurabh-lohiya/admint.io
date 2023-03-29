@@ -10,10 +10,17 @@
 
 -- lib.page:
 
--- lib.tabs-wrapper:
-
 -- lib.tabs:
-active-tab-index: 0
+
+-- lib.tab: Web 3.0 Basics
+link: /learn
+active: true
+
+-- lib.tab: Brand Campaign
+link: /learn/brand-campaign
+
+-- lib.tab: Advertising & Web 3.0
+link: /learn/advertising-web-3-0
 
 -- end: lib.tabs
 
@@ -92,7 +99,5 @@ It’s important to note that the metaverse is a constantly evolving space and n
 A smart contract is a computer program that automatically executes the terms of a contract when certain conditions are met. It is a way to digitally facilitate, verify, and enforce the negotiation or performance of a contract. Smart contracts are stored on a blockchain. This makes them secure, transparent, and tamper-proof. Smart contracts can be used for a wide range of applications, such as financial transactions, supply chain management, and voting systems.
 
 -- end: lib.faq
-
--- end: lib.tabs-wrapper
 
 -- end: lib.page

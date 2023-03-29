@@ -10,10 +10,17 @@
 
 -- lib.page:
 
--- lib.tabs-wrapper:
-
 -- lib.tabs:
-active-tab-index: 0
+
+-- lib.tab: Web 3.0 Basics
+link: /learn
+active: true
+
+-- lib.tab: Brand Campaign
+link: /learn/brand-campaign
+
+-- lib.tab: Advertising & Web 3.0
+link: /learn/advertising-web-3-0
 
 -- end: lib.tabs
 
@@ -203,7 +210,5 @@ applications, such as financial transactions, supply chain management, and
 voting systems.
 
 -- end: lib.faq
-
--- end: lib.tabs-wrapper
 
 -- end: lib.page

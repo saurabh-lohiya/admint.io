@@ -5,14 +5,19 @@
 
 -- lib.page:
 
--- lib.tabs-wrapper:
-
 -- lib.tabs:
-active-tab-index: 2
+
+-- lib.tab: Web 3.0 Basics
+link: /learn
+
+-- lib.tab: Brand Campaign
+link: /learn/brand-campaign
+
+-- lib.tab: Advertising & Web 3.0
+active: true
+link: /learn/advertising-web-3-0
 
 -- end: lib.tabs
-
--- end: lib.tabs-wrapper
 
 -- lib.post-list:
 
