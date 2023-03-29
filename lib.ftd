@@ -2509,7 +2509,7 @@ ftd.image-src image:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1440
+max-width.fixed.px: $max-width
 align-self: center
 margin-top.px: 60
 
@@ -2571,7 +2571,7 @@ link: $lezgoo.cta-url
 caption title:
 ftd.image-src image:
 ftd.image-src bg-image:
-integer width: $max-width
+integer width: 1440
 string cta-text:
 string cta-url:
 
