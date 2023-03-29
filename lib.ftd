@@ -1468,7 +1468,6 @@ caption title:
 body body: 
 string cta-text: 
 string cta-link:
-boolean resized: false
 
 -- ftd.column:
 width: fill-container
@@ -1521,22 +1520,13 @@ align-self: center
 align-content: center
 
 -- ftd.image:
-if: { ftd.device != "mobile"  && !hero.resized }
+if: { ftd.device != "mobile" }
 src: $assets.files.static.hero.web3-round.svg
 width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
 top.px: 48
-left.px: 245
-
--- ftd.image:
-if: { ftd.device != "mobile"  && hero.resized }
-src: $assets.files.static.hero.web3-round.svg
-width.fixed.px: 380
-height.fixed.px: 183
-anchor: parent
-top.px: 50
-left.px: 126
+left.px: -65
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
@@ -1548,12 +1538,22 @@ top.px: 140
 left.px: -20
 
 -- ftd.text: $hero.title
+if: { ftd.device != "mobile" }
 role: $inherited.types.heading-hero
 color: $inherited.colors.custom.one
 text-align: center
-width.fixed.percent if { ftd.device != "mobile" && !hero.resized }: 55
-width.fixed.percent if { ftd.device != "mobile" && hero.resized }: 72
+width.fixed.px: 700
 region: h1
+align-self: center
+
+-- ftd.text: $hero.title
+if: { ftd.device == "mobile" }
+role: $inherited.types.heading-hero
+color: $inherited.colors.custom.one
+text-align: center
+width.fixed.px: 340
+region: h1
+align-self: center
 
 -- end: ftd.column
 
