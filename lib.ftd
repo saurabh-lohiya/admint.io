@@ -745,7 +745,7 @@ right.px: -94
 
 -- ftd.column:
 if: { ftd.device == "mobile"}
-children: $slider-mobile.wrap
+children: $slider.wrap
 width: fill-container
 padding-horizontal.px: 12
 
