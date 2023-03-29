@@ -1,4 +1,3 @@
--- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/admint.io/docs
 -- import: fifthtry.github.io/admint.io/lib
@@ -38,13 +37,13 @@ which matches the design currently displayed on the live site.
 -- ds.h3: How to use?
 
 To use the `footer` component you need to import `lib.ftd` & `common`  inside
-your `.ftd` file. The `footer` component uses `footer-links` which are added
-inside `common/index.ftd` file. 
+your `.ftd` file. The `footer` component uses `footer-links` and `social-links`
+which are defined inside `common/index.ftd` file.
 
-In the `common/index.ftd` we have defined a `fastn-processor` record
-`pr.toc-item` which generates `footer-links` list  based on `fastn-processors`
-sitemap data. You can add or update `footer-links` via editing
-`common/index.ftd` file. 
+In the `common/index.ftd` we have defined a list named `footer-links` of record
+type `pr.toc-item` which generates `footer-links` list using fastn processor
+`pr.toc`. You can add or update this `footer-links` list via editing
+`common/index.ftd` file.
 
 You can also update, add OR remove `social-links` by searching for
 `social-links` list inside `common/index.ftd` file. The `social-links` list
