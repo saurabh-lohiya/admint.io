@@ -680,8 +680,7 @@ width: fill-container
 spacing.fixed.px: 24
 padding-vertical.px: 40
 padding-horizontal.px: 12
-max-width.fixed.percent: 85
-align-self: center
+align-content: center
 
 -- ftd.image:
 if: { slider.active-item != 1 }
@@ -693,7 +692,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: -94
+left.px: 8
 
 -- ftd.image:
 if: { slider.active-item == 1 }
@@ -704,13 +703,14 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-left.px: -94
+left.px: 8
 
 -- ftd.column:
 children: $slider.wrap
 width: fill-container
-padding-horizontal.px: 12
 max-width.fixed.px: $max-width
+align-content: center
+padding-horizontal.px: 12
 
 -- end: ftd.column
 
@@ -723,7 +723,7 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: -94
+right.px: 8
 anchor: parent
 
 -- ftd.image:
@@ -735,7 +735,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-right.px: -94
+right.px: 8
 
 -- end: ftd.row
 
@@ -1022,8 +1022,8 @@ max-width.fixed.percent: 58
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -11
-top.percent: 66
+right.percent: -9
+top.percent: 56
 z-index: -1 
 
 -- ftd.image:
@@ -1200,8 +1200,8 @@ max-width.fixed.percent: 60
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -10
-top.percent: 54
+right.percent: -9
+top.percent: 44
 z-index: -1 
 
 -- ftd.image:
@@ -1324,7 +1324,7 @@ max-width.fixed.percent: 80
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -10
+right.percent: -9
 top.percent: 88
 z-index: -1 
 
@@ -1449,7 +1449,7 @@ max-width.fixed.percent: 60
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -11
+right.percent: -9
 top.percent: 75
 z-index: -1 
 
