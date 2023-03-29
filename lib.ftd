@@ -2685,7 +2685,7 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 
 
 
--- component wrapper:
+-- component legal-wrapper:
 children child:
 integer width: 1300
 
@@ -2694,7 +2694,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 
 -- ftd.column:
-max-width.fixed.px: $wrapper.width
+max-width.fixed.px: $legal-wrapper.width
 padding.px: 30
 margin-horizontal.px if { ftd.device == "mobile" }: 12
 margin-vertical.px: 78
@@ -2704,7 +2704,7 @@ align-self: center
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
-children: $wrapper.child
+children: $legal-wrapper.child
 
 -- end: ftd.column
 
@@ -2712,7 +2712,7 @@ children: $wrapper.child
 
 -- end: ftd.column
 
--- end: wrapper
+-- end: legal-wrapper
 
 
 
@@ -2723,7 +2723,7 @@ children: $wrapper.child
 
 
 
--- component section-content:
+-- component legal-section-content:
 optional caption title:
 optional body body:
 children child:
@@ -2733,28 +2733,28 @@ optional ftd.image-src image:
 -- ftd.column:
 margin-bottom.px: 16
 
--- ftd.text: $section-content.title
-if: { section-content.title != NULL }
+-- ftd.text: $legal-section-content.title
+if: { legal-section-content.title != NULL }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 8
 
 -- ftd.text: 
-if: { section-content.body != NULL }
+if: { legal-section-content.body != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 classes: markdown
 
-$section-content.body
+$legal-section-content.body
 
 -- ftd.column:
-children: $section-content.child
+children: $legal-section-content.child
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: section-content
+-- end: legal-section-content
 
 
 
@@ -2765,7 +2765,7 @@ children: $section-content.child
 
 
 
--- component page-hero:
+-- component legal-page-hero:
 optional caption title:
 ftd.image-src image:
 optional body body:
@@ -2780,21 +2780,21 @@ spacing: space-between
 -- ftd.column:
 max-width.fixed.percent if { ftd.device != "mobile" }: 57
 
--- ftd.text: $page-hero.title
+-- ftd.text: $legal-page-hero.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 24
 
 -- ftd.text: 
-if: { page-hero.body != NULL }
+if: { legal-page-hero.body != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 classes: markdown
 
-$page-hero.body
+$legal-page-hero.body
 
 -- ftd.column:
-children: $page-hero.child
+children: $legal-page-hero.child
 
 -- end:ftd.column
 
@@ -2802,7 +2802,7 @@ children: $page-hero.child
 
 -- ftd.image:
 if: { ftd.device != "mobile"}
-src: $page-hero.image
+src: $legal-page-hero.image
 height.fixed.px: 256
 padding-right.px: 3
 
@@ -2810,13 +2810,13 @@ padding-right.px: 3
 
 -- ftd.image:
 if: { ftd.device == "mobile"}
-src: $page-hero.image
+src: $legal-page-hero.image
 max-width.fixed.px: 256
 margin-top.px: 30
 
 -- end: ftd.column
 
--- end: page-hero
+-- end: legal-page-hero
 
 
 
@@ -2827,7 +2827,7 @@ margin-top.px: 30
 
 
 
--- component title-para:
+-- component legal-title-para:
 optional caption title:
 optional string subtitle:
 optional body body:
@@ -2836,34 +2836,34 @@ children child:
 -- ftd.column:
 margin-top.px: 8
 
--- ftd.text: $title-para.title
-if: { title-para.title != NULL }
+-- ftd.text: $legal-title-para.title
+if: { legal-title-para.title != NULL }
 role: $inherited.types.blockquote
 color: $inherited.colors.text
 margin-bottom.px: 8
 
--- ftd.text: $title-para.subtitle
-if: { title-para.subtitle != NULL }
+-- ftd.text: $legal-title-para.subtitle
+if: { legal-title-para.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-bottom.px: 8
 
 -- ftd.text: 
-if: { title-para.body != NULL }
+if: { legal-title-para.body != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 classes: markdown
 
-$title-para.body
+$legal-title-para.body
 
 -- ftd.column:
-children: $title-para.child
+children: $legal-title-para.child
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: title-para
+-- end: legal-title-para
 
 
 
@@ -2875,7 +2875,7 @@ children: $title-para.child
 
 
 
--- component title-tracking:
+-- component legal-para-title:
 optional caption title:
 optional body body:
 children child:
@@ -2883,28 +2883,28 @@ children child:
 -- ftd.column:
 margin-top.px: 16
 
--- ftd.text: $title-tracking.title
-if: { title-tracking.title != NULL }
+-- ftd.text: $legal-para-title.title
+if: { legal-para-title.title != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-bottom.px: 8
 
 -- ftd.text: 
-if: { title-tracking.body != NULL }
+if: { legal-para-title.body != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 classes: markdown
 
-$title-tracking.body
+$legal-para-title.body
 
 -- ftd.column:
-children: $title-tracking.child
+children: $legal-para-title.child
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: title-tracking
+-- end: legal-para-title
 
 
 
@@ -2915,16 +2915,16 @@ children: $title-tracking.child
 
 
 
--- component list:
+-- component legal-para-list:
 children list-items:
 
 -- ftd.column:
-children: $list.list-items
+children: $legal-para-list.list-items
 margin-vertical.px: 16
 
 -- end: ftd.column
 
--- end: list
+-- end: legal-para-list
 
 
 
@@ -2935,22 +2935,22 @@ margin-vertical.px: 16
 
 
 
--- component list-item:
+-- component legal-para-list-item:
 optional caption title:
 boolean active: true
 
 -- ftd.column:
 
--- ftd.text: $list-item.title
-if: { list-item.title != NULL }
+-- ftd.text: $legal-para-list-item.title
+if: { legal-para-list-item.title != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
-margin-vertical.px if { list-item.active } : -10
-margin-left.px if { list-item.active } : 10
+margin-vertical.px if { legal-para-list-item.active } : -10
+margin-left.px if { legal-para-list-item.active } : 10
 
 -- end: ftd.column
 
--- end: list-item
+-- end: legal-para-list-item
 
 
 
@@ -2962,16 +2962,16 @@ margin-left.px if { list-item.active } : 10
 
 
 
--- component tracking-list:
+-- component legal-tracking-list:
 children list-items:
 
 -- ftd.column:
-children: $tracking-list.list-items
+children: $legal-tracking-list.list-items
 margin-top.px: 16
 
 -- end: ftd.column
 
--- end: tracking-list
+-- end: legal-tracking-list
 
 
 
@@ -2982,20 +2982,20 @@ margin-top.px: 16
 
 
 
--- component Heading:
+-- component legal-para-heading:
 caption title:
 integer marginTop: 16
 
 -- ftd.column:
-margin-top.px: $Heading.marginTop
+margin-top.px: $legal-para-heading.marginTop
 
--- ftd.text: $Heading.title
+-- ftd.text: $legal-para-heading.title
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 
 -- end: ftd.column
 
--- end: Heading
+-- end: legal-para-heading
 
 
 
@@ -3006,28 +3006,28 @@ color: $inherited.colors.text
 
 
 
--- component paragraph:
+-- component legal-paragraph:
 optional caption title:
 optional body body:
 
 -- ftd.column:
 
--- ftd.text: $paragraph.title
-if: { paragraph.title != NULL }
+-- ftd.text: $legal-paragraph.title
+if: { legal-paragraph.title != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 -- ftd.text: 
-if: { paragraph.body != NULL }
+if: { legal-paragraph.body != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 margin-top.px: 18
 
-$paragraph.body
+$legal-paragraph.body
 
 -- end: ftd.column
 
--- end: paragraph
+-- end: legal-paragraph
 
 
 
@@ -3038,19 +3038,19 @@ $paragraph.body
 
 
 
--- component subHeading:
+-- component legal-title:
 optional caption title:
 
 -- ftd.column:
 
--- ftd.text: $subHeading.title
-if: { subHeading.title != NULL }
+-- ftd.text: $legal-title.title
+if: { legal-title.title != NULL }
 role: $inherited.types.blockquote
 color: $inherited.colors.text
 
 -- end: ftd.column
 
--- end: subHeading
+-- end: legal-title
 
 
 
