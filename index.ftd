@@ -14,7 +14,7 @@ cta-link: index.html
 Build your brand's fan-base in web 3.0 with us!
 
 -- lib.slider:
-$active-cell: $current-active
+$active-item: $current-active
 
 -- lib.slide: WHY ADMINT? 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
@@ -22,15 +22,15 @@ src: $assets.files.static.lezgoo.simple.svg
 index: 1
 reset: $current-active
 
--- lib.card: 1
+-- lib.feature-card: 1
 
  Reach out to existing audience base via known channels. 
 
--- lib.card: 2
+-- lib.feature-card: 2
 
  Identify & segregate your “web 3.0 ready” audience pool. 
 
--- lib.card: 3
+-- lib.feature-card: 3
 
  Extend real-world benefits & build your metaverse fanbase! 
 
@@ -123,7 +123,7 @@ associated with Web 3.0, allowing advertisers to focus
 on strategy & campaign execution
 
 -- lib.slider:
-$active-cell: $current-cell
+$active-item: $current-cell
 
 -- lib.works-cell: PLANNING
 number: 1

@@ -1,0 +1,113 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/footer as fastn-footer
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+
+
+-- ds.page: Docs
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+-- ds.page.footer:
+
+-- footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+This document contains various components we have developed using `ftd`
+language.
+
+Below are a few sample components:
+
+-- ds.h3: Header Component
+
+We have developed the `header` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.header:
+site-url: https://admint.io/
+site-logo: https://admint.io/assets/images/admint-logo.svg
+contact: Get Started
+contact-url: https://admint.io/
+sections: $lib.sitemap.sections
+
+-- ds.rendered.output:
+
+-- lib.header:
+site-url: https://admint.io/
+site-logo: https://admint.io/assets/images/admint-logo.svg
+contact: Get Started
+contact-url: https://admint.io/
+sections: $lib.sitemap.sections
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.h3: Hero Component
+
+We have developed the `hero` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.hero: Deliver refreshing Web 3.0 campaigns!
+cta-text: Get Started
+cta-link: index.html
+
+Build your brand's fan-base in web 3.0 with us!
+
+-- ds.rendered.output:
+
+-- lib.hero: Deliver refreshing Web 3.0 campaigns!
+cta-text: Get Started
+cta-link: index.html
+
+Build your brand's fan-base in web 3.0 with us!
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+
+-- ftd.column:
+width: fill-container
+
+-- fastn-footer.fastn-footer:
+copyright: Copyright © 2023 - [FifthTry](https://www.fifthtry.com/)
+site-logo: $fastn-footer.fastn-logo.light
+powered-by-text: Powered by
+powered-by-link: https://fastn.io/
+
+-- end: ftd.column
+
+-- end: footer
