@@ -622,9 +622,8 @@ border-bottom-left-radius.px: 20
 border-bottom-right-radius.px: 20
 padding-top.px: 43
 padding-bottom.px: 54
-padding-horizontal.px: 51
-
-
+padding-horizontal.px: 47
+width: fill-container
 
 -- ftd.text: 
 text: $feature-card.body
@@ -649,7 +648,6 @@ background.solid: $inherited.colors.cta-primary.base
 -- end: ftd.column
 
 -- end: ftd.column
-
 
 -- end: feature-card
 
@@ -829,7 +827,7 @@ width: fill-container
 height: fill-container
 
 -- ftd.text: $simple-steps-desktop.title
-role: $inherited.types.copy-large
+role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
@@ -897,7 +895,7 @@ margin-bottom.px: 16
 padding-horizontal.px: 12
 
 -- ftd.text: $simple-steps-mobile.title
-role: $inherited.types.copy-regular
+role: $inherited.types.label-large
 color: $inherited.colors.text
 margin-bottom.px: 41
 width: fill-container
@@ -1013,7 +1011,7 @@ region: h3
 -- ftd.text:
 if: { structured-desktop.body != NULL }
 text: $structured-desktop.body
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 58
@@ -1067,8 +1065,8 @@ optional integer reset:
 
 -- ftd.column:
 width: fill-container
-margin-bottom.px: 16
 padding-horizontal.px: 12
+margin-bottom.px: 48
 
 -- ftd.image:
 src: $slide-mobile.src
@@ -1191,7 +1189,7 @@ max-width.fixed.percent: 70
 -- ftd.text:
 if: { keymedia-vehicle-desktop.body != NULL }
 text: $keymedia-vehicle-desktop.body
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 60
@@ -1315,7 +1313,7 @@ width: fill-container
 -- ftd.text:
 if: { distribute-nft-desktop.body != NULL }
 text: $distribute-nft-desktop.body
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 80
@@ -1440,7 +1438,7 @@ max-width.fixed.percent: 80
 -- ftd.text:
 if: { analyze-pane-desktop.body != NULL }
 text: $analyze-pane-desktop.body
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 60
