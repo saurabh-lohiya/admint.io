@@ -7,8 +7,6 @@
 -- fastn.dependency: fifthtry.github.io/roboto-font
 -- fastn.dependency: fifthtry.github.io/montserrat
 -- fastn.dependency: fifthtry.github.io/admint-typography
--- fastn.dependency: fifthtry.github.io/bling
--- fastn.auto-import: fifthtry.github.io/bling/dropdown
 
 -- fastn.sitemap:
 

@@ -8,7 +8,7 @@
 -- lib.tabs-wrapper:
 
 -- lib.tabs:
-active-tab-index: 1
+active-tab-index: 2
 
 -- end: lib.tabs
 

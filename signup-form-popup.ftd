@@ -2,6 +2,13 @@
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
 -- import: fifthtry.github.io/admint.io/functions
+-- import: fifthtry.github.io/admint.io/common/fonts
+-- import: fifthtry.github.io/admint.io/common
+
+
+
+-- string $selected-item: Advertiser
+
 
 -- ftd.column:
 width: fill-container
@@ -39,12 +46,16 @@ width: fill-container
 background.solid: $inherited.colors.background.overlay
 align-content: center
 height: fill-container
+padding-vertical.px: 34
 
 -- ftd.column:
+height: fill-container
 background.solid: white
-max-width.fixed.px: 548
+max-width.fixed.px if { ftd.device == "desktop" }: 548
+max-width.fixed.percent if { ftd.device == "mobile" }: 80
 width: fill-container
 padding.px: 37
+overflow-y: auto
 z-index: 1
 
 -- ftd.text: CLOSE
@@ -53,7 +64,14 @@ color: $inherited.colors.cta-primary.base
 align-self: end
 
 -- ftd.text: $signup-form-popup.title
-role: $inherited.types.heading-medium
+if: { ftd.device == "desktop" }
+role: $fonts.nunito-40-d
+color: $inherited.colors.text
+region: h1
+
+-- ftd.text: $signup-form-popup.title
+if: { ftd.device == "mobile" }
+role: $fonts.nunito-40-m
 color: $inherited.colors.text
 region: h1
 
@@ -65,13 +83,13 @@ margin-top.px: 30
 -- ftd.text-input:
 id: popup-input-field1
 padding.px: 6
-width: fill-container
+width.fixed.percent: 100
 background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 color: $inherited.colors.text
-height.fixed.px: 43
+min-height.fixed.px: 43
 margin-top.px: 8
 
 -- ftd.text: $signup-form-popup.input-warning1
@@ -93,16 +111,8 @@ margin-top.px: 16
 role: $inherited.types.source-code
 color: $inherited.colors.text
 
--- ftd.text-input:
-padding.px: 6
-width.fixed.percent: 100
-background.solid: transparent
-border-width.px: 1
-border-color: $inherited.colors.custom.two
-border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
-margin-top.px: 8
+-- dropdown:
+options-list: $option-list
 
 -- end: ftd.column
 
@@ -150,7 +160,7 @@ border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 color: $inherited.colors.text
-height.fixed.px: 43
+min-height.fixed.px: 43
 margin-top.px: 8
 
 -- ftd.text: $signup-form-popup.input-warning4
@@ -284,3 +294,111 @@ align-self: center
 -- end: ftd.column
 
 -- end: cta-button
+
+
+
+
+
+
+
+
+
+
+-- component dropdown:
+caption title: $selected-item
+boolean $show-options: false
+$common.options list options-list:
+
+-- ftd.row:
+align-self: center
+padding.px: 6
+border-radius.px: 10
+margin-top.px: 8
+width: fill-container
+height.fixed.px: 43
+$on-click$: $ftd.toggle($a = $dropdown.show-options)
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+
+
+-- ftd.text: $selected-item
+role: $inherited.types.copy-regular
+padding-right.px: 52
+min-width.fixed.px: 112
+
+-- ftd.image:
+src: https://fifthtry.github.io/fastn-ui/-/fifthtry.github.io/fastn-ui/static/footer/down-dark.svg
+width.fixed.px: 24
+height: auto
+align-self: center
+
+-- ftd.column:
+if: { dropdown.show-options }
+
+-- options-block: $dropdown.title
+options-list: $dropdown.options-list
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: dropdown
+
+
+
+
+-- component options-block:
+caption title:
+$common.options list options-list:
+boolean $mouse-in: false
+
+-- ftd.column:
+background.solid: grey
+padding-vertical.px: 11
+padding-horizontal.px: 14
+anchor: parent
+top.px: 38
+right.px: -80
+min-width.fixed.px: 240
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 10
+
+-- ftd.column:
+spacing.fixed.px: 12
+
+-- ftd.text: $obj.title
+$loop$: $options-block.options-list as $obj
+role: $inherited.types.copy-regular
+padding-right.px: 20
+color: white
+min-width.fixed.px: 112
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+;;$on-click$: $ftd.enable-dark-mode()
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: options-block
+
+
+
+
+
+
+-- $common.options list option-list:
+
+-- $common.options: Advertiser
+
+-- $common.options: Agency
+
+-- $common.options: Brand Owner
+
+-- $common.options: Agency
+
+-- $common.options: SMB
+
+-- $common.options: Startup
+
+-- end: option-list

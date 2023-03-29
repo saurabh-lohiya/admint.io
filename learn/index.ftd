@@ -13,7 +13,7 @@
 -- lib.tabs-wrapper:
 
 -- lib.tabs:
-active-tab-index: 1
+active-tab-index: 0
 
 -- end: lib.tabs
 

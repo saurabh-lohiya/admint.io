@@ -5,8 +5,8 @@
 -- import: fifthtry.github.io/admint.io/common
 -- import: fastn/processors as pr
 
-
-
+-- integer $current-tab: 0
+-- string $selected-item: Advertiser
 
 
 -- integer $active-tab: 0
@@ -1981,17 +1981,8 @@ margin-top.px: 23
 role: $inherited.types.source-code
 color: $inherited.colors.text
 
--- ftd.text-input:
-id: input-field2
-padding.px: 6
-width.fixed.percent: 100
-background.solid: transparent
-border-width.px: 1
-border-color: $inherited.colors.custom.two
-border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
-margin-top.px: 8
+-- dropdown:
+options-list: $option-list
 
 -- end: ftd.column
 
@@ -2083,7 +2074,7 @@ Thanks for your interest...We will update you
 
 -- ftd.image:
 if: { ftd.device == "desktop" }
-src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
+src: $assets.files.static.signup-form.waitlist.svg
 anchor: parent
 right.px: 0
 bottom.px: 50
@@ -2241,18 +2232,11 @@ width: fill-container
 align-content: center
 wrap: true
 
--- ftd.text: $obj.title
+-- tab-button: $obj.title
 $loop$: $tabs.tabs-list as $obj
-;;border-color if { $obj.active }: $inherited.colors.custom.four
-;;border-radius.px if { $obj.active }: 50
-;;border-width.px if { $obj.active }: 2
-padding-vertical.px: 20
-padding-horizontal.px: 30
-color: $inherited.colors.custom.four
-role: $inherited.types.button-large
+active if { $obj.index == $tabs.active-tab-index }: true
+active if { $obj.index != $tabs.active-tab-index }: false
 link: $obj.link
-
--- end: ftd.row
 
 -- end: ftd.column
 
@@ -2281,6 +2265,29 @@ width.fixed.px: 8
 -- end: tabs
 
 
+
+
+
+
+
+
+
+-- component tab-button:
+caption title:
+boolean active: false
+string link:
+
+-- ftd.text: $tab-button.title
+border-color if { tab-button.active }: $inherited.colors.custom.four
+border-radius.px if { tab-button.active }: 50
+border-width.px if { tab-button.active }: 2
+padding-vertical.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.four
+role: $inherited.types.button-large
+link: $tab-button.link
+
+-- end: tab-button
 
 
 
@@ -2400,22 +2407,29 @@ $question-accordion.body
 
 -- record tab-record:
 caption title:
-boolean active:
+boolean active: false
 string link:
+integer index: 0
+
+
+
 
 -- tab-record list tabs-list:
 
 -- tab-record: Web 3.0 Basics🚧
 active: true
 link: learn/
+index: 0
 
 -- tab-record: Brand Campaign🚧
 active: false
 link: learn/brand-campaign/
+index: 1
 
 -- tab-record: Advertising & Web 3.0🚧
 active: false
 link: learn/advertising-web-3-0/
+index: 2
 
 -- end: tabs-list
 
@@ -2987,3 +3001,110 @@ align-self: start
 -- end: ftd.column
 
 -- end: member-card
+
+
+
+
+
+
+
+
+
+
+-- component dropdown:
+caption title: $selected-item
+boolean $show-options: false
+$common.options list options-list:
+
+-- ftd.row:
+align-self: center
+padding.px: 6
+border-radius.px: 10
+margin-top.px: 8
+width: fill-container
+height.fixed.px: 43
+$on-click$: $ftd.toggle($a = $dropdown.show-options)
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+
+
+-- ftd.text: $selected-item
+role: $inherited.types.copy-regular
+padding-right.px: 52
+min-width.fixed.px: 112
+
+-- ftd.image:
+src: https://fifthtry.github.io/fastn-ui/-/fifthtry.github.io/fastn-ui/static/footer/down-dark.svg
+width.fixed.px: 24
+height: auto
+align-self: center
+
+-- ftd.column:
+if: { dropdown.show-options }
+
+-- options-block: $dropdown.title
+options-list: $dropdown.options-list
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: dropdown
+
+
+
+
+-- component options-block:
+caption title:
+$common.options list options-list:
+boolean $mouse-in: false
+
+-- ftd.column:
+background.solid: grey
+padding-vertical.px: 11
+padding-horizontal.px: 14
+anchor: parent
+top.px: 38
+right.px: -200
+min-width.fixed.px: 360
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 10
+
+-- ftd.column:
+spacing.fixed.px: 8
+
+-- ftd.text: $obj.title
+$loop$: $options-block.options-list as $obj
+role: $inherited.types.copy-regular
+padding-right.px: 20
+color: white
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+;;$on-click$: $ftd.enable-dark-mode()
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: options-block
+
+
+
+
+
+
+-- $common.options list option-list:
+
+-- $common.options: Advertiser
+
+-- $common.options: Agency
+
+-- $common.options: Brand Owner
+
+-- $common.options: Agency
+
+-- $common.options: SMB
+
+-- $common.options: Startup
+
+-- end: option-list

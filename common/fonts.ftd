@@ -338,7 +338,19 @@ desktop: $montserrat-28-desktop
 mobile: $montserrat-28-mobile
 
 
+-- ftd.type nunito-40-d:
+line-height.px: 56
+size.px: 40
+letter-spacing.px: -1
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
 
+-- ftd.type nunito-40-m:
+line-height.px: 40
+size.px: 40
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
 
 
 ;; Colors

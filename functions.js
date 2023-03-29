@@ -4,7 +4,7 @@ function loadWindow() {
 
 
 window.onload = (event) => {
-  document.getElementById("warning1").style.display = 'none';
+  // document.getElementById("warning1").style.display = 'none';
   document.getElementById("warning3").style.display = 'none';
   document.getElementById("warning4").style.display = 'none';
   document.getElementById("label-success").style.display = 'none';

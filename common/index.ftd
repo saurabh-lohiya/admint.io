@@ -41,6 +41,15 @@ formValidation();
 
 
 
+-- void popupFormValidate():
+js: $assets.files.functions.js
+
+popupFormValidation();
+
+
+
+
+
 -- record team:
 caption title:
 string designation:
@@ -61,3 +70,7 @@ avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
 link: https://www.linkedin.com/in/jaylahconsejo/
 
 -- end: members
+
+
+-- record options:
+caption title:
