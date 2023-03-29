@@ -1085,7 +1085,7 @@ region: h3
 -- ftd.text:
 if: { slide-mobile.body != NULL }
 text: $slide-mobile.body
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 16
 
