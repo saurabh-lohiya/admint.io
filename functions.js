@@ -4,18 +4,35 @@ function loadWindow() {
 
 
 window.onload = (event) => {
-  // document.getElementById("warning1").style.display = 'none';
-  document.getElementById("warning3").style.display = 'none';
-  document.getElementById("warning4").style.display = 'none';
-  document.getElementById("label-success").style.display = 'none';
-  document.getElementById("popup-warning1").style.display = 'none';
-  document.getElementById("popup-warning3").style.display = 'none';
-  document.getElementById("popup-warning4").style.display = 'none';
-  document.getElementById("popup-label-success").style.display = 'none';
+  if (document.getElementById("warning1")) {
+    document.getElementById("warning1").style.display = 'none';
+  }
+  if (document.getElementById("warning3")) {
+    document.getElementById("warning3").style.display = 'none';
+  }
+  if (document.getElementById("warning4")) {
+    document.getElementById("warning4").style.display = 'none';
+  }
+
+  if (document.getElementById("popup-warning1")) {
+    document.getElementById("popup-warning1").style.display = 'none';
+  }
+  if (document.getElementById("popup-warning3")) {
+    document.getElementById("popup-warning3").style.display = 'none';
+  }
+  if (document.getElementById("popup-warning4")) {
+    document.getElementById("popup-warning4").style.display = 'none';
+  }
+  if (document.getElementById("label-success")) {
+    document.getElementById("label-success").style.display = 'none';
+  }
+  if (document.getElementById("popup-label-success")) {
+    document.getElementById("popup-label-success").style.display = 'none';
+  }
 
   // document.getElementById("blurMe").style.filter = "blur(6px)";
 
-  document.getElementById("opacityme").style.filter = "blur(6px)";
+  // document.getElementById("opacityme").style.filter = "blur(6px)";
 };
 
 
@@ -72,4 +89,12 @@ function popupFormValidation(event) {
   // }
   //document.getElementById(errorField).style.display = 'none';
   //console.log("Validation", event)
+}
+
+
+
+
+function highlightBorder() {
+  console.log("hi")
+  document.getElementById('input-field2').style.borderColor = "blue"
 }

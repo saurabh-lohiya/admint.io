@@ -1912,7 +1912,7 @@ string input-label3:
 string input-warning3: Organization is required
 string input-label4:
 string input-warning4: Email is requied
-role-record list roles: $roles
+$common.role-record list roles: $common.roles
 string cta-text:
 integer width: 1300
 
@@ -1982,7 +1982,7 @@ role: $inherited.types.source-code
 color: $inherited.colors.text
 
 -- dropdown:
-options-list: $option-list
+options-list: $common.option-list
 
 -- end: ftd.column
 
@@ -2085,28 +2085,6 @@ bottom.px: 50
 
 
 
--- record role-record:
-caption title:
-
-
--- role-record list roles:
-
--- role-record: Advertiser
-
--- role-record: Agency
-
--- role-record: Brand Owner
-
--- role-record: Executive
-
--- role-record: SMB
-
--- role-record: Startup
-
--- end: roles
-
-
-
 
 
 
@@ -2172,6 +2150,7 @@ align-self: center
 -- end: ftd.column
 
 -- end: cta-button
+
 
 
 
@@ -2302,6 +2281,7 @@ link: $tab.link
 -- end: ftd.column
 
 -- end: tab
+
 
 
 
@@ -2455,42 +2435,6 @@ $question-accordion.body
 
 
 
--- record tab-record:
-caption title:
-boolean active: false
-string link:
-integer index: 0
-
-
-
-
--- tab-record list tabs-list:
-
--- tab-record: Web 3.0 Basics🚧
-active: true
-link: learn/
-index: 0
-
--- tab-record: Brand Campaign🚧
-active: false
-link: learn/brand-campaign/
-index: 1
-
--- tab-record: Advertising & Web 3.0🚧
-active: false
-link: learn/advertising-web-3-0/
-index: 2
-
--- end: tabs-list
-
-
-
-
-
-
-
-
-
 
 -- component cta-button-2:
 caption title:
@@ -2631,8 +2575,6 @@ link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
 -- end: ftd.column
 
 -- end: lezgoo
-
-
 
 
 
@@ -3066,17 +3008,22 @@ caption title: $selected-item
 boolean $show-options: false
 $common.options list options-list:
 
+-- ftd.column:
+width: fill-container
+
 -- ftd.row:
+id: input-field2
 align-self: center
 padding.px: 6
 border-radius.px: 10
 margin-top.px: 8
 width: fill-container
 height.fixed.px: 43
-$on-click$: $ftd.toggle($a = $dropdown.show-options)
 border-color: $inherited.colors.custom.two
 border-width.px: 1
-
+spacing: space-between
+$on-click$: $ftd.toggle($a = $dropdown.show-options)
+;;$on-click$: $common.highlight-border()
 
 -- ftd.text: $selected-item
 role: $inherited.types.copy-regular
@@ -3084,10 +3031,12 @@ padding-right.px: 52
 min-width.fixed.px: 112
 
 -- ftd.image:
-src: https://fifthtry.github.io/fastn-ui/-/fifthtry.github.io/fastn-ui/static/footer/down-dark.svg
-width.fixed.px: 24
+src: $assets.files.static.faq.down.svg
+width.fixed.px: 16
 height: auto
 align-self: center
+
+-- end: ftd.row
 
 -- ftd.column:
 if: { dropdown.show-options }
@@ -3097,7 +3046,7 @@ options-list: $dropdown.options-list
 
 -- end: ftd.column
 
--- end: ftd.row
+-- end: ftd.column
 
 -- end: dropdown
 
@@ -3114,15 +3063,12 @@ background.solid: grey
 padding-vertical.px: 11
 padding-horizontal.px: 14
 anchor: parent
-top.px: 38
-right.px: -200
+top.px: 2
+left.px: 0
 min-width.fixed.px: 360
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
-
--- ftd.column:
-spacing.fixed.px: 8
 
 -- ftd.text: $obj.title
 $loop$: $options-block.options-list as $obj
@@ -3130,31 +3076,7 @@ role: $inherited.types.copy-regular
 padding-right.px: 20
 color: white
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
-;;$on-click$: $ftd.enable-dark-mode()
-
--- end: ftd.column
 
 -- end: ftd.column
 
 -- end: options-block
-
-
-
-
-
-
--- $common.options list option-list:
-
--- $common.options: Advertiser
-
--- $common.options: Agency
-
--- $common.options: Brand Owner
-
--- $common.options: Agency
-
--- $common.options: SMB
-
--- $common.options: Startup
-
--- end: option-list

@@ -38,15 +38,16 @@ js: $assets.files.functions.js
 formValidation();
 
 
-
-
-
 -- void popupFormValidate():
 js: $assets.files.functions.js
 
 popupFormValidation();
 
 
+-- void highlight-border():
+js: $assets.files.functions.js
+
+highlightBorder();
 
 
 
@@ -74,3 +75,48 @@ link: https://www.linkedin.com/in/jaylahconsejo/
 
 -- record options:
 caption title:
+
+
+-- options list option-list:
+
+-- options: Advertiser
+
+-- options: Agency
+
+-- options: Brand Owner
+
+-- options: Agency
+
+-- options: SMB
+
+-- options: Startup
+
+-- end: option-list
+
+
+-- record role-record:
+caption title:
+
+
+-- role-record list roles:
+
+-- role-record: Advertiser
+
+-- role-record: Agency
+
+-- role-record: Brand Owner
+
+-- role-record: Executive
+
+-- role-record: SMB
+
+-- role-record: Startup
+
+-- end: roles
+
+
+
+
+
+
+

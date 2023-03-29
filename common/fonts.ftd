@@ -339,7 +339,7 @@ mobile: $montserrat-28-mobile
 
 
 -- ftd.type nunito-40-d:
-line-height.px: 56
+line-height.px: 44
 size.px: 40
 letter-spacing.px: -1
 font-family: $nunito-assets.fonts.Nunito
