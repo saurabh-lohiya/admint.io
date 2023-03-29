@@ -1399,7 +1399,7 @@ color: $inherited.colors.text
 margin-bottom.px: 24
 region: h3
 width: fill-container
-width: fill-container
+
 
 -- ftd.text:
 if: { distribute-nft-desktop.body != NULL }
