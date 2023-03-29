@@ -30,6 +30,7 @@ skip: true
 - Docs: docs/
 - Hero: docs/hero/
 - Header: docs/header/
+- Footer: docs/footer/
 - Why Admint? slider: index.html
 - Lezgoo card: index.html
 - How it works?: index.html
