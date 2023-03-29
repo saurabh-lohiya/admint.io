@@ -343,7 +343,7 @@ padding-horizontal.px: 14
 anchor: parent
 top.px: 2
 left.px: 0
-min-width.fixed.px: 360
+min-width.fixed.px: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10

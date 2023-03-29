@@ -353,6 +353,21 @@ font-family: $nunito-assets.fonts.Nunito
 weight: 700
 
 
+
+-- ftd.type size-27-desktop:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-27:
+desktop: $size-27-desktop
+mobile: $size-27-desktop
+
+
+
+
 ;; Colors
 
 -- ftd.color adadad:
@@ -362,3 +377,4 @@ dark: #adadad
 -- ftd.color 44ce9a:
 light: #44ce9a
 dark: #44ce9a
+
