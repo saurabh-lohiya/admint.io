@@ -2685,7 +2685,7 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 
 
 
--- component legal-wrapper:
+-- component legal-pages:
 children child:
 integer width: 1300
 
@@ -2694,7 +2694,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 
 -- ftd.column:
-max-width.fixed.px: $legal-wrapper.width
+max-width.fixed.px: $legal-pages.width
 padding.px: 30
 margin-horizontal.px if { ftd.device == "mobile" }: 12
 margin-vertical.px: 78
@@ -2704,7 +2704,7 @@ align-self: center
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
-children: $legal-wrapper.child
+children: $legal-pages.child
 
 -- end: ftd.column
 
@@ -2712,7 +2712,7 @@ children: $legal-wrapper.child
 
 -- end: ftd.column
 
--- end: legal-wrapper
+-- end: legal-pages
 
 
 
@@ -2874,7 +2874,6 @@ children: $legal-title-para.child
 
 
 
-
 -- component legal-para-title:
 optional caption title:
 optional body body:
@@ -2951,7 +2950,6 @@ margin-left.px if { legal-para-list-item.active } : 10
 -- end: ftd.column
 
 -- end: legal-para-list-item
-
 
 
 

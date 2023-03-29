@@ -5,7 +5,7 @@
 
 -- lib.page:
 
--- lib.legal-wrapper:
+-- lib.legal-pages:
 
 -- lib.legal-section-content: 
 
@@ -293,6 +293,6 @@ If you have any questions about this Privacy Policy, You can contact us:
 
 -- end: lib.legal-section-content
 
--- end: lib.legal-wrapper
+-- end: lib.legal-pages
 
 -- end: lib.page
