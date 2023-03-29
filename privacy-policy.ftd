@@ -5,11 +5,11 @@
 
 -- lib.page:
 
--- wrapper:
+-- lib.wrapper:
 
--- privacypolicy: 
+-- lib.section-content: 
 
--- page-hero: Privacy Policy
+-- lib.page-hero: Privacy Policy
 image: $assets.files.static.lezgoo.privacy-policy.svg 
 
 Last updated: October 14, 2022
@@ -20,14 +20,14 @@ protects You.
 
 We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Free Privacy Policy Generator.
 
--- end: page-hero
+-- end: lib.page-hero
 
+-- lib.Heading: Interpretation and Definitions
 
--- Heading: Interpretation and Definitions
--- title-para: Interpretation
+-- lib.title-para: Interpretation
 subtitle: The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
--- title-para: Definitions
+-- lib.title-para: Definitions
 
 For the purposes of this Privacy Policy:
 
@@ -53,32 +53,36 @@ For the purposes of this Privacy Policy:
 
 **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
--- Heading: Collecting and Using Your Personal Data
--- title-para: Types of Data Collected
+-- lib.Heading: Collecting and Using Your Personal Data
+
+-- lib.title-para: Types of Data Collected
 subtitle: Personal Data
 
 While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
 
--- list:
+-- lib.list:
 
--- list-item: Email address
-active: false
--- list-item: First name and last name
-active: false
--- list-item: Phone number
-active: false
--- list-item: Address, State, Province, ZIP/Postal code, City
-active: false
--- list-item: Usage Data
+-- lib.list-item: Email address
 active: false
 
--- end: list
+-- lib.list-item: First name and last name
+active: false
+
+-- lib.list-item: Phone number
+active: false
+
+-- lib.list-item: Address, State, Province, ZIP/Postal code, City
+active: false
+
+-- lib.list-item: Usage Data
+active: false
+
+-- end: lib.list
 
 
--- paragraph: Usage Data
--- end: paragraph
+-- lib.paragraph: Usage Data
 
--- title-para:
+-- lib.title-para:
 
 Usage Data is collected automatically when using the Service.
 
@@ -88,71 +92,72 @@ When You access the Service by or through a mobile device, We may collect certai
 
 We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
 
--- end: title-para
-
--- title-tracking: Tracking Technologies and Cookies
+-- lib.title-tracking: Tracking Technologies and Cookies
 
 We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
 
--- list:
+-- lib.list:
 
--- list-item: - **Cookies or Browser Cookies.** A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
--- list-item: - **Web Beacons.** Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
+-- lib.list-item: - **Cookies or Browser Cookies.** A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
 
--- end: list
+-- lib.list-item: - **Web Beacons.** Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
 
--- end: title-tracking
+-- end: lib.list
 
--- paragraph: Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies on the Free Privacy Policy website article.
+-- end: lib.title-tracking
+
+-- lib.paragraph: Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies on the Free Privacy Policy website article.
 
 We use both Session and Persistent Cookies for the purposes set out below:
 
--- end: paragraph
+-- lib.tracking-list:
 
--- tracking-list:
-
--- list-item: **Necessary / Essential Cookies** Type: Session Cookies
-active: false
--- list-item: Administered by: Us
-active: false
--- list-item: Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
+-- lib.list-item: **Necessary / Essential Cookies** Type: Session Cookies
 active: false
 
--- end: tracking-list
-
-
--- tracking-list:
-
--- list-item: **Cookies Policy / Notice Acceptance Cookies** Type: Persistent Cookies
-active: false
--- list-item: Administered by: Us
-active: false
--- list-item: Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
+-- lib.list-item: Administered by: Us
 active: false
 
--- end: tracking-list
-
-
--- tracking-list:
-
--- list-item: **Functionality Cookies** Type: Persistent Cookies
-active: false
--- list-item: Administered by: Us
-active: false
--- list-item: Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+-- lib.list-item: Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
 active: false
 
--- end: tracking-list
+-- end: lib.tracking-list
 
+-- lib.tracking-list:
 
--- title-tracking: 
+-- lib.list-item: **Cookies Policy / Notice Acceptance Cookies** Type: Persistent Cookies
+active: false
+
+-- lib.list-item: Administered by: Us
+active: false
+
+-- lib.list-item: Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
+active: false
+
+-- end: lib.tracking-list
+
+-- lib.tracking-list:
+
+-- lib.list-item: **Functionality Cookies** Type: Persistent Cookies
+active: false
+
+-- lib.list-item: Administered by: Us
+active: false
+
+-- lib.list-item: Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+active: false
+
+-- end: lib.tracking-list
+
+-- lib.title-tracking: 
 
 For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
 
--- end: title-tracking
+-- end: lib.title-tracking
 
--- Heading: Use of Your Personal Data
--- title-para:
+-- lib.Heading: Use of Your Personal Data
+
+-- lib.title-para:
 
 The Company may use Personal Data for the following purposes:
 
@@ -174,25 +179,33 @@ The Company may use Personal Data for the following purposes:
 
 We may share Your personal information in the following situations:
 
--- tracking-list:
--- list-item: - **With Service Providers:** We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
+-- lib.tracking-list:
 
--- list-item: - **For business transfers:** We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
--- list-item: - **With Affiliates:** We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
--- list-item: - **With business partners:** We may share Your information with Our business partners to offer You certain products, services or promotions.
--- list-item: - **With other users:** when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.
--- list-item: - **With Your consent:** We may disclose Your personal information for any other purpose with Your consent.
--- end: tracking-list
+-- lib.list-item: - **With Service Providers:** We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
 
--- Heading: Retention of Your Personal Data
--- title-para:
+-- lib.list-item: - **For business transfers:** We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
+
+-- lib.list-item: - **With Affiliates:** We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
+
+-- lib.list-item: - **With business partners:** We may share Your information with Our business partners to offer You certain products, services or promotions.
+
+-- lib.list-item: - **With other users:** when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.
+
+-- lib.list-item: - **With Your consent:** We may disclose Your personal information for any other purpose with Your consent.
+
+-- end: lib.tracking-list
+
+-- lib.Heading: Retention of Your Personal Data
+
+-- lib.title-para:
 
 The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
 
 The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
 
--- Heading: Transfer of Your Personal Data
--- title-para:
+-- lib.Heading: Transfer of Your Personal Data
+
+-- lib.title-para:
 
 Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
 
@@ -200,8 +213,9 @@ Your consent to this Privacy Policy followed by Your submission of such informat
 
 The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
 
--- Heading: Delete Your Personal Data
--- title-para:
+-- lib.Heading: Delete Your Personal Data
+
+-- lib.title-para:
 
 You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
 
@@ -211,55 +225,57 @@ You may update, amend, or delete Your information at any time by signing in to Y
 
 Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
 
--- Heading: Disclosure of Your Personal Data
--- title-para: Business Transactions
+-- lib.Heading: Disclosure of Your Personal Data
+
+-- lib.title-para: Business Transactions
 subtitle: If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
 
--- title-para: Law enforcement
+-- lib.title-para: Law enforcement
 subtitle: Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
 
--- title-para: Other legal requirements
+-- lib.title-para: Other legal requirements
 
 The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
 
+-- lib.list:
 
--- list:
--- list-item: - Comply with a legal obligation
--- list-item: - Protect and defend the rights or property of the Company
--- list-item: - Prevent or investigate possible wrongdoing in connection with the Service
--- list-item: - Protect the personal safety of Users of the Service or the public
--- list-item: - Protect against legal liability
+-- lib.list-item: - Comply with a legal obligation
 
--- end: list 
+-- lib.list-item: - Protect and defend the rights or property of the Company
 
--- subHeading: Security of Your Personal Data
+-- lib.list-item: - Prevent or investigate possible wrongdoing in connection with the Service
 
--- title-para:
+-- lib.list-item: - Protect the personal safety of Users of the Service or the public
+
+-- lib.list-item: - Protect against legal liability
+
+-- end: lib.list 
+
+-- lib.subHeading: Security of Your Personal Data
+
+-- lib.title-para:
 
 The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
 
--- end: privacypolicy
+-- end: lib.section-content
 
-
--- privacypolicy: Children's Privacy
+-- lib.section-content: Children's Privacy
 
 Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
 
 If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
 
--- end: privacypolicy
+-- end: lib.section-content
 
-
--- privacypolicy: Links to Other Websites
+-- lib.section-content: Links to Other Websites
 
 Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
 
 We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
 
--- end: privacypolicy
+-- end: lib.section-content
 
-
--- privacypolicy: Changes to this Privacy Policy
+-- lib.section-content: Changes to this Privacy Policy
 
 We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
 
@@ -267,406 +283,16 @@ We will let You know via email and/or a prominent notice on Our Service, prior t
 
 You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
 
--- end: privacypolicy
+-- end: lib.section-content
 
-
--- privacypolicy: Contact Us
+-- lib.section-content: Contact Us
 
 If you have any questions about this Privacy Policy, You can contact us:
 
-- By email: support@admint.io
+● By email: support@admint.io
 
--- end: privacypolicy
+-- end: lib.section-content
 
-
--- end: wrapper
+-- end: lib.wrapper
 
 -- end: lib.page
-
-
-
-
-
-
-
-
-
-
--- component wrapper:
-children child:
-integer width: 1300
-
--- ftd.column:
-width: fill-container
-background.solid: $inherited.colors.background.base
-
--- ftd.column:
-max-width.fixed.px: $wrapper.width
-padding.px: 30
-margin-horizontal.px if { ftd.device == "mobile" }: 12
-margin-vertical.px: 78
-border-color: $inherited.colors.custom.one
-border-width.px: 1
-align-self: center
-background.solid: $inherited.colors.background.step-1
-
--- ftd.column:
-children: $wrapper.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: wrapper
-
-
-
-
-
-
-
-
-
-
--- component privacypolicy:
-optional caption title:
-optional body body:
-children child:
-integer width: 1300
-optional ftd.image-src image:
-
--- ftd.column:
-margin-bottom.px: 16
-
--- ftd.text: $privacypolicy.title
-if: { privacypolicy.title != NULL }
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: 
-if: { privacypolicy.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$privacypolicy.body
-
--- ftd.column:
-children: $privacypolicy.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: privacypolicy
-
-
-
-
-
-
-
-
-
-
-
--- component page-hero:
-optional caption title:
-ftd.image-src image:
-optional body body:
-
--- ftd.column:
-align-content: center
-
--- ftd.row:
-spacing: space-between
-
--- ftd.column:
-max-width.fixed.percent if { ftd.device != "mobile" }: 57
-
--- ftd.text: $page-hero.title
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 24
-
--- ftd.text: 
-if: { page-hero.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$page-hero.body
-
--- end: ftd.column
-
--- ftd.image:
-if: { ftd.device != "mobile"}
-src: $page-hero.image
-height.fixed.px: 256
-padding-right.px: 3
-
--- end: ftd.row
-
--- ftd.image:
-if: { ftd.device == "mobile"}
-src: $page-hero.image
-max-width.fixed.px: 256
-margin-top.px: 30
-
--- end: ftd.column
-
--- end: page-hero
-
-
-
-
-
-
-
-
-
-
-
--- component title-para:
-optional caption title:
-optional string subtitle:
-optional body body:
-children child:
-
--- ftd.column:
-margin-top.px: 8
-
--- ftd.text: $title-para.title
-if: { title-para.title != NULL }
-role: $inherited.types.blockquote
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: $title-para.subtitle
-if: { title-para.subtitle != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: 
-if: { title-para.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$title-para.body
-
--- ftd.column:
-children: $title-para.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: title-para
-
-
-
-
-
-
-
-
-
-
--- component title-tracking:
-optional caption title:
-optional body body:
-children child:
-
--- ftd.column:
-margin-top.px: 16
-
--- ftd.text: $title-tracking.title
-if: { title-tracking.title != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: 
-if: { title-tracking.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$title-tracking.body
-
--- ftd.column:
-children: $title-tracking.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: title-tracking
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- component list:
-children list-items:
-
--- ftd.column:
-children: $list.list-items
-margin-vertical.px: 16
-
--- end: ftd.column
-
--- end: list
-
-
-
-
-
-
-
-
-
-
--- component tracking-list:
-children list-items:
-
--- ftd.column:
-children: $tracking-list.list-items
-margin-top.px: 16
-
--- end: ftd.column
-
--- end: tracking-list
-
-
-
-
-
-
-
-
-
-
--- component list-item:
-optional caption title:
-boolean active: true
-
--- ftd.column:
-
--- ftd.text: $list-item.title
-if: { list-item.title != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-vertical.px if { list-item.active } : -10
-margin-left.px if { list-item.active } : 10
-
--- end: ftd.column
-
--- end: list-item
-
-
-
-
-
-
-
-
-
-
--- component Heading:
-caption title:
-integer marginTop: 16
-
--- ftd.column:
-margin-top.px: $Heading.marginTop
-
--- ftd.text: $Heading.title
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-
--- end: ftd.column
-
--- end: Heading
-
-
-
-
-
-
-
-
-
-
-
--- component paragraph:
-optional caption title:
-optional body body:
-
--- ftd.column:
-
--- ftd.text: $paragraph.title
-if: { paragraph.title != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
--- ftd.text: 
-if: { paragraph.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-top.px: 18
-
-$paragraph.body
-
--- end: ftd.column
-
--- end: paragraph
-
-
-
-
-
-
-
-
-
-
--- component subHeading:
-optional caption title:
-
--- ftd.column:
-
--- ftd.text: $subHeading.title
-if: { subHeading.title != NULL }
-role: $inherited.types.blockquote
-color: $inherited.colors.text
-
--- end: ftd.column
-
--- end: subHeading
-
-
-
-
-
-
-

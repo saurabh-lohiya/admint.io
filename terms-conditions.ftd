@@ -5,24 +5,25 @@
 
 -- lib.page:
 
--- wrapper:
+-- lib.wrapper:
 
--- termsCondition: 
+-- lib.section-content: 
 
--- page-hero: Terms & Conditions
+-- lib.page-hero: Terms & Conditions
 image: $assets.files.static.lezgoo.t&c.svg 
 
 Last updated: October 14, 2022
 
 Please read these terms and conditions carefully before using Our Service.
 
--- Heading: Interpretation and Definitions
--- title-para: Interpretation
+-- lib.Heading: Interpretation and Definitions
+
+-- lib.title-para: Interpretation
 subtitle: The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
--- end: page-hero
+-- end: lib.page-hero
 
--- title-para: Definitions
+-- lib.title-para: Definitions
 
 For the purposes of these Terms and Conditions:
 
@@ -44,8 +45,9 @@ For the purposes of these Terms and Conditions:
 
 **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
--- Heading: Acknowledgment
--- title-para: 
+-- lib.Heading: Acknowledgment
+
+-- lib.title-para: 
 
 These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
 
@@ -57,10 +59,9 @@ You represent that you are over the age of 18. The Company does not permit those
 
 Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
 
--- end: title-para
+-- lib.Heading: Links to Other Websites
 
--- Heading: Links to Other Websites
--- title-para: 
+-- lib.title-para: 
 
 Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
 
@@ -68,19 +69,17 @@ The Company has no control over, and assumes no responsibility for, the content,
 
 We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
 
--- end: title-para
+-- lib.Heading: Termination
 
--- Heading: Termination
--- title-para: 
+-- lib.title-para: 
 
 We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
 
 Upon termination, Your right to use the Service will cease immediately
 
--- end: title-para
+-- lib.Heading: Limitation of Liability
 
--- Heading: Limitation of Liability
--- title-para: 
+-- lib.title-para: 
 
 Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
 
@@ -88,10 +87,9 @@ To the maximum extent permitted by applicable law, in no event shall the Company
 
 Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
 
--- end: title-para
+-- lib.Heading: "AS IS" and "AS AVAILABLE" Disclaimer
 
--- Heading: "AS IS" and "AS AVAILABLE" Disclaimer
--- title-para: 
+-- lib.title-para: 
 
 The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
 
@@ -99,345 +97,63 @@ Without limiting the foregoing, neither the Company nor any of the company's pro
 
 Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
 
--- end: title-para
+-- lib.Heading: Governing Law
 
--- Heading: Governing Law
--- title-para: 
+-- lib.title-para: 
 
 The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
 
--- end: title-para
+-- lib.Heading: Disputes Resolution
 
--- Heading: Disputes Resolution
--- title-para: 
+-- lib.title-para: 
 
 If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
 
--- end: title-para
+-- lib.Heading: For European Union (EU) Users
 
--- Heading: For European Union (EU) Users
--- title-para: 
+-- lib.title-para: 
 
 If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
 
--- end: title-para
+-- lib.Heading: United States Legal Compliance
 
--- Heading: United States Legal Compliance
--- title-para: 
+-- lib.title-para: 
 
 You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
 
--- end: title-para
+-- lib.Heading: Severability and Waiver
 
--- Heading: Severability and Waiver
--- title-para: Severability
+-- lib.title-para: Severability
 subtitle: If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
 
--- end: title-para
-
--- title-para: Waiver
+-- lib.title-para: Waiver
 
 Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
 
--- end: title-para
+-- lib.Heading: Translation Interpretation
 
--- Heading: Translation Interpretation
--- title-para:
+-- lib.title-para:
 
 These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
 
--- end: title-para
+-- lib.Heading: Changes to These Terms and Conditions
 
--- Heading: Changes to These Terms and Conditions
--- title-para:
+-- lib.title-para:
 
 We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
 
 By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
 
--- end: title-para
+-- lib.Heading: Contact Us
 
--- Heading: Contact Us
--- title-para: 
+-- lib.title-para: 
 
 If you have any questions about these Terms and Conditions, You can contact us:
 
 ● By email: support@admint.io
 
--- end: title-para
+-- end: lib.section-content
 
--- end: termsCondition
-
--- end: wrapper
+-- end: lib.wrapper
 
 -- end: lib.page
-
-
-
-
-
-
-
-
-
-
--- component wrapper:
-children child:
-integer width: 1300
-
--- ftd.column:
-width: fill-container
-background.solid: $inherited.colors.background.base
-
--- ftd.column:
-max-width.fixed.px: $wrapper.width
-padding.px: 30
-margin-horizontal.px if { ftd.device == "mobile" }: 12
-margin-vertical.px: 78
-border-color: $inherited.colors.custom.one
-border-width.px: 1
-align-self: center
-background.solid: $inherited.colors.background.step-1
-
--- ftd.column:
-children: $wrapper.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: wrapper
-
-
-
-
-
-
-
-
-
-
-
--- component termsCondition:
-optional caption title:
-optional body body:
-children child:
-integer width: 1300
-optional ftd.image-src image:
-
--- ftd.column:
-margin-bottom.px: 16
-
--- ftd.text: $termsCondition.title
-if: { termsCondition.title != NULL }
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: 
-if: { termsCondition.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$termsCondition.body
-
--- ftd.column:
-children: $termsCondition.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: termsCondition
-
-
-
-
-
-
-
-
-
-
-
--- component page-hero:
-optional caption title:
-ftd.image-src image:
-optional body body:
-children child:
-
--- ftd.column:
-align-content: center
-
--- ftd.row:
-spacing: space-between
-
--- ftd.column:
-max-width.fixed.percent if { ftd.device != "mobile" }: 57
-
--- ftd.text: $page-hero.title
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 24
-
--- ftd.text: 
-if: { page-hero.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$page-hero.body
-
--- ftd.column:
-children: $page-hero.child
-
--- end:ftd.column
-
--- end: ftd.column
-
--- ftd.image:
-if: { ftd.device != "mobile"}
-src: $page-hero.image
-height.fixed.px: 256
-padding-right.px: 3
-
--- end: ftd.row
-
--- ftd.image:
-if: { ftd.device == "mobile"}
-src: $page-hero.image
-max-width.fixed.px: 256
-margin-top.px: 30
-
--- end: ftd.column
-
--- end: page-hero
-
-
-
-
-
-
-
-
-
--- component title-para:
-optional caption title:
-optional string subtitle:
-optional body body:
-children child:
-
--- ftd.column:
-margin-top.px: 8
-
--- ftd.text: $title-para.title
-if: { title-para.title != NULL }
-role: $inherited.types.blockquote
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: $title-para.subtitle
-if: { title-para.subtitle != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-bottom.px: 8
-
--- ftd.text: 
-if: { title-para.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-classes: markdown
-
-$title-para.body
-
--- ftd.column:
-children: $title-para.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: title-para
-
-
-
-
-
-
-
-
-
-
--- component list:
-children list-items:
-
--- ftd.column:
-children: $list.list-items
-margin-top.px: 16
-
--- end: ftd.column
-
--- end: list
-
-
-
-
-
-
-
-
-
-
--- component list-item:
-optional caption title:
-boolean active: true
-
--- ftd.column:
-
--- ftd.text: $list-item.title
-if: { list-item.title != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-vertical.px if { list-item.active } : -10
-margin-left.px if { list-item.active } : 10
-
--- end: ftd.column
-
--- end: list-item
-
-
-
-
-
-
-
-
-
-
-
--- component Heading:
-caption title:
-integer marginTop: 16
-
--- ftd.column:
-margin-top.px: $Heading.marginTop
-
--- ftd.text: $Heading.title
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-
--- end: ftd.column
-
--- end: Heading
-
-
-
-
-
-
-
-
-

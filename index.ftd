@@ -177,7 +177,7 @@ reset: $current-cell
 
 -- lib.lezgoo: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
 cta-label: Let's Learn🚧
-cta-url: /
+cta-url: /learn/
 image: $assets.files.static.lezgoo.lezgoo-img.svg
 
 -- end: lib.lezgoo
