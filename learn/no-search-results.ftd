@@ -1,0 +1,13 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/lib
+
+-- lib.page:
+
+-- lib.search-results: Search Results For:
+query: blah blah
+
+It seems we can't find what you're looking for.
+
+-- end: lib.search-results
+
+-- end: lib.page

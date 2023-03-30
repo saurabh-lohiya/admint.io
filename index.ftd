@@ -5,7 +5,7 @@
 
 -- integer $current-cell: 1
 
--- lib.page:
+-- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
 
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
 cta-text: Get Started🚧
@@ -116,6 +116,15 @@ global platforms. As a brand, how will you use your regional
 web 3.0 budget?
 
 -- end: lib.advertising
+
+-- lib.lezgoo: NFTs are our preferred media vehicle! 
+cta-label: Let's Learn🚧
+cta-url: /learn/
+image: $assets.files.static.lezgoo.lezgoo-img.svg
+
+You ask why? Because... Followed by the WHY NFTs?
+
+-- end: lib.lezgoo
 
 -- lib.how-it-works: HOW IT WORKS🚧
 subtitle: Web 3.0 campaigns  set up made simple.
