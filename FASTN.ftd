@@ -1,6 +1,7 @@
 -- import: fastn
 
 -- fastn.package: fifthtry.github.io/admint.io
+favicon: https://admint.io/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/admint-cs
 -- fastn.dependency: fifthtry.github.io/nunito-font
