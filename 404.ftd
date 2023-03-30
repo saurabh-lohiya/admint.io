@@ -1,0 +1,56 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/common/fonts
+
+
+
+
+
+-- not-found-page: Oops, looks like the page is lost.
+
+This is not a fault, just an accident that was not intentional.
+
+
+
+
+
+
+
+
+
+
+-- component not-found-page:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1140
+align-self: center
+background.solid: #FFFFFF
+align-content: center
+padding-vertical.px: 65
+
+-- ftd.image:
+src: $assets.files.static.something-lost.png
+width.fixed.px: 500
+
+-- ftd.text: $not-found-page.title
+role: $fonts.title-404
+color: #333333
+margin-top.px: 20
+margin-bottom.px: 10
+
+
+-- ftd.text: 
+role: $fonts.body-404
+color: #333333
+margin-top.px: 20
+margin-bottom.px: 10
+max-width.fixed.px: 800
+
+$not-found-page.body
+-- end: ftd.column
+
+
+
+-- end: not-found-page

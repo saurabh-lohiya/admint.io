@@ -368,6 +368,36 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type title-404-type:
+line-height.px: 40
+size.px: 36
+letter-spacing.px: 0
+weight: 400
+font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
+
+-- ftd.responsive-type title-404:
+desktop: $title-404-type
+mobile: $title-404-type
+
+
+
+
+
+-- ftd.type body-404-type:
+line-height.px: 28
+size.px: 22
+letter-spacing.px: 0
+weight: 300
+font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
+
+-- ftd.responsive-type body-404:
+desktop: $body-404-type
+mobile: $body-404-type
+
+
+
+
+
 ;; Colors
 
 -- ftd.color adadad:
