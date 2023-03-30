@@ -3529,7 +3529,7 @@ common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
-$on-click-outside$: $ftd.toggle($a = $drop-down.show-options)
+$on-click-outside$: $ftd.set-bool($a = $drop-down.show-options, v = false)
 
 -- ftd.row:
 id: drop-down-input
