@@ -432,6 +432,16 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type title-404-type:
+line-height.px: 40
+size.px: 36
+letter-spacing.px: 0
+weight: 400
+font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
+
+-- ftd.responsive-type title-404: $title-404-type
+
+
 -- ftd.type size-20-mobile:
 line-height.px: 36
 size.px: 20
@@ -450,30 +460,33 @@ font-family: $nunito-assets.fonts.Nunito
 desktop: $size-20-desktop
 mobile: $size-20-mobile
 
+
+-- ftd.type body-404-type:
+line-height.px: 28
+size.px: 22
+letter-spacing.px: 0
+weight: 300
+font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
+
+-- ftd.responsive-type body-404: $body-404-type
+
+
+
+
+
+
 ;; Colors
 
--- ftd.color adadad:
-light: #adadad
-dark: #adadad
+-- ftd.color bdbdbd: #bdbdbd
 
--- ftd.color 44ce9a:
-light: #44ce9a
-dark: #44ce9a
+-- ftd.color 69f0ae: #69f0ae
 
--- ftd.color bdbdbd:
-light: #bdbdbd
-dark: #bdbdbd
+-- ftd.color cdcdcd36: #cdcdcd36
 
--- ftd.color 69f0ae:
-light: #69f0ae
-dark: #69f0ae
+-- ftd.color adadad: #adadad
 
--- ftd.color cdcdcd36:
-light: #cdcdcd36
-dark: #cdcdcd36
+-- ftd.color 44ce9a: #44ce9a
 
--- ftd.color 005FBB:
-light: #005FBB
-dark: #005FBB
+-- ftd.color 005FBB: #005FBB
 
 -- ftd.color 3ea880: #3ea880
