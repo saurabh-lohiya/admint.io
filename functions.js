@@ -29,10 +29,6 @@ window.onload = (event) => {
   if (document.getElementById("popup-label-success")) {
     document.getElementById("popup-label-success").style.display = 'none';
   }
-
-  // document.getElementById("blurMe").style.filter = "blur(6px)";
-
-  // document.getElementById("opacityme").style.filter = "blur(6px)";
 };
 
 
@@ -56,11 +52,6 @@ function formValidation(event) {
   }
   document.getElementById("warning4").style.display = 'none';
   document.getElementById("label-success").style.display = 'block';
-  // if (!(check1 && check2 && check3)) {
-  //   event.preventDefault()
-  // }
-  //document.getElementById(errorField).style.display = 'none';
-  //console.log("Validation", event)
 }
 
 
@@ -84,11 +75,6 @@ function popupFormValidation(event) {
   }
   document.getElementById("popup-warning4").style.display = 'none';
   document.getElementById("popup-label-success").style.display = 'block';
-  // if (!(check1 && check2 && check3)) {
-  //   event.preventDefault()
-  // }
-  //document.getElementById(errorField).style.display = 'none';
-  //console.log("Validation", event)
 }
 
 

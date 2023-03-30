@@ -1915,7 +1915,7 @@ string input-label3:
 string input-warning3: Organization is required
 string input-label4:
 string input-warning4: Email is requied
-$common.role-record list roles: $common.roles
+common.role-record list roles: $common.roles
 string cta-text:
 integer width: 1300
 
