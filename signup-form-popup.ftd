@@ -2,7 +2,6 @@
 -- import: fifthtry.github.io/admint.io/signup-form as sf
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
--- import: fifthtry.github.io/admint.io/functions
 -- import: fifthtry.github.io/admint.io/common/fonts
 -- import: fifthtry.github.io/admint.io/common
 
@@ -84,7 +83,7 @@ margin-top.px: 34
 -- ftd.text-input:
 id: popup-input-field1
 padding.px: 6
-width.fixed.percent: 100
+width: fill-container
 background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
@@ -96,7 +95,7 @@ margin-top.px: 8
 -- ftd.text: $signup-form-popup.input-warning1
 id: popup-warning1
 role: $inherited.types.copy-small
-color: #dc3545
+color: $fonts.dc3545
 
 -- ftd.row:
 wrap: true
@@ -141,7 +140,7 @@ margin-top.px: 8
 -- ftd.text: $signup-form-popup.input-warning3
 id: popup-warning3
 role: $inherited.types.copy-small
-color: #dc3545
+color: $fonts.dc3545
 
 -- end: ftd.column
 
@@ -167,7 +166,7 @@ margin-top.px: 8
 -- ftd.text: $signup-form-popup.input-warning4
 id: popup-warning4
 role: $inherited.types.copy-small
-color: #dc3545
+color: $fonts.dc3545
 
 -- ftd.row:
 width: fill-container
