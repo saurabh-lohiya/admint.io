@@ -2502,24 +2502,13 @@ height.fixed.px: 8
 -- end: ftd.column
 
 -- ftd.column:
-if: { ftd.device == "desktop" }
 anchor: parent
 bottom.px: 8
 right.px: 20
 background.solid: #5f5f5f
+width.fixed.px: 8
 height.fixed.percent: 75
-width.fixed.px: 8
-
--- end: ftd.column
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-anchor: parent
-bottom.px: 8
-right.px: 20
-background.solid: #5f5f5f
-height.fixed.percent: 85
-width.fixed.px: 8
+height.fixed.percent if { ftd.device == "mobile" }: 85
 
 -- end: ftd.column
 
@@ -2544,24 +2533,15 @@ string link:
 -- ftd.column:
 
 -- ftd.text: $tab.title
-if: { !tab.active }
 padding-vertical.px: 20
 padding-horizontal.px: 30
 color: $inherited.colors.custom.one
-role if { ftd.device == "desktop" }: $inherited.types.button-large
+role: $inherited.types.button-large
 role if { ftd.device == "mobile" }: $fonts.size-14-m
-link: $tab.link
-
--- ftd.text: $tab.title
-if: { tab.active }
-border-color: $inherited.colors.custom.four
-border-radius.px: 50
-border-width.px: 2
-padding-vertical.px: 20
-padding-horizontal.px: 30
-color: $inherited.colors.custom.four
-role if { ftd.device == "desktop" }: $inherited.types.button-large
-role if { ftd.device == "mobile" }: $fonts.size-14-m
+border-color if { tab.active }: $inherited.colors.custom.four
+border-radius.px if { tab.active }: 50
+border-width.px if { tab.active }: 2
+color if { tab.active }: $inherited.colors.custom.four
 link: $tab.link
 
 -- end: ftd.column
@@ -2673,15 +2653,8 @@ padding-horizontal.px: 10
 width: fill-container
 
 -- ftd.text:
-if: { ftd.device == "desktop" }
 role: $inherited.types.copy-regular
-color: $inherited.colors.custom.one
-
-$question-accordion.body
-
--- ftd.text:
-if: { ftd.device == "mobile" }
-role: $inherited.types.fine-print
+role if { ftd.device == "mobile" }: $inherited.types.fine-print
 color: $inherited.colors.custom.one
 
 $question-accordion.body

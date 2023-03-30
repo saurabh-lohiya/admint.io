@@ -45,7 +45,7 @@ string org-label:
 string org-warning: Organization is required
 string email-label:
 string email-warning: Email is requied
-$common.role-record list roles: $common.roles
+common.role-record list roles: $common.roles
 string cta-text:
 
 -- ftd.column:
@@ -280,7 +280,7 @@ align-self: center
 -- component drop-down:
 caption title: $selected-item
 boolean $show-options: false
-$common.options list drop-down-options-list:
+common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
@@ -345,9 +345,9 @@ border-radius.px: 10
 
 -- ftd.text: $obj.title
 $loop$: $drop-down-options.drop-down-options-list as $obj
-role: $inherited.types.copy-regular
 padding-right.px: 20
-color: white
+role: $inherited.types.copy-regular
+color: $inherited.colors.background.base
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 
 -- end: ftd.column
