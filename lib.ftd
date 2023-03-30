@@ -2,6 +2,7 @@
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
 -- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint.io/assets
 -- import: fastn/processors as pr
 
 -- integer $current-tab: 0
@@ -2550,7 +2551,7 @@ string link:
 if: { !tab.active }
 padding-vertical.px: 20
 padding-horizontal.px: 30
-color: black
+color: $inherited.colors.custom.one
 role if { ftd.device == "desktop" }: $inherited.types.button-large
 role if { ftd.device == "mobile" }: $fonts.size-14-m
 link: $tab.link
@@ -2589,39 +2590,10 @@ integer width: $max-width
 width: fill-container
 
 -- ftd.column:
-if: { ftd.device == "desktop" }
 width: fill-container
 align-content: center
 background.solid: $inherited.colors.background.step-1
-padding-vertical.px: 70
-
--- ftd.column:
-max-width.fixed.px: $faq.width
-width: fill-container
-padding.px if { ftd.device == "mobile" }: $mobileCompPadd
-align-self: center
-
--- ftd.text: $faq.title
-if: { faq.title != NULL }
-margin-bottom.px: 70
-align-self: center
-role: $inherited.types.heading-medium
-
--- ftd.column:
-width: fill-container
-children: $faq.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-width: fill-container
-align-content: center
-background.solid: $inherited.colors.background.step-1
+padding-vertical.px if { ftd.device == "desktop" }: 70
 
 -- ftd.column:
 max-width.fixed.px: $faq.width
@@ -2676,7 +2648,7 @@ classes: markdown
 background.solid: #eeeeee80
 width: fill-container
 spacing: space-between
-padding-horizontal.px if { ftd.device == "desktop" } : 16
+padding-horizontal.px: 16
 padding-horizontal.px if { ftd.device == "mobile" } : 12
 padding-vertical.px: 13
 $on-click$: $ftd.toggle($a = $question-accordion.open)
@@ -2910,7 +2882,7 @@ margin-horizontal.px if { ftd.device == "mobile" }: 50
 -- ftd.image:
 src: $sneak-peak.image
 border-color: $inherited.colors.custom.one
-border-width.px if { ftd.device != "mobile" }: 20
+border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 44
 width.fixed.percent: 100
@@ -2963,7 +2935,7 @@ color: $inherited.colors.text
 
 -- ftd.column:
 align-self: start
-margin-left.rem if { ftd.device != "mobile" }: 5
+margin-left.rem: 5
 margin-left.px if { ftd.device == "mobile" }: 12
 
 -- ftd.text: $sneak-peak.cta-text
@@ -3244,8 +3216,8 @@ string link:
 
 -- ftd.column:
 width: fill-container
-min-width.fixed.percent if {ftd.device != "mobile"}: 33.33
-padding-horizontal.px if {ftd.device != "mobile"}: 12
+min-width.fixed.percent if {ftd.device == "desktop"}: 33.33
+padding-horizontal.px: 12
 padding-horizontal.px if {ftd.device == "mobile"}: 20
 margin-bottom.px if { ftd.device == "mobile" }: 20
 
