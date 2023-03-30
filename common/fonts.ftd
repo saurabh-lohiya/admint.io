@@ -375,6 +375,18 @@ letter-spacing.px: 0
 weight: 600
 font-family: $nunito-assets.fonts.Nunito
 
+
+-- ftd.type size-24-regular:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+
+
+
+
 ;; Colors
 
 -- ftd.color adadad:
