@@ -63,6 +63,7 @@ max-width.fixed.percent if { ftd.device == "mobile" }: 80
 width: fill-container
 padding.px: 37
 overflow-y: auto
+color: $inherited.colors.text
 z-index: 1
 
 -- ftd.text: CLOSE
@@ -73,12 +74,10 @@ link: /
 
 -- ftd.text: $signup-form-popup.title
 role: $fonts.nunito-40
-color: $inherited.colors.text
 region: h1
 
 -- ftd.text: $signup-form-popup.name-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
 margin-top.px: 34
 
 -- ftd.text-input:
@@ -89,7 +88,6 @@ background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
 min-height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
@@ -111,7 +109,6 @@ width.fixed.percent if { ftd.device == "mobile" }: 100
 -- ftd.text: $signup-form-popup.identity-label
 margin-top.px: 16
 role: $inherited.types.source-code
-color: $inherited.colors.text
 
 -- drop-down:
 drop-down-options-list: $common.option-list
@@ -124,7 +121,6 @@ width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $signup-form-popup.org-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
@@ -135,7 +131,6 @@ background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
@@ -151,7 +146,6 @@ color: $fonts.dc3545
 
 -- ftd.text: $signup-form-popup.email-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
@@ -162,7 +156,6 @@ background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
 min-height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
