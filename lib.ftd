@@ -5,11 +5,7 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fastn/processors as pr
 
--- integer $current-tab: 0
 -- string $selected-item: Advertiser
--- integer $active-tab: 0
--- integer $current-active: 1
--- integer $mobileCompPadd: 20
 -- integer max-width: 1320
 
 -- pr.sitemap-data sitemap:
@@ -2597,7 +2593,7 @@ padding-vertical.px if { ftd.device == "desktop" }: 70
 -- ftd.column:
 max-width.fixed.px: $max-width
 width: fill-container
-padding.px if { ftd.device == "mobile" }: $mobileCompPadd
+padding.px if { ftd.device == "mobile" }: 20
 align-self: center
 
 -- ftd.text: $faq.title
