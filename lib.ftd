@@ -2485,19 +2485,9 @@ anchor: parent
 bottom.px: 8
 right.px: 28
 background.solid: #5f5f5f
+height.fixed.px: 8
 width.fixed.percent: 95
-height.fixed.px: 8
-
--- end: ftd.column
-
--- ftd.column:
-if: { ftd.device == "mobile" }
-anchor: parent
-bottom.px: 8
-right.px: 28
-background.solid: #5f5f5f
-width.fixed.percent: 82.5
-height.fixed.px: 8
+width.fixed.percent if { ftd.device == "mobile" }: 82.5
 
 -- end: ftd.column
 
