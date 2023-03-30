@@ -490,3 +490,13 @@ font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
 -- ftd.color 005FBB: #005FBB
 
 -- ftd.color 3ea880: #3ea880
+
+
+-- ftd.shadow lezgoo:
+color: #a9a7a5ba
+x-offset.px: -2
+y-offset.px: 10
+blur.px: 10
+inset: false
+spread.px: 10
+

@@ -76,47 +76,6 @@ Stake your claim across the Metaverses!
 
 -- end: lib.slider
 
--- lib.advertising: How advertising in web 3.0 different....
-tagline: **ADVERTISING IN WEB 3.0**
-
--- lib.ad-card: Transparent Yet Private
-src: $assets.files.static.advertising.Transparent-Yet-Private.svg
-
-In the decentralized web, there's no room for cookies, device
-Ids or tracking individuals. New user data is protected, 
-anonymized, and yet accessible for all, via simple clicks 
-across blockchain explorers. As a brand, what do you
-measure & how?
-
--- lib.ad-card: New Data is Universal
-src: $assets.files.static.advertising.newData.svg
-
-Data no longer sits under one roof, to be used or misused 
-without proper consent from the individual users. But we 
-do get to see any and all trasactions across
-wallets, brand tokens, NFTs & crypto currencies. As a brand,
-focus on behavioral traits rather than individuals?
-
--- lib.ad-card: The target is always moving
-src: $assets.files.static.advertising.target-is-always-moving.svg
-
-Your NFTs are transitionary! Here today, there tomorrow. Your
-high value customer-base is no longer "male, 22-40, SEC A+" 
-but "wallets on Polygon, having BAYC NFT, with $500+ liquid 
-crypto holdings". As a brand, how do you get them to use 
-your NFTs?
-
--- lib.ad-card: Everyone is everywhere
-src: $assets.files.static.advertising.everyone-is-everywhere.svg
-
-Metaverse and other web 3.0 destinations are global. You no 
-longer have audiences restricted to local & hyperlocal cohorts.
-Your brand now caters to a slew of anonymized wallets across 
-global platforms. As a brand, how will you use your regional
-web 3.0 budget?
-
--- end: lib.advertising
-
 -- lib.lezgoo: NFTs are our preferred media vehicle! 
 cta-label: Let's Learn🚧
 cta-url: /learn/
@@ -185,6 +144,47 @@ reset: $current-cell
 
 -- end: lib.how-it-works
 
+
+-- lib.advertising: How advertising in web 3.0 different....
+tagline: **ADVERTISING IN WEB 3.0**
+
+-- lib.ad-card: Transparent Yet Private
+src: $assets.files.static.advertising.Transparent-Yet-Private.svg
+
+In the decentralized web, there's no room for cookies, device
+Ids or tracking individuals. New user data is protected, 
+anonymized, and yet accessible for all, via simple clicks 
+across blockchain explorers. As a brand, what do you
+measure & how?
+
+-- lib.ad-card: New Data is Universal
+src: $assets.files.static.advertising.newData.svg
+
+Data no longer sits under one roof, to be used or misused 
+without proper consent from the individual users. But we 
+do get to see any and all trasactions across
+wallets, brand tokens, NFTs & crypto currencies. As a brand,
+focus on behavioral traits rather than individuals?
+
+-- lib.ad-card: The target is always moving
+src: $assets.files.static.advertising.target-is-always-moving.svg
+
+Your NFTs are transitionary! Here today, there tomorrow. Your
+high value customer-base is no longer "male, 22-40, SEC A+" 
+but "wallets on Polygon, having BAYC NFT, with $500+ liquid 
+crypto holdings". As a brand, how do you get them to use 
+your NFTs?
+
+-- lib.ad-card: Everyone is everywhere
+src: $assets.files.static.advertising.everyone-is-everywhere.svg
+
+Metaverse and other web 3.0 destinations are global. You no 
+longer have audiences restricted to local & hyperlocal cohorts.
+Your brand now caters to a slew of anonymized wallets across 
+global platforms. As a brand, how will you use your regional
+web 3.0 budget?
+
+-- end: lib.advertising
 
 -- lib.lezgoo: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
 cta-label: Let's Learn🚧

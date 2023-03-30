@@ -575,6 +575,7 @@ title: $page.title
 -- ftd.column:
 width: fill-container
 $on-mouse-enter$: $common.global-event()
+background.solid: $inherited.colors.background.base
 
 -- header:
 site-name: $page.site-name
@@ -671,6 +672,7 @@ integer min: 1
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.row:
 if: { ftd.device != "mobile" }
@@ -2800,6 +2802,8 @@ width: fill-container
 max-width.fixed.px: $max-width
 align-self: center
 margin-top.px: 60
+shadow: $fonts.lezgoo
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
