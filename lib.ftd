@@ -4191,6 +4191,10 @@ $search-result.body
 -- button-small: Read More
 link: $search-result.link
 
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: search-result
 
 
