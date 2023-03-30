@@ -417,9 +417,7 @@ letter-spacing.px: 0
 weight: 400
 font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
 
--- ftd.responsive-type title-404:
-desktop: $title-404-type
-mobile: $title-404-type
+-- ftd.responsive-type title-404: $title-404-type
 
 
 
