@@ -10,9 +10,13 @@
 
 -- integer $active-tab: 0
 
+-- integer $current-tab: 1
+
 -- integer $current-active: 1
 
 -- integer $mobileCompPadd: 20
+
+-- boolean $change-prices: false
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
@@ -570,6 +574,7 @@ title: $page.title
 
 -- ftd.column:
 width: fill-container
+$on-mouse-enter$: $common.global-event()
 
 -- header:
 site-name: $page.site-name
@@ -583,7 +588,6 @@ $sidebar-open: $page.sidebar-open
 -- ftd.column:
 children: $page.wrap
 width: fill-container
-$on-mouse-enter$: $common.global-event()
 
 -- end: ftd.column
 
@@ -3642,7 +3646,6 @@ align-self: start
 
 
 
-
 -- component why-nft-hero:
 caption title:
 string tagline:
@@ -3757,16 +3760,6 @@ $brand-objective.body
 -- end: ftd.column
 
 -- end: brand-objective
-
-
-
-
-
-
-
-
-
-
 -- component why-nft-card: 
 caption title:
 ftd.image-src image:
@@ -3874,6 +3867,70 @@ right.px: 0
 
 
 
+-- component business-card:
+caption title:
+decimal monthly-price:
+decimal annually-price:
+optional string id: 
+
+-- ftd.column:
+width.fixed.percent: 33
+width if { ftd.device == "mobile" }: fill-container
+background.solid: $inherited.colors.background.step-1
+margin-horizontal.px if { ftd.device != "mobile" }: 16
+padding.px: 20
+border-radius.px: 10
+border-color: $inherited.colors.custom.two
+border-width.px:1
+color: $inherited.colors.text
+
+-- ftd.text: $business-card.title
+role: $fonts.size-18
+
+-- ftd.row:
+width: fill-container
+id: $business-card.id
+spacing.fixed.px: 4
+role: $inherited.types.heading-medium
+
+-- ftd.text: \$
+
+-- ftd.decimal: 
+value if { change-prices }: $business-card.annually-price
+value: $business-card.monthly-price
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 16
+margin-bottom.px: 39
+padding-vertical.px: 8
+padding-horizontal.px: 23
+align-content: center
+background.solid: $fonts.cdcdcd36
+width: fill-container
+spacing.fixed.px: 4
+
+-- ftd.image:
+src: $assets.files.static.pricing.dark-star.svg
+-- ftd.text:  Launching Soon 
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: business-card
+
+
+
+
+
+
+
+
+
+
 -- component search:
 string link: 
 
@@ -3904,6 +3961,157 @@ link: $search.link
 -- end: ftd.row
 
 -- end: search
+
+
+
+
+
+
+
+
+
+
+-- component business-plus-card:
+caption title:
+decimal monthly-price:
+decimal annually-price:
+optional string id: 
+
+-- ftd.column:
+width: fill-container
+width.fixed.percent if { ftd.device != "mobile" }: 33
+background.solid: $inherited.colors.border
+margin-horizontal.px if { ftd.device != "mobile" }: 16
+padding.px: 20
+border-radius.px: 10
+border-color: $inherited.colors.custom.two
+border-width.px:1
+color: $inherited.colors.background.step-1
+
+-- ftd.column:
+anchor: parent
+background.solid: $fonts.005FBB
+width.fixed.px: 57
+height.fixed.px: 62
+top.px: 0
+right.px: 0
+border-bottom-left-radius.px: 10
+border-top-right-radius.px: 10
+align-content: center
+
+-- ftd.image:
+src: $assets.files.static.pricing.plus.svg
+
+-- end: ftd.column
+
+-- ftd.text: $business-plus-card.title
+role: $fonts.size-18
+
+-- ftd.row:
+width: fill-container
+id: $business-plus-card.id
+spacing.fixed.px: 4
+role: $inherited.types.heading-medium
+
+-- ftd.text: \$
+
+-- ftd.decimal: 
+value if { change-prices }: $business-plus-card.annually-price
+value: $business-plus-card.monthly-price
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 16
+margin-bottom.px: 39
+padding-vertical.px: 8
+padding-horizontal.px: 23
+align-content: center
+background.solid: #cdcdcd36
+width: fill-container
+spacing.fixed.px: 4
+
+-- ftd.image:
+src: $assets.files.static.pricing.light-star.svg
+-- ftd.text: Launching Soon 
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- end: ftd.column
+-- end: business-plus-card
+
+
+
+
+
+
+
+
+
+
+
+
+-- component tab-panel:
+boolean $switch: false
+boolean $active: false
+children tab-panel-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { tab-panel.index == tab-panel.reset }
+width: fill-container
+padding-bottom.px: 56
+max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+align-self: center
+padding-horizontal.px if { ftd.device == "mobile" }: 16
+
+-- ftd.row:
+align-self if { ftd.device != "mobile" }: end
+padding-vertical.px: 38
+spacing.fixed.px: 24
+align-content: center
+
+-- ftd.text: Monthly
+role: $fonts.size-24
+color if { !tab-panel.switch }: $inherited.colors.border
+color: $inherited.colors.custom.one
+
+-- slide-toggle:
+$on-click$: $ftd.toggle($a = $tab-panel.switch)
+$on-click$: $ftd.toggle($a = $tab-panel.active)
+$on-click$: $ftd.toggle($a = $change-prices)
+active: $tab-panel.active
+
+-- ftd.text: Annually (Save 25%)
+role: $fonts.size-24
+color: $inherited.colors.custom.one
+color if { tab-panel.switch }: $inherited.colors.border
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+children: $tab-panel.tab-panel-wrap
+width: fill-container
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+children: $tab-panel.tab-panel-wrap
+width: fill-container
+spacing.fixed.px: 24
+margin-bottom.px: 24
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tab-panel
+
 
 
 
@@ -3983,11 +4191,139 @@ $search-result.body
 -- button-small: Read More
 link: $search-result.link
 
--- end: ftd.column
-
--- end: ftd.column
-
 -- end: search-result
+
+
+
+
+
+
+
+
+
+
+-- component business-plan:
+optional caption title:
+optional body body:
+children tabs-wrap:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 56
+max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+align-self: center
+padding-horizontal.px if { ftd.device == "mobile" }: 12
+
+-- ftd.text: $business-plan.title
+role: $fonts.size-50
+color: $inherited.colors.text
+margin-bottom.px: 89
+
+-- ftd.row:
+align-content: center
+width: fill-container
+max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+children: $business-plan.tabs-wrap
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: business-plan
+
+
+
+
+
+
+
+
+
+
+-- component tab-label:
+optional caption title:
+optional boolean $active-item: false
+integer index:
+
+-- ftd.row:
+$on-click$: $ftd.toggle($a = $tab-label.active-item)
+$on-click$: $ftd.set-integer($a = $current-tab, v = $tab-label.index)
+padding-horizontal.px: 24
+height.fixed.px: 100
+width.fixed.px: 217
+align-content: center
+align-self: center
+
+-- ftd.column:
+anchor: parent
+top.px: 0
+height.fixed.px: 85
+width.fixed.px: 178
+height.fixed.px if { ftd.device != "mobile" }: 100
+width.fixed.px if { ftd.device != "mobile" }: 217
+
+-- ftd.image:
+if: { current-tab == $tab-label.index }
+src: $assets.files.static.pricing.tab-highlight.svg
+height: fill-container
+width: fill-container
+
+
+-- end: ftd.column
+
+-- ftd.text: $tab-label.title
+if: { tab-label.title != NULL }
+role: $fonts.size-20
+color: $inherited.colors.text
+color if { current-tab == $tab-label.index }: $inherited.colors.cta-primary.base
+white-space: nowrap
+
+-- end: ftd.row
+
+-- end: tab-label
+
+
+
+
+
+
+
+
+
+
+-- component slide-toggle:
+boolean active: 
+
+-- ftd.column:
+width.fixed.px: 40
+z-index: 0
+
+-- ftd.column:
+width.fixed.px: 36
+height.fixed.px: 14
+background.solid: $inherited.colors.border
+border-radius.px: 8
+z-index: 0
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+top.px: -3
+left.px: 0
+width.fixed.px: 20
+height.fixed.px: 20
+background.solid if { !slide-toggle.active }: $fonts.bdbdbd
+background.solid: $fonts.69f0ae
+border-radius.percent: 50 
+z-index: 10
+left.px if { slide-toggle.active }: 20
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: slide-toggle
 
 
 
