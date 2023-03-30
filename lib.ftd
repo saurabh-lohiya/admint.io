@@ -3529,6 +3529,7 @@ common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
+$on-click-outside$: $ftd.toggle($a = $drop-down.show-options)
 
 -- ftd.row:
 id: drop-down-input
@@ -3539,12 +3540,15 @@ margin-top.px: 8
 width: fill-container
 height.fixed.px: 43
 border-color: $inherited.colors.custom.two
+border-color if { drop-down.show-options }: blue
 border-width.px: 1
+border-width.px if { drop-down.show-options }: 2
 spacing: space-between
 $on-click$: $ftd.toggle($a = $drop-down.show-options)
 
 -- ftd.text: $selected-item
 role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
 padding-right.px: 52
 min-width.fixed.px: 112
 
@@ -3558,7 +3562,7 @@ align-self: center
 
 -- drop-down-options: $drop-down.title
 drop-down-options-list: $drop-down.drop-down-options-list
-show-options: $drop-down.show-options
+$show-options: $drop-down.show-options
 
 -- end: ftd.column
 
@@ -3571,7 +3575,7 @@ show-options: $drop-down.show-options
 caption title:
 common.options list drop-down-options-list:
 boolean $mouse-in: false
-boolean show-options: false
+boolean $show-options: false
 
 -- ftd.column:
 if: { drop-down-options.show-options }
@@ -3595,6 +3599,7 @@ color: $inherited.colors.cta-primary.text
 $loop$: $drop-down-options.drop-down-options-list as $obj
 padding-right.px: 20
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
 -- end: ftd.column
 

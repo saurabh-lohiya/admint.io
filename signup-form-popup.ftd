@@ -107,8 +107,9 @@ width.fixed.percent: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $signup-form-popup.identity-label
-margin-top.px: 16
 role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
 
 -- drop-down:
 drop-down-options-list: $common.option-list
@@ -277,6 +278,7 @@ common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
+$on-click-outside$: $ftd.toggle($a = $drop-down.show-options)
 
 -- ftd.row:
 id: user-identity-input
@@ -287,12 +289,15 @@ margin-top.px: 8
 width: fill-container
 height.fixed.px: 43
 border-color: $inherited.colors.custom.two
+border-color if { drop-down.show-options }: blue
 border-width.px: 1
+border-width.px if { drop-down.show-options }: 2
 spacing: space-between
 $on-click$: $ftd.toggle($a = $drop-down.show-options)
 
 -- ftd.text: $selected-item
 role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
 padding-right.px: 52
 min-width.fixed.px: 112
 
@@ -306,7 +311,7 @@ align-self: center
 
 -- drop-down-options: $drop-down.title
 drop-down-options-list: $drop-down.drop-down-options-list
-show-options: $drop-down.show-options
+$show-options: $drop-down.show-options
 
 -- end: ftd.column
 
@@ -319,7 +324,7 @@ show-options: $drop-down.show-options
 caption title:
 common.options list drop-down-options-list:
 boolean $mouse-in: false
-boolean show-options: false
+boolean $show-options: false
 
 -- ftd.column:
 if: { drop-down-options.show-options }
@@ -331,8 +336,7 @@ padding-horizontal.px: 14
 anchor: parent
 top.px: 2
 left.px: 0
-min-width.fixed.px: 360
-min-width.fixed.px if { ftd.device == "mobile" }: 240
+min-width.fixed.px: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
@@ -343,6 +347,7 @@ color: $inherited.colors.background.base
 $loop$: $drop-down-options.drop-down-options-list as $obj
 padding-right.px: 20
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
 -- end: ftd.column
 
