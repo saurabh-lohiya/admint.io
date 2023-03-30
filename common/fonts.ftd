@@ -500,3 +500,13 @@ blur.px: 10
 inset: false
 spread.px: 10
 
+
+
+
+
+-- ftd.shadow about:
+color: #000
+x-offset.px: 10
+y-offset.px: 10 
+blur.px: 1
+

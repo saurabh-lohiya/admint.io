@@ -3401,12 +3401,11 @@ width: fill-container
 align-self: center
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-border-right-width.px: 10
-border-bottom-width.px: 10
 margin-top.px: 63
 padding-horizontal.px: 30
 padding-top.px: 30
 background.solid: $inherited.colors.background.step-1
+shadow: $fonts.about
 
 -- ftd.column:
 width.fixed.percent: 66.66
@@ -3457,14 +3456,13 @@ width: fill-container
 align-self: center
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-border-right-width.px: 10
-border-bottom-width.px: 10
 margin-top.px: 63
 padding-horizontal.px: 30
 padding-top.px: 30
 background.solid: $inherited.colors.background.step-1
 padding-bottom.px: 373
 overflow-x: hidden
+shadow: $fonts.about
 
 -- ftd.text: $about-us-mobile.title
 role: $inherited.types.heading-medium
