@@ -2828,7 +2828,7 @@ max-width.fixed.percent if { ftd.device != "mobile" }: 80
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
-border-radius.px if { ftd.device != "mobile" }: 50
+border-radius.px: 50
 border-radius.px if { ftd.device == "mobile" }: 34
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
