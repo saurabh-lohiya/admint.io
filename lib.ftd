@@ -2984,11 +2984,7 @@ border-color: $inherited.colors.custom.one
 border-width.px: 1
 align-self: center
 background.solid: $inherited.colors.background.step-1
-
--- ftd.column:
 children: $legal-pages.child
-
--- end: ftd.column
 
 -- end: ftd.column
 
