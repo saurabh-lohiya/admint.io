@@ -1,6 +1,4 @@
 -- import: fifthtry.github.io/admint.io/assets
--- import: fifthtry.github.io/admint.io/common/fonts
--- import: fifthtry.github.io/admint.io/header
 -- import: fifthtry.github.io/admint.io/lib
 
 -- lib.page:
@@ -20,9 +18,13 @@ link: /learn/advertising-web-3-0
 -- end: lib.tabs
 
 
+
 -- lib.post-list:
 
 -- lib.post-list.articles:
+
+-- lib.search:
+link: learn/search-results/
 
 -- lib.article-item: Lorem Ipsum is simply dummy text
 thumbnail: $assets.files.static.blog.StockSnap.jpeg

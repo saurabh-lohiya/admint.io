@@ -1,6 +1,4 @@
 -- import: fifthtry.github.io/admint.io/assets
--- import: fifthtry.github.io/admint.io/common/fonts
--- import: fifthtry.github.io/admint.io/header
 -- import: fifthtry.github.io/admint.io/lib
 
 -- lib.page:
@@ -22,6 +20,9 @@ link: /learn/advertising-web-3-0
 -- lib.post-list:
 
 -- lib.post-list.articles:
+
+-- lib.search:
+link: learn/search-results/
 
 -- lib.article-item: Metaverse Is The New Playground For Advertisement.
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg

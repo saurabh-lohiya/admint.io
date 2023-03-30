@@ -1,0 +1,104 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/lib
+
+
+
+-- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
+
+-- lib.why-nft-hero: Because NFTs are awesome!
+tagline: **WHY NFTs?**
+image: $assets.files.static.why-nfts.nft-awesome.svg
+
+NFTs started out cool. And then people started pserceiving them to be nothing
+more than overpriced jpegs. That's simply not true. They can be so much more!
+The way a jar could be filled with cookies, candies, pickled stuff or have
+coins in them, it is up to us what value an NFT should have in them. Think of
+NFTs to be a container that depending on what's inside them, can change the
+experience for the NFT owner. Let's get to know NFTs better.
+
+-- lib.why-nft-card: NFTs Offer Value
+image: $assets.files.static.why-nfts.neft-offer-value.svg
+
+The other side of the coin really! If something can store value, that value can
+be extended to provide real-world utility. Imagine creating a bunch of extended
+value-adds around the statement, “if a user has a particular NFT then, allow
+them to...”
+
+- Access unique offline/online brand experiences.
+- Try samples / buy exclusive items / vote & comment.
+- Burn NFT for $ value on Ecom & DTC site.
+
+-- lib.brand-objective: Brand Objective:
+
+Exclusive experiences / Lead generation / Co-creation / Sales
+
+-- end: lib.why-nft-card
+
+-- lib.why-nft-card: NFTs Track Value
+image: $assets.files.static.why-nfts.nft-track-value.svg
+
+You can look up all the wallets that have a particular type of NFT across
+blockchains. Thereby you can check valuable NFTs, valuable collections and high
+value wallets. You can determine or percieve the value of wallets that own your
+brand NFTs!
+
+- Use NFTs to track wallets & user behavior
+- NFT Profiles based on NFTs owned / spends
+
+-- lib.brand-objective: Brand Objective:
+
+Determine spends capacity / Exclusive product upsell / Re-targetting.
+
+-- end: lib.why-nft-card
+
+-- lib.why-nft-card: NFTs Trade Value
+image: $assets.files.static.why-nfts.nft-trade-value.svg
+
+NFTs allow for barter / swaps / upgrades / downgrades etc. You can also build
+associations like “if user has NFT X, drop NFT Y in to their wallet. This makes
+NFTs highly flexible as a tradeable asset.
+
+- Use NFTs to gamify interaction with users.
+- Use Marketplaces to Swap / Trade/ Drop one for one NFT to drive engagement.
+- NFT collab with partner brands to magnify value-add / build ecosystem.
+
+-- lib.brand-objective: Brand Objective:
+
+Drive engagement & Increase userbase.
+
+-- end: lib.why-nft-card
+
+-- lib.why-nft-card: NFTs Stack Value
+image: $assets.files.static.why-nfts.NFTs-Stack-Value.svg
+
+NFTs can be built to allow composability. You can merge multiple composableNFTs
+into one or break down an NFT into smaller components. Makes for interesting
+evolutionary models to be built using NFTs.
+
+- Merge & evolve NFTs in collectibles / games.
+- Pro rate ownership of assets
+- Divesting partial assets for $ value
+
+-- lib.brand-objective: Brand Objective:
+
+Increased consumer base via co-ownership of high net worth goods. Engagement /
+revenue via collectibles & P2E.
+
+-- end: lib.why-nft-card
+
+-- lib.why-nft-card: NFTs Lend Value
+image: $assets.files.static.why-nfts.nft-lend-value.svg
+
+You can structure your NFT to be shared on a time-bound basis to various
+platforms in return for value of access that can be provided by them.
+
+- Use NFT lending to gain liquidity of assets you want.
+- Pro rate ownership of assets
+
+-- lib.brand-objective: Brand Objective:
+
+Branding x engagement. Always on-campaign
+
+-- end: lib.why-nft-card
+
+-- end: lib.page
