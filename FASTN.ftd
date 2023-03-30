@@ -1,6 +1,7 @@
 -- import: fastn
 
 -- fastn.package: fifthtry.github.io/admint.io
+favicon: https://admint.io/favicon.ico
 
 -- fastn.dependency: fifthtry.github.io/admint-cs
 -- fastn.dependency: fifthtry.github.io/nunito-font
@@ -25,12 +26,18 @@
 # Docs: docs/
 skip: true
 
-- Docs: docs/
-- Hero: docs/hero/
-- Header: docs/header/
+- Homepage: docs/hero/
+  - Header: docs/header/
+  - Hero: docs/hero/
+  - Slider🚧: docs/slider/
+  - Lezgoo card🚧: docs/lezgoo/
+  - Sneak Peak🚧: docs/sneak-peak/
+  - Ad-card🚧: docs/ad-card/
+  - Multiple Ad-cards🚧: docs/ad-cards/
 - Footer: docs/footer/
-- Why Admint? slider: index.html
-- Lezgoo card: index.html
-- How it works?: index.html
-- How it works? slider: index.html
-- Advertising in Web 3.0: index.html
+- About Page: docs/about-us/
+  - About Us🚧: docs/about-us/
+  - Our Team🚧: docs/our-team/
+- Learn Page: docs/faq/
+  - FAQs & Accordion🚧: docs/faq/
+  

@@ -1,0 +1,195 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+-- integer $current-active: 1
+
+-- ds.page: Slider
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+
+-- ds.page.footer:
+
+-- lib.slider:
+$active-item: $current-active
+
+-- lib.simple-steps: **WHY ADMINT?** 🚧
+subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
+src: $assets.files.static.lezgoo.simple.svg
+index: 1
+reset: $current-active
+
+-- lib.feature-card: 1
+
+ Reach out to existing audience base via known channels. 
+
+-- lib.feature-card: 2
+
+ Identify & segregate your “web 3.0 ready” audience pool. 
+
+-- lib.feature-card: 3
+
+ Extend real-world benefits & build your metaverse fanbase! 
+
+-- end: lib.simple-steps
+
+-- lib.structured: **WHY ADMINT?** 🚧
+subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
+src: $assets.files.static.lezgoo.structured.svg
+index: 2 
+reset: $current-active
+
+Follow along our guided walkthroughs to sequentially construct
+all the necessary components to launch a campaign.
+
+-- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
+subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
+src: $assets.files.static.lezgoo.keymedia.svg 
+index: 3 
+reset: $current-active
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+-- lib.distribute-nft: **WHY ADMINT?** 🚧
+subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
+src: $assets.files.static.lezgoo.distribute.svg
+index: 4 
+reset: $current-active
+
+With AdMint's custom tools & templates, you can ensure that
+your intended audience receive the NFTs and avail the 
+associated real-world brand offerings.
+
+
+-- lib.analyze-pane: **WHY ADMINT?** 🚧
+subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
+src: $assets.files.static.lezgoo.analyze.svg
+index: 5
+reset: $current-active
+
+Watch the numbers. See the plan take shape. Measure that ROI. 
+Stake your claim across the Metaverses!
+
+-- end: lib.slider
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `slider` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use `slider` component you need to `import` `lib` inside you `.ftd` file.
+
+-- ds.code:
+lang: ftd
+
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import `lib` inside your `.ftd` file, use the `slider` component by
+adding all required attributes of it.
+
+Inside your `.ftd` file, `-- integer $current-active: 1` variable to be added,
+which sends `integer` as `index` for each slide. Pass `$current-active`
+variable to each slide components `reset` attribute. `index` attribute of each
+slide component should be `+1` (as shown in below code snippet).
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- integer $current-active: 1
+
+
+\-- lib.slider:
+$active-item: $current-active
+
+\-- lib.simple-steps: **WHY ADMINT?** 🚧
+subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
+src: $assets.files.static.lezgoo.simple.svg
+index: 1
+reset: $current-active
+
+\-- lib.feature-card: 1
+
+ Reach out to existing audience base via known channels. 
+
+\-- lib.feature-card: 2
+
+ Identify & segregate your “web 3.0 ready” audience pool. 
+
+\-- lib.feature-card: 3
+
+ Extend real-world benefits & build your metaverse fanbase! 
+
+\-- end: lib.simple-steps
+
+\-- lib.structured: **WHY ADMINT?** 🚧
+subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
+src: $assets.files.static.lezgoo.structured.svg
+index: 2 
+reset: $current-active
+
+Follow along our guided walkthroughs to sequentially construct
+all the necessary components to launch a campaign.
+
+\-- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
+subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
+src: $assets.files.static.lezgoo.keymedia.svg 
+index: 3 
+reset: $current-active
+
+With AdMint you can create your very own custom NFT collection
+or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+
+\-- lib.distribute-nft: **WHY ADMINT?** 🚧
+subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
+src: $assets.files.static.lezgoo.distribute.svg
+index: 4 
+reset: $current-active
+
+With AdMint's custom tools & templates, you can ensure that
+your intended audience receive the NFTs and avail the 
+associated real-world brand offerings.
+
+\-- lib.analyze-pane: **WHY ADMINT?** 🚧
+subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
+src: $assets.files.static.lezgoo.analyze.svg
+index: 5
+reset: $current-active
+
+Watch the numbers. See the plan take shape. Measure that ROI. 
+Stake your claim across the Metaverses!
+
+\-- end: lib.slider
+
+-- ds.rendered.output:
+
+-- ftd.text: 👇 Look at bottom of this page 👇
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+padding-vertical.px: 20
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
