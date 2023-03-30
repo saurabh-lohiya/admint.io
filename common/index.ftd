@@ -8,6 +8,8 @@ loadWindow();
 
 
 
+
+
 -- void increment-and-clamp(a,by,min,max):
 integer $a:
 integer by: 1
@@ -16,6 +18,8 @@ integer max: 5
 
 
 a = (((a - min) + by) % (max - min)) + min
+
+
 
 
 
@@ -56,15 +60,14 @@ js: $assets.files.functions.js
 highlightBorder();
 
 
+
+
+
 -- record team:
 caption title:
 string designation:
 ftd.image-src avatar:
 string link:
-
-
-
-
 
 -- team list members:
 
@@ -86,10 +89,6 @@ link: https://www.linkedin.com/in/jaylahconsejo/
 
 -- record options:
 caption title:
-
-
-
-
 
 -- options list option-list:
 
@@ -113,10 +112,6 @@ caption title:
 
 -- record role-record:
 caption title:
-
-
-
-
 
 -- role-record list roles:
 
@@ -154,10 +149,6 @@ $processor$: pr.toc
 -- record social-media:
 ftd.image-src src:
 string link: /
-
-
-
-
 
 -- social-media list social-links:
 
