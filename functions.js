@@ -76,11 +76,3 @@ function popupFormValidation(event) {
   document.getElementById("user-email-warning").style.display = 'none';
   document.getElementById("user-label-success").style.display = 'block';
 }
-
-
-
-
-function highlightBorder() {
-  console.log("hi")
-  document.getElementById('drop-down-input').style.borderColor = "blue"
-}

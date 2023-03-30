@@ -3643,7 +3643,6 @@ border-color: $inherited.colors.custom.two
 border-width.px: 1
 spacing: space-between
 $on-click$: $ftd.toggle($a = $drop-down.show-options)
-;;$on-click$: $common.highlight-border()
 
 -- ftd.text: $selected-item
 role: $inherited.types.copy-regular
