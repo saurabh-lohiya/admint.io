@@ -6,18 +6,17 @@
 
 -- integer $current-tab: 0
 -- string $selected-item: Advertiser
-
-
 -- integer $active-tab: 0
-
 -- integer $current-active: 1
-
 -- integer $mobileCompPadd: 20
+-- integer max-width: 1320
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
 
--- integer max-width: 1320
+
+
+
 
 
 
@@ -1860,7 +1859,6 @@ link: $hero.cta-link
 -- end: ftd.column
 
 -- end: hero
-
 
 
 
