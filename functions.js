@@ -29,6 +29,16 @@ window.onload = (event) => {
   if (document.getElementById("user-label-success")) {
     document.getElementById("user-label-success").style.display = 'none';
   }
+  document.getElementById("warning1").style.display = 'none';
+  document.getElementById("warning3").style.display = 'none';
+  document.getElementById("warning4").style.display = 'none';
+  document.getElementById("label-success").style.display = 'none';
+  document.getElementById("blur-business-a") ? document.getElementById("blur-business-a").style.filter = "blur(6px)" : ""
+  document.getElementById("blur-business-b") ? document.getElementById("blur-business-a").style.filter = "blur(6px)" : ""
+  document.getElementById("blur-enterprise-a") ? document.getElementById("blur-enterprise-a").style.filter = "blur(6px)" : ""
+  document.getElementById("blur-enterprise-b") ? document.getElementById("blur-enterprise-b").style.filter = "blur(6px)" : ""
+  document.getElementById("blur-plus-a") ? document.getElementById("blur-plus-a").style.filter = "blur(6px)" : ""
+  document.getElementById("blur-plus-b") ? document.getElementById("blur-plus-b").style.filter = "blur(6px)" : ""
 };
 
 

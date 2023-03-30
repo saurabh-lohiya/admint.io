@@ -19,14 +19,14 @@ favicon: https://admint.io/favicon.ico
 
 # About Us: about/
 
-# Pricing🚧: 
+# Pricing🚧: pricing/
 
 # Learn: learn/
 
 # Docs: docs/
 skip: true
 
-- Homepage: docs/hero/
+- Homepage: docs/header/
   - Header: docs/header/
   - Hero: docs/hero/
   - Slider🚧: docs/slider/
@@ -40,4 +40,3 @@ skip: true
   - Our Team🚧: docs/our-team/
 - Learn Page: docs/faq/
   - FAQs & Accordion🚧: docs/faq/
-  
