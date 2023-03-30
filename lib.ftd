@@ -314,7 +314,7 @@ width: fill-container
 margin-bottom.px: 55
 
 -- ftd.column:
-if: { !$article-item.post-page }
+if: { !article-item.post-page }
 width: fill-container
 
 -- ftd.image:
@@ -339,7 +339,7 @@ $article-item.body
 -- end: ftd.column
 
 -- ftd.column:
-if: { $article-item.post-page }
+if: { article-item.post-page }
 width: fill-container
 
 -- ftd.text: $article-item.title
@@ -2700,6 +2700,14 @@ wrap: true
 role: $inherited.types.heading-small
 color: $inherited.colors.text
 max-width.fixed.percent if { ftd.device != "mobile" }: 80
+
+-- ftd.text: 
+if: { lezgoo.body != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+max-width.fixed.percent if { ftd.device != "mobile" }: 80
+
+$lezgoo.body
 
 -- end: ftd.row
 
