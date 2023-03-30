@@ -113,8 +113,8 @@ margin-top.px: 16
 role: $inherited.types.source-code
 color: $inherited.colors.text
 
--- dropdown:
-options-list: $common.option-list
+-- drop-down:
+drop-down-options-list: $common.option-list
 
 -- end: ftd.column
 
@@ -181,7 +181,7 @@ padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
 text-color: white
-$on-click$: $functions.popupFormValidate()
+$on-click$: $common.popup-form-validate()
 
 -- ftd.text: 
 id: popup-label-success
@@ -281,10 +281,10 @@ align-self: center
 
 
 
--- component dropdown:
+-- component drop-down:
 caption title: $selected-item
 boolean $show-options: false
-$common.options list options-list:
+$common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
@@ -300,7 +300,7 @@ height.fixed.px: 43
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 spacing: space-between
-$on-click$: $ftd.toggle($a = $dropdown.show-options)
+$on-click$: $ftd.toggle($a = $drop-down.show-options)
 ;;$on-click$: $common.highlight-border()
 
 -- ftd.text: $selected-item
@@ -317,23 +317,23 @@ align-self: center
 -- end: ftd.row
 
 -- ftd.column:
-if: { dropdown.show-options }
+if: { drop-down.show-options }
 
--- options-block: $dropdown.title
-options-list: $dropdown.options-list
-
--- end: ftd.column
+-- drop-down-options: $drop-down.title
+drop-down-options-list: $drop-down.drop-down-options-list
 
 -- end: ftd.column
 
--- end: dropdown
+-- end: ftd.column
+
+-- end: drop-down
 
 
 
 
--- component options-block:
+-- component drop-down-options:
 caption title:
-$common.options list options-list:
+$common.options list drop-down-options-list:
 boolean $mouse-in: false
 
 -- ftd.column:
@@ -349,7 +349,7 @@ border-width.px: 1
 border-radius.px: 10
 
 -- ftd.text: $obj.title
-$loop$: $options-block.options-list as $obj
+$loop$: $drop-down-options.drop-down-options-list as $obj
 role: $inherited.types.copy-regular
 padding-right.px: 20
 color: white
@@ -357,4 +357,4 @@ $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 
 -- end: ftd.column
 
--- end: options-block
+-- end: drop-down-options

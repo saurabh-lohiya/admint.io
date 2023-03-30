@@ -38,10 +38,16 @@ js: $assets.files.functions.js
 formValidation();
 
 
--- void popupFormValidate():
+
+
+
+-- void popup-form-validate():
 js: $assets.files.functions.js
 
 popupFormValidation();
+
+
+
 
 
 -- void highlight-border():
@@ -50,12 +56,14 @@ js: $assets.files.functions.js
 highlightBorder();
 
 
-
 -- record team:
 caption title:
 string designation:
 ftd.image-src avatar:
 string link:
+
+
+
 
 
 -- team list members:
@@ -73,9 +81,11 @@ link: https://www.linkedin.com/in/jaylahconsejo/
 -- end: members
 
 
+
+
+
 -- record options:
 caption title:
-
 
 -- options list option-list:
 
@@ -94,9 +104,11 @@ caption title:
 -- end: option-list
 
 
+
+
+
 -- record role-record:
 caption title:
-
 
 -- role-record list roles:
 
@@ -113,11 +125,6 @@ caption title:
 -- role-record: Startup
 
 -- end: roles
-
-
-
-
-
 
 
 
