@@ -4,18 +4,35 @@ function loadWindow() {
 
 
 window.onload = (event) => {
-  document.getElementById("name-warning") ? document.getElementById("name-warning").style.display = 'none' : "";
-  document.getElementById("org-warning") ? document.getElementById("org-warning").style.display = 'none' : "";
-  document.getElementById("email-warning") ? document.getElementById("email-warning").style.display = 'none' : "";
-  document.getElementById("user-name-warning") ? document.getElementById("user-name-warning").style.display = 'none' : "";
-  document.getElementById("user-org-warning") ? document.getElementById("user-org-warning").style.display = 'none' : "";
-  document.getElementById("user-email-warning") ? document.getElementById("user-email-warning").style.display = 'none' : "";
-  document.getElementById("label-success") ? document.getElementById("label-success").style.display = 'none' : "";
-  document.getElementById("user-label-success") ? document.getElementById("user-label-success").style.display = 'none' : "";
-  document.getElementById("warning1") ? document.getElementById("warning1").style.display = 'none' : "";
-  document.getElementById("warning3") ? document.getElementById("warning3").style.display = 'none' : "";
-  document.getElementById("warning4") ? document.getElementById("warning4").style.display = 'none' : "";
-  document.getElementById("label-success") ? document.getElementById("label-success").style.display = 'none' : "";
+  if (document.getElementById("name-warning")) {
+    document.getElementById("name-warning").style.display = 'none';
+  }
+  if (document.getElementById("org-warning")) {
+    document.getElementById("org-warning").style.display = 'none';
+  }
+  if (document.getElementById("email-warning")) {
+    document.getElementById("email-warning").style.display = 'none';
+  }
+
+  if (document.getElementById("user-name-warning")) {
+    document.getElementById("user-name-warning").style.display = 'none';
+  }
+  if (document.getElementById("user-org-warning")) {
+    document.getElementById("user-org-warning").style.display = 'none';
+  }
+  if (document.getElementById("user-email-warning")) {
+    document.getElementById("user-email-warning").style.display = 'none';
+  }
+  if (document.getElementById("label-success")) {
+    document.getElementById("label-success").style.display = 'none';
+  }
+  if (document.getElementById("user-label-success")) {
+    document.getElementById("user-label-success").style.display = 'none';
+  }
+  document.getElementById("warning1").style.display = 'none';
+  document.getElementById("warning3").style.display = 'none';
+  document.getElementById("warning4").style.display = 'none';
+  document.getElementById("label-success").style.display = 'none';
   document.getElementById("blur-business-a") ? document.getElementById("blur-business-a").style.filter = "blur(6px)" : ""
   document.getElementById("blur-business-b") ? document.getElementById("blur-business-b").style.filter = "blur(6px)" : ""
   document.getElementById("blur-enterprise-a") ? document.getElementById("blur-enterprise-a").style.filter = "blur(6px)" : ""
