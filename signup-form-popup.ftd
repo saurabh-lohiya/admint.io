@@ -1,6 +1,13 @@
+-- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/signup-form as sf
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/common/fonts
+-- import: fifthtry.github.io/admint.io/common
+
+
+
+-- string $selected-item: Advertiser
 
 
 -- ftd.column:
@@ -10,10 +17,10 @@ colors: $cs.main
 types: $typo.types
 
 -- signup-form-popup: Join the waitlist to get updated when we go live!
-input-label1: Name
-input-label2: Who are you?
-input-label3: Organization Name
-input-label4: Email id
+name-label: Name
+identity-label: Who are you?
+org-label: Organization Name
+email-label: Email id
 cta-text: Join waitlist
 
 -- end: signup-form-popup
@@ -21,13 +28,24 @@ cta-text: Join waitlist
 -- end: ftd.column
 
 
+
+
+
+
+
+
+
+
 -- component signup-form-popup:
 caption title:
-string input-label1:
-string input-label2:
-string input-label3:
-string input-label4:
-role-record list roles: $roles
+string name-label:
+string name-warning: Name is required
+string identity-label:
+string org-label:
+string org-warning: Organization is required
+string email-label:
+string email-warning: Email is requied
+common.role-record list roles: $common.roles
 string cta-text:
 
 -- ftd.column:
@@ -35,40 +53,49 @@ width: fill-container
 background.solid: $inherited.colors.background.overlay
 align-content: center
 height: fill-container
+padding-vertical.px: 34
 
 -- ftd.column:
-background.solid: white
+height: fill-container
+background.solid: $inherited.colors.background.base
 max-width.fixed.px: 548
+max-width.fixed.percent if { ftd.device == "mobile" }: 80
 width: fill-container
-padding.px: 50
+padding.px: 37
+overflow-y: auto
+color: $inherited.colors.text
 z-index: 1
 
 -- ftd.text: CLOSE
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
+link: /
 
 -- ftd.text: $signup-form-popup.title
-role: $inherited.types.heading-medium
-color: $inherited.colors.cta-primary.base
+role: $fonts.nunito-40
 region: h1
 
--- ftd.text: $signup-form-popup.input-label1
+-- ftd.text: $signup-form-popup.name-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
-margin-top.px: 30
+margin-top.px: 34
 
 -- ftd.text-input:
+id: user-name-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
+min-height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
 
+-- ftd.text: $signup-form-popup.name-warning
+id: user-name-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
 
 -- ftd.row:
 wrap: true
@@ -76,106 +103,96 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form-popup.input-label2
-margin-top.px: 16
+-- ftd.text: $signup-form-popup.identity-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
+margin-top.px: 16
 
--- ftd.text-input:
-padding.px: 6
-width.fixed.percent: 100
-background.solid: transparent
-border-width.px: 1
-border-color: $inherited.colors.custom.two
-border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
-margin-top.px: 8
+-- drop-down:
+drop-down-options-list: $common.option-list
 
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.percent: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form-popup.input-label3
+-- ftd.text: $signup-form-popup.org-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
+id: user-org-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
+
+-- ftd.text: $signup-form-popup.org-warning
+id: user-org-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
 
 -- end: ftd.column
 
 -- end: ftd.row
 
--- ftd.text: $signup-form-popup.input-label4
+-- ftd.text: $signup-form-popup.email-label
 role: $inherited.types.source-code
-color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
+id: user-email-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
+min-height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
 
--- end: ftd.text-input
+-- ftd.text: $signup-form-popup.email-warning
+id: user-email-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
 
 -- cta-button: $signup-form-popup.cta-text
-bg-color: $inherited.colors.custom.four
-padding-horizontal: 41
-padding-vertical: 11
-marginTop: 2
-text-color: white
+$on-click$: $common.popup-form-validate()
+
+-- ftd.text: 
+id: user-label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+width.fixed.percent: 50
+width.fixed.percent if { ftd.device == "mobile" }: 100
+text-align: end
+margin-top.px: 20
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: signup-form-popup
-
-
-
-
-
-
--- record role-record:
-caption title:
-
-
--- role-record list roles:
-
--- role-record: Advertiser
-
--- role-record: Agency
-
--- role-record: Brand Owner
-
--- role-record: Executive
-
--- role-record: SMB
-
--- role-record: Startup
-
--- end: roles
 
 
 
@@ -189,8 +206,8 @@ caption title:
 -- component cta-button:
 caption title:
 optional string role: tertiary
-ftd.color bg-color: transparent
-ftd.color text-color: black
+ftd.color bg-color: $inherited.colors.custom.four
+ftd.color text-color: $inherited.colors.cta-primary.text
 ftd.color border-color: $inherited.colors.border
 integer border-radius: 30
 optional string link:
@@ -199,9 +216,9 @@ boolean show-arrow: false
 optional ftd.image-src cta-icon:
 optional integer width:
 boolean align-center: false
-integer padding-vertical: 10
-integer padding-horizontal: 28
-decimal marginTop: 0
+integer padding-vertical: 11
+integer padding-horizontal: 41
+decimal marginTop: 2
 boolean transparent: false
 integer border-width: 1
 optional ftd.image-src src:
@@ -244,3 +261,96 @@ align-self: center
 -- end: ftd.column
 
 -- end: cta-button
+
+
+
+
+
+
+
+
+
+
+-- component drop-down:
+caption title: $selected-item
+boolean $show-options: false
+common.options list drop-down-options-list:
+
+-- ftd.column:
+width: fill-container
+$on-click-outside$: $ftd.set-bool($a = $drop-down.show-options, v = false)
+
+-- ftd.row:
+id: user-identity-input
+align-self: center
+padding.px: 6
+border-radius.px: 10
+margin-top.px: 8
+width: fill-container
+height.fixed.px: 43
+border-color: $inherited.colors.custom.two
+border-color if { drop-down.show-options }: blue
+border-width.px: 1
+border-width.px if { drop-down.show-options }: 2
+spacing: space-between
+$on-click$: $ftd.toggle($a = $drop-down.show-options)
+
+-- ftd.text: $selected-item
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+padding-right.px: 52
+min-width.fixed.px: 112
+
+-- ftd.image:
+src: $assets.files.static.faq.down.svg
+width.fixed.px: 16
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- drop-down-options: $drop-down.title
+drop-down-options-list: $drop-down.drop-down-options-list
+$show-options: $drop-down.show-options
+
+-- end: ftd.column
+
+-- end: drop-down
+
+
+
+
+-- component drop-down-options:
+caption title:
+common.options list drop-down-options-list:
+boolean $mouse-in: false
+boolean $show-options: false
+
+-- ftd.column:
+if: { drop-down-options.show-options }
+
+-- ftd.column:
+background.solid: grey
+padding-vertical.px: 11
+padding-horizontal.px: 14
+anchor: parent
+top.px: 2
+left.px: 0
+min-width.fixed.px: 240
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.background.base
+
+-- ftd.text: $obj.title
+$loop$: $drop-down-options.drop-down-options-list as $obj
+padding-right.px: 20
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: drop-down-options

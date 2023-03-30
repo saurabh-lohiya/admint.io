@@ -8,10 +8,9 @@ favicon: https://admint.io/favicon.ico
 -- fastn.dependency: fifthtry.github.io/roboto-font
 -- fastn.dependency: fifthtry.github.io/montserrat
 -- fastn.dependency: fifthtry.github.io/admint-typography
--- fastn.dependency: fifthtry.github.io/bling
 -- fastn.dependency: fifthtry.github.io/doc-site
 -- fastn.dependency: fifthtry.github.io/footer
--- fastn.auto-import: fifthtry.github.io/bling/dropdown
+
 -- fastn.auto-import: fifthtry.github.io/admint.io/assets
 
 -- fastn.sitemap:

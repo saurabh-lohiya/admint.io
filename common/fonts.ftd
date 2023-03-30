@@ -338,9 +338,23 @@ desktop: $montserrat-28-desktop
 mobile: $montserrat-28-mobile
 
 
+-- ftd.type nunito-40-desktop:
+line-height.px: 44
+size.px: 40
+letter-spacing.px: -1
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
 
+-- ftd.type nunito-40-mobile:
+line-height.px: 40
+size.px: 40
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
 
-
+-- ftd.responsive-type nunito-40:
+desktop: $nunito-40-desktop
+mobile: $nunito-40-mobile
 
 -- ftd.type size-27-desktop:
 line-height.px: 27
@@ -376,6 +390,13 @@ mobile: $size-50-mobile
 
 
 
+
+-- ftd.type size-14-m:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
 
 
 -- ftd.type size-24-700-mobile:
@@ -497,6 +518,8 @@ font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
 -- ftd.color bdbdbd: #bdbdbd
 
 -- ftd.color 69f0ae: #69f0ae
+
+-- ftd.color dc3545: #dc3545
 
 -- ftd.color cdcdcd36: #cdcdcd36
 

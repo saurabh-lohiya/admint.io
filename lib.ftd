@@ -2,9 +2,14 @@
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
 -- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint.io/assets
 -- import: fastn/processors as pr
 
+-- string $selected-item: Advertiser
+-- integer max-width: 1320
 
+-- pr.sitemap-data sitemap:
+$processor$: pr.full-sitemap
 
 
 
@@ -21,7 +26,6 @@
 -- pr.sitemap-data sitemap:
 $processor$: pr.full-sitemap
 
--- integer max-width: 1320
 
 
 
@@ -1754,6 +1758,7 @@ padding-vertical.px: 8
 
 
 
+
 -- component hero:
 caption title:
 body body: 
@@ -1867,6 +1872,14 @@ link: $hero.cta-link
 
 -- end: hero
 
+
+
+
+
+
+
+
+
 -- component footer:
 ftd.image-src site-logo:
 string site-url:
@@ -1928,7 +1941,7 @@ left.px: -12
 
 -- ftd.column:
 align-self: end
-width: fill-container
+padding-horizontal.px: 12
 
 -- ftd.image:
 src: $footer-desktop.site-logo
@@ -1991,25 +2004,25 @@ padding-horizontal.px: 12
 -- ftd.image:
 src: $footer-mobile.site-logo
 link: $footer-mobile.site-url
+width.fixed.px: 194
 
 -- ftd.column:
-margin-top.px: 48
+margin-top.px: 46
 padding-left.px: 16
 
 -- ftd.text: $obj.title
 $loop$: $footer-mobile.footer-links as $obj
-role: $inherited.types.blockquote
+role: $inherited.types.label-large
 color: $inherited.colors.background.step-1
-margin-bottom.px: 8
 
 -- end: ftd.column
 
 -- ftd.row:
 margin-top.px: 80
-padding-left.px: 16
+padding-left.px: 20
 
 -- ftd.image:
-margin-right.px: 16
+margin-right.px: 20
 $loop$: $footer-mobile.social-links as $obj
 src: $obj.src
 
@@ -2019,8 +2032,8 @@ src: $obj.src
 src: $footer-mobile.team-thumb
 anchor: parent
 bottom.px: 0
-left.px: 32
-width.fixed.px: 200
+left.px: 50
+width.fixed.px: 196
 
 -- end: ftd.column
 
@@ -2038,14 +2051,14 @@ width.fixed.px: 200
 
 -- component signup-form:
 caption title:
-string input-label1:
-string input-warning1: Name is required
-string input-label2:
-string input-label3:
-string input-warning3: Organization is required
-string input-label4:
-string input-warning4: Email is requied
-role-record list roles: $roles
+string name-label:
+string name-warning: Name is required
+string identity-label:
+string org-label:
+string org-warning: Organization is required
+string email-label:
+string email-warning: Email is requied
+common.role-record list roles: $common.roles
 string cta-text:
 integer width: 1300
 
@@ -2054,14 +2067,15 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 align-content: center
 padding-vertical.px: 50
+padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $signup-form.width
 
 -- ftd.column:
-background.solid: white
-max-width.fixed.px: 850
+background.solid: $inherited.colors.cta-primary.text
+max-width.fixed.px: 856
 width: fill-container
 padding.px: 50
 z-index: 1
@@ -2075,15 +2089,15 @@ align-self: end
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 region: h1
-width.fixed.percent: 80
+width.fixed.percent if { ftd.device == "desktop" }: 80
 
--- ftd.text: $signup-form.input-label1
+-- ftd.text: $signup-form.name-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 30
 
 -- ftd.text-input:
-id: input-field1
+id: name-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2095,8 +2109,8 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.input-warning1
-id: warning1
+-- ftd.text: $signup-form.name-warning
+id: name-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -2109,22 +2123,13 @@ width: fill-container
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label2
-margin-top.px: 16
+-- ftd.text: $signup-form.identity-label
+margin-top.px: 23
 role: $inherited.types.source-code
 color: $inherited.colors.text
 
--- ftd.text-input:
-id: input-field2
-padding.px: 6
-width.fixed.percent: 100
-background.solid: transparent
-border-width.px: 1
-border-color: $inherited.colors.custom.two
-border-radius.px: 10
-color: $inherited.colors.text
-height.fixed.px: 43
-margin-top.px: 8
+-- drop-down:
+drop-down-options-list: $common.option-list
 
 -- end: ftd.column
 
@@ -2132,13 +2137,13 @@ margin-top.px: 8
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label3
+-- ftd.text: $signup-form.org-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
-margin-top.px: 16
+margin-top.px: 23
 
 -- ftd.text-input:
-id: input-field3
+id: org-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2150,8 +2155,8 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.input-warning3
-id: warning3
+-- ftd.text: $signup-form.org-warning
+id: org-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -2159,13 +2164,13 @@ color: #dc3545
 
 -- end: ftd.row
 
--- ftd.text: $signup-form.input-label4
+-- ftd.text: $signup-form.email-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
-margin-top.px: 16
+margin-top.px: 23
 
 -- ftd.text-input:
-id: input-field4
+id: email-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2179,8 +2184,8 @@ $on-blur$: $common.form-validate()
 
 -- end: ftd.text-input
 
--- ftd.text: $signup-form.input-warning4
-id: warning4
+-- ftd.text: $signup-form.email-warning
+id: email-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -2194,7 +2199,7 @@ bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
-text-color: white
+text-color: $inherited.colors.cta-primary.text
 $on-click$: $common.form-validate()
 
 -- ftd.text: 
@@ -2216,7 +2221,7 @@ Thanks for your interest...We will update you
 
 -- ftd.image:
 if: { ftd.device == "desktop" }
-src: https://admint.io/waitlist.74d2a98161e313ba72cc.svg
+src: $assets.files.static.signup-form.waitlist.svg
 anchor: parent
 right.px: 0
 bottom.px: 50
@@ -2224,28 +2229,6 @@ bottom.px: 50
 -- end: ftd.column
 
 -- end: signup-form
-
-
-
--- record role-record:
-caption title:
-
-
--- role-record list roles:
-
--- role-record: Advertiser
-
--- role-record: Agency
-
--- role-record: Brand Owner
-
--- role-record: Executive
-
--- role-record: SMB
-
--- role-record: Startup
-
--- end: roles
 
 
 
@@ -2323,90 +2306,63 @@ align-self: center
 
 
 
--- component tabs-wrapper:
+
+-- component tabs:
 children child:
 integer width: $max-width
 
 -- ftd.column:
 width: fill-container
-align-content: center
+align-self: center
+max-width.fixed.px: 1320
+padding-horizontal.px: 28
+padding-vertical.px: 16
 
 -- ftd.column:
-width: fill-container
-max-width.fixed.px: $tabs-wrapper.width
-children: $tabs-wrapper.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: tabs-wrapper
-
-
-
-
-
-
-
-
-
--- component tabs:
-integer active-tab-index: 0
-tab-record list tabs-list: $tabs-list
-integer width: $max-width
-
--- ftd.column:
-width: fill-container
-align-content: center
-margin-top.px: 32
-padding-horizontal.px: 20
-padding-vertical.px: 10
-
--- ftd.column:
-width: fill-container
-max-width.fixed.px: $tabs.width
 border-width.px: 2
-padding.px: 16
-border-color: #5f5f5f
+padding-vertical.px: 16
+width: fill-container
 
 -- ftd.row:
+if: { ftd.device == "desktop" }
 width: fill-container
 align-content: center
-wrap: true
-
--- ftd.text: $obj.title
-$loop$: $tabs.tabs-list as $obj
-;;border-color if { $obj.active }: $inherited.colors.custom.four
-;;border-radius.px if { $obj.active }: 50
-;;border-width.px if { $obj.active }: 2
-padding-vertical.px: 20
-padding-horizontal.px: 30
-color: $inherited.colors.custom.four
-role: $inherited.types.button-large
-link: $obj.link
+children: $tabs.child
 
 -- end: ftd.row
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+align-content: center
+children: $tabs.child
+
 -- end: ftd.column
+
+-- end: ftd.column
+
+
 
 -- ftd.column:
 anchor: parent
-bottom.px: 2
-right.px: 12
+bottom.px: 8
+right.px: 28
 background.solid: #5f5f5f
-width.fixed.percent if { ftd.device == "desktop" }: 96
-width.fixed.percent if { ftd.device == "mobile" }: 87
 height.fixed.px: 8
+width.fixed.percent: 95
+width.fixed.percent if { ftd.device == "mobile" }: 82.5
 
 -- end: ftd.column
 
 -- ftd.column:
 anchor: parent
-bottom.px: 10
-right.px: 12
+bottom.px: 8
+right.px: 20
 background.solid: #5f5f5f
-height.fixed.percent: 80
 width.fixed.px: 8
+height.fixed.percent: 75
+height.fixed.percent if { ftd.device == "mobile" }: 85
+
 -- end: ftd.column
 
 -- end: ftd.column
@@ -2421,21 +2377,56 @@ width.fixed.px: 8
 
 
 
+
+-- component tab:
+caption title:
+boolean active: false
+string link:
+
+-- ftd.column:
+
+-- ftd.text: $tab.title
+padding-vertical.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.one
+role: $inherited.types.button-large
+role if { ftd.device == "mobile" }: $fonts.size-14-m
+border-color if { tab.active }: $inherited.colors.custom.four
+border-radius.px if { tab.active }: 50
+border-width.px if { tab.active }: 2
+color if { tab.active }: $inherited.colors.custom.four
+link: $tab.link
+
+-- end: ftd.column
+
+-- end: tab
+
+
+
+
+
+
+
+
+
+
 -- component faq:
 optional caption title:
 children child:
-integer width: $max-width
+
+-- ftd.column:
+width: fill-container
 
 -- ftd.column:
 width: fill-container
 align-content: center
 background.solid: $inherited.colors.background.step-1
-padding-vertical.px: 70
+padding-vertical.px if { ftd.device == "desktop" }: 70
 
 -- ftd.column:
-max-width.fixed.px: $faq.width
+max-width.fixed.px: $max-width
 width: fill-container
-padding.px if { ftd.device == "mobile" }: $mobileCompPadd
+padding.px if { ftd.device == "mobile" }: 20
 align-self: center
 
 -- ftd.text: $faq.title
@@ -2447,6 +2438,8 @@ role: $inherited.types.heading-medium
 -- ftd.column:
 width: fill-container
 children: $faq.child
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -2484,13 +2477,14 @@ background.solid: #eeeeee80
 width: fill-container
 spacing: space-between
 padding-horizontal.px: 16
+padding-horizontal.px if { ftd.device == "mobile" } : 12
 padding-vertical.px: 13
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
 -- ftd.text: $question-accordion.title
-role: $inherited.types.button-large
+role: $fonts.size-18
 color if { question-accordion.open }: $inherited.colors.custom.four
-color if { !question-accordion.open }: $inherited.colors.custom.one
+color: $inherited.colors.custom.one
 align-self: center
 
 -- ftd.image:
@@ -2507,12 +2501,13 @@ width.fixed.px: 24
 
 -- ftd.column:
 if: { question-accordion.open }
-padding-vertical.px: 16
+padding-vertical.px: 12
+padding-horizontal.px: 10
 width: fill-container
-padding.px: 16
 
 -- ftd.text:
 role: $inherited.types.copy-regular
+role if { ftd.device == "mobile" }: $inherited.types.fine-print
 color: $inherited.colors.custom.one
 
 $question-accordion.body
@@ -2522,106 +2517,6 @@ $question-accordion.body
 -- end: ftd.column
 
 -- end: question-accordion
-
-
-
-
-
-
-
-
-
--- record tab-record:
-caption title:
-boolean active:
-string link:
-
--- tab-record list tabs-list:
-
--- tab-record: Web 3.0 Basics🚧
-active: true
-link: learn/
-
--- tab-record: Brand Campaign🚧
-active: false
-link: learn/brand-campaign/
-
--- tab-record: Advertising & Web 3.0🚧
-active: false
-link: learn/advertising-web-3-0/
-
--- end: tabs-list
-
-
-
-
-
-
-
-
-
-
--- component cta-button-2:
-caption title:
-optional string role: tertiary
-ftd.color bg-color: transparent
-ftd.color text-color: black
-ftd.color border-color: $inherited.colors.border
-integer border-radius: 50
-optional string link: /
-optional boolean medium: false
-boolean show-arrow: false
-optional ftd.image-src cta-icon:
-optional integer width:
-boolean align-center: false
-integer padding-vertical: 10
-integer padding-horizontal: 28
-decimal marginTop: 0
-boolean transparent: false
-integer border-width: 1
-optional ftd.image-src src:
-boolean active: false
-
--- ftd.column:
-align-self if { cta-button-2.align-center }: center
-margin-top.rem: $cta-button-2.marginTop
-
--- ftd.row:
-if: { !cta-button-2.medium }
-width.fixed.px if { cta-button-2.width != NULL}: $cta-button-2.width
-spacing.fixed.px: 10
-link if { cta-button-2.link != NULL }: $cta-button-2.link
-background.solid if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.base
-background.solid if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.base
-background.solid: $cta-button-2.bg-color
-border-radius.px: $cta-button-2.border-radius
-border-color: $cta-button-2.border-color
-border-width.px if { $cta-button-2.active }: $cta-button-2.border-width
-padding-vertical.px: $cta-button-2.padding-vertical
-padding-horizontal.px: $cta-button-2.padding-horizontal
-align-content: center
-
--- ftd.text: $cta-button-2.title
-role: $inherited.types.button-large
-color if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.text
-color if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.text
-color if { !cta-button-2.active }: $inherited.colors.custom.one
-color if { cta-button-2.active }: $inherited.colors.custom.four
-white-space: nowrap
-text-align: center
-
--- ftd.image:
-if: { cta-button-2.src != NULL }
-src: $cta-button-2.src
-width: auto
-height: auto
-align-self: center
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: cta-button-2
 
 
 
@@ -2735,7 +2630,7 @@ margin-horizontal.px if { ftd.device == "mobile" }: 50
 -- ftd.image:
 src: $sneak-peak.image
 border-color: $inherited.colors.custom.one
-border-width.px if { ftd.device != "mobile" }: 20
+border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 44
 width.fixed.percent: 100
@@ -3435,8 +3330,8 @@ string link:
 
 -- ftd.column:
 width: fill-container
-min-width.fixed.percent if {ftd.device != "mobile"}: 33.33
-padding-horizontal.px if {ftd.device != "mobile"}: 12
+min-width.fixed.percent if {ftd.device == "desktop"}: 33.33
+padding-horizontal.px: 12
 padding-horizontal.px if {ftd.device == "mobile"}: 20
 margin-bottom.px if { ftd.device == "mobile" }: 20
 
@@ -3482,6 +3377,62 @@ align-self: start
 -- end: ftd.column
 
 -- end: member-feature-card
+
+
+
+
+
+
+
+
+
+
+-- component drop-down:
+caption title: $selected-item
+boolean $show-options: false
+common.options list drop-down-options-list:
+
+-- ftd.column:
+width: fill-container
+$on-click-outside$: $ftd.set-bool($a = $drop-down.show-options, v = false)
+
+-- ftd.row:
+id: drop-down-input
+align-self: center
+padding.px: 6
+border-radius.px: 10
+margin-top.px: 8
+width: fill-container
+height.fixed.px: 43
+border-color: $inherited.colors.custom.two
+border-color if { drop-down.show-options }: blue
+border-width.px: 1
+border-width.px if { drop-down.show-options }: 2
+spacing: space-between
+$on-click$: $ftd.toggle($a = $drop-down.show-options)
+
+-- ftd.text: $selected-item
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+padding-right.px: 52
+min-width.fixed.px: 112
+
+-- ftd.image:
+src: $assets.files.static.faq.down.svg
+width.fixed.px: 16
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- drop-down-options: $drop-down.title
+drop-down-options-list: $drop-down.drop-down-options-list
+$show-options: $drop-down.show-options
+
+-- end: ftd.column
+
+-- end: drop-down
+
 
 
 
@@ -3611,6 +3562,41 @@ $brand-objective.body
 
 
 
+-- component drop-down-options:
+caption title:
+common.options list drop-down-options-list:
+boolean $mouse-in: false
+boolean $show-options: false
+
+-- ftd.column:
+if: { drop-down-options.show-options }
+
+-- ftd.column:
+background.solid: grey
+padding-vertical.px: 11
+padding-horizontal.px: 14
+anchor: parent
+top.px: 2
+left.px: 0
+min-width.fixed.px: 360
+min-width.fixed.px if { ftd.device == "mobile" }: 240
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.cta-primary.text
+
+-- ftd.text: $obj.title
+$loop$: $drop-down-options.drop-down-options-list as $obj
+padding-right.px: 20
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: drop-down-options
 
 
 
