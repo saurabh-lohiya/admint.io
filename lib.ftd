@@ -2674,77 +2674,6 @@ $question-accordion.body
 
 
 
--- component cta-button-2:
-caption title:
-optional string role: tertiary
-ftd.color bg-color: transparent
-ftd.color text-color: black
-ftd.color border-color: $inherited.colors.border
-integer border-radius: 50
-optional string link: /
-optional boolean medium: false
-boolean show-arrow: false
-optional ftd.image-src cta-icon:
-optional integer width:
-boolean align-center: false
-integer padding-vertical: 10
-integer padding-horizontal: 28
-decimal marginTop: 0
-boolean transparent: false
-integer border-width: 1
-optional ftd.image-src src:
-boolean active: false
-
--- ftd.column:
-align-self if { cta-button-2.align-center }: center
-margin-top.rem: $cta-button-2.marginTop
-
--- ftd.row:
-if: { !cta-button-2.medium }
-width.fixed.px if { cta-button-2.width != NULL}: $cta-button-2.width
-spacing.fixed.px: 10
-link if { cta-button-2.link != NULL }: $cta-button-2.link
-background.solid if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.base
-background.solid if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.base
-background.solid: $cta-button-2.bg-color
-border-radius.px: $cta-button-2.border-radius
-border-color: $cta-button-2.border-color
-border-width.px if { $cta-button-2.active }: $cta-button-2.border-width
-padding-vertical.px: $cta-button-2.padding-vertical
-padding-horizontal.px: $cta-button-2.padding-horizontal
-align-content: center
-
--- ftd.text: $cta-button-2.title
-role: $inherited.types.button-large
-color if { cta-button-2.role == "secondary" }: $inherited.colors.cta-secondary.text
-color if { cta-button-2.role == "primary" }: $inherited.colors.cta-primary.text
-color if { !cta-button-2.active }: $inherited.colors.custom.one
-color if { cta-button-2.active }: $inherited.colors.custom.four
-white-space: nowrap
-text-align: center
-
--- ftd.image:
-if: { cta-button-2.src != NULL }
-src: $cta-button-2.src
-width: auto
-height: auto
-align-self: center
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: cta-button-2
-
-
-
-
-
-
-
-
-
-
 -- component lezgoo:
 caption title:
 optional body body:
@@ -3661,12 +3590,12 @@ min-width.fixed.px: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.cta-primary.text
 
 -- ftd.text: $obj.title
 $loop$: $drop-down-options.drop-down-options-list as $obj
-role: $inherited.types.copy-regular
 padding-right.px: 20
-color: $inherited.colors.cta-primary.text
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 
 -- end: ftd.column

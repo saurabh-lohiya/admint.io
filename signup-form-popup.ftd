@@ -57,7 +57,7 @@ padding-vertical.px: 34
 
 -- ftd.column:
 height: fill-container
-background.solid: white
+background.solid: $inherited.colors.background.base
 max-width.fixed.px: 548
 max-width.fixed.percent if { ftd.device == "mobile" }: 80
 width: fill-container
@@ -335,12 +335,12 @@ min-width.fixed.px: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.background.base
 
 -- ftd.text: $obj.title
 $loop$: $drop-down-options.drop-down-options-list as $obj
 padding-right.px: 20
-role: $inherited.types.copy-regular
-color: $inherited.colors.background.base
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 
 -- end: ftd.column
