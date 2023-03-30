@@ -6,19 +6,19 @@
 
 
 
--- lib.page:
+-- lib.page: Admint
 
 -- lib.tabs:
 
 -- lib.tab: Web 3.0 Basics
-link: /learn
+link: learn/
 active: true
 
 -- lib.tab: Brand Campaign
-link: /learn/brand-campaign
+link: learn/brand-campaign/
 
 -- lib.tab: Advertising & Web 3.0
-link: /learn/advertising-web-3-0
+link: learn/advertising-web-3-0/
 
 -- end: lib.tabs
 

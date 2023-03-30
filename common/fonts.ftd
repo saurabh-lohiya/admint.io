@@ -549,3 +549,13 @@ color: #000
 x-offset.px: 10
 y-offset.px: 10 
 blur.px: 1
+
+
+
+
+
+-- ftd.shadow tabs:
+color: #505050
+x-offset.px: 6
+y-offset.px: 8 
+blur.px: 1

@@ -1,13 +1,12 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/lib
 
--- lib.page:
+-- lib.page: Metaverse is the new playground for advertisement. &#8211; Admint
 
 -- lib.tabs:
 
 -- lib.tab: Web 3.0 Basics
 link: /learn
-active: true
 
 -- lib.tab: Brand Campaign
 link: /learn/brand-campaign
@@ -89,7 +88,7 @@ dedicated army behind each product, which is an established story in itself.
 post-page: true
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
-link: learn/metaverse-is-the-new-playground-for-advertisement-2/
+link: learn/metaverse-is-the-new-playground-for-advertisement/
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 timestamp: December 6, 2022
 comments: No comments

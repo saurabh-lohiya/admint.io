@@ -211,7 +211,7 @@ boolean post-page: false
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 align-content: center
-margin-top.px: 30
+padding-top.px: 30
 
 -- ftd.column:
 width: fill-container
@@ -473,6 +473,7 @@ width: fill-container
 src: $recent-post.thumbnail
 width: fill-container
 height: auto
+link: $recent-post.link
 
 -- ftd.text: $recent-post.title
 role: $fonts.montserrat-18
@@ -2313,8 +2314,12 @@ integer width: $max-width
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width: fill-container
 align-self: center
-max-width.fixed.px: 1320
+max-width.fixed.px: 1140
 padding-horizontal.px: 28
 padding-vertical.px: 16
 
@@ -2322,6 +2327,7 @@ padding-vertical.px: 16
 border-width.px: 2
 padding-vertical.px: 16
 width: fill-container
+shadow: $fonts.tabs
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
@@ -2340,28 +2346,6 @@ children: $tabs.child
 -- end: ftd.column
 
 -- end: ftd.column
-
-
-
--- ftd.column:
-anchor: parent
-bottom.px: 8
-right.px: 28
-background.solid: #5f5f5f
-height.fixed.px: 8
-width.fixed.percent: 95
-width.fixed.percent if { ftd.device == "mobile" }: 82.5
-
--- end: ftd.column
-
--- ftd.column:
-anchor: parent
-bottom.px: 8
-right.px: 20
-background.solid: #5f5f5f
-width.fixed.px: 8
-height.fixed.percent: 75
-height.fixed.percent if { ftd.device == "mobile" }: 85
 
 -- end: ftd.column
 
@@ -2424,7 +2408,7 @@ background.solid: $inherited.colors.background.step-1
 padding-vertical.px if { ftd.device == "desktop" }: 70
 
 -- ftd.column:
-max-width.fixed.px: $max-width
+max-width.fixed.px: 1088
 width: fill-container
 padding.px if { ftd.device == "mobile" }: 20
 align-self: center
@@ -4190,10 +4174,16 @@ children results:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1320
 align-self: center
 padding-horizontal.px: 12
 margin-bottom.px: 30
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1140
+align-self: center
+margin-top.px: 30
 
 -- ftd.row:
 margin-bottom.px: 20
@@ -4222,6 +4212,8 @@ wrap: true
 spacing.fixed.px: 30
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 

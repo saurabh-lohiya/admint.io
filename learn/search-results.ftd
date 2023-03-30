@@ -3,6 +3,19 @@
 
 -- lib.page:
 
+-- lib.tabs:
+
+-- lib.tab: Web 3.0 Basics
+link: learn/
+
+-- lib.tab: Brand Campaign
+link: learn/brand-campaign/
+
+-- lib.tab: Advertising & Web 3.0
+link: learn/advertising-web-3-0/
+
+-- end: lib.tabs
+
 -- lib.search-results: Search Results For:
 query: blah blah
 
