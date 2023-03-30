@@ -98,7 +98,7 @@ $active-item: $current-cell
 number: 1
 right-src: $assets.files.static.lezgoo.planning-right-img.svg 
 left-src: $assets.files.static.lezgoo.planning-left-img.svg
-right-mob-src: $assets.files.static.lezgoo.planning-right-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
 left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
 top-cell: You choose your brand’s campaign objective 
 bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
