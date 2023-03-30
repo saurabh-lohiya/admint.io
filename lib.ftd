@@ -2191,13 +2191,13 @@ width.fixed.px: 196
 
 -- component signup-form:
 caption title:
-string input-label1:
-string input-warning1: Name is required
-string input-label2:
-string input-label3:
-string input-warning3: Organization is required
-string input-label4:
-string input-warning4: Email is requied
+string name-label:
+string name-warning: Name is required
+string identity-label:
+string org-label:
+string org-warning: Organization is required
+string email-label:
+string email-warning: Email is requied
 common.role-record list roles: $common.roles
 string cta-text:
 integer width: 1300
@@ -2231,13 +2231,13 @@ color: $inherited.colors.text
 region: h1
 width.fixed.percent if { ftd.device == "desktop" }: 80
 
--- ftd.text: $signup-form.input-label1
+-- ftd.text: $signup-form.name-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 30
 
 -- ftd.text-input:
-id: input-field1
+id: name-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2249,8 +2249,8 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.input-warning1
-id: warning1
+-- ftd.text: $signup-form.name-warning
+id: name-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -2263,7 +2263,7 @@ width: fill-container
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label2
+-- ftd.text: $signup-form.identity-label
 margin-top.px: 23
 role: $inherited.types.source-code
 color: $inherited.colors.text
@@ -2277,13 +2277,13 @@ drop-down-options-list: $common.option-list
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.input-label3
+-- ftd.text: $signup-form.org-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 23
 
 -- ftd.text-input:
-id: input-field3
+id: org-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2295,8 +2295,8 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.input-warning3
-id: warning3
+-- ftd.text: $signup-form.org-warning
+id: org-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -2304,13 +2304,13 @@ color: #dc3545
 
 -- end: ftd.row
 
--- ftd.text: $signup-form.input-label4
+-- ftd.text: $signup-form.email-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 23
 
 -- ftd.text-input:
-id: input-field4
+id: email-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -2324,8 +2324,8 @@ $on-blur$: $common.form-validate()
 
 -- end: ftd.text-input
 
--- ftd.text: $signup-form.input-warning4
-id: warning4
+-- ftd.text: $signup-form.email-warning
+id: email-warning
 role: $inherited.types.copy-small
 color: #dc3545
 
@@ -3636,7 +3636,7 @@ common.options list drop-down-options-list:
 width: fill-container
 
 -- ftd.row:
-id: input-field2
+id: drop-down-input
 align-self: center
 padding.px: 6
 border-radius.px: 10

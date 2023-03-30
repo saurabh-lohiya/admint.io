@@ -191,10 +191,10 @@ cta-text: Get Started🚧
 cta-url: index.html
 
 -- lib.signup-form: Join the waitlist to get updated when we go live!
-input-label1: Name
-input-label2: Who are you?
-input-label3: Organization Name
-input-label4: Email id
+name-label: Name
+identity-label: Who are you?
+org-label: Organization Name
+email-label: Email id
 cta-text: Join waitlist🚧
 
 -- end: lib.signup-form

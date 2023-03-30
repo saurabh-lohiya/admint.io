@@ -4,77 +4,77 @@ function loadWindow() {
 
 
 window.onload = (event) => {
-  if (document.getElementById("warning1")) {
-    document.getElementById("warning1").style.display = 'none';
+  if (document.getElementById("name-warning")) {
+    document.getElementById("name-warning").style.display = 'none';
   }
-  if (document.getElementById("warning3")) {
-    document.getElementById("warning3").style.display = 'none';
+  if (document.getElementById("org-warning")) {
+    document.getElementById("org-warning").style.display = 'none';
   }
-  if (document.getElementById("warning4")) {
-    document.getElementById("warning4").style.display = 'none';
+  if (document.getElementById("email-warning")) {
+    document.getElementById("email-warning").style.display = 'none';
   }
 
-  if (document.getElementById("popup-warning1")) {
-    document.getElementById("popup-warning1").style.display = 'none';
+  if (document.getElementById("user-name-warning")) {
+    document.getElementById("user-name-warning").style.display = 'none';
   }
-  if (document.getElementById("popup-warning3")) {
-    document.getElementById("popup-warning3").style.display = 'none';
+  if (document.getElementById("user-org-warning")) {
+    document.getElementById("user-org-warning").style.display = 'none';
   }
-  if (document.getElementById("popup-warning4")) {
-    document.getElementById("popup-warning4").style.display = 'none';
+  if (document.getElementById("user-email-warning")) {
+    document.getElementById("user-email-warning").style.display = 'none';
   }
   if (document.getElementById("label-success")) {
     document.getElementById("label-success").style.display = 'none';
   }
-  if (document.getElementById("popup-label-success")) {
-    document.getElementById("popup-label-success").style.display = 'none';
+  if (document.getElementById("user-label-success")) {
+    document.getElementById("user-label-success").style.display = 'none';
   }
 };
 
 
 function formValidation(event) {
-  let check1 = document.getElementById("input-field1").value != ""
-  let check2 = document.getElementById("input-field3").value != ""
-  let check3 = document.getElementById("input-field4").value != ""
+  let check1 = document.getElementById("name-input").value != ""
+  let check2 = document.getElementById("org-input").value != ""
+  let check3 = document.getElementById("email-input").value != ""
   if (!check1) {
-    document.getElementById("warning1").style.display = 'block';
+    document.getElementById("name-warning").style.display = 'block';
     return
   }
-  document.getElementById("warning1").style.display = 'none';
+  document.getElementById("name-warning").style.display = 'none';
   if (!check2) {
-    document.getElementById("warning3").style.display = 'block';
+    document.getElementById("org-warning").style.display = 'block';
     return
   }
-  document.getElementById("warning3").style.display = 'none';
+  document.getElementById("org-warning").style.display = 'none';
   if (!check3) {
-    document.getElementById("warning4").style.display = 'block';
+    document.getElementById("email-warning").style.display = 'block';
     return
   }
-  document.getElementById("warning4").style.display = 'none';
+  document.getElementById("email-warning").style.display = 'none';
   document.getElementById("label-success").style.display = 'block';
 }
 
 
 function popupFormValidation(event) {
-  let check1 = document.getElementById("popup-input-field1").value != ""
-  let check2 = document.getElementById("popup-input-field3").value != ""
-  let check3 = document.getElementById("popup-input-field4").value != ""
+  let check1 = document.getElementById("user-name-input").value != ""
+  let check2 = document.getElementById("user-org-input").value != ""
+  let check3 = document.getElementById("user-email-input").value != ""
   if (!check1) {
-    document.getElementById("popup-warning1").style.display = 'block';
+    document.getElementById("user-name-warning").style.display = 'block';
     return
   }
-  document.getElementById("popup-warning1").style.display = 'none';
+  document.getElementById("user-name-warning").style.display = 'none';
   if (!check2) {
-    document.getElementById("popup-warning3").style.display = 'block';
+    document.getElementById("user-org-warning").style.display = 'block';
     return
   }
-  document.getElementById("popup-warning3").style.display = 'none';
+  document.getElementById("user-org-warning").style.display = 'none';
   if (!check3) {
-    document.getElementById("popup-warning4").style.display = 'block';
+    document.getElementById("user-email-warning").style.display = 'block';
     return
   }
-  document.getElementById("popup-warning4").style.display = 'none';
-  document.getElementById("popup-label-success").style.display = 'block';
+  document.getElementById("user-email-warning").style.display = 'none';
+  document.getElementById("user-label-success").style.display = 'block';
 }
 
 
@@ -82,5 +82,5 @@ function popupFormValidation(event) {
 
 function highlightBorder() {
   console.log("hi")
-  document.getElementById('input-field2').style.borderColor = "blue"
+  document.getElementById('drop-down-input').style.borderColor = "blue"
 }

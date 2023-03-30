@@ -17,10 +17,10 @@ colors: $cs.main
 types: $typo.types
 
 -- signup-form-popup: Join the waitlist to get updated when we go live!
-input-label1: Name
-input-label2: Who are you?
-input-label3: Organization Name
-input-label4: Email id
+name-label: Name
+identity-label: Who are you?
+org-label: Organization Name
+email-label: Email id
 cta-text: Join waitlist
 
 -- end: signup-form-popup
@@ -30,13 +30,13 @@ cta-text: Join waitlist
 
 -- component signup-form-popup:
 caption title:
-string input-label1:
-string input-warning1: Name is required
-string input-label2:
-string input-label3:
-string input-warning3: Organization is required
-string input-label4:
-string input-warning4: Email is requied
+string name-label:
+string name-warning: Name is required
+string identity-label:
+string org-label:
+string org-warning: Organization is required
+string email-label:
+string email-warning: Email is requied
 $common.role-record list roles: $common.roles
 string cta-text:
 
@@ -75,13 +75,13 @@ role: $fonts.nunito-40-m
 color: $inherited.colors.text
 region: h1
 
--- ftd.text: $signup-form-popup.input-label1
+-- ftd.text: $signup-form-popup.name-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 34
 
 -- ftd.text-input:
-id: popup-input-field1
+id: user-name-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -91,9 +91,10 @@ border-radius.px: 10
 color: $inherited.colors.text
 min-height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.input-warning1
-id: popup-warning1
+-- ftd.text: $signup-form-popup.name-warning
+id: user-name-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
 
@@ -106,7 +107,7 @@ width: fill-container
 width.fixed.percent: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form-popup.input-label2
+-- ftd.text: $signup-form-popup.identity-label
 margin-top.px: 16
 role: $inherited.types.source-code
 color: $inherited.colors.text
@@ -120,13 +121,13 @@ drop-down-options-list: $common.option-list
 width.fixed.percent: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form-popup.input-label3
+-- ftd.text: $signup-form-popup.org-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
-id: popup-input-field3
+id: user-org-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -136,9 +137,10 @@ border-radius.px: 10
 color: $inherited.colors.text
 height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.input-warning3
-id: popup-warning3
+-- ftd.text: $signup-form-popup.org-warning
+id: user-org-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
 
@@ -146,13 +148,13 @@ color: $fonts.dc3545
 
 -- end: ftd.row
 
--- ftd.text: $signup-form-popup.input-label4
+-- ftd.text: $signup-form-popup.email-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 16
 
 -- ftd.text-input:
-id: popup-input-field4
+id: user-email-input
 padding.px: 6
 width: fill-container
 background.solid: transparent
@@ -162,9 +164,10 @@ border-radius.px: 10
 color: $inherited.colors.text
 min-height.fixed.px: 43
 margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.input-warning4
-id: popup-warning4
+-- ftd.text: $signup-form-popup.email-warning
+id: user-email-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
 
@@ -182,7 +185,7 @@ text-color: white
 $on-click$: $common.popup-form-validate()
 
 -- ftd.text: 
-id: popup-label-success
+id: user-label-success
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
@@ -287,7 +290,7 @@ $common.options list drop-down-options-list:
 width: fill-container
 
 -- ftd.row:
-id: popup-input-field2
+id: user-identity-input
 align-self: center
 padding.px: 6
 border-radius.px: 10
