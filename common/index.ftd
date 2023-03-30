@@ -87,6 +87,10 @@ link: https://www.linkedin.com/in/jaylahconsejo/
 -- record options:
 caption title:
 
+
+
+
+
 -- options list option-list:
 
 -- options: Advertiser
@@ -109,6 +113,10 @@ caption title:
 
 -- record role-record:
 caption title:
+
+
+
+
 
 -- role-record list roles:
 
@@ -146,6 +154,10 @@ $processor$: pr.toc
 -- record social-media:
 ftd.image-src src:
 string link: /
+
+
+
+
 
 -- social-media list social-links:
 
