@@ -549,7 +549,7 @@ color: $inherited.colors.cta-primary.text
 
 
 -- component page:
-caption title: Admint.io
+caption title: AdMint - Deliver refreshing Web 3.0 campaigns!
 optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
