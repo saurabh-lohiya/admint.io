@@ -368,6 +368,13 @@ mobile: $size-27-desktop
 
 
 
+-- ftd.type size-14-m:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
 ;; Colors
 
 -- ftd.color adadad:

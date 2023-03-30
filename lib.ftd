@@ -1924,6 +1924,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 align-content: center
 padding-vertical.px: 50
+padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
@@ -1945,7 +1946,7 @@ align-self: end
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 region: h1
-width.fixed.percent: 80
+width.fixed.percent if { ftd.device == "desktop" }: 80
 
 -- ftd.text: $signup-form.input-label1
 role: $inherited.types.source-code
@@ -2205,7 +2206,7 @@ anchor: parent
 bottom.px: 8
 right.px: 28
 background.solid: #5f5f5f
-width.fixed.percent: 94
+width.fixed.percent: 95
 height.fixed.px: 8
 
 -- end: ftd.column
@@ -2268,7 +2269,8 @@ if: { !tab.active }
 padding-vertical.px: 20
 padding-horizontal.px: 30
 color: black
-role: $inherited.types.button-large
+role if { ftd.device == "desktop" }: $inherited.types.button-large
+role if { ftd.device == "mobile" }: $fonts.size-14-m
 link: $tab.link
 
 -- ftd.text: $tab.title
@@ -2279,7 +2281,8 @@ border-width.px: 2
 padding-vertical.px: 20
 padding-horizontal.px: 30
 color: $inherited.colors.custom.four
-role: $inherited.types.button-large
+role if { ftd.device == "desktop" }: $inherited.types.button-large
+role if { ftd.device == "mobile" }: $fonts.size-14-m
 link: $tab.link
 
 -- end: ftd.column
@@ -2391,7 +2394,8 @@ classes: markdown
 background.solid: #eeeeee80
 width: fill-container
 spacing: space-between
-padding-horizontal.px: 16
+padding-horizontal.px if { ftd.device == "desktop" } : 16
+padding-horizontal.px if { ftd.device == "mobile" } : 12
 padding-vertical.px: 13
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
@@ -2415,12 +2419,20 @@ width.fixed.px: 24
 
 -- ftd.column:
 if: { question-accordion.open }
-padding-vertical.px: 16
+padding-vertical.px: 12
+padding-horizontal.px: 10
 width: fill-container
-padding.px: 16
 
 -- ftd.text:
+if: { ftd.device == "desktop" }
 role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+
+$question-accordion.body
+
+-- ftd.text:
+if: { ftd.device == "mobile" }
+role: $inherited.types.fine-print
 color: $inherited.colors.custom.one
 
 $question-accordion.body
@@ -3069,7 +3081,7 @@ padding-horizontal.px: 14
 anchor: parent
 top.px: 2
 left.px: 0
-min-width.fixed.px: 360
+min-width.fixed.px: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
