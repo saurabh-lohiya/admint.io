@@ -1,0 +1,123 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+
+
+-- ds.page: FAQs
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+-- ds.page.footer:
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `faq` and `question-accordion` component for
+[admint.io/learn](https://admint.io/learn), which matches the design currently
+displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use the `faq` and `question-accordion` components you need to import
+`lib.ftd` inside your `.ftd` file, as shown below:
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import the `lib` inside your `.ftd` file, use the `faq` and
+`question-accordion` component by adding all required attributes of it.
+
+You can also use `question-accordion` component if you want to show a accordion
+like UI on your `.ftd` pages. Just add `title` and `body` to it. Check second
+`question-accordion` component in below code snippet.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.faq:
+
+\-- lib.question-accordion: What is Web 3.0?
+
+Web 3.0 is the next level of the internet, just like how you will go to high
+school after finishing grade school. The first version of the internet is like
+Web 1.0, where people just put up websites for others to read. But as the
+internet grew, more things were added like videos, social media, and online
+shopping. This is like Web 2.0, it’s more interactive and fun, but still needs
+people to tell it what to do.
+
+Web 3.0 is like having a robot helper that can do things for you online, like
+finding the best videos or helping you buy things. It’s still being developed,
+but it will make the internet even more helpful and fun to use. And this is
+where Blockchain comes in, it’s like a special notebook where you can write
+things down that everyone can see and trust, so the computers can talk to each
+other and make decisions without needing people to tell them what to do. So,
+it’s like the internet is growing and getting smarter, just like how you are
+growing and learning new things as you go through school or life, in general.
+
+\-- lib.question-accordion: I am a accordion title
+
+I am accordion body. 
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+\-- end: lib.faq
+
+-- ds.rendered.output:
+
+-- lib.faq:
+
+-- lib.question-accordion: What is Web 3.0?
+
+Web 3.0 is the next level of the internet, just like how you will go to high
+school after finishing grade school. The first version of the internet is like
+Web 1.0, where people just put up websites for others to read. But as the
+internet grew, more things were added like videos, social media, and online
+shopping. This is like Web 2.0, it’s more interactive and fun, but still needs
+people to tell it what to do.
+
+Web 3.0 is like having a robot helper that can do things for you online, like
+finding the best videos or helping you buy things. It’s still being developed,
+but it will make the internet even more helpful and fun to use. And this is
+where Blockchain comes in, it’s like a special notebook where you can write
+things down that everyone can see and trust, so the computers can talk to each
+other and make decisions without needing people to tell them what to do. So,
+it’s like the internet is growing and getting smarter, just like how you are
+growing and learning new things as you go through school or life, in general.
+
+-- lib.question-accordion: I am a accordion title
+
+I am accordion body. Body of can contain multiple paragraphs, links etc.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry’s standard dummy
+
+- I am a list item.
+
+- I am a list item.
+
+-- end: lib.faq
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
