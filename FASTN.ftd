@@ -32,8 +32,8 @@ skip: true
 - Hero: docs/hero/
 - Header: docs/header/
 - Footer: docs/footer/
-- Why Admint? slider: index.html
-- Lezgoo card: index.html
-- How it works?: index.html
-- How it works? slider: index.html
-- Advertising in Web 3.0: index.html
+- Slider🚧: docs/slider/
+- Lezgoo card🚧: docs/lezgoo/
+- Sneak Peak🚧: docs/sneak-peak/
+- Ad-card🚧: docs/ad-card/
+- Multiple Ad-cards🚧: docs/ad-cards/
