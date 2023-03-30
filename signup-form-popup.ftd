@@ -28,6 +28,14 @@ cta-text: Join waitlist
 -- end: ftd.column
 
 
+
+
+
+
+
+
+
+
 -- component signup-form-popup:
 caption title:
 string name-label:
@@ -64,14 +72,7 @@ align-self: end
 link: /
 
 -- ftd.text: $signup-form-popup.title
-if: { ftd.device == "desktop" }
-role: $fonts.nunito-40-d
-color: $inherited.colors.text
-region: h1
-
--- ftd.text: $signup-form-popup.title
-if: { ftd.device == "mobile" }
-role: $fonts.nunito-40-m
+role: $fonts.nunito-40
 color: $inherited.colors.text
 region: h1
 
@@ -177,11 +178,6 @@ spacing: space-between
 wrap: true
 
 -- cta-button: $signup-form-popup.cta-text
-bg-color: $inherited.colors.custom.four
-padding-horizontal: 41
-padding-vertical: 11
-marginTop: 2
-text-color: white
 $on-click$: $common.popup-form-validate()
 
 -- ftd.text: 
@@ -216,8 +212,8 @@ Thanks for your interest...We will update you
 -- component cta-button:
 caption title:
 optional string role: tertiary
-ftd.color bg-color: transparent
-ftd.color text-color: black
+ftd.color bg-color: $inherited.colors.custom.four
+ftd.color text-color: $inherited.colors.cta-primary.text
 ftd.color border-color: $inherited.colors.border
 integer border-radius: 30
 optional string link:
@@ -226,9 +222,9 @@ boolean show-arrow: false
 optional ftd.image-src cta-icon:
 optional integer width:
 boolean align-center: false
-integer padding-vertical: 10
-integer padding-horizontal: 28
-decimal marginTop: 0
+integer padding-vertical: 11
+integer padding-horizontal: 41
+decimal marginTop: 2
 boolean transparent: false
 integer border-width: 1
 optional ftd.image-src src:

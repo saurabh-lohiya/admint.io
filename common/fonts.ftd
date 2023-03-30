@@ -338,21 +338,23 @@ desktop: $montserrat-28-desktop
 mobile: $montserrat-28-mobile
 
 
--- ftd.type nunito-40-d:
+-- ftd.type nunito-40-desktop:
 line-height.px: 44
 size.px: 40
 letter-spacing.px: -1
 font-family: $nunito-assets.fonts.Nunito
 weight: 700
 
--- ftd.type nunito-40-m:
+-- ftd.type nunito-40-mobile:
 line-height.px: 40
 size.px: 40
 letter-spacing.px: 0
 font-family: $nunito-assets.fonts.Nunito
 weight: 700
 
-
+-- ftd.responsive-type nunito-40:
+desktop: $nunito-40-desktop
+mobile: $nunito-40-mobile
 
 -- ftd.type size-27-desktop:
 line-height.px: 27
