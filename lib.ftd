@@ -623,13 +623,12 @@ border-bottom-right-radius.px: 20
 padding-top.px: 43
 padding-bottom.px: 54
 padding-horizontal.px: 47
-
-
+width: fill-container
 
 -- ftd.text: 
 text: $feature-card.body
 color: $inherited.colors.text
-role: $inherited.types.copy-large
+role: $fonts.size-24-regular
 margin-bottom.px: 60
 
 -- ftd.column:
@@ -650,75 +649,14 @@ background.solid: $inherited.colors.cta-primary.base
 
 -- end: ftd.column
 
-
 -- end: feature-card
 
--- component slide:
-caption title:
-string subtitle:
-optional body body:
-ftd.image-src src:
-children slide-wrap:
-optional integer index:
-optional integer reset:
-
--- ftd.column:
-if: { slide.index == slide.reset }
 
 
 
--- ftd.row:
-width: fill-container
-
--- ftd.column:
-width: fill-container
-height: fill-container
-
--- ftd.text: $slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-bottom.px: 41
-
--- ftd.text: $slide.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
-margin-bottom.px: 87
-region: h3
-
-
--- ftd.text:
-if: {slide.body != NULL}
-text: $slide.body
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-margin-bottom.px: 41
 
 
 
--- end: ftd.column
-
--- ftd.column:
-align-content: center
-align-self: center
-
--- ftd.image:
-src: $slide.src
-align-self: center
-
--- end: ftd.column
-
--- end: ftd.row
-
--- ftd.row:
-width: fill-container
-children: $slide.slide-wrap
-spacing.fixed.px: 24
-
--- end: ftd.row
-
--- end: ftd.column
-
--- end: slide
 
 
 
@@ -728,7 +666,11 @@ integer $active-item:
 integer max: 6
 integer min: 1
 
+-- ftd.column:
+width: fill-container
+
 -- ftd.row:
+if: { ftd.device != "mobile" }
 width: fill-container
 padding-horizontal.px: 12
 align-content: center
@@ -738,8 +680,7 @@ width: fill-container
 spacing.fixed.px: 24
 padding-vertical.px: 40
 padding-horizontal.px: 12
-max-width.fixed.percent: 85
-align-self: center
+align-content: center
 
 -- ftd.image:
 if: { slider.active-item != 1 }
@@ -751,7 +692,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: -94
+left.px: 8
 
 -- ftd.image:
 if: { slider.active-item == 1 }
@@ -762,14 +703,16 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-left.px: -94
+left.px: 8
 
--- ftd.row:
+-- ftd.column:
 children: $slider.wrap
 width: fill-container
+max-width.fixed.px: $max-width
+align-content: center
 padding-horizontal.px: 12
 
--- end: ftd.row
+-- end: ftd.column
 
 -- ftd.image:
 if: { slider.active-item != 5 }
@@ -780,7 +723,7 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: -94
+right.px: 8
 anchor: parent
 
 -- ftd.image:
@@ -792,13 +735,22 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-right.px: -94
+right.px: 8
 
+-- end: ftd.row
 
 -- end: ftd.row
 
+-- ftd.column:
+if: { ftd.device == "mobile"}
+children: $slider.wrap
+width: fill-container
+padding-horizontal.px: 12
+padding-vertical.px: 40
 
--- end: ftd.row
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: slider
 
@@ -809,17 +761,63 @@ right.px: -94
 
 
 
--- component slide:
+
+
+
+-- component simple-steps:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children slide-wrap:
+children simple-steps-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
-if: { slide.index == slide.reset }
+width: fill-container
+
+-- simple-steps-desktop: $simple-steps.title
+if: { ftd.device != "mobile" }
+subtitle: $simple-steps.subtitle
+body: $simple-steps.body
+src: $simple-steps.src
+simple-steps-wrap: $simple-steps.simple-steps-wrap
+index: $simple-steps.index
+reset: $simple-steps.reset
+
+-- simple-steps-mobile: $simple-steps.title
+if: { ftd.device == "mobile" }
+subtitle: $simple-steps.subtitle
+body: $simple-steps.body
+src: $simple-steps.src
+simple-steps-wrap: $simple-steps.simple-steps-wrap
+index: $simple-steps.index
+reset: $simple-steps.reset
+
+-- end: ftd.column
+
+-- end: simple-steps
+
+
+
+
+
+
+
+
+
+
+-- component simple-steps-desktop:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children simple-steps-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { simple-steps-desktop.index == simple-steps-desktop.reset }
 
 -- ftd.row:
 width: fill-container
@@ -828,26 +826,24 @@ width: fill-container
 width: fill-container
 height: fill-container
 
--- ftd.text: $slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+-- ftd.text: $simple-steps-desktop.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $slide.subtitle
+-- ftd.text: $simple-steps-desktop.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 87
 region: h3
-width.fixed.percent: 60
-
+width.fixed.percent: 75
 
 -- ftd.text:
-if: {slide.body != NULL}
-text: $slide.body
+if: { simple-steps-desktop.body != NULL }
+text: $simple-steps-desktop.body
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 margin-bottom.px: 41
-
 
 -- end: ftd.column
 
@@ -856,7 +852,7 @@ align-content: center
 align-self: center
 
 -- ftd.image:
-src: $slide.src
+src: $simple-steps-desktop.src
 align-self: center
 
 -- end: ftd.column
@@ -865,32 +861,134 @@ align-self: center
 
 -- ftd.row:
 width: fill-container
-children: $slide.slide-wrap
+children: $simple-steps-desktop.simple-steps-wrap
 spacing.fixed.px: 24
+margin-top.px: -73
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: slide
+-- end: simple-steps-desktop
 
 
 
 
 
--- component full-slide:
+
+
+
+
+
+-- component simple-steps-mobile:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children full-slide-wrap:
+children simple-steps-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
-if: { full-slide.index == full-slide.reset }
-height.fixed.px: 650
+width: fill-container
+margin-bottom.px: 16
+padding-horizontal.px: 12
 
+-- ftd.text: $simple-steps-mobile.title
+role: $inherited.types.label-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+width: fill-container
+
+-- ftd.text: $simple-steps-mobile.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 87
+region: h3
+width: fill-container
+
+-- ftd.text:
+if: { simple-steps-mobile.body != NULL }
+text: $simple-steps-mobile.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 41
+
+-- ftd.column:
+width: fill-container
+children: $simple-steps-mobile.simple-steps-wrap
+spacing.fixed.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: simple-steps-mobile
+
+
+
+
+
+
+
+
+
+
+-- component structured:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children structured-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+width: fill-container
+
+-- structured-desktop: $structured.title
+if: { ftd.device != "mobile" }
+subtitle: $structured.subtitle
+body: $structured.body
+src: $structured.src
+structured-wrap: $structured.structured-wrap
+index: $structured.index
+reset: $structured.reset
+
+-- slide-mobile: $structured.title
+if: { ftd.device == "mobile" }
+subtitle: $structured.subtitle
+body: $structured.body
+src: $structured.src
+slide-wrap: $structured.structured-wrap
+index: $structured.index
+reset: $structured.reset
+
+-- end: ftd.column
+
+-- end: structured
+
+
+
+
+
+
+
+
+
+
+-- component structured-desktop:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children structured-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { structured-desktop.index == structured-desktop.reset }
+height.fixed.px: 650
 
 -- ftd.row:
 width: fill-container
@@ -899,22 +997,21 @@ width: fill-container
 width: fill-container
 height: fill-container
 
--- ftd.text: $full-slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+-- ftd.text: $structured-desktop.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $full-slide.subtitle
+-- ftd.text: $structured-desktop.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 28
 region: h3
 
-
 -- ftd.text:
-if: {full-slide.body != NULL}
-text: $full-slide.body
-role: $inherited.types.copy-large
+if: { structured-desktop.body != NULL }
+text: $structured-desktop.body
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 58
@@ -926,11 +1023,11 @@ align-content: center
 align-self: center
 anchor: parent 
 right.percent: -9
-top.percent: 30
+top.percent: 56
 z-index: -1 
 
 -- ftd.image:
-src: $full-slide.src
+src: $structured-desktop.src
 align-self: center
 
 -- end: ftd.column
@@ -939,34 +1036,133 @@ align-self: center
 
 -- ftd.row:
 width: fill-container
-children: $full-slide.full-slide-wrap
+children: $structured-desktop.structured-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: full-slide
+-- end: structured-desktop
 
 
 
 
 
--- component mid-slide:
+
+
+
+
+
+-- component slide-mobile:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children mid-slide-wrap:
+children slide-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
-if: { mid-slide.index == mid-slide.reset }
-height.fixed.px: 650
+width: fill-container
+padding-horizontal.px: 12
+margin-bottom.px: 48
+
+-- ftd.image:
+src: $slide-mobile.src
+align-self: center
+width.fixed.percent: 60
+height: auto
+
+-- ftd.text: $slide-mobile.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 28
+region: h3
+
+-- ftd.text:
+if: { slide-mobile.body != NULL }
+text: $slide-mobile.body
+role: $fonts.size-24-regular
+color: $inherited.colors.text
+margin-bottom.px: 16
+
+-- ftd.column:
+width: fill-container
+children: $slide-mobile.slide-wrap
+spacing.fixed.px: 24
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: slide-mobile
+
+
+
+
+
+
+
+
+
+
+-- component keymedia-vehicle:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children keymedia-vehicle-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
 width: fill-container
 
+-- keymedia-vehicle-desktop: $keymedia-vehicle.title
+if: { ftd.device != "mobile" }
+subtitle: $keymedia-vehicle.subtitle
+body: $keymedia-vehicle.body
+src: $keymedia-vehicle.src
+keymedia-vehicle-wrap: $keymedia-vehicle.keymedia-vehicle-wrap
+index: $keymedia-vehicle.index
+reset: $keymedia-vehicle.reset
 
+-- slide-mobile: $keymedia-vehicle.title
+if: { ftd.device == "mobile" }
+subtitle: $keymedia-vehicle.subtitle
+body: $keymedia-vehicle.body
+src: $keymedia-vehicle.src
+slide-wrap: $keymedia-vehicle.keymedia-vehicle-wrap
+index: $keymedia-vehicle.index
+reset: $keymedia-vehicle.reset
+
+-- end: ftd.column
+
+-- end: keymedia-vehicle
+
+
+
+
+
+
+
+
+
+
+-- component keymedia-vehicle-desktop:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children keymedia-vehicle-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { keymedia-vehicle-desktop.index == keymedia-vehicle-desktop.reset }
+height.fixed.px: 650
+width: fill-container
 
 -- ftd.row:
 width: fill-container
@@ -975,14 +1171,14 @@ width: fill-container
 width: fill-container
 height: fill-container
 
--- ftd.text: $mid-slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+-- ftd.text: $keymedia-vehicle-desktop.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
 margin-bottom.px: 28
 max-width.fixed.percent: 70
 width: fill-container
 
--- ftd.text: $mid-slide.subtitle
+-- ftd.text: $keymedia-vehicle-desktop.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 20
@@ -991,12 +1187,12 @@ width: fill-container
 max-width.fixed.percent: 70
 
 -- ftd.text:
-if: {mid-slide.body != NULL}
-text: $mid-slide.body
-role: $inherited.types.copy-large
+if: { keymedia-vehicle-desktop.body != NULL }
+text: $keymedia-vehicle-desktop.body
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 70
+max-width.fixed.percent: 60
 
 -- end: ftd.column
 
@@ -1004,12 +1200,12 @@ max-width.fixed.percent: 70
 align-content: center
 align-self: center
 anchor: parent 
-right.px:0
-top.px: 220
+right.percent: -9
+top.percent: 44
 z-index: -1 
 
 -- ftd.image:
-src: $mid-slide.src
+src: $keymedia-vehicle-desktop.src
 align-self: center
 
 -- end: ftd.column
@@ -1018,29 +1214,78 @@ align-self: center
 
 -- ftd.row:
 width: fill-container
-children: $mid-slide.mid-slide-wrap
+children: $keymedia-vehicle-desktop.keymedia-vehicle-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: mid-slide
+-- end: keymedia-vehicle-desktop
 
 
 
 
--- component four-slide:
+
+
+
+
+
+
+-- component distribute-nft:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children four-slide-wrap:
+children distribute-nft-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
-if: { four-slide.index == four-slide.reset }
+width: fill-container
+
+-- distribute-nft-desktop: $distribute-nft.title
+if: { ftd.device != "mobile" }
+subtitle: $distribute-nft.subtitle
+body: $distribute-nft.body
+src: $distribute-nft.src
+distribute-nft-wrap: $distribute-nft.distribute-nft-wrap
+index: $distribute-nft.index
+reset: $distribute-nft.reset
+
+-- slide-mobile: $distribute-nft.title
+if: { ftd.device == "mobile" }
+subtitle: $distribute-nft.subtitle
+body: $distribute-nft.body
+src: $distribute-nft.src
+slide-wrap: $distribute-nft.distribute-nft-wrap
+index: $distribute-nft.index
+reset: $distribute-nft.reset
+
+-- end: ftd.column
+
+-- end: distribute-nft
+
+
+
+
+
+
+
+
+
+
+-- component distribute-nft-desktop:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children distribute-nft-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { distribute-nft-desktop.index == distribute-nft-desktop.reset }
 height.fixed.px: 650
 width: fill-container
 
@@ -1051,13 +1296,13 @@ width: fill-container
 width: fill-container
 height: fill-container
 
--- ftd.text: $four-slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+-- ftd.text: $distribute-nft-desktop.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
 margin-bottom.px: 41
 width: fill-container
 
--- ftd.text: $four-slide.subtitle
+-- ftd.text: $distribute-nft-desktop.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 24
@@ -1066,12 +1311,12 @@ width: fill-container
 
 
 -- ftd.text:
-if: {four-slide.body != NULL}
-text: $four-slide.body
-role: $inherited.types.copy-large
+if: { distribute-nft-desktop.body != NULL }
+text: $distribute-nft-desktop.body
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 70
+max-width.fixed.percent: 80
 
 -- end: ftd.column
 
@@ -1079,12 +1324,12 @@ max-width.fixed.percent: 70
 align-content: center
 align-self: center
 anchor: parent 
-right.px:0
-top.px: 220
+right.percent: -9
+top.percent: 88
 z-index: -1 
 
 -- ftd.image:
-src: $four-slide.src
+src: $distribute-nft-desktop.src
 align-self: center
 
 -- end: ftd.column
@@ -1093,14 +1338,14 @@ align-self: center
 
 -- ftd.row:
 width: fill-container
-children: $four-slide.four-slide-wrap
+children: $distribute-nft-desktop.distribute-nft-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: four-slide
+-- end: distribute-nft-desktop
 
 
 
@@ -1110,19 +1355,63 @@ spacing.fixed.px: 24
 
 
 
--- component last-slide:
+
+-- component analyze-pane:
 caption title:
 string subtitle:
 optional body body:
 ftd.image-src src:
-children last-slide-wrap:
+children analyze-pane-wrap:
 optional integer index:
 optional integer reset:
 
 -- ftd.column:
-if: { last-slide.index == last-slide.reset }
 width: fill-container
 
+-- analyze-pane-desktop: $analyze-pane.title
+if: { ftd.device != "mobile" }
+subtitle: $analyze-pane.subtitle
+body: $analyze-pane.body
+src: $analyze-pane.src
+analyze-pane-wrap: $analyze-pane.analyze-pane-wrap
+index: $analyze-pane.index
+reset: $analyze-pane.reset
+
+-- slide-mobile: $analyze-pane.title
+if: { ftd.device == "mobile" }
+subtitle: $analyze-pane.subtitle
+body: $analyze-pane.body
+src: $analyze-pane.src
+slide-wrap: $analyze-pane.analyze-pane-wrap
+index: $analyze-pane.index
+reset: $analyze-pane.reset
+
+-- end: ftd.column
+
+-- end: analyze-pane
+
+
+
+
+
+
+
+
+
+
+-- component analyze-pane-desktop:
+caption title:
+string subtitle:
+optional body body:
+ftd.image-src src:
+children analyze-pane-wrap:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { analyze-pane-desktop.index == analyze-pane-desktop.reset }
+width: fill-container
+height.fixed.px: 650
 
 -- ftd.row:
 width: fill-container
@@ -1131,28 +1420,28 @@ width: fill-container
 width: fill-container
 height: fill-container
 
--- ftd.text: $last-slide.title
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+-- ftd.text: $analyze-pane-desktop.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
 margin-bottom.px: 41
 max-width.fixed.percent: 75
 width: fill-container
 
--- ftd.text: $last-slide.subtitle
+-- ftd.text: $analyze-pane-desktop.subtitle
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 28
+margin-bottom.px: 24
 region: h3
 width: fill-container
-max-width.fixed.percent: 75
+max-width.fixed.percent: 80
 
 -- ftd.text:
-if: {last-slide.body != NULL}
-text: $last-slide.body
-role: $inherited.types.copy-large
+if: { analyze-pane-desktop.body != NULL }
+text: $analyze-pane-desktop.body
+role: $fonts.size-24-regular
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 70
+max-width.fixed.percent: 60
 
 -- end: ftd.column
 
@@ -1160,12 +1449,12 @@ max-width.fixed.percent: 70
 align-content: center
 align-self: center
 anchor: parent 
-right.px:0
-top.px: 220
+right.percent: -9
+top.percent: 75
 z-index: -1 
 
 -- ftd.image:
-src: $last-slide.src
+src: $analyze-pane-desktop.src
 align-self: center
 
 -- end: ftd.column
@@ -1174,18 +1463,14 @@ align-self: center
 
 -- ftd.row:
 width: fill-container
-children: $last-slide.last-slide-wrap
+children: $analyze-pane-desktop.analyze-pane-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: last-slide
-
-
-
-
+-- end: analyze-pane-desktop
 
 
 
