@@ -29,7 +29,7 @@ favicon: https://admint.io/favicon.ico
 # Docs: docs/
 skip: true
 
-- Homepage: docs/hero/
+- Homepage: docs/header/
   - Header: docs/header/
   - Hero: docs/hero/
   - Slider🚧: docs/slider/
