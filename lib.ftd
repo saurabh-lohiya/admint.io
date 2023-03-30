@@ -998,7 +998,7 @@ width: fill-container
 height: fill-container
 
 -- ftd.text: $structured-desktop.title
-role: $inherited.types.copy-large
+role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
@@ -1172,7 +1172,7 @@ width: fill-container
 height: fill-container
 
 -- ftd.text: $keymedia-vehicle-desktop.title
-role: $inherited.types.copy-large
+role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 28
 max-width.fixed.percent: 70
@@ -1297,7 +1297,7 @@ width: fill-container
 height: fill-container
 
 -- ftd.text: $distribute-nft-desktop.title
-role: $inherited.types.copy-large
+role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 width: fill-container
@@ -1421,7 +1421,7 @@ width: fill-container
 height: fill-container
 
 -- ftd.text: $analyze-pane-desktop.title
-role: $inherited.types.copy-large
+role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 max-width.fixed.percent: 75
