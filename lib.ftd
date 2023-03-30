@@ -1497,6 +1497,7 @@ boolean $sidebar-open: false
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
 
 -- header-desktop:
 if: { ftd.device != "mobile" }
@@ -3658,6 +3659,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
@@ -3764,6 +3766,16 @@ $brand-objective.body
 -- end: ftd.column
 
 -- end: brand-objective
+
+
+
+
+
+
+
+
+
+
 -- component why-nft-card: 
 caption title:
 ftd.image-src image:
@@ -3772,9 +3784,9 @@ children brands:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1320
 align-self: center
-padding-horizontal.px: 12
+background.solid: $inherited.colors.background.step-1
+padding-horizontal.px if { ftd.device == "mobile" }: 12
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
@@ -3817,6 +3829,8 @@ padding-bottom.px: 0
 margin-bottom.px: 48
 border-width.px: 1
 border-color: $inherited.colors.custom.one
+max-width.fixed.px: 1320
+align-self: center
 
 -- ftd.column:
 width.fixed.percent: 58.33
