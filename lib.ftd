@@ -2214,7 +2214,7 @@ width: fill-container
 max-width.fixed.px: $signup-form.width
 
 -- ftd.column:
-background.solid: white
+background.solid: $inherited.colors.cta-primary.text
 max-width.fixed.px: 856
 width: fill-container
 padding.px: 50
@@ -2339,7 +2339,7 @@ bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
 marginTop: 2
-text-color: white
+text-color: $inherited.colors.cta-primary.text
 $on-click$: $common.form-validate()
 
 -- ftd.text: 
@@ -2584,7 +2584,6 @@ link: $tab.link
 -- component faq:
 optional caption title:
 children child:
-integer width: $max-width
 
 -- ftd.column:
 width: fill-container
@@ -2596,7 +2595,7 @@ background.solid: $inherited.colors.background.step-1
 padding-vertical.px if { ftd.device == "desktop" }: 70
 
 -- ftd.column:
-max-width.fixed.px: $faq.width
+max-width.fixed.px: $max-width
 width: fill-container
 padding.px if { ftd.device == "mobile" }: $mobileCompPadd
 align-self: center
@@ -2656,7 +2655,7 @@ $on-click$: $ftd.toggle($a = $question-accordion.open)
 -- ftd.text: $question-accordion.title
 role: $fonts.size-18
 color if { question-accordion.open }: $inherited.colors.custom.four
-color if { !question-accordion.open }: $inherited.colors.custom.one
+color: $inherited.colors.custom.one
 align-self: center
 
 -- ftd.image:
@@ -3631,7 +3630,7 @@ align-self: start
 -- component drop-down:
 caption title: $selected-item
 boolean $show-options: false
-$common.options list drop-down-options-list:
+common.options list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
@@ -3680,7 +3679,7 @@ drop-down-options-list: $drop-down.drop-down-options-list
 
 -- component drop-down-options:
 caption title:
-$common.options list drop-down-options-list:
+common.options list drop-down-options-list:
 boolean $mouse-in: false
 
 -- ftd.column:
@@ -3699,7 +3698,7 @@ border-radius.px: 10
 $loop$: $drop-down-options.drop-down-options-list as $obj
 role: $inherited.types.copy-regular
 padding-right.px: 20
-color: white
+color: $inherited.colors.cta-primary.text
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 
 -- end: ftd.column

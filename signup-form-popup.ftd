@@ -40,7 +40,6 @@ string input-label4:
 string input-warning4: Email is requied
 $common.role-record list roles: $common.roles
 string cta-text:
-integer width: 1300
 
 -- ftd.column:
 width: fill-container
