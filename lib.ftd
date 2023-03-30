@@ -3633,3 +3633,412 @@ align-self: start
 -- end: ftd.column
 
 -- end: member-feature-card
+
+
+
+
+
+
+
+
+
+
+-- component why-nft-hero:
+caption title:
+string tagline:
+ftd.image-src image:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+max-width.fixed.px: 1320
+padding-vertical.px: 65
+align-self: center
+padding-horizontal.px: 12
+
+-- ftd.text: $why-nft-hero.tagline
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
+margin-bottom.px: 41
+
+-- ftd.text: $why-nft-hero.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h3
+margin-bottom.px: 8
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 20
+
+$why-nft-hero.body
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
+max-width.fixed.px: 1320
+padding-vertical.px: 65
+align-self: center
+
+-- ftd.image:
+src: $why-nft-hero.image
+max-width.fixed.percent: 100
+anchor: parent
+left.px: 0
+bottom.px: 0
+
+-- ftd.column:
+width: fill-container
+margin-left.percent: 42
+
+-- ftd.text: $why-nft-hero.tagline
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
+margin-bottom.px: 41
+
+-- ftd.text: $why-nft-hero.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h3
+margin-bottom.px: 8
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$why-nft-hero.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: why-nft-hero
+
+
+
+
+
+
+
+
+
+
+-- component brand-objective:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+margin-vertical.px: 20
+padding.px: 20
+background.solid: $inherited.colors.custom.three
+
+-- ftd.text: $brand-objective.title
+role: $fonts.size-20-700
+color: $inherited.colors.custom.four
+region: h5
+margin-bottom.px: 8
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$brand-objective.body
+
+-- end: ftd.column
+
+-- end: brand-objective
+
+
+
+
+
+
+
+
+
+
+-- component why-nft-card: 
+caption title:
+ftd.image-src image:
+body body:
+children brands:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1320
+align-self: center
+padding-horizontal.px: 12
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+padding.px: 30
+padding-bottom.px: 0
+margin-bottom.px: 48
+border-width.px: 1
+border-color: $inherited.colors.custom.one
+
+-- ftd.text: $why-nft-card.title
+role: $fonts.size-24-700
+color: $inherited.colors.custom.one
+region: h4
+margin-bottom.px: 8
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$why-nft-card.body
+
+-- ftd.column:
+width: fill-container
+children: $why-nft-card.brands
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $why-nft-card.image
+max-width.fixed.percent: 100
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
+padding.px: 30
+padding-bottom.px: 0
+margin-bottom.px: 48
+border-width.px: 1
+border-color: $inherited.colors.custom.one
+
+-- ftd.column:
+width.fixed.percent: 58.33
+
+-- ftd.text: $why-nft-card.title
+role: $fonts.size-24-700
+color: $inherited.colors.custom.one
+region: h4
+margin-bottom.px: 8
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$why-nft-card.body
+
+-- ftd.column:
+width: fill-container
+children: $why-nft-card.brands
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 525
+align-content: bottom-right
+height: fill-container
+padding-top.px: 30
+
+-- ftd.image:
+src: $why-nft-card.image
+max-width.fixed.percent: 100
+anchor: parent
+bottom.px: 0
+right.px: 0
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: why-nft-card
+
+
+
+
+
+
+
+
+
+
+-- component search:
+string link: 
+
+-- ftd.row:
+width.fixed.px: 210
+padding.px: 8
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 30
+border-width.px: 1
+border-color: $fonts.3ea880
+align-content: center
+align-self: end
+margin-bottom.px: 20
+
+-- ftd.text-input:
+background.solid: transparent
+width: fill-container
+placeholder: Search here...
+margin-left.px: 10
+
+-- ftd.image:
+src: $assets.files.static.search-icon.svg
+width.fixed.px: 22
+height: fill-container
+cursor: pointer
+link: $search.link
+
+-- end: ftd.row
+
+-- end: search
+
+
+
+
+
+
+
+
+
+
+-- component search-result:
+caption title:
+body body:
+string link:
+optional ftd.image-src thumbnail:
+optional string timestamp:
+optional string comments: No comments
+
+-- ftd.column:
+width.fixed.percent: 48
+width if { ftd.device == "mobile" }: fill-container
+
+-- ftd.column:
+if: { search-result.thumbnail == NULL }
+width: fill-container
+
+-- ftd.text: $search-result.title
+role: $fonts.roboto-18
+color: $inherited.colors.custom.nine
+link: $search-result.link
+
+-- ftd.text: 
+role: $fonts.roboto-14
+color: $inherited.colors.cta-secondary.disabled
+margin-bottom.px: 10
+
+$search-result.body
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { search-result.thumbnail != NULL }
+width: fill-container
+
+-- ftd.image:
+src: $search-result.thumbnail
+width: fill-container
+height: auto
+
+-- ftd.text: $search-result.title
+role: $fonts.montserrat-18
+color: $inherited.colors.custom.four
+link: $search-result.link
+margin-top.px: 20
+
+-- ftd.row:
+margin-bottom.px: 13
+spacing.fixed.px: 6
+role: $fonts.montserrat-15-19
+color: $fonts.adadad
+
+-- ftd.text: $search-result.timestamp
+
+-- ftd.text: /
+
+-- ftd.text: $search-result.comments
+
+-- end: ftd.row
+
+-- ftd.text: 
+role: $fonts.montserrat-14-19
+color: #020101a1
+margin-bottom.px: 10
+
+$search-result.body
+
+-- button-small: Read More
+link: $search-result.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: search-result
+
+
+
+
+
+
+
+
+
+
+-- component search-results:
+caption title:
+string query:
+optional body body:
+children results:
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1320
+align-self: center
+padding-horizontal.px: 12
+margin-bottom.px: 30
+
+-- ftd.row:
+margin-bottom.px: 20
+spacing.fixed.px: 5
+role: $fonts.size-22-800-montserrat
+color: $inherited.colors.custom.one
+
+-- ftd.text: $search-results.title
+
+-- ftd.text: $search-results.query
+
+-- end: ftd.row
+
+-- ftd.text: 
+if: { search-results.body != NULL }
+role: $fonts.roboto-14
+color: $inherited.colors.custom.one
+margin-bottom.px: 220
+
+$search-results.body
+
+-- ftd.row:
+width: fill-container
+children: $search-results.results
+wrap: true
+spacing.fixed.px: 30
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: search-results
