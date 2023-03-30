@@ -548,7 +548,7 @@ color: $inherited.colors.cta-primary.text
 
 
 -- component page:
-caption title: Admint.io
+caption title: AdMint - Deliver refreshing Web 3.0 campaigns!
 optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
@@ -2807,8 +2807,7 @@ align-self: center
 
 -- component lezgoo:
 caption title:
-body body:
-string body1:
+optional body body:
 string cta-label:
 string cta-url:
 ftd.image-src image:
@@ -2833,7 +2832,7 @@ if: { ftd.device != "mobile" }
 src: $lezgoo.image
 
 -- ftd.column:
-padding.px if { ftd.device == "mobile" }: 48
+padding.px if { ftd.device == "mobile" }: 40
 
 -- ftd.row:
 margin-bottom.px: 24
@@ -2841,20 +2840,8 @@ wrap: true
 
 -- ftd.text: $lezgoo.title
 role: $inherited.types.heading-small
-color: $inherited.colors.cta-primary.base
-
--- ftd.text: 
-role: $inherited.types.heading-small
 color: $inherited.colors.text
-padding-left.px: 10
-
-$lezgoo.body1
-
--- ftd.text: 
-role: $inherited.types.heading-small
-color: $inherited.colors.text
-
-$lezgoo.body
+max-width.fixed.percent if { ftd.device != "mobile" }: 80
 
 -- end: ftd.row
 
@@ -2863,8 +2850,10 @@ background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
 border-radius.px: 50
+border-radius.px if { ftd.device == "mobile" }: 34
+role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
-link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
+link: $lezgoo.cta-url
 
 -- end: ftd.column
 
@@ -2887,7 +2876,6 @@ link if { lezgoo.cta-url != NULL }: $lezgoo.cta-url
 caption title:
 ftd.image-src image:
 ftd.image-src bg-image:
-integer width: $max-width
 string cta-text:
 string cta-url:
 
@@ -2900,7 +2888,7 @@ padding-vertical.px: 60
 -- ftd.column:
 width: fill-container
 align-content: center
-max-width.fixed.px: $sneak-peak.width
+max-width.fixed.px: 1440
 
 -- ftd.column:
 width if { ftd.device != "mobile" }: fill-container
@@ -2914,7 +2902,7 @@ border-width.px if { ftd.device != "mobile" }: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 44
 width.fixed.percent: 100
-max-width.fixed.px: 1020
+max-width.fixed.px: 1040
 
 -- end: ftd.column
 
@@ -2924,20 +2912,35 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-top.percent: 55
+margin-left.rem: 5
+margin-top.px: 150
 
 -- ftd.text: $sneak-peak.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 width.fixed.px: 750
-margin-left.rem: 5
-anchor: parent
+margin-bottom.px: 40
+
+-- ftd.text: $sneak-peak.cta-text
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 41
+padding-vertical.px: 11
+border-radius.px: 50
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.text
+link: $sneak-peak.cta-url
 
 -- end: ftd.column
+
+-- ftd.column:
 
 -- ftd.image:
 src: $sneak-peak.bg-image
 align-self: end
+top.px: -75
+anchor: parent
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -2951,20 +2954,12 @@ width.fixed.percent: 100
 
 -- ftd.column:
 margin-horizontal.px: 12
-margin-vertical.px: 32
 
 -- ftd.text: $sneak-peak.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.column:
-align-self: start
-margin-left.rem if { ftd.device != "mobile" }: 5
-margin-left.px if { ftd.device == "mobile" }: 12
+margin-top.px: 15
+margin-bottom.px: 32
 
 -- ftd.text: $sneak-peak.cta-text
 background.solid: $inherited.colors.cta-primary.base
@@ -2981,7 +2976,367 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 
 -- end: ftd.column
 
+-- end: ftd.column
+
 -- end: sneak-peak
+
+
+
+
+
+
+
+
+
+
+-- component legal-pages:
+children child:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+max-width.fixed.px: 1320
+padding.px: 30
+margin-horizontal.px if { ftd.device == "mobile" }: 12
+margin-vertical.px: 78
+border-color: $inherited.colors.custom.one
+border-width.px: 1
+align-self: center
+background.solid: $inherited.colors.background.step-1
+children: $legal-pages.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-pages
+
+
+
+
+
+
+
+
+
+
+-- component legal-section-content:
+optional caption title:
+optional body body:
+children child:
+integer width: 1320
+optional ftd.image-src image:
+
+-- ftd.column:
+margin-bottom.px: 16
+
+-- ftd.text: $legal-section-content.title
+if: { legal-section-content.title != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: 
+if: { legal-section-content.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$legal-section-content.body
+
+-- ftd.column:
+children: $legal-section-content.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-section-content
+
+
+
+
+
+
+
+
+
+
+-- component legal-page-hero:
+optional caption title:
+ftd.image-src image:
+optional body body:
+children ui-list:
+
+-- ftd.column:
+align-content: center
+
+-- ftd.row:
+spacing: space-between
+
+-- ftd.column:
+max-width.fixed.percent if { ftd.device != "mobile" }: 57
+
+-- ftd.text: $legal-page-hero.title
+if: { legal-page-hero.title != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 24
+
+-- ftd.text: 
+if: { legal-page-hero.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$legal-page-hero.body
+
+-- ftd.column:
+children: $legal-page-hero.ui-list
+
+-- end:ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+if: { ftd.device != "mobile"}
+src: $legal-page-hero.image
+height.fixed.px: 256
+padding-right.px: 3
+
+-- end: ftd.row
+
+-- ftd.image:
+if: { ftd.device == "mobile"}
+src: $legal-page-hero.image
+height.fixed.px: 256
+max-width.fixed.percent: 100
+margin-top.px: 30
+
+-- end: ftd.column
+
+-- end: legal-page-hero
+
+
+
+
+
+
+
+
+
+
+-- component legal-title-para:
+optional caption title:
+optional string subtitle:
+optional body body:
+children title-child:
+
+-- ftd.column:
+margin-top.px: 8
+
+-- ftd.text: $legal-title-para.title
+if: { legal-title-para.title != NULL }
+role: $inherited.types.blockquote
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: $legal-title-para.subtitle
+if: { legal-title-para.subtitle != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: 
+if: { legal-title-para.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$legal-title-para.body
+
+-- ftd.column:
+children: $legal-title-para.title-child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-title-para
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-title:
+optional caption title:
+optional body body:
+children para-child:
+
+-- ftd.column:
+margin-top.px: 16
+
+-- ftd.text: $legal-para-title.title
+if: { legal-para-title.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: 
+if: { legal-para-title.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$legal-para-title.body
+
+-- ftd.column:
+children: $legal-para-title.para-child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-para-title
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-list:
+children list-items:
+
+-- ftd.column:
+children: $legal-para-list.list-items
+margin-vertical.px: 16
+
+-- end: ftd.column
+
+-- end: legal-para-list
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-list-item:
+optional caption title:
+boolean active: true
+
+-- ftd.text: $legal-para-list-item.title
+if: { legal-para-list-item.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-vertical.px if { legal-para-list-item.active } : -10
+margin-left.px if { legal-para-list-item.active } : 10
+
+-- end: legal-para-list-item
+
+
+
+
+
+
+
+
+
+
+-- component legal-tracking-list:
+children list-items:
+
+-- ftd.column:
+children: $legal-tracking-list.list-items
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: legal-tracking-list
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-heading:
+caption title:
+
+-- ftd.column:
+margin-top.px: 16
+
+-- ftd.text: $legal-para-heading.title
+role: $fonts.size-29
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: legal-para-heading
+
+
+
+
+
+
+
+
+
+
+-- component legal-paragraph:
+optional caption title:
+optional body body:
+
+-- ftd.column:
+
+-- ftd.text: $legal-paragraph.title
+if: { legal-paragraph.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: 
+if: { legal-paragraph.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 18
+
+$legal-paragraph.body
+
+-- end: ftd.column
+
+-- end: legal-paragraph
+
+
+
+
+
+
+
+
+
+
+-- component legal-title:
+optional caption title:
+
+-- ftd.text: $legal-title.title
+if: { legal-title.title != NULL }
+role: $inherited.types.blockquote
+color: $inherited.colors.text
+
+-- end: legal-title
 
 
 
