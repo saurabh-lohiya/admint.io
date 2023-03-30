@@ -3548,13 +3548,9 @@ align-self: center
 
 -- end: ftd.row
 
--- ftd.column:
-if: { drop-down.show-options }
-
 -- drop-down-options: $drop-down.title
 drop-down-options-list: $drop-down.drop-down-options-list
-
--- end: ftd.column
+show-options: $drop-down.show-options
 
 -- end: ftd.column
 
@@ -3567,6 +3563,10 @@ drop-down-options-list: $drop-down.drop-down-options-list
 caption title:
 common.options list drop-down-options-list:
 boolean $mouse-in: false
+boolean show-options: false
+
+-- ftd.column:
+if: { drop-down-options.show-options }
 
 -- ftd.column:
 background.solid: grey
@@ -3575,7 +3575,8 @@ padding-horizontal.px: 14
 anchor: parent
 top.px: 2
 left.px: 0
-min-width.fixed.px: 240
+min-width.fixed.px: 360
+min-width.fixed.px if { ftd.device == "mobile" }: 240
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 10
@@ -3586,6 +3587,8 @@ color: $inherited.colors.cta-primary.text
 $loop$: $drop-down-options.drop-down-options-list as $obj
 padding-right.px: 20
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+
+-- end: ftd.column
 
 -- end: ftd.column
 
