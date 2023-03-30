@@ -2480,7 +2480,6 @@ children: $tabs.child
 
 
 -- ftd.column:
-if: { ftd.device == "desktop" }
 anchor: parent
 bottom.px: 8
 right.px: 28
