@@ -16,7 +16,7 @@ Build your brand's fan-base in web 3.0 with us!
 -- lib.slider:
 $active-item: $current-active
 
--- lib.slide: WHY ADMINT? 🚧
+-- lib.simple-steps: **WHY ADMINT?** 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
 src: $assets.files.static.lezgoo.simple.svg
 index: 1
@@ -34,9 +34,9 @@ reset: $current-active
 
  Extend real-world benefits & build your metaverse fanbase! 
 
--- end: lib.slide
+-- end: lib.simple-steps
 
--- lib.full-slide: WHY ADMINT? 🚧
+-- lib.structured: **WHY ADMINT?** 🚧
 subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
 src: $assets.files.static.lezgoo.structured.svg
 index: 2 
@@ -45,7 +45,7 @@ reset: $current-active
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
--- lib.mid-slide: WHY ADMINT? 🚧
+-- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
 subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
 src: $assets.files.static.lezgoo.keymedia.svg 
 index: 3 
@@ -54,16 +54,18 @@ reset: $current-active
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
--- lib.four-slide: WHY ADMINT? 🚧
+-- lib.distribute-nft: **WHY ADMINT?** 🚧
 subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
-src: $assets.files.static.lezgoo.ditribut.svg
+src: $assets.files.static.lezgoo.distribute.svg
 index: 4 
 reset: $current-active
 
-With AdMint you can create your very own custom NFT collection
-or use pre-minted NFTs (if yet unsure!) to power your campaigns.
+With AdMint's custom tools & templates, you can ensure that
+your intended audience receive the NFTs and avail the 
+associated real-world brand offerings.
 
--- lib.last-slide: WHY ADMINT? 🚧
+
+-- lib.analyze-pane: **WHY ADMINT?** 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.lezgoo.analyze.svg
 index: 5
