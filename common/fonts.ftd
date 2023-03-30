@@ -369,6 +369,34 @@ mobile: $size-27-desktop
 
 
 
+-- ftd.type size-50-mobile:
+line-height.px: 40
+size.px: 29
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.type size-50-desktop:
+line-height.px: 45
+size.px: 50
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-50:
+desktop: $size-50-desktop
+mobile: $size-50-mobile
+
+
+
+
+
+-- ftd.type size-14-m:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.type size-14-m:
 line-height.px: 19
@@ -420,12 +448,73 @@ font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type size-22-800-montserrat: $size-22-800-mont-type
 
--- ftd.type size-24-regular:
+
+
+
+
+-- ftd.type size-24-regular-mobile:
+line-height.px: 24
+size.px: 19
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-24-regular-desktop:
+line-height.px: 27
+size.px: 19
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+
+-- ftd.responsive-type size-24-regular:
+desktop: $size-24-regular-desktop
+mobile: $size-24-regular-mobile
+
+
+
+
+
+
+-- ftd.type title-404-type:
+line-height.px: 40
+size.px: 36
+letter-spacing.px: 0
+weight: 400
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+-- ftd.responsive-type title-404: $title-404-type
+
+
+-- ftd.type size-20-mobile:
+line-height.px: 36
+size.px: 20
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.type size-20-desktop:
 line-height.px: 36
 size.px: 24
 letter-spacing.px: 0
 weight: 400
 font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-20:
+desktop: $size-20-desktop
+mobile: $size-20-mobile
+
+
+-- ftd.type body-404-type:
+line-height.px: 28
+size.px: 22
+letter-spacing.px: 0
+weight: 300
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+-- ftd.responsive-type body-404: $body-404-type
+
 
 
 
@@ -433,18 +522,47 @@ font-family: $nunito-assets.fonts.Nunito
 
 ;; Colors
 
--- ftd.color adadad:
-light: #adadad
-dark: #adadad
+-- ftd.color bdbdbd: #bdbdbd
 
--- ftd.color 44ce9a:
-light: #44ce9a
-dark: #44ce9a
+-- ftd.color 69f0ae: #69f0ae
 
--- ftd.color dc3545:
-light: #dc3545
-dark: #dc3545
+-- ftd.color dc3545: #dc3545
 
+-- ftd.color cdcdcd36: #cdcdcd36
 
+-- ftd.color adadad: #adadad
+
+-- ftd.color 44ce9a: #44ce9a
+
+-- ftd.color 005FBB: #005FBB
 
 -- ftd.color 3ea880: #3ea880
+
+
+-- ftd.shadow lezgoo:
+color: #a9a7a5ba
+x-offset.px: -2
+y-offset.px: 10
+blur.px: 10
+inset: false
+spread.px: 10
+
+
+
+
+
+-- ftd.shadow about:
+color: #000
+x-offset.px: 10
+y-offset.px: 10 
+blur.px: 1
+
+
+
+
+
+-- ftd.shadow tabs:
+color: #505050
+x-offset.px: 6
+y-offset.px: 8 
+blur.px: 1

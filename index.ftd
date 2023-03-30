@@ -64,7 +64,6 @@ With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
-
 -- lib.analyze-pane: **WHY ADMINT?** 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.lezgoo.analyze.svg
@@ -75,6 +74,95 @@ Watch the numbers. See the plan take shape. Measure that ROI.
 Stake your claim across the Metaverses!
 
 -- end: lib.slider
+
+-- lib.lezgoo: NFTs are our preferred media vehicle! 
+cta-label: Let's Learn🚧
+cta-url: /learn/
+image: $assets.files.static.lezgoo.lezgoo-img.svg
+
+You ask why? Because... Followed by the WHY NFTs?
+
+-- end: lib.lezgoo
+
+-- lib.how-it-works: **HOW IT WORKS** 🚧
+subtitle: Web 3.0 campaigns  set up made simple.
+
+AdMint offsets most of the technological challenges 
+associated with Web 3.0, allowing advertisers to focus 
+on strategy & campaign execution
+
+-- lib.slider:
+$active-item: $current-cell
+
+-- lib.works-cell: PLANNING
+number: 1
+right-src: $assets.files.static.lezgoo.planning-right-img.svg 
+left-src: $assets.files.static.lezgoo.planning-left-img.svg
+right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
+left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
+top-cell: You choose your brand’s campaign objective 
+bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
+index: 1
+reset: $current-cell
+
+-- lib.works-cell: FUNDS
+number: 2
+left-src: $assets.files.static.lezgoo.fund-left-img.svg 
+right-src: $assets.files.static.lezgoo.fund-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.fund-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.fund-right-mob.svg
+top-cell: You set up funds via standard payment options 
+bottom-cell: AdMint handles your crypto wallets & transfers 
+index: 2
+reset: $current-cell
+
+-- lib.works-cell: NFTs
+number: 3
+left-src: $assets.files.static.lezgoo.nft-left-img.svg 
+right-src: $assets.files.static.lezgoo.nft-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.nft-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.nft-right-mob.svg
+top-cell: You provide us creatives to run the campaign
+bottom-cell: AdMint preps & converts them into NFT collections
+index: 3
+reset: $current-cell
+
+-- lib.works-cell: DISTRIBUTION
+number: 4
+left-src: $assets.files.static.lezgoo.dist-left-img.svg 
+right-src: $assets.files.static.lezgoo.dist-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.dist-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.dist-right-mob.svg
+top-cell: You identify target audience to receive the NFTs
+bottom-cell: AdMint provides tools and templates to enable distribution. execution.
+index: 4
+reset: $current-cell
+
+-- lib.works-cell: UTILITY
+number: 5
+left-src: $assets.files.static.lezgoo.utility-left-img.svg 
+right-src: $assets.files.static.lezgoo.utility-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.utility-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.utility-right-mob.svg
+top-cell: You determine the real world value offering to consumers
+bottom-cell: AdMint helps validate NFT ownership & extends access 
+index: 5
+reset: $current-cell
+
+-- lib.works-cell: ANALYTICS
+number: 6
+left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
+right-src: $assets.files.static.lezgoo.analytics-img-right.svg
+left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
+top-cell: You define campaign objectives & success metrics
+bottom-cell: AdMint provides web 2.0 & web 3.0 data to analyse your campaign  
+index: 6
+reset: $current-cell
+
+-- end: lib.slider
+
+-- end: lib.how-it-works
 
 -- lib.advertising: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
@@ -116,75 +204,6 @@ global platforms. As a brand, how will you use your regional
 web 3.0 budget?
 
 -- end: lib.advertising
-
--- lib.lezgoo: NFTs are our preferred media vehicle! 
-cta-label: Let's Learn🚧
-cta-url: /learn/
-image: $assets.files.static.lezgoo.lezgoo-img.svg
-
-You ask why? Because... Followed by the WHY NFTs?
-
--- end: lib.lezgoo
-
--- lib.how-it-works: HOW IT WORKS🚧
-subtitle: Web 3.0 campaigns  set up made simple.
-
-AdMint offsets most of the technological challenges 
-associated with Web 3.0, allowing advertisers to focus 
-on strategy & campaign execution
-
--- lib.slider:
-$active-item: $current-cell
-
--- lib.works-cell: PLANNING
-number: 1
-right-src: $assets.files.static.lezgoo.planning-right-img.svg 
-left-src: $assets.files.static.lezgoo.planning-left-img.svg
-top-cell: You choose your brand’s campaign objective 
-bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
-index: 1
-reset: $current-cell
-
--- lib.works-cell: FUNDS
-number: 2
-left-src: $assets.files.static.lezgoo.fund-left-img.svg 
-right-src: $assets.files.static.lezgoo.fund-right-img.svg
-top-cell: You set up funds via standard payment options 
-bottom-cell: AdMint handles your crypto wallets & transfers 
-index: 2
-reset: $current-cell
-
--- lib.works-cell: NFTs
-number: 3
-left-src: $assets.files.static.lezgoo.nft-left-img.svg 
-right-src: $assets.files.static.lezgoo.nft-right-img.svg
-top-cell: You provide us creatives to run the campaign
-bottom-cell: AdMint preps & converts them into NFT collections
-index: 3
-reset: $current-cell
-
--- lib.works-cell: DISTRIBUTION
-number: 4
-left-src: $assets.files.static.lezgoo.dist-left-img.svg 
-right-src: $assets.files.static.lezgoo.dist-right-img.svg
-top-cell: You identify target audience to receive the NFTs
-bottom-cell: AdMint provides tools and templates to enable distribution. execution.
-index: 4
-reset: $current-cell
-
--- lib.works-cell: UTILITY
-number: 5
-left-src: $assets.files.static.lezgoo.utility-left-img.svg 
-right-src: $assets.files.static.lezgoo.utility-right-img.svg
-top-cell: You determine the real world value offering to consumers
-bottom-cell: AdMint helps validate NFT ownership & extends access 
-index: 5
-reset: $current-cell
-
--- end: lib.slider
-
--- end: lib.how-it-works
-
 
 -- lib.lezgoo: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
 cta-label: Let's Learn🚧
