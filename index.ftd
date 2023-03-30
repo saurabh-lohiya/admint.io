@@ -64,7 +64,6 @@ With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
-
 -- lib.analyze-pane: **WHY ADMINT?** 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.lezgoo.analyze.svg
@@ -84,6 +83,7 @@ image: $assets.files.static.lezgoo.lezgoo-img.svg
 You ask why? Because... Followed by the WHY NFTs?
 
 -- end: lib.lezgoo
+
 -- lib.how-it-works: **HOW IT WORKS** 🚧
 subtitle: Web 3.0 campaigns  set up made simple.
 
@@ -163,7 +163,6 @@ reset: $current-cell
 -- end: lib.slider
 
 -- end: lib.how-it-works
-
 
 -- lib.advertising: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**

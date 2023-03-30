@@ -11,6 +11,8 @@ favicon: https://admint.io/favicon.ico
 -- fastn.dependency: fifthtry.github.io/doc-site
 -- fastn.dependency: fifthtry.github.io/footer
 
+-- fastn.auto-import: fifthtry.github.io/admint.io/assets
+
 -- fastn.sitemap:
 
 # Home: index.html
