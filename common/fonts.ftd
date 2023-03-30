@@ -420,12 +420,29 @@ font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type size-22-800-montserrat: $size-22-800-mont-type
 
--- ftd.type size-24-regular:
-line-height.px: 36
-size.px: 24
+
+
+
+
+-- ftd.type size-24-regular-mobile:
+line-height.px: 24
+size.px: 19
 letter-spacing.px: 0
-weight: 400
+weight: 700
 font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type size-24-regular-desktop:
+line-height.px: 27
+size.px: 19
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+
+-- ftd.responsive-type size-24-regular:
+desktop: $size-24-regular-desktop
+mobile: $size-24-regular-mobile
 
 
 
@@ -509,4 +526,3 @@ color: #000
 x-offset.px: 10
 y-offset.px: 10 
 blur.px: 1
-

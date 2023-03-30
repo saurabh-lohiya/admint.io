@@ -1867,165 +1867,6 @@ link: $hero.cta-link
 
 -- end: hero
 
-
-
-
-
-
-
-
-
-
-
--- component how-it-works:
-caption title:
-string subtitle:
-body body:
-children works-wrap:
-
--- ftd.column:
-width: fill-container
-padding-top.px: 42
-padding-bottom.px: 80
-max-width.fixed.px: $max-width
-align-self: center
-
--- ftd.text: $how-it-works.title
-role: $inherited.types.label-large
-color: $inherited.colors.custom.two
-margin-bottom.px: 41
-
--- ftd.text: $how-it-works.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text-strong
-region: h2
-margin-bottom.px: 28
-
--- ftd.text:
-text: $how-it-works.body
-role: $inherited.types.copy-large
-color: $inherited.colors.text
-margin-bottom.px: 20
-width.fixed.percent: 65
-
--- ftd.column:
-children: $how-it-works.works-wrap
-width: fill-container
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: how-it-works
-
-
-
-
-
-
-
-
-
-
--- component works-cell:
-caption title:
-integer number:
-ftd.image-src left-src:
-ftd.image-src right-src:
-string top-cell:
-string bottom-cell:
-optional integer index:
-optional integer reset:
-
--- ftd.row:
-if: { works-cell.index == works-cell.reset }
-width: fill-container
-max-width.fixed.px: $max-width
-
--- ftd.image:
-src: $works-cell.left-src
-padding-horizontal.px: 12
-
--- ftd.column:
-width: fill-container
-padding-horizontal.px: 12
-
--- ftd.row:
-width: fill-container
-align-content: center
-
--- ftd.text: Step
-role: $inherited.types.fine-print
-color: $inherited.colors.custom.four
-
--- ftd.integer: $works-cell.number
-role: $inherited.types.fine-print
-color: $inherited.colors.custom.four
-
--- end: ftd.row
-
--- ftd.text: $works-cell.title
-role: $inherited.types.fine-print
-color: $inherited.colors.custom.four
-margin-bottom.px: 10
-text-align: center
-
--- ftd.column:
-anchor: parent
-top.percent: 24
-z-index: -1
-width.fixed.px: 300
-align-content: center
-align-self: center
-
--- ftd.image:
-width: fill-container
-src: $assets.files.static.lezgoo.how-it-works.svg
-align-self: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.percent: 85
-align-content: center
-min-width.fixed.px: 300
-
--- ftd.text: $works-cell.top-cell
-role: $inherited.types.blockquote
-color: $inherited.colors.text-strong
-padding-vertical.px: 13
-padding-horizontal.px: 17
-width.fixed.percent: 100
-margin-left.percent: 24
-
--- ftd.text: $works-cell.bottom-cell
-role: $inherited.types.blockquote
-color: $inherited.colors.background.step-1
-padding-vertical.px: 13
-padding-horizontal.px: 17
-width.fixed.percent: 100
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.image:
-src: $works-cell.right-src
-padding-horizontal.px: 12
-align-self: center
-
--- end: ftd.row
-
--- end: works-cell
-
-
-
-
-
-
-
-
-
 -- component footer:
 ftd.image-src site-logo:
 string site-url:
@@ -4399,3 +4240,316 @@ spacing.fixed.px: 30
 -- end: ftd.column
 
 -- end: search-results
+
+
+
+
+
+
+
+
+
+
+-- component how-it-works:
+caption title:
+string subtitle:
+body body:
+children works-wrap:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 42
+padding-bottom.px: 80
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+align-self: center
+padding-horizontal.px if { ftd.device == "mobile" }: 12
+
+-- ftd.text: $how-it-works.title
+role: $inherited.types.label-large
+color: $inherited.colors.custom.two
+margin-bottom.px: 41
+
+-- ftd.text: $how-it-works.subtitle
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+region: h2
+margin-bottom.px: 28
+
+-- ftd.text:
+text: $how-it-works.body
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+margin-bottom.px: 20
+width: fill-container
+width.fixed.percent if { ftd.device != "mobile" }: 65
+
+-- end: ftd.column
+
+-- ftd.column:
+children: $how-it-works.works-wrap
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: how-it-works
+
+
+
+
+
+
+
+
+
+
+-- component works-cell:
+caption title:
+integer number:
+ftd.image-src left-src:
+ftd.image-src right-src:
+optional ftd.image-src left-mob-src:
+optional ftd.image-src right-mob-src:
+string top-cell:
+string bottom-cell:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+width: fill-container
+
+-- works-cell-desktop: $works-cell.title
+if: { ftd.device != "mobile" }
+number: $works-cell.number
+left-src: $works-cell.left-src
+right-src: $works-cell.right-src
+top-cell: $works-cell.top-cell
+bottom-cell: $works-cell.bottom-cell
+index: $works-cell.index
+reset: $works-cell.reset
+
+-- works-cell-mobile: $works-cell.title
+if: { ftd.device == "mobile" }
+number: $works-cell.number
+left-src: $works-cell.left-src
+right-src: $works-cell.right-src
+left-mob-src: $works-cell.left-mob-src
+right-mob-src: $works-cell.right-mob-src
+top-cell: $works-cell.top-cell
+bottom-cell: $works-cell.bottom-cell
+index: $works-cell.index
+reset: $works-cell.reset
+
+-- end: ftd.column
+
+-- end: works-cell
+
+
+
+
+
+
+
+
+
+
+-- ftd.background-image bg-image: 
+src: $assets.files.static.lezgoo.how-it-works.svg
+position: center-top
+repeat: no-repeat
+
+
+
+
+
+
+
+
+
+
+-- component works-cell-desktop:
+caption title:
+integer number:
+ftd.image-src left-src:
+ftd.image-src right-src:
+string top-cell:
+string bottom-cell:
+optional integer index:
+optional integer reset:
+
+-- ftd.row:
+if: { works-cell-desktop.index == works-cell-desktop.reset }
+width: fill-container
+max-width.fixed.px: $max-width
+
+-- ftd.image:
+src: $works-cell-desktop.left-src
+padding-right.px: 12
+width: fill-container
+margin-left.px: -44
+height: fill-container
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 12
+
+-- ftd.row:
+width: fill-container
+align-content: center
+spacing.fixed.px: 6
+role: $fonts.size-19
+color: $inherited.colors.custom.four
+
+-- ftd.text: Step
+
+-- ftd.integer: $works-cell-desktop.number
+
+-- end: ftd.row
+
+-- ftd.text: $works-cell-desktop.title
+role: $fonts.size-23
+color: $inherited.colors.text
+margin-bottom.px: 10
+text-align: center
+width: fill-container
+
+-- ftd.column:
+width.fixed.px: 300
+background.image: $bg-image
+height.fixed.px: 300
+align-self: center
+role: $inherited.types.blockquote
+
+-- ftd.text: $works-cell-desktop.top-cell
+color: $inherited.colors.custom.one
+padding-vertical.px: 13
+padding-horizontal.px: 17
+width: fill-container
+height.fixed.px: 120
+text-align: center
+
+-- ftd.text: $works-cell-desktop.bottom-cell
+color: $inherited.colors.background.step-1
+padding-vertical.px: 13
+padding-horizontal.px: 17
+text-align: center
+width: fill-container
+height.fixed.px: 120
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $works-cell-desktop.right-src
+padding-right.px: 12
+align-self: center
+width: fill-container
+margin-right.px: -44
+
+-- end: ftd.row
+
+-- end: works-cell-desktop
+
+
+
+
+
+
+
+
+
+
+-- component works-cell-mobile:
+caption title:
+integer number:
+ftd.image-src left-src:
+ftd.image-src right-src:
+optional ftd.image-src left-mob-src:
+optional ftd.image-src right-mob-src:
+string top-cell:
+string bottom-cell:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 25
+margin-bottom.px: 24
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.image:
+src if { works-cell-mobile.left-mob-src != NULL }: $works-cell-mobile.left-mob-src
+src: $works-cell-mobile.left-src
+width.fixed.percent: 27
+height: auto
+
+
+-- ftd.image:
+src if { works-cell-mobile.right-mob-src != NULL }: $works-cell-mobile.right-mob-src
+src: $works-cell-mobile.right-src
+width.fixed.percent: 27
+height: auto
+
+-- end: ftd.row
+
+-- ftd.row:
+background.solid: $inherited.colors.border
+padding-vertical.px: 7
+padding-horizontal.px: 12
+width: fill-container
+spacing.fixed.px: 6
+role: $fonts.size-19
+color: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 2
+
+-- ftd.integer: $works-cell-mobile.number
+
+-- ftd.text: .
+
+-- end: ftd.row
+
+-- ftd.text: $works-cell-mobile.title
+width: fill-container
+
+-- end: ftd.row
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 17
+padding-horizontal.px: 10
+role: $inherited.types.blockquote
+color: $inherited.colors.text-strong
+
+-- ftd.text: $works-cell-mobile.top-cell
+text-align: center
+width: fill-container
+
+-- ftd.row:
+width.fixed.percent: 70
+align-self: center
+height.fixed.px: 1
+background.solid: $inherited.colors.border
+margin-top.px: 10
+margin-bottom.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $works-cell-mobile.bottom-cell
+text-align: center
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: works-cell-mobile
