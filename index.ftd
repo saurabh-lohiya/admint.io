@@ -151,8 +151,8 @@ reset: $current-cell
 
 -- lib.works-cell: ANALYTICS
 number: 6
-left-src: $assets.files.static.lezgoo.analytics-left-img.svg 
-right-src: $assets.files.static.lezgoo.analytics-right-img.svg
+left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
+right-src: $assets.files.static.lezgoo.analytics-img-right.svg
 left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
 right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
 top-cell: You define campaign objectives & success metrics
