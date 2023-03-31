@@ -562,7 +562,7 @@ caption title: AdMint - Deliver refreshing Web 3.0 campaigns!
 optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
-string contact: Get Started🚧
+string contact: Get Started
 string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
@@ -1577,6 +1577,7 @@ spacing.fixed.px: 24
 width: fill-container
 spacing.fixed.px: 44
 align-self: center
+padding-left.px: 3
 
 -- sections-list: $obj.title
 url: $obj.url
@@ -1605,6 +1606,7 @@ string url: /
 boolean $is-active: false
 
 -- ftd.row:
+margin-left.px: 11
 
 -- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
@@ -1688,7 +1690,6 @@ border-radius.px: 6
 border-color: $inherited.colors.text
 border-width.px: 1
 
-
 -- ftd.image:
 src: $assets.files.static.lezgoo.hamberger.svg
 width.fixed.px: 30
@@ -1704,8 +1705,6 @@ $on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
 
 -- ftd.column:
 if: {header-mobile.sidebar-open}
-
-
 
 -- ftd.column:
 width: fill-container
@@ -1723,10 +1722,15 @@ url: $header-mobile.contact-url
 
 -- end: ftd.column
 
-
 -- end: ftd.column
 
 -- end: header-mobile
+
+
+
+
+
+
 
 
 
@@ -1739,14 +1743,13 @@ boolean is-active: false
 -- ftd.column:
 
 -- ftd.text: $sections-list.title
-color:$inherited.colors.text-strong
+color: $inherited.colors.text
 color if {sections-list.is-active}: $inherited.colors.cta-primary.base
-role: $inherited.types.label-large
+role: $fonts.nunito-30-20-400
 link: $sections-list.url
 width: fill-container
 white-space: nowrap
 padding-vertical.px: 8
-
 
 -- end: ftd.column
 
