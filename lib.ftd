@@ -1093,7 +1093,7 @@ region: h3
 -- ftd.text:
 if: { slide-mobile.body != NULL }
 text: $slide-mobile.body
-role: $fonts.size-24-regular
+role: $fonts.size-20-700-type
 color: $inherited.colors.text
 margin-bottom.px: 16
 
@@ -2067,7 +2067,7 @@ string email-label:
 string email-warning: Email is requied
 common.role-record list roles: $common.roles
 string cta-text:
-integer width: 1300
+integer width: 1320
 
 -- ftd.column:
 width: fill-container
@@ -2079,6 +2079,7 @@ padding-horizontal.px: 12
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $signup-form.width
+margin-left.px if { ftd.device == "desktop" }: 23
 
 -- ftd.column:
 background.solid: $inherited.colors.cta-primary.text
@@ -2099,7 +2100,7 @@ region: h1
 width.fixed.percent if { ftd.device == "desktop" }: 80
 
 -- ftd.text: $signup-form.name-label
-role: $inherited.types.source-code
+role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 30
 
@@ -2107,7 +2108,6 @@ margin-top.px: 30
 id: name-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -2132,7 +2132,7 @@ width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $signup-form.identity-label
 margin-top.px: 23
-role: $inherited.types.source-code
+role: $fonts.size-14-400
 color: $inherited.colors.text
 
 -- drop-down:
@@ -2145,7 +2145,7 @@ width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $signup-form.org-label
-role: $inherited.types.source-code
+role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 23
 
@@ -2153,7 +2153,6 @@ margin-top.px: 23
 id: org-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -2172,7 +2171,7 @@ color: #dc3545
 -- end: ftd.row
 
 -- ftd.text: $signup-form.email-label
-role: $inherited.types.source-code
+role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 23
 
@@ -2180,7 +2179,6 @@ margin-top.px: 23
 id: email-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -2600,7 +2598,8 @@ caption title:
 ftd.image-src image:
 ftd.image-src bg-image:
 string cta-text:
-string cta-url:
+optional string cta-url:
+boolean $cta-event: false
 
 -- ftd.column:
 width: fill-container
@@ -2652,6 +2651,7 @@ border-radius.px: 50
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
 link: $sneak-peak.cta-url
+$on-click$: $ftd.set-bool($a = $sneak-peak.cta-event, v = true)
 
 -- end: ftd.column
 
@@ -3563,7 +3563,7 @@ boolean $show-options: false
 if: { drop-down-options.show-options }
 
 -- ftd.column:
-background.solid: grey
+background.solid: $fonts.grey
 padding-vertical.px: 11
 padding-horizontal.px: 14
 anchor: parent
@@ -3781,7 +3781,6 @@ align-self: end
 margin-bottom.px: 20
 
 -- ftd.text-input:
-background.solid: transparent
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
@@ -4538,3 +4537,246 @@ width: fill-container
 -- end: ftd.column
 
 -- end: works-cell-mobile
+
+
+
+
+
+
+
+
+
+-- component signup-form-popup:
+caption title:
+string name-label:
+string name-warning: Name is required
+string identity-label:
+string org-label:
+string org-warning: Organization is required
+string email-label:
+string email-warning: Email is requied
+common.role-record list roles: $common.roles
+string cta-text:
+boolean $visible: false
+
+-- ftd.column:
+if: { signup-form-popup.visible }
+width: fill-container
+background.solid: $inherited.colors.background.overlay
+align-content: center
+height: fill-container
+padding-vertical.px: 34
+anchor: window
+z-index: 999
+top.px: 0
+bottom.px: 0
+left.px: 0
+right.px: 0
+overflow-y: hidden
+
+-- ftd.column:
+height: fill-container
+background.solid: $inherited.colors.background.step-1
+max-width.fixed.px: 548
+max-width.fixed.percent if { ftd.device == "mobile" }: 80
+width: fill-container
+padding.px: 37
+overflow-y: auto
+color: $inherited.colors.text
+z-index: 1
+
+-- ftd.text: CLOSE
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+$on-click$: $ftd.set-bool($a = $signup-form-popup.visible, v = false)
+
+-- ftd.text: $signup-form-popup.title
+role: $fonts.nunito-40
+region: h1
+
+-- ftd.text: $signup-form-popup.name-label
+role: $inherited.types.source-code
+margin-top.px: 34
+
+-- ftd.text-input:
+id: user-name-input
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+min-height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
+
+-- ftd.text: $signup-form-popup.name-warning
+id: user-name-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
+
+-- ftd.row:
+wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 48.5
+width if { ftd.device == "mobile" }: fill-container
+
+-- ftd.text: $signup-form-popup.identity-label
+role: $inherited.types.source-code
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- drop-down:
+drop-down-options-list: $common.option-list
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 48.5
+width if { ftd.device == "mobile" }: fill-container
+
+-- ftd.text: $signup-form-popup.org-label
+role: $inherited.types.source-code
+margin-top.px: 16
+
+-- ftd.text-input:
+id: user-org-input
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
+
+-- ftd.text: $signup-form-popup.org-warning
+id: user-org-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text: $signup-form-popup.email-label
+role: $inherited.types.source-code
+margin-top.px: 16
+
+-- ftd.text-input:
+id: user-email-input
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+min-height.fixed.px: 43
+margin-top.px: 8
+$on-blur$: $common.popup-form-validate()
+
+-- ftd.text: $signup-form-popup.email-warning
+id: user-email-warning
+role: $inherited.types.copy-small
+color: $fonts.dc3545
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
+
+-- cta-button: $signup-form-popup.cta-text
+bg-color: $inherited.colors.custom.four
+padding-horizontal: 41
+padding-vertical: 11
+marginTop: 2
+text-color: $inherited.colors.cta-primary.text
+$on-click$: $common.popup-form-validate()
+
+-- ftd.text: 
+id: user-label-success
+role: $inherited.types.button-large
+color: $inherited.colors.cta-primary.base
+align-self: end
+width.fixed.percent: 50
+width if { ftd.device == "mobile" }: fill-container
+text-align: end
+margin-top.px: 20
+
+Thanks for your interest...We will update you
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: signup-form-popup
+
+
+
+
+
+
+
+
+
+
+-- component drop-down-medium-options:
+caption title:
+common.options list drop-down-medium-options-list:
+boolean $mouse-in: false
+boolean $show-options: false
+
+-- ftd.column:
+if: { drop-down-medium-options.show-options }
+
+-- ftd.column:
+background.solid: $fonts.grey
+padding-vertical.px: 11
+padding-horizontal.px: 14
+anchor: parent
+top.px: 2
+left.px: 0
+min-width.fixed.px: 220
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.background.base
+
+-- ftd.text: $obj.title
+width: fill-container
+$loop$: $drop-down-medium-options.drop-down-medium-options-list as $obj
+padding-right.px: 20
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-medium-options.show-options)
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: drop-down-medium-options
+
+
+
+
+
+
+
+
+
+
+-- component drop-down-medium-option:
+caption title:
+
+-- ftd.text: $drop-down-medium-option.title
+padding-right.px: 20
+$on-mouse-enter$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = true )
+$on-mouse-leave$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = false )
+$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
+$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
+
+-- end: drop-down-medium-option
