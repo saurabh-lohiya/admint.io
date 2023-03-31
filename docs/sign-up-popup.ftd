@@ -5,11 +5,10 @@
 -- import: fifthtry.github.io/admint.io/common
 -- import: fifthtry.github.io/admint-typography as typo
 
-
 -- boolean $show-signup-popup: false
 
 
--- ds.page: Sign-Up Form Popup
+-- ds.page: Sign-Up form Popup
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -35,7 +34,6 @@ To use `signup-form-popup` component you need to `import` `lib` inside your
 
 -- ds.code:
 lang: ftd
-
 
 \-- import: fifthtry.github.io/admint.io/lib
 
@@ -79,6 +77,5 @@ org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
 $visible: $show-signup-popup
-
 
 -- end: ds.page
