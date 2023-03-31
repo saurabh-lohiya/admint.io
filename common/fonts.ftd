@@ -421,15 +421,20 @@ mobile: $size-24-700-desktop
 
 
 
-
--- ftd.type size-20-700-type-mobile:
-line-height.px: 36
-size.px: 24
+-- ftd.type size-14-400:
+line-height.px: 16
+size.px: 14
 letter-spacing.px: 0
-weight: 500
+weight: 400
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.type size-20-700-type-dekstop:
+-- ftd.responsive-type size-14-400: $size-14-400
+
+
+
+
+
+-- ftd.type size-20-700-type:
 line-height.px: 24
 size.px: 20
 letter-spacing.px: 0
@@ -549,9 +554,6 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
-
-;; Colors
-
 -- ftd.color bdbdbd: #bdbdbd
 
 -- ftd.color 69f0ae: #69f0ae
@@ -567,6 +569,11 @@ font-family: $nunito-assets.fonts.Nunito
 -- ftd.color 005FBB: #005FBB
 
 -- ftd.color 3ea880: #3ea880
+
+-- ftd.color grey: grey
+
+
+
 
 
 -- ftd.shadow lezgoo:
