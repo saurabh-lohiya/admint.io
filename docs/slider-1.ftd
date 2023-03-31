@@ -9,7 +9,7 @@
 
 -- integer $current-active: 1
 
--- ds.page: Slider
+-- ds.page: Slider 1
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
