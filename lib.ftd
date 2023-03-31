@@ -2067,7 +2067,7 @@ string email-label:
 string email-warning: Email is requied
 common.role-record list roles: $common.roles
 string cta-text:
-integer width: 1295
+integer width: 1320
 
 -- ftd.column:
 width: fill-container
@@ -2079,6 +2079,7 @@ padding-horizontal.px: 12
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $signup-form.width
+margin-left.px if { ftd.device == "desktop" }: 23
 
 -- ftd.column:
 background.solid: $inherited.colors.cta-primary.text
@@ -2107,7 +2108,6 @@ margin-top.px: 30
 id: name-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -2153,7 +2153,6 @@ margin-top.px: 23
 id: org-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -2180,7 +2179,6 @@ margin-top.px: 23
 id: email-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -3565,7 +3563,7 @@ boolean $show-options: false
 if: { drop-down-options.show-options }
 
 -- ftd.column:
-background.solid: grey
+background.solid: $fonts.grey
 padding-vertical.px: 11
 padding-horizontal.px: 14
 anchor: parent
@@ -3783,7 +3781,6 @@ align-self: end
 margin-bottom.px: 20
 
 -- ftd.text-input:
-background.solid: transparent
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
@@ -4579,7 +4576,7 @@ overflow-y: hidden
 
 -- ftd.column:
 height: fill-container
-background.solid: $inherited.colors.background.base
+background.solid: $inherited.colors.background.step-1
 max-width.fixed.px: 548
 max-width.fixed.percent if { ftd.device == "mobile" }: 80
 width: fill-container
@@ -4606,7 +4603,6 @@ margin-top.px: 34
 id: user-name-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -4626,7 +4622,7 @@ width: fill-container
 
 -- ftd.column:
 width.fixed.percent: 48.5
-width.fixed.percent if { ftd.device == "mobile" }: 100
+width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $signup-form-popup.identity-label
 role: $inherited.types.source-code
@@ -4640,7 +4636,7 @@ drop-down-options-list: $common.option-list
 
 -- ftd.column:
 width.fixed.percent: 48.5
-width.fixed.percent if { ftd.device == "mobile" }: 100
+width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $signup-form-popup.org-label
 role: $inherited.types.source-code
@@ -4650,7 +4646,6 @@ margin-top.px: 16
 id: user-org-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -4675,7 +4670,6 @@ margin-top.px: 16
 id: user-email-input
 padding.px: 6
 width: fill-container
-background.solid: transparent
 border-width.px: 1
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
@@ -4730,66 +4724,17 @@ Thanks for your interest...We will update you
 
 
 
--- component drop-down-1:
-caption title: $selected-item
-boolean $show-options: false
-common.options list drop-down-options-list:
-
--- ftd.column:
-width: fill-container
-$on-click-outside$: $ftd.set-bool($a = $drop-down-1.show-options, v = false)
-
--- ftd.row:
-id: user-identity-input
-align-self: center
-padding.px: 6
-border-radius.px: 10
-margin-top.px: 8
-width: fill-container
-height.fixed.px: 43
-border-color: $inherited.colors.custom.two
-border-color if { drop-down-1.show-options }: blue
-border-width.px: 1
-border-width.px if { drop-down-1.show-options }: 2
-spacing: space-between
-$on-click$: $ftd.toggle($a = $drop-down-1.show-options)
-
--- ftd.text: $selected-item
-role: $inherited.types.copy-regular
-color: $inherited.colors.custom.one
-padding-right.px: 52
-min-width.fixed.px: 112
-
--- ftd.image:
-src: $assets.files.static.faq.down.svg
-width.fixed.px: 16
-height: auto
-align-self: center
-
--- end: ftd.row
-
--- drop-down-1-options: $drop-down-1.title
-drop-down-1-options-list: $drop-down-1.drop-down-1-options-list
-$show-options: $drop-down-1.show-options
-
--- end: ftd.column
-
--- end: drop-down-1
-
-
-
-
--- component drop-down-options-1:
+-- component drop-down-medium-options:
 caption title:
-common.options list drop-down-options-1-list:
+common.options list drop-down-medium-options-list:
 boolean $mouse-in: false
 boolean $show-options: false
 
 -- ftd.column:
-if: { drop-down-options-1.show-options }
+if: { drop-down-medium-options.show-options }
 
 -- ftd.column:
-background.solid: grey
+background.solid: $fonts.grey
 padding-vertical.px: 11
 padding-horizontal.px: 14
 anchor: parent
@@ -4804,32 +4749,29 @@ color: $inherited.colors.background.base
 
 -- ftd.text: $obj.title
 width: fill-container
-;;background.solid if { drop-down-options-1.mouse-in }: blue
-$loop$: $drop-down-options-1.drop-down-options-1-list as $obj
+$loop$: $drop-down-medium-options.drop-down-medium-options-list as $obj
 padding-right.px: 20
-;;$on-mouse-enter$: $ftd.set-bool($a = $drop-down-options-1.mouse-in, v = true )
-;;$on-mouse-leave$: $ftd.set-bool($a = $drop-down-options-1.mouse-in, v = false )
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
-$on-click$: $ftd.toggle($a = $drop-down-options-1.show-options)
+$on-click$: $ftd.toggle($a = $drop-down-medium-options.show-options)
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: drop-down-options-1
+-- end: drop-down-medium-options
 
 
 
 
 
--- component drop-down-option-1:
+-- component drop-down-medium-option:
 caption title:
 
--- ftd.text: $drop-down-option-1.title
+-- ftd.text: $drop-down-medium-option.title
 padding-right.px: 20
 $on-mouse-enter$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = true )
 $on-mouse-leave$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = false )
 $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 $on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
--- end: drop-down-option-1
+-- end: drop-down-medium-option

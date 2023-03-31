@@ -428,10 +428,7 @@ letter-spacing.px: 0
 weight: 400
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type size-14-400:
-desktop: $size-14-400
-mobile: $size-14-400
-
+-- ftd.responsive-type size-14-400: $size-14-400
 
 
 
@@ -554,9 +551,6 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
-
-;; Colors
-
 -- ftd.color bdbdbd: #bdbdbd
 
 -- ftd.color 69f0ae: #69f0ae
@@ -572,6 +566,11 @@ font-family: $nunito-assets.fonts.Nunito
 -- ftd.color 005FBB: #005FBB
 
 -- ftd.color 3ea880: #3ea880
+
+-- ftd.color grey: grey
+
+
+
 
 
 -- ftd.shadow lezgoo:
