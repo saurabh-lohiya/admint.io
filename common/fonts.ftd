@@ -447,7 +447,7 @@ weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type size-20-700:
-desktop: $size-20-700-type-dekstop
+desktop: $size-20-700-type-desktop
 mobile: $size-20-700-type-mobile
 
 
