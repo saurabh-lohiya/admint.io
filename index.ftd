@@ -6,6 +6,7 @@
 -- integer $current-cell: 1
 
 -- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
+$show-signup: $show-signup-popup
 
 -- lib.signup-form-popup: Join the waitlist to get updated when we go live!
 name-label: Name
@@ -16,8 +17,8 @@ cta-text: Join waitlist
 $visible: $show-signup-popup
 
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
-cta-text: Get Started🚧
-cta-link: index.html
+cta-text: Get Started
+$show-signup: $show-signup-popup
 
 Build your brand's fan-base in web 3.0 with us!
 

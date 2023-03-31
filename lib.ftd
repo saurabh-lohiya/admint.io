@@ -563,7 +563,7 @@ optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
 string contact: Get Started
-string contact-url: index.html
+optional string contact-url:
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
 ftd.image-src footer-site-logo: $assets.files.static.footer.admint-logo-footer.svg
@@ -574,6 +574,7 @@ children wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 boolean blog: false
+boolean $show-signup: false
 
 -- ftd.document:
 title: $page.title
@@ -591,6 +592,7 @@ contact: $page.contact
 contact-url: $page.contact-url
 sections: $page.sections
 $sidebar-open: $page.sidebar-open
+$show-signup: $page.show-signup
 
 -- ftd.column:
 children: $page.wrap
@@ -1505,6 +1507,7 @@ string contact:
 string contact-url:
 pr.toc-item list sections: 
 boolean $sidebar-open: false
+boolean $show-signup: false
 
 -- ftd.column:
 width: fill-container
@@ -1518,6 +1521,7 @@ site-logo: $header.site-logo
 contact: $header.contact
 contact-url: $header.contact-url
 sections: $header.sections
+$show-signup: $header.show-signup
 
 -- header-mobile:
 if: { ftd.device == "mobile" }
@@ -1528,6 +1532,7 @@ contact: $header.contact
 contact-url: $header.contact-url
 sections: $header.sections
 $sidebar-open: $header.sidebar-open
+$show-signup: $header.show-signup
 
 -- end: ftd.column
 
@@ -1546,6 +1551,7 @@ optional ftd.image-src site-logo:
 optional string contact:
 optional string contact-url:
 pr.toc-item list sections:
+boolean $show-signup: false
 
 -- ftd.row:
 width: fill-container
@@ -1565,7 +1571,6 @@ src: $header-desktop.site-logo
 width: auto
 height: auto
 link: $header-desktop.site-url
-
 
 -- ftd.text: $header-desktop.site-name
 if: {header-desktop.site-name != NULL}
@@ -1594,6 +1599,7 @@ $loop$: $header-desktop.sections as $obj
 
 -- header-button: $header-desktop.contact
 url: $header-desktop.contact-url
+$show-signup: $header-desktop.show-signup
 
 -- end: ftd.row
 
@@ -1606,10 +1612,15 @@ url: $header-desktop.contact-url
 
 
 
+
+
+
+
 -- component header-button:
 caption title:
-string url: /
+optional string url: 
 boolean $is-active: false
+boolean $show-signup: false
 
 -- ftd.row:
 margin-left.px: 11
@@ -1631,6 +1642,7 @@ if: {header-button.title != NULL}
 role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
+$on-click$ if { header-button.url == NULL }: $ftd.set-bool($a = $header-button.show-signup, v = true)
 
 -- end: ftd.row
 
@@ -1655,6 +1667,7 @@ optional string contact:
 optional string contact-url:
 pr.toc-item list sections:
 boolean $sidebar-open:
+boolean $show-signup: false
 
 -- ftd.column:
 width: fill-container
@@ -1725,6 +1738,7 @@ $loop$: $header-mobile.sections as $obj
 
 -- header-button: $header-mobile.contact
 url: $header-mobile.contact-url
+$show-signup: $header-mobile.show-signup
 
 -- end: ftd.column
 
@@ -1773,7 +1787,8 @@ padding-vertical.px: 8
 caption title:
 body body: 
 string cta-text: 
-string cta-link:
+optional string cta-link:
+boolean $show-signup: false
 
 -- ftd.column:
 width: fill-container
@@ -1875,6 +1890,7 @@ $hero.body
 
 -- button: $hero.cta-text
 link: $hero.cta-link
+$on-click$: $ftd.set-bool($a = $hero.show-signup, v = true)
 
 -- end: ftd.column
 
