@@ -61,9 +61,7 @@ email-label: Email id
 cta-text: Join waitlist
 $visible: $show-signup-popup
 
-
 -- ds.rendered.output:
-
 
 -- end: ds.rendered.output
 
