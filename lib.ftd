@@ -562,7 +562,7 @@ caption title: AdMint - Deliver refreshing Web 3.0 campaigns!
 optional string site-name:
 string site-url: index.html
 ftd.image-src site-logo: $assets.files.static.admint-logo.svg
-string contact: Get Started🚧
+string contact: Get Started
 string contact-url: index.html
 pr.toc-item list sections: $sitemap.sections
 boolean $sidebar-open: false
@@ -637,7 +637,7 @@ width: fill-container
 -- ftd.text: 
 text: $feature-card.body
 color: $inherited.colors.text
-role: $fonts.size-24-regular
+role: $fonts.nunito-24-36-400
 margin-bottom.px: 60
 
 -- ftd.column:
@@ -1021,7 +1021,7 @@ region: h3
 -- ftd.text:
 if: { structured-desktop.body != NULL }
 text: $structured-desktop.body
-role: $fonts.size-24-regular
+role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 58
@@ -1032,9 +1032,9 @@ max-width.fixed.percent: 58
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -9
-top.percent: 56
-z-index: -1 
+right.px: -61
+top.percent: 62
+z-index: 0 
 
 -- ftd.image:
 src: $structured-desktop.src
@@ -1199,7 +1199,7 @@ max-width.fixed.percent: 70
 -- ftd.text:
 if: { keymedia-vehicle-desktop.body != NULL }
 text: $keymedia-vehicle-desktop.body
-role: $fonts.size-24-regular
+role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 60
@@ -1210,9 +1210,9 @@ max-width.fixed.percent: 60
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -9
-top.percent: 44
-z-index: -1 
+right.px: -61
+top.percent: 52
+z-index: 0
 
 -- ftd.image:
 src: $keymedia-vehicle-desktop.src
@@ -1323,7 +1323,7 @@ width: fill-container
 -- ftd.text:
 if: { distribute-nft-desktop.body != NULL }
 text: $distribute-nft-desktop.body
-role: $fonts.size-24-regular
+role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 80
@@ -1334,9 +1334,9 @@ max-width.fixed.percent: 80
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -9
+right.px: -61
 top.percent: 88
-z-index: -1 
+z-index: 0 
 
 -- ftd.image:
 src: $distribute-nft-desktop.src
@@ -1448,7 +1448,7 @@ max-width.fixed.percent: 80
 -- ftd.text:
 if: { analyze-pane-desktop.body != NULL }
 text: $analyze-pane-desktop.body
-role: $fonts.size-24-regular
+role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
 max-width.fixed.percent: 60
@@ -1459,9 +1459,9 @@ max-width.fixed.percent: 60
 align-content: center
 align-self: center
 anchor: parent 
-right.percent: -9
-top.percent: 75
-z-index: -1 
+right.px: -61
+top.percent: 86
+z-index: 0
 
 -- ftd.image:
 src: $analyze-pane-desktop.src
@@ -1577,6 +1577,7 @@ spacing.fixed.px: 24
 width: fill-container
 spacing.fixed.px: 44
 align-self: center
+padding-left.px: 3
 
 -- sections-list: $obj.title
 url: $obj.url
@@ -1605,6 +1606,7 @@ string url: /
 boolean $is-active: false
 
 -- ftd.row:
+margin-left.px: 11
 
 -- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
@@ -1688,7 +1690,6 @@ border-radius.px: 6
 border-color: $inherited.colors.text
 border-width.px: 1
 
-
 -- ftd.image:
 src: $assets.files.static.lezgoo.hamberger.svg
 width.fixed.px: 30
@@ -1704,8 +1705,6 @@ $on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
 
 -- ftd.column:
 if: {header-mobile.sidebar-open}
-
-
 
 -- ftd.column:
 width: fill-container
@@ -1723,10 +1722,15 @@ url: $header-mobile.contact-url
 
 -- end: ftd.column
 
-
 -- end: ftd.column
 
 -- end: header-mobile
+
+
+
+
+
+
 
 
 
@@ -1739,14 +1743,13 @@ boolean is-active: false
 -- ftd.column:
 
 -- ftd.text: $sections-list.title
-color:$inherited.colors.text-strong
+color: $inherited.colors.text
 color if {sections-list.is-active}: $inherited.colors.cta-primary.base
-role: $inherited.types.label-large
+role: $fonts.nunito-30-20-400
 link: $sections-list.url
 width: fill-container
 white-space: nowrap
 padding-vertical.px: 8
-
 
 -- end: ftd.column
 
