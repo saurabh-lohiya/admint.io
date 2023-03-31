@@ -2643,7 +2643,7 @@ margin-top.px: 150
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 width.fixed.px: 750
-margin-bottom.px: 40
+margin-bottom.px: 32
 
 -- ftd.text: $sneak-peak.cta-text
 background.solid: $inherited.colors.cta-primary.base
