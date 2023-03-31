@@ -44,8 +44,7 @@ lang: ftd
 Once you import `lib` inside your `.ftd` file, use the `signup-form-popup`
 component by adding all required attributes of it. Also, add global mutable
 variable `show-signup-popup` inside your `.ftd` file and pass it to `$visible:`
-attribute as shown in below code
-snippet:
+attribute as shown in below code snippet:
 
 -- ds.rendered:
 
