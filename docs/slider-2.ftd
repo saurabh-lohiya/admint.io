@@ -1,0 +1,212 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+-- integer $current-active: 1
+
+-- ds.page: Slider 2
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+
+-- ds.page.footer:
+
+-- lib.slider:
+$active-item: $current-active
+
+-- lib.works-cell: PLANNING
+number: 1
+right-src: $assets.files.static.lezgoo.planning-right-img.svg 
+left-src: $assets.files.static.lezgoo.planning-left-img.svg
+right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
+left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
+top-cell: You choose your brand’s campaign objective 
+bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
+index: 1
+reset: $current-active
+
+-- lib.works-cell: FUNDS
+number: 2
+left-src: $assets.files.static.lezgoo.fund-left-img.svg 
+right-src: $assets.files.static.lezgoo.fund-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.fund-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.fund-right-mob.svg
+top-cell: You set up funds via standard payment options 
+bottom-cell: AdMint handles your crypto wallets & transfers 
+index: 2
+reset: $current-active
+
+-- lib.works-cell: NFTs
+number: 3
+left-src: $assets.files.static.lezgoo.nft-left-img.svg 
+right-src: $assets.files.static.lezgoo.nft-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.nft-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.nft-right-mob.svg
+top-cell: You provide us creatives to run the campaign
+bottom-cell: AdMint preps & converts them into NFT collections
+index: 3
+reset: $current-active
+
+-- lib.works-cell: DISTRIBUTION
+number: 4
+left-src: $assets.files.static.lezgoo.dist-left-img.svg 
+right-src: $assets.files.static.lezgoo.dist-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.dist-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.dist-right-mob.svg
+top-cell: You identify target audience to receive the NFTs
+bottom-cell: AdMint provides tools and templates to enable distribution. execution.
+index: 4
+reset: $current-active
+
+-- lib.works-cell: UTILITY
+number: 5
+left-src: $assets.files.static.lezgoo.utility-left-img.svg 
+right-src: $assets.files.static.lezgoo.utility-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.utility-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.utility-right-mob.svg
+top-cell: You determine the real world value offering to consumers
+bottom-cell: AdMint helps validate NFT ownership & extends access 
+index: 5
+reset: $current-active
+
+-- lib.works-cell: ANALYTICS
+number: 6
+left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
+right-src: $assets.files.static.lezgoo.analytics-img-right.svg
+left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
+top-cell: You define campaign objectives & success metrics
+bottom-cell: AdMint provides web 2.0 & web 3.0 data to analyse your campaign  
+index: 6
+reset: $current-active
+
+-- end: lib.slider
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `slider` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use `slider` component you need to `import` `lib` inside you `.ftd` file.
+
+-- ds.code:
+lang: ftd
+
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import `lib` inside your `.ftd` file, use the `slider` component by
+adding all required attributes of it.
+
+Inside your `.ftd` file, `-- integer $current-active: 1` variable to be added,
+which sends `integer` as `index` for each slide. Pass `$current-active`
+variable to each slide components `reset` attribute. `index` attribute of each
+slide component should be `+1` (as shown in below code snippet).
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- integer $current-active: 1
+
+
+\-- lib.slider:
+$active-item: $current-active
+
+\-- lib.works-cell: PLANNING
+number: 1
+right-src: $assets.files.static.lezgoo.planning-right-img.svg 
+left-src: $assets.files.static.lezgoo.planning-left-img.svg
+right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
+left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
+top-cell: You choose your brand’s campaign objective 
+bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
+index: 1
+reset: $current-active
+
+\-- lib.works-cell: FUNDS
+number: 2
+left-src: $assets.files.static.lezgoo.fund-left-img.svg 
+right-src: $assets.files.static.lezgoo.fund-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.fund-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.fund-right-mob.svg
+top-cell: You set up funds via standard payment options 
+bottom-cell: AdMint handles your crypto wallets & transfers 
+index: 2
+reset: $current-active
+
+\-- lib.works-cell: NFTs
+number: 3
+left-src: $assets.files.static.lezgoo.nft-left-img.svg 
+right-src: $assets.files.static.lezgoo.nft-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.nft-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.nft-right-mob.svg
+top-cell: You provide us creatives to run the campaign
+bottom-cell: AdMint preps & converts them into NFT collections
+index: 3
+reset: $current-active
+
+\-- lib.works-cell: DISTRIBUTION
+number: 4
+left-src: $assets.files.static.lezgoo.dist-left-img.svg 
+right-src: $assets.files.static.lezgoo.dist-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.dist-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.dist-right-mob.svg
+top-cell: You identify target audience to receive the NFTs
+bottom-cell: AdMint provides tools and templates to enable distribution. execution.
+index: 4
+reset: $current-active
+
+\-- lib.works-cell: UTILITY
+number: 5
+left-src: $assets.files.static.lezgoo.utility-left-img.svg 
+right-src: $assets.files.static.lezgoo.utility-right-img.svg
+left-mob-src: $assets.files.static.lezgoo.utility-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.utility-right-mob.svg
+top-cell: You determine the real world value offering to consumers
+bottom-cell: AdMint helps validate NFT ownership & extends access 
+index: 5
+reset: $current-active
+
+\-- lib.works-cell: ANALYTICS
+number: 6
+left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
+right-src: $assets.files.static.lezgoo.analytics-img-right.svg
+left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
+right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
+top-cell: You define campaign objectives & success metrics
+bottom-cell: AdMint provides web 2.0 & web 3.0 data to analyse your campaign  
+index: 6
+reset: $current-active
+
+\-- end: lib.slider
+
+-- ds.rendered.output:
+
+-- ftd.text: 👇 Look at bottom of this page 👇
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+padding-vertical.px: 20
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
