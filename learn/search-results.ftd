@@ -2,6 +2,7 @@
 -- import: fifthtry.github.io/admint.io/lib
 
 -- lib.page:
+blog: true
 
 -- lib.tabs:
 

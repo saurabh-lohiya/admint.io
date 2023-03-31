@@ -559,6 +559,20 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type montserrat-16-29-type:
+line-height.px: 29
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-16-29: $montserrat-16-29-type
+
+
+
+
+
+
 -- ftd.color bdbdbd: #bdbdbd
 
 -- ftd.color 69f0ae: #69f0ae

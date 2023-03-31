@@ -7,6 +7,7 @@
 
 
 -- lib.page: Admint
+blog: true
 
 -- lib.tabs:
 
