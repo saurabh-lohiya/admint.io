@@ -2531,6 +2531,7 @@ align-self: center
 margin-top.px: 60
 shadow: $fonts.lezgoo
 background.solid: $inherited.colors.background.step-1
+z-index: 1
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
