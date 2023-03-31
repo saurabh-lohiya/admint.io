@@ -1,0 +1,87 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+-- boolean $show-signup-popup: false
+
+
+-- ds.page: Sign-Up Form Popup
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+-- ds.page.footer:
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `signup-form-popup` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use `signup-form-popup` component you need to `import` `lib` inside your
+`.ftd` file
+
+-- ds.code:
+lang: ftd
+
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import `lib` inside your `.ftd` file, use the `signup-form-popup`
+component by adding all required attributes of it. Also, add global mutable
+variable `show-signup-popup` inside your `.ftd` file and pass it to `$visible:`
+attribute as shown in below code
+snippet:
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- boolean $show-signup-popup: false
+
+\-- lib.signup-form-popup: Join the waitlist to get updated when we go live!
+name-label: Name
+identity-label: Who are you?
+org-label: Organization Name
+email-label: Email id
+cta-text: Join waitlist
+$visible: $show-signup-popup
+
+
+-- ds.rendered.output:
+
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ftd.text: 👉 Click here to open Sign-Up Form Popup 👈
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+padding-vertical.px: 20
+$on-click$: $ftd.set-bool($a = $show-signup-popup, v = true)
+
+-- lib.signup-form-popup: Join the waitlist to get updated when we go live!
+name-label: Name
+identity-label: Who are you?
+org-label: Organization Name
+email-label: Email id
+cta-text: Join waitlist
+$visible: $show-signup-popup
+
+
+-- end: ds.page
