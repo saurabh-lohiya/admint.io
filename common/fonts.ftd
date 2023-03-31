@@ -432,17 +432,22 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type size-20-700-type-mobile:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
 
-
--- ftd.type size-20-700-type:
+-- ftd.type size-20-700-type-desktop:
 line-height.px: 24
 size.px: 20
 letter-spacing.px: 0
 weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type size-20-700-type:
-desktop: $size-20-700-type-dekstop
+-- ftd.responsive-type size-20-700:
+desktop: $size-20-700-type-desktop
 mobile: $size-20-700-type-mobile
 
 
