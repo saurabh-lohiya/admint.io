@@ -1,0 +1,31 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/assets
+
+
+
+
+-- ds.page: Brand Campaign
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+
+-- ds.page.footer:
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+Documentation work in in progress.
+
+-- end: ds.page

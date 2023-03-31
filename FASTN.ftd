@@ -29,20 +29,27 @@ favicon: https://fifthtry.github.io/admint.io/favicon.ico
 # Docs: docs/
 skip: true
 
-- Homepage: docs/header/
+- Home🚧: docs/header/
   - Header: docs/header/
   - Hero: docs/hero/
-  - Slider-1🚧: docs/slider-1/
-  - Slider-2🚧: docs/slider-2/
-  - Lezgoo card🚧: docs/lezgoo/
-  - Sneak Peak🚧: docs/sneak-peak/
-  - Ad-card🚧: docs/ad-card/
-  - Multiple Ad-cards🚧: docs/ad-cards/
+  - Slider-1: docs/slider-1/
+  - Slider-2: docs/slider-2/
+  - Lezgoo card: docs/lezgoo/
+  - Sneak Peak: docs/sneak-peak/
+  - Ad-card: docs/ad-card/
+  - Multiple Ad-cards: docs/ad-cards/
   - Sign-up form: docs/sign-up-form/
-- Footer: docs/footer/
+- Why NFT?🚧: docs/why-nfts/
 - About Page: docs/about-us/
-  - About Us🚧: docs/about-us/
-  - Our Team🚧: docs/our-team/
-- Learn Page: docs/faq/
-  - FAQs & Accordion🚧: docs/faq/
+  - About Us: docs/about-us/
+  - Our Team: docs/our-team/
+- Pricing🚧: docs/pricing/
+- Learn Page🚧: docs/faq/
+  - FAQs & Accordion: docs/faq/
+  - Brand campaign🚧: docs/brand-campaign/
+  - Advertising-web-3-0🚧: docs/advertising-web-3-0/
+- Blog🚧: docs/blog/
+- Terms & conditions🚧: docs/terms-conditions/
+- Privacy Policy🚧: docs/privacy-policy/
 - Sign-up form popup: docs/sign-up-popup/
+- Footer: docs/footer/
