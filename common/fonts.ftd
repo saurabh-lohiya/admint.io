@@ -441,7 +441,10 @@ letter-spacing.px: 0
 weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type size-20-700: $size-20-700-type
+-- ftd.responsive-type size-20-700-type:
+desktop: $size-20-700-type-dekstop
+mobile: $size-20-700-type-mobile
+
 
 
 
