@@ -524,6 +524,19 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type nunito-24-36-400-type:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type nunito-24-36-400: $nunito-24-36-400-type
+
+
+
+
+
 
 ;; Colors
 
