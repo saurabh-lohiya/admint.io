@@ -573,6 +573,7 @@ ftd.image-src team-thumb: $assets.files.static.footer.footer-hand-thumb.svg
 children wrap:
 ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
+boolean blog: false
 
 -- ftd.document:
 title: $page.title
@@ -598,11 +599,16 @@ width: fill-container
 -- end: ftd.column
 
 -- footer:
+if: { !page.blog }
 site-logo: $page.footer-site-logo
 site-url: $page.site-url
 footer-links: $page.footer-links
 social-links: $page.social-links
 team-thumb: $page.team-thumb
+
+
+-- footer-tiny: Copyright © 2022 Admint
+if: { page.blog }
 
 -- end: ftd.column
 
@@ -4780,3 +4786,31 @@ $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 $on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
 -- end: drop-down-medium-option
+
+
+
+
+
+
+
+
+
+
+-- component footer-tiny:
+caption title:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-vertical.px: 20
+background.solid: $inherited.colors.custom.one
+
+-- ftd.text: $footer-tiny.title
+role: $fonts.montserrat-16-29
+color: $inherited.colors.background.step-1
+text-align: center
+
+-- end: ftd.column
+
+
+-- end: footer-tiny

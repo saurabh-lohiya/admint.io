@@ -1,0 +1,64 @@
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/assets
+
+
+
+
+-- ds.page: Footer - 2
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+
+-- ds.page.footer:
+
+-- lib.footer-tiny: Copyright © 2022 Admint
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `footer-tiny` component for [admint.io/learn/](https://admint.io/learn/), 
+which matches the design currently displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use the `footer-tiny` component you need to import `lib.ftd` inside your `.ftd`
+file.
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import `lib` inside your `.ftd` file, use the `footer-tiny` component
+by adding all required attributes of it.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.footer-tiny: Copyright © 2022 Admint
+
+-- ds.rendered.output:
+
+-- ftd.text: 👇 Look at footer of this page 👇
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+padding-vertical.px: 20
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
