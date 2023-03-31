@@ -102,7 +102,7 @@ which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `slider` component you need to `import` `lib` inside you `.ftd` file.
+To use `slider` component you need to `import` `lib` inside your `.ftd` file.
 
 -- ds.code:
 lang: ftd

@@ -29,7 +29,7 @@ which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `signup-form` component you need to `import` `lib` inside you `.ftd`
+To use `signup-form` component you need to `import` `lib` inside your `.ftd`
 file.
 
 -- ds.code:
