@@ -10,7 +10,7 @@
 -- lib.legal-section-content: 
 
 -- lib.legal-page-hero: Privacy Policy
-image: $assets.files.static.lezgoo.privacy-policy.svg 
+image: $assets.files.static.privacy-policy.svg 
 
 Last updated: October 14, 2022
 

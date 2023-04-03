@@ -584,7 +584,7 @@ width: fill-container
 $on-mouse-enter$: $common.global-event()
 background.solid: $inherited.colors.background.base
 
--- header:
+-- navbar:
 site-name: $page.site-name
 site-url: $page.site-url
 site-logo: $page.site-logo
@@ -609,7 +609,7 @@ social-links: $page.social-links
 team-thumb: $page.team-thumb
 
 
--- footer-tiny: Copyright © 2022 Admint
+-- site-footer: Copyright © 2022 Admint
 if: { page.blog }
 
 -- end: ftd.column
@@ -677,7 +677,7 @@ background.solid: $inherited.colors.cta-primary.base
 
 
 
--- component slider:
+-- component carousel:
 children wrap:
 integer $active-item:
 integer max: 6
@@ -701,9 +701,9 @@ padding-horizontal.px: 12
 align-content: center
 
 -- ftd.image:
-if: { slider.active-item != 1 }
-src: $assets.files.static.lezgoo.right.svg
-$on-click$: $common.decrement-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
+if: { carousel.active-item != 1 }
+src: $assets.files.static.carousel.right.svg
+$on-click$: $common.decrement-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -713,8 +713,8 @@ anchor: parent
 left.px: 8
 
 -- ftd.image:
-if: { slider.active-item == 1 }
-src: $assets.files.static.lezgoo.right.svg
+if: { carousel.active-item == 1 }
+src: $assets.files.static.carousel.right.svg
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -724,7 +724,7 @@ anchor: parent
 left.px: 8
 
 -- ftd.column:
-children: $slider.wrap
+children: $carousel.wrap
 width: fill-container
 max-width.fixed.px: $max-width
 align-content: center
@@ -733,9 +733,9 @@ padding-horizontal.px: 12
 -- end: ftd.column
 
 -- ftd.image:
-if: { slider.active-item != 5 }
-src: $assets.files.static.lezgoo.left.svg
-$on-click$: $common.increment-and-clamp($a = $slider.active-item, by = 1, min = $slider.min, max = $slider.max)
+if: { carousel.active-item != 5 }
+src: $assets.files.static.carousel.left.svg
+$on-click$: $common.increment-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -745,8 +745,8 @@ right.px: 8
 anchor: parent
 
 -- ftd.image:
-if: { slider.active-item == 5 }
-src: $assets.files.static.lezgoo.left.svg
+if: { carousel.active-item == 5 }
+src: $assets.files.static.carousel.left.svg
 align-self: center
 border-radius.px: 100
 width.fixed.px: 40
@@ -761,7 +761,7 @@ right.px: 8
 
 -- ftd.column:
 if: { ftd.device == "mobile"}
-children: $slider.wrap
+children: $carousel.wrap
 width: fill-container
 padding-horizontal.px: 12
 padding-vertical.px: 40
@@ -770,7 +770,7 @@ padding-vertical.px: 40
 
 -- end: ftd.column
 
--- end: slider
+-- end: carousel
 
 
 
@@ -1499,7 +1499,7 @@ spacing.fixed.px: 24
 
 
 
--- component header:
+-- component navbar:
 optional string site-name:
 string site-url: 
 ftd.image-src site-logo: 
@@ -1513,30 +1513,30 @@ boolean $show-signup: false
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 
--- header-desktop:
+-- navbar-desktop:
 if: { ftd.device != "mobile" }
-site-name: $header.site-name
-site-url: $header.site-url
-site-logo: $header.site-logo
-contact: $header.contact
-contact-url: $header.contact-url
-sections: $header.sections
-$show-signup: $header.show-signup
+site-name: $navbar.site-name
+site-url: $navbar.site-url
+site-logo: $navbar.site-logo
+contact: $navbar.contact
+contact-url: $navbar.contact-url
+sections: $navbar.sections
+$show-signup: $navbar.show-signup
 
--- header-mobile:
+-- navbar-mobile:
 if: { ftd.device == "mobile" }
-site-name: $header.site-name
-site-url: $header.site-url
-site-logo: $header.site-logo
-contact: $header.contact
-contact-url: $header.contact-url
-sections: $header.sections
-$sidebar-open: $header.sidebar-open
-$show-signup: $header.show-signup
+site-name: $navbar.site-name
+site-url: $navbar.site-url
+site-logo: $navbar.site-logo
+contact: $navbar.contact
+contact-url: $navbar.contact-url
+sections: $navbar.sections
+$sidebar-open: $navbar.sidebar-open
+$show-signup: $navbar.show-signup
 
 -- end: ftd.column
 
--- end: header
+-- end: navbar
 
 
 
@@ -1544,7 +1544,7 @@ $show-signup: $header.show-signup
 
 
 
--- component header-desktop:
+-- component navbar-desktop:
 optional string site-name:
 optional string site-url:
 optional ftd.image-src site-logo: 
@@ -1566,17 +1566,17 @@ align-self: center
 padding-vertical.px: 5
 
 -- ftd.image:
-if: { header-desktop.site-name == NULL }
-src: $header-desktop.site-logo
+if: { navbar-desktop.site-name == NULL }
+src: $navbar-desktop.site-logo
 width: auto
 height: auto
-link: $header-desktop.site-url
+link: $navbar-desktop.site-url
 
--- ftd.text: $header-desktop.site-name
-if: {header-desktop.site-name != NULL}
+-- ftd.text: $navbar-desktop.site-name
+if: {navbar-desktop.site-name != NULL}
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
-link: $header-desktop.site-url 
+link: $navbar-desktop.site-url 
 
 -- end: ftd.row
 
@@ -1593,19 +1593,19 @@ padding-left.px: 3
 -- sections-list: $obj.title
 url: $obj.url
 is-active: $obj.is-active
-$loop$: $header-desktop.sections as $obj
+$loop$: $navbar-desktop.sections as $obj
 
 -- end: ftd.row
 
--- header-button: $header-desktop.contact
-url: $header-desktop.contact-url
-$show-signup: $header-desktop.show-signup
+-- navbar-button: $navbar-desktop.contact
+url: $navbar-desktop.contact-url
+$show-signup: $navbar-desktop.show-signup
 
 -- end: ftd.row
 
 -- end: ftd.row
 
--- end: header-desktop
+-- end: navbar-desktop
 
 
 
@@ -1616,7 +1616,7 @@ $show-signup: $header-desktop.show-signup
 
 
 
--- component header-button:
+-- component navbar-button:
 caption title:
 optional string url: 
 boolean $is-active: false
@@ -1627,28 +1627,28 @@ margin-left.px: 11
 
 -- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
-border-color if {header-button.is-active}: $inherited.colors.cta-primary.hover
+border-color if {navbar-button.is-active}: $inherited.colors.cta-primary.hover
 border-radius.px: 50
-$on-mouse-enter$: $ftd.set-bool($a = $header-button.is-active, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $header-button.is-active, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $navbar-button.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar-button.is-active, v = false)
 padding-vertical.px: 11
 padding-vertical.px if { ftd.device == " mobile" }: 5
 padding-horizontal.px: 35
-link: $header-button.url
+link: $navbar-button.url
 align-self: center
 
--- ftd.text: $header-button.title
-if: {header-button.title != NULL}
+-- ftd.text: $navbar-button.title
+if: {navbar-button.title != NULL}
 role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
-$on-click$ if { header-button.url == NULL }: $ftd.set-bool($a = $header-button.show-signup, v = true)
+$on-click$ if { navbar-button.url == NULL }: $ftd.set-bool($a = $navbar-button.show-signup, v = true)
 
 -- end: ftd.row
 
 -- end: ftd.row
 
--- end: header-button
+-- end: navbar-button
 
 
 
@@ -1659,7 +1659,7 @@ $on-click$ if { header-button.url == NULL }: $ftd.set-bool($a = $header-button.s
 
 
 
--- component header-mobile:
+-- component navbar-mobile:
 optional string site-name:
 optional string site-url:
 optional ftd.image-src site-logo:
@@ -1686,18 +1686,18 @@ spacing: space-between
 width: fill-container
 
 -- ftd.image:
-if: { header-mobile.site-name == NULL }
-src: $header-mobile.site-logo
+if: { navbar-mobile.site-name == NULL }
+src: $navbar-mobile.site-logo
 width: auto
 height.fixed.px: 44
 padding-vertical.px: 5
-link: $header-mobile.site-url
+link: $navbar-mobile.site-url
 
--- ftd.text: $header-mobile.site-name
-if: { header-mobile.site-name != NULL }
+-- ftd.text: $navbar-mobile.site-name
+if: { navbar-mobile.site-name != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
-link: $header-mobile.site-url 
+link: $navbar-mobile.site-url 
 
 -- end: ftd.row
 
@@ -1710,11 +1710,11 @@ border-color: $inherited.colors.text
 border-width.px: 1
 
 -- ftd.image:
-src: $assets.files.static.lezgoo.hamberger.svg
+src: $assets.files.static.hamberger.svg
 width.fixed.px: 30
 height: auto
 align-self: center
-$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
+$on-click$: $ftd.toggle($a = $navbar-mobile.sidebar-open)
 
 -- end: ftd.row
 
@@ -1723,7 +1723,7 @@ $on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
 -- end: ftd.row
 
 -- ftd.column:
-if: {header-mobile.sidebar-open}
+if: {navbar-mobile.sidebar-open}
 
 -- ftd.column:
 width: fill-container
@@ -1732,19 +1732,19 @@ padding-horizontal.px: 14
 -- sections-list: $obj.title
 url: $obj.url
 is-active: $obj.is-active
-$loop$: $header-mobile.sections as $obj
+$loop$: $navbar-mobile.sections as $obj
 
 -- end: ftd.column
 
--- header-button: $header-mobile.contact
-url: $header-mobile.contact-url
-$show-signup: $header-mobile.show-signup
+-- navbar-button: $navbar-mobile.contact
+url: $navbar-mobile.contact-url
+$show-signup: $navbar-mobile.show-signup
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: header-mobile
+-- end: navbar-mobile
 
 
 
@@ -2537,7 +2537,7 @@ $question-accordion.body
 
 
 
--- component lezgoo:
+-- component help-banner:
 caption title:
 optional body body:
 string cta-label:
@@ -2549,13 +2549,13 @@ width: fill-container
 max-width.fixed.px: $max-width
 align-self: center
 margin-top.px: 60
-shadow: $fonts.lezgoo
+shadow: $fonts.help-banner
 background.solid: $inherited.colors.background.step-1
 z-index: 1
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
-src: $lezgoo.image
+src: $help-banner.image
 
 -- ftd.row:
 spacing.fixed.percent: 10
@@ -2564,7 +2564,7 @@ align-content: center
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
-src: $lezgoo.image
+src: $help-banner.image
 
 -- ftd.column:
 padding.px if { ftd.device == "mobile" }: 40
@@ -2573,22 +2573,22 @@ padding.px if { ftd.device == "mobile" }: 40
 margin-bottom.px: 24
 wrap: true
 
--- ftd.text: $lezgoo.title
+-- ftd.text: $help-banner.title
 role: $inherited.types.heading-small
 color: $inherited.colors.text
 max-width.fixed.percent if { ftd.device != "mobile" }: 80
 
 -- ftd.text: 
-if: { lezgoo.body != NULL }
+if: { help-banner.body != NULL }
 role: $inherited.types.heading-small
 color: $inherited.colors.text
 max-width.fixed.percent if { ftd.device != "mobile" }: 80
 
-$lezgoo.body
+$help-banner.body
 
 -- end: ftd.row
 
--- ftd.text: $lezgoo.cta-label
+-- ftd.text: $help-banner.cta-label
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
@@ -2596,7 +2596,7 @@ border-radius.px: 50
 border-radius.px if { ftd.device == "mobile" }: 34
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
-link: $lezgoo.cta-url
+link: $help-banner.cta-url
 
 -- end: ftd.column
 
@@ -2604,7 +2604,7 @@ link: $lezgoo.cta-url
 
 -- end: ftd.column
 
--- end: lezgoo
+-- end: help-banner
 
 
 
@@ -3460,6 +3460,7 @@ caption title:
 string tagline:
 ftd.image-src image:
 body body:
+boolean $hover-me: false
 
 -- ftd.column:
 width: fill-container
@@ -3518,6 +3519,9 @@ padding-right.px: 4
 role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
+style if { why-nft-hero.hover-me }: underline
+$on-mouse-enter$: $ftd.set-bool($a = $why-nft-hero.hover-me, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $why-nft-hero.hover-me, v = false)
 
 -- ftd.text: $why-nft-hero.title
 role: $inherited.types.heading-medium
@@ -4368,7 +4372,7 @@ reset: $works-cell.reset
 
 
 -- ftd.background-image bg-image: 
-src: $assets.files.static.lezgoo.how-it-works.svg
+src: $assets.files.static.carousel.how-it-works.svg
 position: center-top
 repeat: no-repeat
 
@@ -4816,7 +4820,7 @@ $on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
 
 
--- component footer-tiny:
+-- component site-footer:
 caption title:
 
 -- ftd.column:
@@ -4825,7 +4829,7 @@ align-content: center
 padding-vertical.px: 20
 background.solid: $inherited.colors.custom.one
 
--- ftd.text: $footer-tiny.title
+-- ftd.text: $site-footer.title
 role: $fonts.montserrat-16-29
 color: $inherited.colors.background.step-1
 text-align: center
@@ -4833,4 +4837,4 @@ text-align: center
 -- end: ftd.column
 
 
--- end: footer-tiny
+-- end: site-footer

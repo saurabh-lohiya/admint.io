@@ -9,7 +9,7 @@
 
 
 
--- ds.page: Header
+-- ds.page: Navbar
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -26,16 +26,16 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `header` component for [admint.io](https://admint.io/), 
+We have developed the `navbar` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use the `header` component you need to import `lib.ftd` inside your `.ftd`
-file. `header` component captures `sitemap-data` which is added inside your
+To use the `navbar` component you need to import `lib.ftd` inside your `.ftd`
+file. `navbar` component captures `sitemap-data` which is added inside your
 `FASTN.ftd` file.
 
-To use the `header` component you need to import the `fastn/processors`,
+To use the `navbar` component you need to import the `fastn/processors`,
 `fastn-processors` helps to fetch sitemap-data from `FASTN.ftd` file.
 
 We have already imported the `fastn-processors` into your `lib.ftd` file.
@@ -49,14 +49,14 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `header` component by
+Once you import `lib` inside your `.ftd` file, use the `navbar` component by
 adding all required attributes of it.
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- header:
+\-- navbar:
 site-url: https://admint.io/
 site-logo: https://admint.io/assets/images/admint-logo.svg
 contact: Get Started
@@ -65,7 +65,7 @@ sections: $lib.sitemap.sections
 
 -- ds.rendered.output:
 
--- lib.header:
+-- lib.navbar:
 site-url: https://admint.io/
 site-logo: https://admint.io/assets/images/admint-logo.svg
 contact: Get Started

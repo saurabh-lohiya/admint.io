@@ -9,7 +9,7 @@
 
 
 
--- ds.page: Footer - 1
+-- ds.page: Footer
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main

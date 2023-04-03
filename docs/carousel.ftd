@@ -9,7 +9,7 @@
 
 -- integer $current-active: 1
 
--- ds.page: Slider 1
+-- ds.page: Carousel
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -20,12 +20,12 @@ sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
--- lib.slider:
+-- lib.carousel:
 $active-item: $current-active
 
 -- lib.simple-steps: **WHY ADMINT?** 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
-src: $assets.files.static.lezgoo.simple.svg
+src: $assets.files.static.carousel.simple.svg
 index: 1
 reset: $current-active
 
@@ -45,7 +45,7 @@ reset: $current-active
 
 -- lib.structured: **WHY ADMINT?** 🚧
 subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
-src: $assets.files.static.lezgoo.structured.svg
+src: $assets.files.static.carousel.structured.svg
 index: 2 
 reset: $current-active
 
@@ -54,7 +54,7 @@ all the necessary components to launch a campaign.
 
 -- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
 subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
-src: $assets.files.static.lezgoo.keymedia.svg 
+src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
 reset: $current-active
 
@@ -63,7 +63,7 @@ or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
 -- lib.distribute-nft: **WHY ADMINT?** 🚧
 subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
-src: $assets.files.static.lezgoo.distribute.svg
+src: $assets.files.static.carousel.distribute.svg
 index: 4 
 reset: $current-active
 
@@ -74,14 +74,14 @@ associated real-world brand offerings.
 
 -- lib.analyze-pane: **WHY ADMINT?** 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
-src: $assets.files.static.lezgoo.analyze.svg
+src: $assets.files.static.carousel.analyze.svg
 index: 5
 reset: $current-active
 
 Watch the numbers. See the plan take shape. Measure that ROI. 
 Stake your claim across the Metaverses!
 
--- end: lib.slider
+-- end: lib.carousel
 
 -- docs.footer:
 
@@ -89,12 +89,12 @@ Stake your claim across the Metaverses!
 
 -- ds.page.body:
 
-We have developed the `slider` component for [admint.io](https://admint.io/), 
+We have developed the `carousel` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `slider` component you need to `import` `lib` inside you `.ftd` file.
+To use `carousel` component you need to `import` `lib` inside you `.ftd` file.
 
 -- ds.code:
 lang: ftd
@@ -104,7 +104,7 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `slider` component by
+Once you import `lib` inside your `.ftd` file, use the `carousel` component by
 adding all required attributes of it.
 
 Inside your `.ftd` file, `-- integer $current-active: 1` variable to be added,
@@ -119,12 +119,12 @@ slide component should be `+1` (as shown in below code snippet).
 \-- integer $current-active: 1
 
 
-\-- lib.slider:
+\-- lib.carousel:
 $active-item: $current-active
 
 \-- lib.simple-steps: **WHY ADMINT?** 🚧
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
-src: $assets.files.static.lezgoo.simple.svg
+src: $assets.files.static.carousel.simple.svg
 index: 1
 reset: $current-active
 
@@ -144,7 +144,7 @@ reset: $current-active
 
 \-- lib.structured: **WHY ADMINT?** 🚧
 subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
-src: $assets.files.static.lezgoo.structured.svg
+src: $assets.files.static.carousel.structured.svg
 index: 2 
 reset: $current-active
 
@@ -153,7 +153,7 @@ all the necessary components to launch a campaign.
 
 \-- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
 subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
-src: $assets.files.static.lezgoo.keymedia.svg 
+src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
 reset: $current-active
 
@@ -162,7 +162,7 @@ or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
 \-- lib.distribute-nft: **WHY ADMINT?** 🚧
 subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
-src: $assets.files.static.lezgoo.distribute.svg
+src: $assets.files.static.carousel.distribute.svg
 index: 4 
 reset: $current-active
 
@@ -172,14 +172,14 @@ associated real-world brand offerings.
 
 \-- lib.analyze-pane: **WHY ADMINT?** 🚧
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
-src: $assets.files.static.lezgoo.analyze.svg
+src: $assets.files.static.carousel.analyze.svg
 index: 5
 reset: $current-active
 
 Watch the numbers. See the plan take shape. Measure that ROI. 
 Stake your claim across the Metaverses!
 
-\-- end: lib.slider
+\-- end: lib.carousel
 
 -- ds.rendered.output:
 
