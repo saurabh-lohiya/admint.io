@@ -33,7 +33,7 @@ skip: true
 - Hero: docs/hero/
 - Carousel: docs/carousel/
 - Help Banner: docs/help-banner/
-- Carousel: docs/carousel-2/
+- How it works: docs/how-it-works/
 - Ad-card: docs/ad-card/
 - Multiple Ad-cards: docs/ad-cards/
 - Sneak Peak: docs/sneak-peak/
