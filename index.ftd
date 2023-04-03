@@ -2,23 +2,23 @@
 -- import: fifthtry.github.io/admint.io/lib
 
 -- integer $current-active: 1
--- boolean $show-signup-popup: false
+-- boolean $show-waitlist-popup: false
 -- integer $current-cell: 1
 
 -- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
-$show-signup: $show-signup-popup
+$show-signup: $show-waitlist-popup
 
--- lib.signup-form-popup: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-popup: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
-$visible: $show-signup-popup
+$visible: $show-waitlist-popup
 
 -- lib.hero: Deliver refreshing Web 3.0 campaigns!
 cta-text: Get Started
-$show-signup: $show-signup-popup
+$show-signup: $show-waitlist-popup
 
 Build your brand's fan-base in web 3.0 with us!
 
@@ -215,7 +215,7 @@ web 3.0 budget?
 -- end: lib.advertisment
 
 -- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
-cta-label: Let's Learn🚧
+cta-label: Let's Learn
 cta-url: /learn/
 image: $assets.files.static.help-banner.svg
 
@@ -224,16 +224,14 @@ image: $assets.files.static.help-banner.svg
 -- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
 image: $assets.files.static.carousel.sneak-peak.png
 bg-image: $assets.files.static.carousel.sneak-bg.png
-cta-text: Get Started🚧
-$cta-event: $show-signup-popup
+cta-text: Get Started
+$cta-event: $show-waitlist-popup
 
--- lib.signup-form: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
-cta-text: Join waitlist🚧
-
--- end: lib.signup-form
+cta-text: Join waitlist
 
 -- end: lib.page
