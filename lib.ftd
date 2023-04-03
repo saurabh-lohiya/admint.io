@@ -3468,7 +3468,7 @@ background.solid: $inherited.colors.background.step-1
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: 1296
 padding-vertical.px: 65
 align-self: center
 padding-horizontal.px: 12
@@ -3496,9 +3496,10 @@ $why-nft-hero.body
 -- ftd.row:
 if: { ftd.device != "mobile" }
 width: fill-container
-max-width.fixed.px: 1320
+max-width.fixed.px: 1296
 padding-vertical.px: 65
 align-self: center
+padding-horizontal.px: 12
 
 -- ftd.image:
 src: $why-nft-hero.image
@@ -3509,7 +3510,9 @@ bottom.px: 0
 
 -- ftd.column:
 width: fill-container
-margin-left.percent: 42
+margin-left.percent: 41.66
+padding-left.px: 6
+padding-right.px: 4
 
 -- ftd.text: $why-nft-hero.tagline
 role: $inherited.types.label-large
@@ -3525,6 +3528,7 @@ margin-bottom.px: 8
 -- ftd.text:
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
+margin-bottom.px: 16
 
 $why-nft-hero.body
 
