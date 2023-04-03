@@ -30,16 +30,16 @@ language.
 
 Below are a few sample components:
 
--- ds.h3: Header Component
+-- ds.h3: Navbar Component
 
-We have developed the `header` component for [admint.io](https://admint.io/), 
+We have developed the `navbar` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- lib.header:
+\-- lib.navbar:
 site-url: https://admint.io/
 site-logo: https://admint.io/assets/images/admint-logo.svg
 contact: Get Started
@@ -48,7 +48,7 @@ sections: $lib.sitemap.sections
 
 -- ds.rendered.output:
 
--- lib.header:
+-- lib.navbar:
 site-url: https://admint.io/
 site-logo: https://admint.io/assets/images/admint-logo.svg
 contact: Get Started

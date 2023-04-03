@@ -20,8 +20,8 @@ sections: $lib.sitemap.sections
 -- ds.page.footer:
 
 -- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
-image: $assets.files.static.lezgoo.sneak-peak.png
-bg-image: $assets.files.static.lezgoo.sneak-bg.png
+image: $assets.files.static.carousel.sneak-peak.png
+bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
 cta-url: docs/sneak-peak/
 
@@ -54,8 +54,8 @@ adding all required attributes of it.
 -- ds.rendered.input:
 
 \-- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
-image: $assets.files.static.lezgoo.sneak-peak.png
-bg-image: $assets.files.static.lezgoo.sneak-bg.png
+image: $assets.files.static.carousel.sneak-peak.png
+bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
 cta-url: docs/sneak-peak/
 

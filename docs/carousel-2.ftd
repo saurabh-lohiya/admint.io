@@ -9,7 +9,7 @@
 
 -- integer $current-active: 1
 
--- ds.page: Slider 2
+-- ds.page: Carousel 2
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -20,15 +20,15 @@ sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
--- lib.slider:
+-- lib.carousel:
 $active-item: $current-active
 
 -- lib.works-cell: PLANNING
 number: 1
-right-src: $assets.files.static.lezgoo.planning-right-img.svg 
-left-src: $assets.files.static.lezgoo.planning-left-img.svg
-right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
-left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
+right-src: $assets.files.static.carousel.planning-right-img.svg 
+left-src: $assets.files.static.carousel.planning-left-img.svg
+right-mob-src: $assets.files.static.carousel.planning-right-mob-new.svg
+left-mob-src: $assets.files.static.carousel.planning-left-mob.svg
 top-cell: You choose your brand’s campaign objective 
 bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
 index: 1
@@ -36,10 +36,10 @@ reset: $current-active
 
 -- lib.works-cell: FUNDS
 number: 2
-left-src: $assets.files.static.lezgoo.fund-left-img.svg 
-right-src: $assets.files.static.lezgoo.fund-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.fund-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.fund-right-mob.svg
+left-src: $assets.files.static.carousel.fund-left-img.svg 
+right-src: $assets.files.static.carousel.fund-right-img.svg
+left-mob-src: $assets.files.static.carousel.fund-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.fund-right-mob.svg
 top-cell: You set up funds via standard payment options 
 bottom-cell: AdMint handles your crypto wallets & transfers 
 index: 2
@@ -47,10 +47,10 @@ reset: $current-active
 
 -- lib.works-cell: NFTs
 number: 3
-left-src: $assets.files.static.lezgoo.nft-left-img.svg 
-right-src: $assets.files.static.lezgoo.nft-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.nft-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.nft-right-mob.svg
+left-src: $assets.files.static.carousel.nft-left-img.svg 
+right-src: $assets.files.static.carousel.nft-right-img.svg
+left-mob-src: $assets.files.static.carousel.nft-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.nft-right-mob.svg
 top-cell: You provide us creatives to run the campaign
 bottom-cell: AdMint preps & converts them into NFT collections
 index: 3
@@ -58,10 +58,10 @@ reset: $current-active
 
 -- lib.works-cell: DISTRIBUTION
 number: 4
-left-src: $assets.files.static.lezgoo.dist-left-img.svg 
-right-src: $assets.files.static.lezgoo.dist-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.dist-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.dist-right-mob.svg
+left-src: $assets.files.static.carousel.dist-left-img.svg 
+right-src: $assets.files.static.carousel.dist-right-img.svg
+left-mob-src: $assets.files.static.carousel.dist-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.dist-right-mob.svg
 top-cell: You identify target audience to receive the NFTs
 bottom-cell: AdMint provides tools and templates to enable distribution. execution.
 index: 4
@@ -69,10 +69,10 @@ reset: $current-active
 
 -- lib.works-cell: UTILITY
 number: 5
-left-src: $assets.files.static.lezgoo.utility-left-img.svg 
-right-src: $assets.files.static.lezgoo.utility-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.utility-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.utility-right-mob.svg
+left-src: $assets.files.static.carousel.utility-left-img.svg 
+right-src: $assets.files.static.carousel.utility-right-img.svg
+left-mob-src: $assets.files.static.carousel.utility-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.utility-right-mob.svg
 top-cell: You determine the real world value offering to consumers
 bottom-cell: AdMint helps validate NFT ownership & extends access 
 index: 5
@@ -80,16 +80,16 @@ reset: $current-active
 
 -- lib.works-cell: ANALYTICS
 number: 6
-left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
-right-src: $assets.files.static.lezgoo.analytics-img-right.svg
-left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
+left-src: $assets.files.static.carousel.analytics-img-left.svg 
+right-src: $assets.files.static.carousel.analytics-img-right.svg
+left-mob-src: $assets.files.static.carousel.analytics-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.analytics-right-mob.svg
 top-cell: You define campaign objectives & success metrics
 bottom-cell: AdMint provides web 2.0 & web 3.0 data to analyse your campaign  
 index: 6
 reset: $current-active
 
--- end: lib.slider
+-- end: lib.carousel
 
 -- docs.footer:
 
@@ -97,12 +97,12 @@ reset: $current-active
 
 -- ds.page.body:
 
-We have developed the `slider` component for [admint.io](https://admint.io/), 
+We have developed the `carousel` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `slider` component you need to `import` `lib` inside your `.ftd` file.
+To use `carousel` component you need to `import` `lib` inside your `.ftd` file.
 
 -- ds.code:
 lang: ftd
@@ -112,7 +112,7 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `slider` component by
+Once you import `lib` inside your `.ftd` file, use the `carousel` component by
 adding all required attributes of it.
 
 Inside your `.ftd` file, `-- integer $current-active: 1` variable to be added,
@@ -127,15 +127,15 @@ slide component should be `+1` (as shown in below code snippet).
 \-- integer $current-active: 1
 
 
-\-- lib.slider:
+\-- lib.carousel:
 $active-item: $current-active
 
 \-- lib.works-cell: PLANNING
 number: 1
-right-src: $assets.files.static.lezgoo.planning-right-img.svg 
-left-src: $assets.files.static.lezgoo.planning-left-img.svg
-right-mob-src: $assets.files.static.lezgoo.planning-right-mob-new.svg
-left-mob-src: $assets.files.static.lezgoo.planning-left-mob.svg
+right-src: $assets.files.static.carousel.planning-right-img.svg 
+left-src: $assets.files.static.carousel.planning-left-img.svg
+right-mob-src: $assets.files.static.carousel.planning-right-mob-new.svg
+left-mob-src: $assets.files.static.carousel.planning-left-mob.svg
 top-cell: You choose your brand’s campaign objective 
 bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
 index: 1
@@ -143,10 +143,10 @@ reset: $current-active
 
 \-- lib.works-cell: FUNDS
 number: 2
-left-src: $assets.files.static.lezgoo.fund-left-img.svg 
-right-src: $assets.files.static.lezgoo.fund-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.fund-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.fund-right-mob.svg
+left-src: $assets.files.static.carousel.fund-left-img.svg 
+right-src: $assets.files.static.carousel.fund-right-img.svg
+left-mob-src: $assets.files.static.carousel.fund-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.fund-right-mob.svg
 top-cell: You set up funds via standard payment options 
 bottom-cell: AdMint handles your crypto wallets & transfers 
 index: 2
@@ -154,10 +154,10 @@ reset: $current-active
 
 \-- lib.works-cell: NFTs
 number: 3
-left-src: $assets.files.static.lezgoo.nft-left-img.svg 
-right-src: $assets.files.static.lezgoo.nft-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.nft-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.nft-right-mob.svg
+left-src: $assets.files.static.carousel.nft-left-img.svg 
+right-src: $assets.files.static.carousel.nft-right-img.svg
+left-mob-src: $assets.files.static.carousel.nft-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.nft-right-mob.svg
 top-cell: You provide us creatives to run the campaign
 bottom-cell: AdMint preps & converts them into NFT collections
 index: 3
@@ -165,10 +165,10 @@ reset: $current-active
 
 \-- lib.works-cell: DISTRIBUTION
 number: 4
-left-src: $assets.files.static.lezgoo.dist-left-img.svg 
-right-src: $assets.files.static.lezgoo.dist-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.dist-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.dist-right-mob.svg
+left-src: $assets.files.static.carousel.dist-left-img.svg 
+right-src: $assets.files.static.carousel.dist-right-img.svg
+left-mob-src: $assets.files.static.carousel.dist-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.dist-right-mob.svg
 top-cell: You identify target audience to receive the NFTs
 bottom-cell: AdMint provides tools and templates to enable distribution. execution.
 index: 4
@@ -176,10 +176,10 @@ reset: $current-active
 
 \-- lib.works-cell: UTILITY
 number: 5
-left-src: $assets.files.static.lezgoo.utility-left-img.svg 
-right-src: $assets.files.static.lezgoo.utility-right-img.svg
-left-mob-src: $assets.files.static.lezgoo.utility-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.utility-right-mob.svg
+left-src: $assets.files.static.carousel.utility-left-img.svg 
+right-src: $assets.files.static.carousel.utility-right-img.svg
+left-mob-src: $assets.files.static.carousel.utility-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.utility-right-mob.svg
 top-cell: You determine the real world value offering to consumers
 bottom-cell: AdMint helps validate NFT ownership & extends access 
 index: 5
@@ -187,16 +187,16 @@ reset: $current-active
 
 \-- lib.works-cell: ANALYTICS
 number: 6
-left-src: $assets.files.static.lezgoo.analytics-img-left.svg 
-right-src: $assets.files.static.lezgoo.analytics-img-right.svg
-left-mob-src: $assets.files.static.lezgoo.analytics-left-mob.svg 
-right-mob-src: $assets.files.static.lezgoo.analytics-right-mob.svg
+left-src: $assets.files.static.carousel.analytics-img-left.svg 
+right-src: $assets.files.static.carousel.analytics-img-right.svg
+left-mob-src: $assets.files.static.carousel.analytics-left-mob.svg 
+right-mob-src: $assets.files.static.carousel.analytics-right-mob.svg
 top-cell: You define campaign objectives & success metrics
 bottom-cell: AdMint provides web 2.0 & web 3.0 data to analyse your campaign  
 index: 6
 reset: $current-active
 
-\-- end: lib.slider
+\-- end: lib.carousel
 
 -- ds.rendered.output:
 

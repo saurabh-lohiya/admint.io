@@ -595,7 +595,7 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 
 
--- ftd.shadow lezgoo:
+-- ftd.shadow help-banner:
 color: #a9a7a5ba
 x-offset.px: -2
 y-offset.px: 8

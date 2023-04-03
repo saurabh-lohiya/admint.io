@@ -29,28 +29,27 @@ favicon: https://fifthtry.github.io/admint.io/favicon.ico
 # Docs: docs/
 skip: true
 
-- Home🚧: docs/header/
-  - Header: docs/header/
-  - Hero: docs/hero/
-  - Slider-1: docs/slider-1/
-  - Slider-2: docs/slider-2/
-  - Lezgoo card: docs/lezgoo/
-  - Sneak Peak: docs/sneak-peak/
-  - Ad-card: docs/ad-card/
-  - Multiple Ad-cards: docs/ad-cards/
-  - Sign-up form: docs/sign-up-form/
+- Navbar: docs/navbar/
+- Hero: docs/hero/
+- Carousel: docs/carousel/
+- Help Banner: docs/help-banner/
+- Carousel: docs/carousel-2/
+- Ad-card: docs/ad-card/
+- Multiple Ad-cards: docs/ad-cards/
+- Sneak Peak: docs/sneak-peak/
+- Sign-up form: docs/sign-up-form/
 - Why NFT?🚧: docs/why-nfts/
 - About Page: docs/about-us/
-  - About Us: docs/about-us/
-  - Our Team: docs/our-team/
+- About Us: docs/about-us/
+- Our Team: docs/our-team/
 - Pricing🚧: docs/pricing/
 - Learn Page🚧: docs/faq/
-  - FAQs & Accordion: docs/faq/
-  - Brand campaign🚧: docs/brand-campaign/
-  - Advertising-web-3-0🚧: docs/advertising-web-3-0/
+- FAQs & Accordion: docs/faq/
+- Brand campaign🚧: docs/brand-campaign/
+- Advertising-web-3-0🚧: docs/advertising-web-3-0/
 - Blog🚧: docs/blog/
 - Terms & conditions🚧: docs/terms-conditions/
 - Privacy Policy🚧: docs/privacy-policy/
 - Sign-up form popup: docs/sign-up-popup/
-- Footer-1: docs/footer-1/
-- Footer-2: docs/footer-2/
+- Footer: docs/footer/
+- Site Footer: docs/site-footer/

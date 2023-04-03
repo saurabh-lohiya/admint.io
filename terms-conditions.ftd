@@ -10,7 +10,7 @@
 -- lib.legal-section-content: 
 
 -- lib.legal-page-hero: Terms & Conditions
-image: $assets.files.static.lezgoo.t&c.svg 
+image: $assets.files.static.t&c.svg 
 
 Last updated: October 14, 2022
 

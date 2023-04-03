@@ -1,0 +1,66 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/doc-site as ds
+-- import: fifthtry.github.io/admint.io/docs
+-- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+
+
+
+
+
+-- ds.page: Help Banner
+show-footer: true
+site-logo: $assets.files.static.admint-logo.svg
+colors: $cs.main
+types: $typo.types
+$widthfill: true
+sections: $lib.sitemap.sections
+
+-- ds.page.footer:
+
+-- docs.footer:
+
+-- end: ds.page.footer
+
+-- ds.page.body:
+
+We have developed the `help-banner` component for [admint.io](https://admint.io/), 
+which matches the design currently displayed on the live site.
+
+-- ds.h3: How to use?
+
+To use the `help-banner` component you need to import `lib.ftd` inside your `.ftd`
+file, as shown below:
+
+-- ds.code:
+lang: ftd
+
+\-- import: fifthtry.github.io/admint.io/lib
+
+-- ds.markdown:
+
+Once you import the `lib` inside your `.ftd` file, use the `help-banner` component by
+adding all required attributes of it.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!
+cta-label: Let's Learn
+cta-url: learn/
+image: $assets.files.static.help-banner.svg
+
+-- ds.rendered.output:
+
+-- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!
+cta-label: Let's Learn
+cta-url: learn/
+image: $assets.files.static.help-banner.svg
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
