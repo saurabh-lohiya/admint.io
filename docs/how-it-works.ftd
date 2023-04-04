@@ -30,10 +30,10 @@ which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-The `how-it-works` component accepts `ftd` `child` components also. Check[How it
+The `how-it-works` component accepts `ftd` `child` components also. Check [How it
 works](index.html#how-it-works) of homepage. It have `carousel` as child and
-`carousel` items as children. It can be used add any other components as its
-children. We recommend to close it with `-- end:how-it-works` if it contains
+`carousel` items as children. It can be used to add any other components as its
+children. We recommend to close it with `-- end: how-it-works`, if it contains
 multiple childrens.
 
 To use the `how-it-works` component you need to import `lib.ftd` inside your `.ftd`
