@@ -563,7 +563,7 @@ font-family: $nunito-assets.fonts.Nunito
 line-height.px: 24
 size.px: 17
 letter-spacing.px: 0
-weight: 400
+weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type button-large:

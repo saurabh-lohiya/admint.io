@@ -2111,7 +2111,7 @@ padding.px: 50
 z-index: 1
 
 -- ftd.text: CLOSE
-role: $inherited.types.button-large
+role: $fonts.size-17
 color: $inherited.colors.cta-primary.base
 align-self: end
 
@@ -3455,6 +3455,61 @@ $show-options: $drop-down.show-options
 
 
 
+-- component drop-down-medium:
+caption title: $selected-item
+boolean $show-options: false
+common.options list drop-down-medium-options-list:
+
+-- ftd.column:
+width: fill-container
+$on-click-outside$: $ftd.set-bool($a = $drop-down-medium.show-options, v = false)
+
+-- ftd.row:
+id: drop-down-medium-input
+align-self: center
+padding.px: 6
+border-radius.px: 10
+margin-top.px: 8
+width: fill-container
+height.fixed.px: 43
+border-color: $inherited.colors.custom.two
+border-color if { drop-down-medium.show-options }: blue
+border-width.px: 1
+border-width.px if { drop-down-medium.show-options }: 2
+spacing: space-between
+$on-click$: $ftd.toggle($a = $drop-down-medium.show-options)
+
+-- ftd.text: $selected-item
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+padding-right.px: 52
+min-width.fixed.px: 112
+
+-- ftd.image:
+src: $assets.files.static.faq.down.svg
+width.fixed.px: 16
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- drop-down-medium-options: $drop-down-medium.title
+drop-down-medium-options-list: $drop-down-medium.drop-down-medium-options-list
+$show-options: $drop-down-medium.show-options
+
+-- end: ftd.column
+
+-- end: drop-down-medium
+
+
+
+
+
+
+
+
+
+
 -- component why-nft-hero:
 caption title:
 string tagline:
@@ -4766,6 +4821,7 @@ caption title:
 common.options list drop-down-medium-options-list:
 boolean $mouse-in: false
 boolean $show-options: false
+integer $active-cell: -1
 
 -- ftd.column:
 if: { drop-down-medium-options.show-options }
@@ -4773,7 +4829,7 @@ if: { drop-down-medium-options.show-options }
 -- ftd.column:
 background.solid: $fonts.grey
 padding-vertical.px: 11
-padding-horizontal.px: 14
+padding-horizontal.px: 5
 anchor: parent
 top.px: 2
 left.px: 0
@@ -4784,12 +4840,11 @@ border-radius.px: 10
 role: $inherited.types.copy-regular
 color: $inherited.colors.background.base
 
--- ftd.text: $obj.title
-width: fill-container
+-- drop-down-medium-option: $obj.title
+idx: $LOOP.COUNTER
+$active: $drop-down-medium-options.active-cell
 $loop$: $drop-down-medium-options.drop-down-medium-options-list as $obj
-padding-right.px: 20
-$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
-$on-click$: $ftd.toggle($a = $drop-down-medium-options.show-options)
+$show-options: $drop-down-medium-options.show-options
 
 -- end: ftd.column
 
@@ -4808,13 +4863,19 @@ $on-click$: $ftd.toggle($a = $drop-down-medium-options.show-options)
 
 -- component drop-down-medium-option:
 caption title:
+integer idx:
+integer $active:
+boolean $show-options: false
 
 -- ftd.text: $drop-down-medium-option.title
-padding-right.px: 20
-$on-mouse-enter$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = true )
-$on-mouse-leave$: $ftd.set-bool($a = $drop-down-options.mouse-in, v = false )
-$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
-$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
+border-radius.px: 5
+width: fill-container
+padding-left.px: 20
+$on-mouse-enter$: $ftd.set-integer($a = $drop-down-medium-option.active, v = $drop-down-medium.option.idx )
+$on-mouse-leave$: $ftd.set-integer($a = $drop-down-medium-option.active, v = -1 )
+$on-click$: $ftd.set-string($a = $selected-item, v = $drop-down-medium-option.title)
+$on-click$: $ftd.toggle($a = $drop-down-medium-option.show-options)
+background.solid if { drop-down-medium-option.active == drop-down-medium-option.idx }: #25A6F7
 
 -- end: drop-down-medium-option
 
