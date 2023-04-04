@@ -1995,7 +1995,7 @@ align-self: end
 -- ftd.image:
 $loop$: $footer-desktop.social-links as $obj
 src: $obj.src
-padding-left.px: 20
+padding-left.px: 10
 cursor: pointer
 link: $obj.link
 
@@ -2122,7 +2122,7 @@ region: h1
 width.fixed.percent if { ftd.device == "desktop" }: 80
 
 -- ftd.text: $join-waitlist-form.name-label
-role: $fonts.size-14-400
+role: $inherited.types.fine-print
 color: $inherited.colors.text
 margin-top.px: 30
 
@@ -2153,8 +2153,8 @@ width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $join-waitlist-form.identity-label
-margin-top.px: 23
-role: $fonts.size-14-400
+margin-top.px: 18
+role: $inherited.types.fine-print
 color: $inherited.colors.text
 
 -- drop-down:
@@ -2167,9 +2167,9 @@ width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $join-waitlist-form.org-label
-role: $fonts.size-14-400
+role: $inherited.types.fine-print
 color: $inherited.colors.text
-margin-top.px: 23
+margin-top.px: 18
 
 -- ftd.text-input:
 id: org-input
@@ -2193,9 +2193,9 @@ color: #dc3545
 -- end: ftd.row
 
 -- ftd.text: $join-waitlist-form.email-label
-role: $fonts.size-14-400
+role: $inherited.types.fine-print
 color: $inherited.colors.text
-margin-top.px: 23
+margin-top.px: 18
 
 -- ftd.text-input:
 id: email-input
@@ -2305,7 +2305,7 @@ padding-horizontal.px: $cta-button.padding-horizontal
 align-content: center
 
 -- ftd.text: $cta-button.title
-role: $inherited.types.button-large
+role: $fonts.size-27
 color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
 color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
 color: $cta-button.text-color
@@ -3588,6 +3588,7 @@ caption title:
 common.options list drop-down-options-list:
 boolean $mouse-in: false
 boolean $show-options: false
+integer $active-cell: -1
 
 -- ftd.column:
 if: { drop-down-options.show-options }
@@ -3595,7 +3596,7 @@ if: { drop-down-options.show-options }
 -- ftd.column:
 background.solid: $fonts.grey
 padding-vertical.px: 11
-padding-horizontal.px: 14
+padding-horizontal.px: 5
 anchor: parent
 top.px: 2
 left.px: 0
@@ -3607,17 +3608,21 @@ border-radius.px: 10
 role: $inherited.types.copy-regular
 color: $inherited.colors.cta-primary.text
 
--- ftd.text: $obj.title
-$loop$: $drop-down-options.drop-down-options-list as $obj
-padding-right.px: 20
-$on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
-$on-click$: $ftd.toggle($a = $drop-down-options.show-options)
+-- drop-down-option: $obj.title
+idx: $LOOP.COUNTER
+$active: $drop-down-options.active-cell
+$show-options: $drop-down-options.show-options
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: drop-down-options
+
+
+
+
+
 
 
 
@@ -4617,7 +4622,7 @@ color: $inherited.colors.text
 z-index: 1
 
 -- ftd.text: CLOSE
-role: $inherited.types.button-large
+role: $fonts.size-17
 color: $inherited.colors.cta-primary.base
 align-self: end
 $on-click$: $ftd.set-bool($a = $join-waitlist-popup.visible, v = false)
@@ -4627,7 +4632,7 @@ role: $fonts.nunito-40
 region: h1
 
 -- ftd.text: $join-waitlist-popup.name-label
-role: $inherited.types.source-code
+role: $inherited.types.fine-print
 margin-top.px: 34
 
 -- ftd.text-input:
@@ -4670,7 +4675,7 @@ width.fixed.percent: 48.5
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $join-waitlist-popup.org-label
-role: $inherited.types.source-code
+role: $inherited.types.fine-print
 margin-top.px: 16
 
 -- ftd.text-input:
@@ -4694,7 +4699,7 @@ color: $fonts.dc3545
 -- end: ftd.row
 
 -- ftd.text: $join-waitlist-popup.email-label
-role: $inherited.types.source-code
+role: $inherited.types.fine-print
 margin-top.px: 16
 
 -- ftd.text-input:
@@ -4811,6 +4816,33 @@ $on-click$: $ftd.set-string($a = $selected-item, v = $obj.title)
 $on-click$: $ftd.toggle($a = $drop-down-options.show-options)
 
 -- end: drop-down-medium-option
+
+
+
+
+
+
+
+
+
+
+-- component drop-down-option:
+caption title:
+integer idx:
+integer $active:
+boolean $show-options: false
+
+-- ftd.text: $drop-down-option.title
+border-radius.px: 5
+width: fill-container
+padding-left.px: 20
+$on-mouse-enter$: $ftd.set-integer($a = $drop-down-option.active, v = $drop-down-option.idx )
+$on-mouse-leave$: $ftd.set-integer($a = $drop-down-option.active, v = -1 )
+$on-click$: $ftd.set-string($a = $selected-item, v = $drop-down-option.title)
+$on-click$: $ftd.toggle($a = $drop-down-option.show-options)
+background.solid if { drop-down-option.active == drop-down-option.idx }: #25A6F7
+
+-- end: drop-down-option
 
 
 

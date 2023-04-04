@@ -558,6 +558,20 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type size-17:
+line-height.px: 24
+size.px: 17
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type button-large:
+desktop: $size-17
+mobile: $size-17
+
+
+
+
 
 -- ftd.type montserrat-16-29-type:
 line-height.px: 29
@@ -589,7 +603,7 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 -- ftd.color 3ea880: #3ea880
 
--- ftd.color grey: grey
+-- ftd.color grey: #777
 
 
 
