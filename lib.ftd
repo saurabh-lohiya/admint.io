@@ -2248,7 +2248,7 @@ Thanks for your interest...We will update you
 
 -- ftd.image:
 if: { ftd.device == "desktop" }
-src: $assets.files.static.join-waitlist-form.waitlist.svg
+src: $assets.files.static.waitlist.svg
 anchor: parent
 right.px: 0
 bottom.px: 50
