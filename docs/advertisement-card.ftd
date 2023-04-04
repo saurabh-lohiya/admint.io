@@ -9,7 +9,7 @@
 
 
 
--- ds.page: Advertisment Card
+-- ds.page: Advertisement Card
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
