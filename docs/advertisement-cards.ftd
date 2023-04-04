@@ -22,7 +22,7 @@ sections: $lib.sitemap.sections
 -- lib.advertisment: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
--- lib.advertisment-card: Transparent Yet Private
+-- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
@@ -31,7 +31,7 @@ anonymized, and yet accessible for all, via simple clicks
 across blockchain explorers. As a brand, what do you
 measure & how?
 
--- lib.advertisment-card: New Data is Universal
+-- lib.advertisement-card: New Data is Universal
 src: $assets.files.static.advertising.newData.svg
 
 Data no longer sits under one roof, to be used or misused 
@@ -40,7 +40,7 @@ do get to see any and all trasactions across
 wallets, brand tokens, NFTs & crypto currencies. As a brand,
 focus on behavioral traits rather than individuals?
 
--- lib.advertisment-card: The target is always moving
+-- lib.advertisement-card: The target is always moving
 src: $assets.files.static.advertising.target-is-always-moving.svg
 
 Your NFTs are transitionary! Here today, there tomorrow. Your
@@ -49,7 +49,7 @@ but "wallets on Polygon, having BAYC NFT, with $500+ liquid
 crypto holdings". As a brand, how do you get them to use 
 your NFTs?
 
--- lib.advertisment-card: Everyone is everywhere
+-- lib.advertisement-card: Everyone is everywhere
 src: $assets.files.static.advertising.everyone-is-everywhere.svg
 
 Metaverse and other web 3.0 destinations are global. You no 
@@ -66,17 +66,17 @@ web 3.0 budget?
 
 -- ds.page.body:
 
-We have developed the `advertisment` and `advertisment-card` component for [admint.io](https://admint.io/), 
+We have developed the `advertisment` and `advertisement-card` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 The `advertisment` component accepts `title` and `tagline` attributes. It has
-provision to accept child components. You can add as many as child `advertisment-card`
-components to it. Each `advertisment-card` uses `50%` width of `advertisment` component
+provision to accept child components. You can add as many as child `advertisement-card`
+components to it. Each `advertisement-card` uses `50%` width of `advertisment` component
 which means `2` card per row will be displayed.
 
 -- ds.h3: How to use?
 
-To use the `advertisment` and `advertisment-card` component you need to import `lib.ftd`
+To use the `advertisment` and `advertisement-card` component you need to import `lib.ftd`
 inside your `.ftd` file, as shown below:
 
 -- ds.code:
@@ -87,7 +87,7 @@ lang: ftd
 -- ds.markdown:
 
 Once you import the `lib` inside your `.ftd` file, use the `advertisment` and
-`advertisment-card` component by adding all required attributes of it.
+`advertisement-card` component by adding all required attributes of it.
 
 -- ds.rendered:
 
@@ -96,7 +96,7 @@ Once you import the `lib` inside your `.ftd` file, use the `advertisment` and
 \-- lib.advertisment: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
-\-- lib.advertisment-card: Transparent Yet Private
+\-- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
@@ -105,7 +105,7 @@ anonymized, and yet accessible for all, via simple clicks
 across blockchain explorers. As a brand, what do you
 measure & how?
 
-\-- lib.advertisment-card: New Data is Universal
+\-- lib.advertisement-card: New Data is Universal
 src: $assets.files.static.advertising.newData.svg
 
 Data no longer sits under one roof, to be used or misused 
@@ -114,7 +114,7 @@ do get to see any and all trasactions across
 wallets, brand tokens, NFTs & crypto currencies. As a brand,
 focus on behavioral traits rather than individuals?
 
-\-- lib.advertisment-card: The target is always moving
+\-- lib.advertisement-card: The target is always moving
 src: $assets.files.static.advertising.target-is-always-moving.svg
 
 Your NFTs are transitionary! Here today, there tomorrow. Your
@@ -123,7 +123,7 @@ but "wallets on Polygon, having BAYC NFT, with $500+ liquid
 crypto holdings". As a brand, how do you get them to use 
 your NFTs?
 
-\-- lib.advertisment-card: Everyone is everywhere
+\-- lib.advertisement-card: Everyone is everywhere
 src: $assets.files.static.advertising.everyone-is-everywhere.svg
 
 Metaverse and other web 3.0 destinations are global. You no 
