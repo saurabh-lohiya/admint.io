@@ -587,6 +587,20 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 
 
+-- ftd.type label-lg-nunito:
+line-height.px: 30
+size.px: 20
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type label-lg-nunito:
+desktop: $label-lg-nunito
+mobile: $label-lg-nunito
+
+
+
+
 
 -- ftd.color bdbdbd: #bdbdbd
 

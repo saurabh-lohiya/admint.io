@@ -1957,13 +1957,14 @@ ftd.image-src team-thumb:
 width: fill-container
 align-self: center
 max-width.fixed.px: $max-width
-padding-vertical.px: 53
+padding-top.px: 53
+padding-bottom.px: 60
 
 -- ftd.image:
 src: $footer-desktop.team-thumb
 anchor: parent
 bottom.px: 0
-left.px: -12
+left.px: -10
 
 -- ftd.column:
 align-self: end
@@ -1973,7 +1974,8 @@ padding-horizontal.px: 12
 src: $footer-desktop.site-logo
 align-self: end
 link: $footer-desktop.site-url
-width.fixed.px: 194
+width.fixed.px: 195
+height.fixed.px: 48
 
 -- ftd.row:
 margin-top.px: 48
@@ -1981,7 +1983,7 @@ align-self: end
 
 -- ftd.text: $obj.title
 $loop$: $footer-desktop.footer-links as $obj
-role: $inherited.types.label-large
+role: $fonts.label-lg-nunito
 color: $inherited.colors.background.step-1
 padding-left.px: 32
 link: $obj.url
