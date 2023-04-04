@@ -173,10 +173,10 @@ reset: $current-cell
 
 -- end: lib.how-it-works
 
--- lib.advertisment: How advertising in web 3.0 different....
+-- lib.advertisement: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
--- lib.advertisment-card: Transparent Yet Private
+-- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
@@ -185,7 +185,7 @@ anonymized, and yet accessible for all, via simple clicks
 across blockchain explorers. As a brand, what do you
 measure & how?
 
--- lib.advertisment-card: New Data is Universal
+-- lib.advertisement-card: New Data is Universal
 src: $assets.files.static.advertising.newData.svg
 
 Data no longer sits under one roof, to be used or misused 
@@ -194,7 +194,7 @@ do get to see any and all trasactions across
 wallets, brand tokens, NFTs & crypto currencies. As a brand,
 focus on behavioral traits rather than individuals?
 
--- lib.advertisment-card: The target is always moving
+-- lib.advertisement-card: The target is always moving
 src: $assets.files.static.advertising.target-is-always-moving.svg
 
 Your NFTs are transitionary! Here today, there tomorrow. Your
@@ -203,7 +203,7 @@ but "wallets on Polygon, having BAYC NFT, with $500+ liquid
 crypto holdings". As a brand, how do you get them to use 
 your NFTs?
 
--- lib.advertisment-card: Everyone is everywhere
+-- lib.advertisement-card: Everyone is everywhere
 src: $assets.files.static.advertising.everyone-is-everywhere.svg
 
 Metaverse and other web 3.0 destinations are global. You no 
@@ -212,7 +212,7 @@ Your brand now caters to a slew of anonymized wallets across
 global platforms. As a brand, how will you use your regional
 web 3.0 budget?
 
--- end: lib.advertisment
+-- end: lib.advertisement
 
 -- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
 cta-label: Let's Learn
