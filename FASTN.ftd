@@ -34,8 +34,8 @@ skip: true
 - Carousel: docs/carousel/
 - Help Banner: docs/help-banner/
 - How it works: docs/how-it-works/
-- Advertisement card: docs/advertisement-card/
-- Advertisement & cards: docs/advertisement-cards/
+- advertisement card: docs/advertisement-card/
+- advertisement & cards: docs/advertisement-cards/
 - Sneak Peak: docs/sneak-peak/
 - Join waitlist form: docs/join-waitlist-form/
 - Join waitlist popup: docs/join-waitlist-popup/
