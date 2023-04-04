@@ -5,10 +5,10 @@
 -- import: fifthtry.github.io/admint.io/common
 -- import: fifthtry.github.io/admint-typography as typo
 
--- boolean $show-signup-popup: false
+-- boolean $show-waitlist-popup: false
 
 
--- ds.page: Sign-Up form Popup
+-- ds.page: Join waitlist Popup
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -24,12 +24,12 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `signup-form-popup` component for [admint.io](https://admint.io/), 
+We have developed the `join-waitlist-popup` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `signup-form-popup` component you need to `import` `lib` inside your
+To use `join-waitlist-popup` component you need to `import` `lib` inside your
 `.ftd` file
 
 -- ds.code:
@@ -39,24 +39,24 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `signup-form-popup`
+Once you import `lib` inside your `.ftd` file, use the `join-waitlist-popup`
 component by adding all required attributes of it. Also, add global mutable
-variable `show-signup-popup` inside your `.ftd` file and pass it to `$visible:`
+variable `show-waitlist-popup` inside your `.ftd` file and pass it to `$visible:`
 attribute as shown in below code snippet:
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- boolean $show-signup-popup: false
+\-- boolean $show-waitlist-popup: false
 
-\-- lib.signup-form-popup: Join the waitlist to get updated when we go live!
+\-- lib.join-waitlist-popup: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
-$visible: $show-signup-popup
+$visible: $show-waitlist-popup
 
 -- ds.rendered.output:
 
@@ -64,18 +64,18 @@ $visible: $show-signup-popup
 
 -- end: ds.rendered
 
--- ftd.text: 👉 Click here to open Sign-Up Form Popup 👈
+-- ftd.text: 👉 Click here to open `Join waitlist Popup` 👈
 role: $inherited.types.copy-large
 color: $inherited.colors.text-strong
 padding-vertical.px: 20
-$on-click$: $ftd.set-bool($a = $show-signup-popup, v = true)
+$on-click$: $ftd.set-bool($a = $show-waitlist-popup, v = true)
 
--- lib.signup-form-popup: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-popup: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
-$visible: $show-signup-popup
+$visible: $show-waitlist-popup
 
 -- end: ds.page

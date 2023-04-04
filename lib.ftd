@@ -2078,7 +2078,7 @@ width.fixed.px: 196
 
 
 
--- component signup-form:
+-- component join-waitlist-form:
 caption title:
 string name-label:
 string name-warning: Name is required
@@ -2100,7 +2100,7 @@ padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $signup-form.width
+max-width.fixed.px: $join-waitlist-form.width
 margin-left.px if { ftd.device == "desktop" }: 23
 
 -- ftd.column:
@@ -2115,13 +2115,13 @@ role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
 
--- ftd.text: $signup-form.title
+-- ftd.text: $join-waitlist-form.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 region: h1
 width.fixed.percent if { ftd.device == "desktop" }: 80
 
--- ftd.text: $signup-form.name-label
+-- ftd.text: $join-waitlist-form.name-label
 role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 30
@@ -2138,7 +2138,7 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.name-warning
+-- ftd.text: $join-waitlist-form.name-warning
 id: name-warning
 role: $inherited.types.copy-small
 color: #dc3545
@@ -2152,7 +2152,7 @@ width: fill-container
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.identity-label
+-- ftd.text: $join-waitlist-form.identity-label
 margin-top.px: 23
 role: $fonts.size-14-400
 color: $inherited.colors.text
@@ -2166,7 +2166,7 @@ drop-down-options-list: $common.option-list
 width.fixed.percent if { ftd.device == "desktop" }: 48.5
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
--- ftd.text: $signup-form.org-label
+-- ftd.text: $join-waitlist-form.org-label
 role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 23
@@ -2183,7 +2183,7 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.form-validate()
 
--- ftd.text: $signup-form.org-warning
+-- ftd.text: $join-waitlist-form.org-warning
 id: org-warning
 role: $inherited.types.copy-small
 color: #dc3545
@@ -2192,7 +2192,7 @@ color: #dc3545
 
 -- end: ftd.row
 
--- ftd.text: $signup-form.email-label
+-- ftd.text: $join-waitlist-form.email-label
 role: $fonts.size-14-400
 color: $inherited.colors.text
 margin-top.px: 23
@@ -2211,7 +2211,7 @@ $on-blur$: $common.form-validate()
 
 -- end: ftd.text-input
 
--- ftd.text: $signup-form.email-warning
+-- ftd.text: $join-waitlist-form.email-warning
 id: email-warning
 role: $inherited.types.copy-small
 color: #dc3545
@@ -2221,7 +2221,7 @@ width: fill-container
 spacing: space-between
 wrap: true
 
--- cta-button: $signup-form.cta-text
+-- cta-button: $join-waitlist-form.cta-text
 bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
@@ -2248,14 +2248,14 @@ Thanks for your interest...We will update you
 
 -- ftd.image:
 if: { ftd.device == "desktop" }
-src: $assets.files.static.signup-form.waitlist.svg
+src: $assets.files.static.join-waitlist-form.waitlist.svg
 anchor: parent
 right.px: 0
 bottom.px: 50
 
 -- end: ftd.column
 
--- end: signup-form
+-- end: join-waitlist-form
 
 
 
@@ -4577,7 +4577,7 @@ width: fill-container
 
 
 
--- component signup-form-popup:
+-- component join-waitlist-popup:
 caption title:
 string name-label:
 string name-warning: Name is required
@@ -4591,7 +4591,7 @@ string cta-text:
 boolean $visible: false
 
 -- ftd.column:
-if: { signup-form-popup.visible }
+if: { join-waitlist-popup.visible }
 width: fill-container
 background.solid: $inherited.colors.background.overlay
 align-content: center
@@ -4620,13 +4620,13 @@ z-index: 1
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.base
 align-self: end
-$on-click$: $ftd.set-bool($a = $signup-form-popup.visible, v = false)
+$on-click$: $ftd.set-bool($a = $join-waitlist-popup.visible, v = false)
 
--- ftd.text: $signup-form-popup.title
+-- ftd.text: $join-waitlist-popup.title
 role: $fonts.nunito-40
 region: h1
 
--- ftd.text: $signup-form-popup.name-label
+-- ftd.text: $join-waitlist-popup.name-label
 role: $inherited.types.source-code
 margin-top.px: 34
 
@@ -4641,7 +4641,7 @@ min-height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.name-warning
+-- ftd.text: $join-waitlist-popup.name-warning
 id: user-name-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
@@ -4655,7 +4655,7 @@ width: fill-container
 width.fixed.percent: 48.5
 width if { ftd.device == "mobile" }: fill-container
 
--- ftd.text: $signup-form-popup.identity-label
+-- ftd.text: $join-waitlist-popup.identity-label
 role: $inherited.types.source-code
 color: $inherited.colors.text
 margin-top.px: 16
@@ -4669,7 +4669,7 @@ drop-down-options-list: $common.option-list
 width.fixed.percent: 48.5
 width if { ftd.device == "mobile" }: fill-container
 
--- ftd.text: $signup-form-popup.org-label
+-- ftd.text: $join-waitlist-popup.org-label
 role: $inherited.types.source-code
 margin-top.px: 16
 
@@ -4684,7 +4684,7 @@ height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.org-warning
+-- ftd.text: $join-waitlist-popup.org-warning
 id: user-org-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
@@ -4693,7 +4693,7 @@ color: $fonts.dc3545
 
 -- end: ftd.row
 
--- ftd.text: $signup-form-popup.email-label
+-- ftd.text: $join-waitlist-popup.email-label
 role: $inherited.types.source-code
 margin-top.px: 16
 
@@ -4708,7 +4708,7 @@ min-height.fixed.px: 43
 margin-top.px: 8
 $on-blur$: $common.popup-form-validate()
 
--- ftd.text: $signup-form-popup.email-warning
+-- ftd.text: $join-waitlist-popup.email-warning
 id: user-email-warning
 role: $inherited.types.copy-small
 color: $fonts.dc3545
@@ -4718,7 +4718,7 @@ width: fill-container
 spacing: space-between
 wrap: true
 
--- cta-button: $signup-form-popup.cta-text
+-- cta-button: $join-waitlist-popup.cta-text
 bg-color: $inherited.colors.custom.four
 padding-horizontal: 41
 padding-vertical: 11
@@ -4744,7 +4744,7 @@ Thanks for your interest...We will update you
 
 -- end: ftd.column
 
--- end: signup-form-popup
+-- end: join-waitlist-popup
 
 
 

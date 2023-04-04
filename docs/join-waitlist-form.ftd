@@ -8,7 +8,7 @@
 
 
 
--- ds.page: Sign-Up Form
+-- ds.page: Join waitlist form
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -24,12 +24,12 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `signup-form` component for [admint.io](https://admint.io/), 
+We have developed the `join-waitlist-form` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use `signup-form` component you need to `import` `lib` inside your `.ftd`
+To use `join-waitlist-form` component you need to `import` `lib` inside your `.ftd`
 file.
 
 -- ds.code:
@@ -40,14 +40,14 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `signup-form` component by
+Once you import `lib` inside your `.ftd` file, use the `join-waitlist-form` component by
 adding all required attributes of it.
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- lib.signup-form: Join the waitlist to get updated when we go live!
+\-- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
@@ -56,7 +56,7 @@ cta-text: Join waitlist
 
 -- ds.rendered.output:
 
--- lib.signup-form: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name

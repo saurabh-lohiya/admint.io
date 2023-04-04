@@ -37,7 +37,8 @@ skip: true
 - Advertisement card: docs/advertisement-card/
 - Advertisement & cards: docs/advertisement-cards/
 - Sneak Peak: docs/sneak-peak/
-- Sign-up form: docs/sign-up-form/
+- Join waitlist form: docs/join-waitlist-form/
+- Join waitlist popup: docs/join-waitlist-popup/
 - Why NFT?🚧: docs/why-nfts/
 - About Page: docs/about-us/
 - About Us: docs/about-us/
@@ -50,6 +51,5 @@ skip: true
 - Blog🚧: docs/blog/
 - Terms & conditions🚧: docs/terms-conditions/
 - Privacy Policy🚧: docs/privacy-policy/
-- Sign-up form popup: docs/sign-up-popup/
 - Footer: docs/footer/
 - Site Footer: docs/site-footer/
