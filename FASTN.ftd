@@ -33,9 +33,9 @@ skip: true
 - Hero: docs/hero/
 - Carousel: docs/carousel/
 - Help Banner: docs/help-banner/
-- Carousel: docs/carousel-2/
-- Ad-card: docs/ad-card/
-- Multiple Ad-cards: docs/ad-cards/
+- How it works: docs/how-it-works/
+- Advertisement card: docs/advertisement-card/
+- Advertisement & cards: docs/advertisement-cards/
 - Sneak Peak: docs/sneak-peak/
 - Sign-up form: docs/sign-up-form/
 - Why NFT?🚧: docs/why-nfts/

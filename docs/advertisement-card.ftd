@@ -9,7 +9,7 @@
 
 
 
--- ds.page: Ad-card
+-- ds.page: Advertisement Card
 show-footer: true
 site-logo: $assets.files.static.admint-logo.svg
 colors: $cs.main
@@ -25,12 +25,12 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `ad-card` component for [admint.io](https://admint.io/), 
+We have developed the `advertisement-card` component for [admint.io](https://admint.io/), 
 which matches the design currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use the `ad-card` component you need to import `lib.ftd` inside your `.ftd`
+To use the `advertisement-card` component you need to import `lib.ftd` inside your `.ftd`
 file, as shown below:
 
 -- ds.code:
@@ -40,14 +40,14 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import the `lib` inside your `.ftd` file, use the `ad-card` component by
+Once you import the `lib` inside your `.ftd` file, use the `advertisement-card` component by
 adding all required attributes of it.
 
 -- ds.rendered:
 
 -- ds.rendered.input:
 
-\-- lib.ad-card: Transparent Yet Private
+\-- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
@@ -58,7 +58,7 @@ measure & how?
 
 -- ds.rendered.output:
 
--- lib.ad-card: Transparent Yet Private
+-- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
 
 In the decentralized web, there's no room for cookies, device
