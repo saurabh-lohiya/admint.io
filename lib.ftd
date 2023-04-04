@@ -76,7 +76,7 @@ border-radius.px: 50
 
 
 
--- component advertisment:
+-- component advertisement:
 caption title:
 string tagline: 
 children feature-cards:
@@ -94,12 +94,12 @@ padding-horizontal.px: 12
 padding-vertical.px: 12
 align-content: left
 
--- ftd.text: $advertisment.tagline
+-- ftd.text: $advertisement.tagline
 role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $advertisment.title
+-- ftd.text: $advertisement.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 86
@@ -111,7 +111,7 @@ if: { ftd.device != "mobile" }
 width: fill-container
 max-width.fixed.px: $max-width
 padding-horizontal.px: 12
-children: $advertisment.feature-cards
+children: $advertisement.feature-cards
 spacing.fixed.px: 24
 wrap: true
 
@@ -121,14 +121,14 @@ wrap: true
 if: { ftd.device == "mobile" }
 width: fill-container
 padding-horizontal.px: 12
-children: $advertisment.feature-cards
+children: $advertisement.feature-cards
 spacing.fixed.px: 20
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: advertisment
+-- end: advertisement
 
 
 

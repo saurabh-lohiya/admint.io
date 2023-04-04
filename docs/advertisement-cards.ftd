@@ -19,7 +19,7 @@ sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
--- lib.advertisment: How advertising in web 3.0 different....
+-- lib.advertisement: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
 -- lib.advertisement-card: Transparent Yet Private
@@ -58,7 +58,7 @@ Your brand now caters to a slew of anonymized wallets across
 global platforms. As a brand, how will you use your regional
 web 3.0 budget?
 
--- end: lib.advertisment
+-- end: lib.advertisement
 
 -- docs.footer:
 
@@ -93,7 +93,7 @@ Once you import the `lib` inside your `.ftd` file, use the `advertisment` and
 
 -- ds.rendered.input:
 
-\-- lib.advertisment: How advertising in web 3.0 different....
+\-- lib.advertisement: How advertising in web 3.0 different....
 tagline: **ADVERTISING IN WEB 3.0**
 
 \-- lib.advertisement-card: Transparent Yet Private
@@ -132,7 +132,7 @@ Your brand now caters to a slew of anonymized wallets across
 global platforms. As a brand, how will you use your regional
 web 3.0 budget?
 
-\-- end: lib.advertisment
+\-- end: lib.advertisement
 
 -- ds.rendered.output:
 
