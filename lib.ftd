@@ -4289,7 +4289,7 @@ spacing.fixed.px: 30
 
 -- component how-it-works:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 body body:
 children works-wrap:
 
@@ -4310,15 +4310,19 @@ role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $how-it-works.subtitle
+-- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 region: h2
 margin-bottom.px: 28
 
+-- how-it-works.subtitle.0:
+
+-- end: ftd.column
+
 -- ftd.text:
 text: $how-it-works.body
-role: $inherited.types.copy-large
+role: $fonts.nunito-24-36-500-type
 color: $inherited.colors.text
 margin-bottom.px: 20
 width: fill-container
@@ -4462,21 +4466,31 @@ height.fixed.px: 300
 align-self: center
 role: $inherited.types.blockquote
 
--- ftd.text: $works-cell-desktop.top-cell
-color: $inherited.colors.custom.one
+-- ftd.column:
 padding-vertical.px: 13
 padding-horizontal.px: 17
 width: fill-container
 height.fixed.px: 120
-text-align: center
+align-content: center
+
+-- ftd.text: $works-cell-desktop.top-cell
+color: $inherited.colors.custom.one
+
+
+-- end: ftd.column
+
+-- ftd.column:
+padding-vertical.px: 13
+padding-horizontal.px: 17
+width: fill-container
+height.fixed.px: 120
+align-content: center
 
 -- ftd.text: $works-cell-desktop.bottom-cell
 color: $inherited.colors.background.step-1
-padding-vertical.px: 13
-padding-horizontal.px: 17
-text-align: center
-width: fill-container
-height.fixed.px: 120
+
+
+-- end: ftd.column
 
 -- end: ftd.column
 
