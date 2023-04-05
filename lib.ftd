@@ -4298,6 +4298,7 @@ width: fill-container
 padding-top.px: 42
 padding-bottom.px: 80
 id: how-it-works
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 width: fill-container
@@ -4432,7 +4433,7 @@ max-width.fixed.px: $max-width
 src: $works-cell-desktop.left-src
 padding-right.px: 12
 width: fill-container
-margin-left.px: -44
+align-self: center
 height: fill-container
 
 -- ftd.column:
@@ -4462,7 +4463,7 @@ width: fill-container
 -- ftd.column:
 width.fixed.px: 300
 background.image: $bg-image
-height.fixed.px: 300
+height.fixed.px: 244
 align-self: center
 role: $inherited.types.blockquote
 
@@ -4476,7 +4477,6 @@ align-content: center
 -- ftd.text: $works-cell-desktop.top-cell
 color: $inherited.colors.custom.one
 
-
 -- end: ftd.column
 
 -- ftd.column:
@@ -4489,7 +4489,6 @@ align-content: center
 -- ftd.text: $works-cell-desktop.bottom-cell
 color: $inherited.colors.background.step-1
 
-
 -- end: ftd.column
 
 -- end: ftd.column
@@ -4501,7 +4500,7 @@ src: $works-cell-desktop.right-src
 padding-right.px: 12
 align-self: center
 width: fill-container
-margin-right.px: -44
+
 
 -- end: ftd.row
 
