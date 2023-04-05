@@ -2151,7 +2151,7 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.px if { ftd.device == "desktop" }: 366
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $join-waitlist-form.identity-label
@@ -2165,7 +2165,7 @@ drop-down-options-list: $common.option-list
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.percent if { ftd.device == "desktop" }: 48.5
+width.fixed.px if { ftd.device == "desktop" }: 366
 width.fixed.percent if { ftd.device == "mobile" }: 100
 
 -- ftd.text: $join-waitlist-form.org-label
@@ -2629,7 +2629,8 @@ boolean $cta-event: false
 width: fill-container
 align-content: center
 background.solid: $inherited.colors.background.base
-padding-vertical.px: 60
+padding-top.px: 60
+padding-bottom.px: 50
 
 -- ftd.column:
 width: fill-container
@@ -2658,11 +2659,11 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-margin-left.rem: 5
-margin-top.px: 150
+margin-left.px: 72
+margin-top.px: 153
 
 -- ftd.text: $sneak-peak.title
-role: $inherited.types.heading-medium
+role: $fonts.heading-md
 color: $inherited.colors.text
 width.fixed.px: 750
 margin-bottom.px: 32
@@ -3413,8 +3414,9 @@ $on-click-outside$: $ftd.set-bool($a = $drop-down.show-options, v = false)
 
 -- ftd.row:
 id: drop-down-input
-align-self: center
-padding.px: 6
+padding-vertical.px: 6
+padding-left.px: 7
+padding-right.px: 3
 border-radius.px: 10
 margin-top.px: 8
 width: fill-container
@@ -3431,9 +3433,10 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.custom.one
 padding-right.px: 52
 min-width.fixed.px: 112
+align-self: center
 
 -- ftd.image:
-src: $assets.files.static.faq.down.svg
+src: $assets.files.static.join-waitlist-form.down.svg
 width.fixed.px: 16
 height: auto
 align-self: center
@@ -4715,7 +4718,7 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-width.fixed.percent: 48.5
+width.fixed.px: 224
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $join-waitlist-popup.identity-label
@@ -4729,7 +4732,7 @@ drop-down-options-list: $common.option-list
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.percent: 48.5
+width.fixed.px: 224
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $join-waitlist-popup.org-label

@@ -602,6 +602,21 @@ mobile: $label-lg-nunito
 
 
 
+-- ftd.type heading-md:
+line-height.px: 45
+size.px: 40
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type heading-md:
+desktop: $heading-md
+mobile: $heading-md
+
+
+
+
+
 -- ftd.color bdbdbd: #bdbdbd
 
 -- ftd.color 69f0ae: #69f0ae
