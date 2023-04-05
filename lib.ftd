@@ -2548,35 +2548,34 @@ ftd.image-src image:
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: $max-width
-align-self: center
 margin-top.px: 60
-shadow: $fonts.help-banner
-background.solid: $inherited.colors.background.step-1
-z-index: 1
-
--- ftd.image:
-if: { ftd.device == "mobile" }
-src: $help-banner.image
-
--- ftd.row:
-spacing.fixed.percent: 10
-width: fill-container
-align-content: center 
-
--- ftd.image:
-if: { ftd.device != "mobile" }
-src: $help-banner.image
+align-content: center
 
 -- ftd.column:
-padding.px if { ftd.device == "mobile" }: 40
+width: fill-container
+shadow: $fonts.help-banner
+background.solid: $inherited.colors.background.step-1
+max-width.fixed.px: 1296
+align-self: center
+z-index: 1
 
 -- ftd.row:
-margin-bottom.px: 24
 wrap: true
+spacing: space-between
+width: fill-container
+
+-- ftd.image:
+src: $help-banner.image
+max-width.fixed.percent: 100
+
+-- ftd.column:
+padding-vertical.px: 40
+padding-horizontal.px if { ftd.device == "mobile" }: 40
+max-width.fixed.px: 880
+align-self: center
 
 -- ftd.text: $help-banner.title
-role: $inherited.types.heading-small
+role: $fonts.size-33-nunito
 color: $inherited.colors.text
 max-width.fixed.percent if { ftd.device != "mobile" }: 80
 
@@ -2588,8 +2587,6 @@ max-width.fixed.percent if { ftd.device != "mobile" }: 80
 
 $help-banner.body
 
--- end: ftd.row
-
 -- ftd.text: $help-banner.cta-label
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
@@ -2599,10 +2596,14 @@ border-radius.px if { ftd.device == "mobile" }: 34
 role: $inherited.types.button-large
 color: $inherited.colors.cta-primary.text
 link: $help-banner.cta-url
+margin-top.px: 24
+
 
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -2647,9 +2648,9 @@ src: $sneak-peak.image
 border-color: $inherited.colors.custom.one
 border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
-border-radius.px: 44
+border-radius.px: 46
 width.fixed.percent: 100
-max-width.fixed.px: 1040
+max-width.fixed.px: 1037
 
 -- end: ftd.column
 
@@ -2685,7 +2686,7 @@ $on-click$: $ftd.set-bool($a = $sneak-peak.cta-event, v = true)
 -- ftd.image:
 src: $sneak-peak.bg-image
 align-self: end
-top.px: -75
+top.px: -85
 anchor: parent
 
 -- end: ftd.column
