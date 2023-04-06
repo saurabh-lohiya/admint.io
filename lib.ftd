@@ -695,7 +695,6 @@ align-content: center
 width: fill-container
 spacing.fixed.px: 24
 padding-vertical.px if { !carousel.small-height }: 40
-padding-vertical.px if { carousel.small-height }: 17
 padding-horizontal.px: 12
 align-content: center
 
@@ -4374,7 +4373,7 @@ margin-bottom.px: 20
 text: $how-it-works.body
 role: $fonts.nunito-24-36-500-type
 color: $inherited.colors.text
-margin-bottom.px: 0
+margin-bottom.px: 16
 width: fill-container
 width.fixed.percent if { ftd.device != "mobile" }: 65
 
@@ -4496,7 +4495,7 @@ spacing.fixed.px: 6
 role: $fonts.size-19
 color: $inherited.colors.custom.four
 
--- ftd.text: Step
+-- ftd.text: STEP
 
 -- ftd.integer: $works-cell-desktop.number
 
