@@ -17,17 +17,38 @@ types: $typo.types
 $widthfill: true
 sections: $lib.sitemap.sections
 
-
 -- ds.page.footer:
 
 -- lib.carousel:
 $active-item: $current-active
 
 -- lib.simple-steps: **WHY ADMINT?** 🚧
-subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
 src: $assets.files.static.carousel.simple.svg
 index: 1
 reset: $current-active
+
+-- lib.simple-steps.subtitle:
+
+-- ftd.container:
+
+-- ftd.text: Make your brand "
+display: inline-block
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- ftd.text: Web 3.0 ready
+display: inline-block
+role: $inherited.types.heading-medium
+color: $inherited.colors.border
+
+-- ftd.text: " via structured campaign phases:
+display: inline-block
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- end: ftd.container
+
+-- end: lib.simple-steps.subtitle
 
 -- lib.feature-card: 1
 
@@ -44,39 +65,122 @@ reset: $current-active
 -- end: lib.simple-steps
 
 -- lib.structured: **WHY ADMINT?** 🚧
-subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
 src: $assets.files.static.carousel.structured.svg
 index: 2 
 reset: $current-active
+
+-- lib.structured.subtitle:
+
+-- ftd.container:
+width: fill-container
+
+-- ftd.text: Campaigns are structured to mimic  
+display: inline-block
+
+-- ftd.text: standard known processes:
+display: inline-block
+color: $inherited.colors.border
+margin-horizontal.px: 10
+
+-- ftd.text: Planning, Set Up, Execution & Analysis
+display: inline-block
+
+-- end: ftd.container
+
+-- end: lib.structured.subtitle
+
+-- lib.structured.body:
 
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
 -- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
-subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
 src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
 reset: $current-active
+
+-- lib.keymedia-vehicle.subtitle:
+
+-- ftd.container:
+
+-- ftd.text: NFTs are our
+display: inline-block
+
+-- ftd.text: key media vehicle
+display: inline-block
+color: $inherited.colors.border
+margin-horizontal.px: 10
+
+-- ftd.text: 
+display: inline
+
+vehicle to run  campaigns. You can even mint your own!
+
+-- end: ftd.container
+
+-- end: lib.keymedia-vehicle.subtitle
+
+-- lib.keymedia-vehicle.body:
 
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
 -- lib.distribute-nft: **WHY ADMINT?** 🚧
-subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
 src: $assets.files.static.carousel.distribute.svg
 index: 4 
 reset: $current-active
+
+-- lib.distribute-nft.subtitle:
+
+-- ftd.container:
+
+-- ftd.text: We help you
+display: inline-block
+
+-- ftd.text: distribute, validate & track
+display: inline-block
+margin-horizontal.px: 10
+color: $inherited.colors.border
+
+-- ftd.text:  
+display: inline
+
+your NFTs via custom tools & templates. A one-stop ad stack! 
+
+-- end: ftd.container
+
+-- end: lib.distribute-nft.subtitle
+
+-- lib.distribute-nft.body:
 
 With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
-
 -- lib.analyze-pane: **WHY ADMINT?** 🚧
-subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.carousel.analyze.svg
 index: 5
 reset: $current-active
+
+-- lib.analyze-pane.subtitle:
+
+-- ftd.container:
+
+-- ftd.text: Analyze & consolidate
+display: inline
+color: $inherited.colors.border
+margin-right.px: 10
+
+-- ftd.text:
+display: inline
+
+the strategy that works best for your brand! Run your web 3.0 experiments.
+
+-- end: ftd.container
+
+-- end: lib.analyze-pane.subtitle
+
+-- lib.analyze-pane.body:
 
 Watch the numbers. See the plan take shape. Measure that ROI. 
 Stake your claim across the Metaverses!
@@ -99,7 +203,6 @@ To use `carousel` component you need to `import` `lib` inside you `.ftd` file.
 -- ds.code:
 lang: ftd
 
-
 \-- import: fifthtry.github.io/admint.io/lib
 
 -- ds.markdown:
@@ -117,7 +220,6 @@ slide component should be `+1` (as shown in below code snippet).
 -- ds.rendered.input:
 
 \-- integer $current-active: 1
-
 
 \-- lib.carousel:
 $active-item: $current-active
