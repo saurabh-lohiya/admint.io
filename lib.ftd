@@ -680,7 +680,7 @@ background.solid: $inherited.colors.cta-primary.base
 -- component carousel:
 children wrap:
 integer $active-item:
-integer max: 6
+integer max: 5
 integer min: 1
 
 -- ftd.column:
@@ -701,7 +701,7 @@ padding-horizontal.px: 12
 align-content: center
 
 -- ftd.image:
-if: { carousel.active-item != 1 }
+if: { carousel.active-item != carousel.min }
 src: $assets.files.static.carousel.right.svg
 $on-click$: $common.decrement-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
 align-self: center
@@ -713,7 +713,7 @@ anchor: parent
 left.px: 8
 
 -- ftd.image:
-if: { carousel.active-item == 1 }
+if: { carousel.active-item == carousel.min }
 src: $assets.files.static.carousel.right.svg
 align-self: center
 border-radius.px: 100
@@ -733,7 +733,7 @@ padding-horizontal.px: 12
 -- end: ftd.column
 
 -- ftd.image:
-if: { carousel.active-item != 5 }
+if: { carousel.active-item != carousel.max }
 src: $assets.files.static.carousel.left.svg
 $on-click$: $common.increment-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
 align-self: center
@@ -745,7 +745,7 @@ right.px: 8
 anchor: parent
 
 -- ftd.image:
-if: { carousel.active-item == 5 }
+if: { carousel.active-item == carousel.max }
 src: $assets.files.static.carousel.left.svg
 align-self: center
 border-radius.px: 100
@@ -784,7 +784,7 @@ padding-vertical.px: 40
 
 -- component simple-steps:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children simple-steps-wrap:
@@ -827,7 +827,7 @@ reset: $simple-steps.reset
 
 -- component simple-steps-desktop:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children simple-steps-wrap:
@@ -836,6 +836,7 @@ optional integer reset:
 
 -- ftd.column:
 if: { simple-steps-desktop.index == simple-steps-desktop.reset }
+min-height.fixed.px: 650
 
 -- ftd.row:
 width: fill-container
@@ -849,12 +850,14 @@ role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $simple-steps-desktop.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
+-- ftd.column:
 margin-bottom.px: 87
 region: h3
 width.fixed.percent: 75
+
+-- simple-steps-desktop.subtitle.0:
+
+-- end: ftd.column
 
 -- ftd.text:
 if: { simple-steps-desktop.body != NULL }
@@ -865,15 +868,10 @@ margin-bottom.px: 41
 
 -- end: ftd.column
 
--- ftd.column:
-align-content: center
-align-self: center
-
 -- ftd.image:
 src: $simple-steps-desktop.src
 align-self: center
-
--- end: ftd.column
+margin-top.px: -56
 
 -- end: ftd.row
 
@@ -900,7 +898,7 @@ margin-top.px: -73
 
 -- component simple-steps-mobile:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children simple-steps-wrap:
@@ -918,12 +916,9 @@ color: $inherited.colors.text
 margin-bottom.px: 41
 width: fill-container
 
--- ftd.text: $simple-steps-mobile.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
+-- simple-steps-mobile.subtitle.0:
 margin-bottom.px: 87
 region: h3
-width: fill-container
 
 -- ftd.text:
 if: { simple-steps-mobile.body != NULL }
@@ -954,7 +949,7 @@ spacing.fixed.px: 16
 
 -- component structured:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children structured-wrap:
@@ -997,7 +992,7 @@ reset: $structured.reset
 
 -- component structured-desktop:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children structured-wrap:
@@ -1020,11 +1015,18 @@ role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
--- ftd.text: $structured-desktop.subtitle
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
+
+-- ftd.column:
 margin-bottom.px: 28
 region: h3
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+spacing.fixed.px: 8
+width: fill-container
+
+-- structured-desktop.subtitle.0:
+
+-- end: ftd.column
 
 -- ftd.text:
 if: { structured-desktop.body != NULL }
@@ -1074,7 +1076,7 @@ spacing.fixed.px: 24
 
 -- component slide-mobile:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children slide-wrap:
@@ -1092,11 +1094,15 @@ align-self: center
 width.fixed.percent: 60
 height: auto
 
--- ftd.text: $slide-mobile.subtitle
+-- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 28
 region: h3
+
+-- slide-mobile.subtitle.0:
+
+-- end: ftd.column
 
 -- ftd.text:
 if: { slide-mobile.body != NULL }
@@ -1127,7 +1133,7 @@ spacing.fixed.px: 24
 
 -- component keymedia-vehicle:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children keymedia-vehicle-wrap:
@@ -1170,7 +1176,7 @@ reset: $keymedia-vehicle.reset
 
 -- component keymedia-vehicle-desktop:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children keymedia-vehicle-wrap:
@@ -1196,13 +1202,18 @@ margin-bottom.px: 28
 max-width.fixed.percent: 70
 width: fill-container
 
--- ftd.text: $keymedia-vehicle-desktop.subtitle
+
+-- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 20
 region: h3
 width: fill-container
 max-width.fixed.percent: 70
+
+-- keymedia-vehicle-desktop.subtitle.0:
+
+-- end: ftd.column
 
 -- ftd.text:
 if: { keymedia-vehicle-desktop.body != NULL }
@@ -1252,7 +1263,7 @@ spacing.fixed.px: 24
 
 -- component distribute-nft:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children distribute-nft-wrap:
@@ -1295,7 +1306,7 @@ reset: $distribute-nft.reset
 
 -- component distribute-nft-desktop:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children distribute-nft-wrap:
@@ -1320,12 +1331,18 @@ color: $inherited.colors.custom.two
 margin-bottom.px: 41
 width: fill-container
 
--- ftd.text: $distribute-nft-desktop.subtitle
+
+-- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 24
 region: h3
 width: fill-container
+
+
+-- distribute-nft-desktop.subtitle.0:
+
+-- end: ftd.column
 
 
 -- ftd.text:
@@ -1376,7 +1393,7 @@ spacing.fixed.px: 24
 
 -- component analyze-pane:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children analyze-pane-wrap:
@@ -1419,7 +1436,7 @@ reset: $analyze-pane.reset
 
 -- component analyze-pane-desktop:
 caption title:
-string subtitle:
+ftd.ui list subtitle:
 optional body body:
 ftd.image-src src:
 children analyze-pane-wrap:
@@ -1445,13 +1462,19 @@ margin-bottom.px: 41
 max-width.fixed.percent: 75
 width: fill-container
 
--- ftd.text: $analyze-pane-desktop.subtitle
+
+-- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-bottom.px: 24
 region: h3
 width: fill-container
 max-width.fixed.percent: 80
+
+-- analyze-pane-desktop.subtitle.0:
+
+-- end: ftd.column
+
 
 -- ftd.text:
 if: { analyze-pane-desktop.body != NULL }
@@ -1564,13 +1587,13 @@ padding-horizontal.px: 25
 -- ftd.row:
 align-self: center
 padding-vertical.px: 5
+link: $navbar-desktop.site-url
 
 -- ftd.image:
 if: { navbar-desktop.site-name == NULL }
 src: $navbar-desktop.site-logo
 width: auto
 height: auto
-link: $navbar-desktop.site-url
 
 -- ftd.text: $navbar-desktop.site-name
 if: {navbar-desktop.site-name != NULL}
@@ -1582,13 +1605,12 @@ link: $navbar-desktop.site-url
 
 -- ftd.row:
 align-self: end
-spacing.fixed.px: 24
+spacing.fixed.px: 38
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 44
 align-self: center
-padding-left.px: 3
 
 -- sections-list: $obj.title
 url: $obj.url
@@ -1623,9 +1645,6 @@ boolean $is-active: false
 boolean $show-signup: false
 
 -- ftd.row:
-margin-left.px: 11
-
--- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
 border-color if {navbar-button.is-active}: $inherited.colors.cta-primary.hover
 border-radius.px: 50
@@ -1643,8 +1662,6 @@ role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
 $on-click$ if { navbar-button.url == NULL }: $ftd.set-bool($a = $navbar-button.show-signup, v = true)
-
--- end: ftd.row
 
 -- end: ftd.row
 
