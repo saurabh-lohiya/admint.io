@@ -822,6 +822,9 @@ reset: $simple-steps.reset
 
 
 
+
+
+
 -- component simple-steps-desktop:
 caption title:
 ftd.ui list subtitle:
@@ -837,7 +840,6 @@ min-height.fixed.px: 650
 
 -- ftd.row:
 width: fill-container
-background.image: $common.steps-bg-image
 height: fill-container
 
 -- ftd.column:

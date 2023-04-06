@@ -174,11 +174,11 @@ src: https://admint.io/facebook.5af5659b1d481d1457d7.svg
 
 
 
--- ftd.background-position.length bg-position:
+/-- ftd.background-position.length bg-position:
 x.percent: 100
 y.px: -56 
 
--- ftd.background-image steps-bg-image: 
+/-- ftd.background-image steps-bg-image: 
 src: $assets.files.static.carousel.simple.svg
-position: $bg-position
+position: right-top
 repeat: no-repeat
