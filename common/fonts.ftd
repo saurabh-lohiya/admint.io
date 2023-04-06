@@ -591,7 +591,7 @@ font-family: $montserrat-assets.fonts.Montserrat
 line-height.px: 30
 size.px: 20
 letter-spacing.px: 0
-weight: 400
+weight: 500
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type label-lg-nunito:
@@ -627,6 +627,21 @@ weight: 700
 -- ftd.responsive-type heading-md:
 desktop: $size-33-nunito
 mobile: $size-33-nunito
+
+
+
+
+
+-- ftd.type button-lg-27:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type button-lg-27:
+desktop: $button-lg-27
+mobile: $button-lg-27
 
 
 

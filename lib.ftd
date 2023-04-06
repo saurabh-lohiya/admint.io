@@ -2081,7 +2081,9 @@ width.fixed.px: 196
 
 
 -- component join-waitlist-form:
-caption title:
+string title1:
+string title2:
+string title3:
 string name-label:
 string name-warning: Name is required
 string identity-label:
@@ -2117,11 +2119,28 @@ role: $fonts.size-17
 color: $inherited.colors.cta-primary.base
 align-self: end
 
--- ftd.text: $join-waitlist-form.title
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 80
+
+-- ftd.text: $join-waitlist-form.title1
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 region: h1
-width.fixed.percent if { ftd.device == "desktop" }: 80
+display: inline
+
+-- ftd.text: $join-waitlist-form.title2
+role: $inherited.types.heading-large
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+
+-- ftd.text: $join-waitlist-form.title3
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
 
 -- ftd.text: $join-waitlist-form.name-label
 role: $inherited.types.fine-print
@@ -2571,7 +2590,7 @@ max-width.fixed.percent: 100
 -- ftd.column:
 padding-vertical.px: 40
 padding-horizontal.px if { ftd.device == "mobile" }: 40
-max-width.fixed.px: 880
+max-width.fixed.px: 868
 align-self: center
 
 -- ftd.text: $help-banner.title
@@ -2593,7 +2612,7 @@ padding-horizontal.px: 41
 padding-vertical.px: 11
 border-radius.px: 50
 border-radius.px if { ftd.device == "mobile" }: 34
-role: $inherited.types.button-large
+role: $fonts.button-lg-27
 color: $inherited.colors.cta-primary.text
 link: $help-banner.cta-url
 margin-top.px: 24
@@ -2619,7 +2638,9 @@ margin-top.px: 24
 
 
 -- component sneak-peak:
-caption title:
+string title1:
+string title2:
+string title3:
 ftd.image-src image:
 ftd.image-src bg-image:
 string cta-text:
@@ -2663,18 +2684,36 @@ width: fill-container
 margin-left.px: 72
 margin-top.px: 153
 
--- ftd.text: $sneak-peak.title
+-- ftd.container:
+max-width.fixed.px: 680
+
+-- ftd.text: $sneak-peak.title1
 role: $fonts.heading-md
 color: $inherited.colors.text
 width.fixed.px: 750
-margin-bottom.px: 32
+display: inline
+
+-- ftd.text: $sneak-peak.title2
+role: $fonts.heading-md
+color: $inherited.colors.cta-primary.base
+width.fixed.px: 750
+display: inline
+
+-- ftd.text: $sneak-peak.title3
+role: $fonts.heading-md
+color: $inherited.colors.text
+width.fixed.px: 750
+display: inline
+
+-- end: ftd.container
 
 -- ftd.text: $sneak-peak.cta-text
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
 border-radius.px: 50
-role: $inherited.types.button-large
+margin-top.px: 32
+role: $fonts.button-lg-27
 color: $inherited.colors.cta-primary.text
 link: $sneak-peak.cta-url
 $on-click$: $ftd.set-bool($a = $sneak-peak.cta-event, v = true)
@@ -2704,18 +2743,32 @@ width.fixed.percent: 100
 -- ftd.column:
 margin-horizontal.px: 12
 
--- ftd.text: $sneak-peak.title
-role: $inherited.types.heading-medium
+-- ftd.container:
+
+-- ftd.text: $sneak-peak.title1
+role: $fonts.heading-md
 color: $inherited.colors.text
-margin-top.px: 15
-margin-bottom.px: 32
+display: inline
+
+-- ftd.text: $sneak-peak.title2
+role: $fonts.heading-md
+color: $inherited.colors.cta-primary.base
+display: inline
+
+-- ftd.text: $sneak-peak.title3
+role: $fonts.heading-md
+color: $inherited.colors.text
+display: inline
+
+-- end: ftd.container
 
 -- ftd.text: $sneak-peak.cta-text
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
 border-radius.px: 50
-role: $inherited.types.button-large
+margin-top.px: 32
+role: $fonts.button-lg-27
 color: $inherited.colors.cta-primary.text
 link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 

@@ -214,20 +214,26 @@ web 3.0 budget?
 
 -- end: lib.advertisement
 
--- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
+-- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!
 cta-label: Let's Learn
 cta-url: /learn/
 image: $assets.files.static.help-banner.svg
 
 -- end: lib.help-banner
 
--- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
+-- lib.sneak-peak: 
+title1: A 
+title2: sneak peek
+title3: into the AdMint platform. See how simple it really is!
 image: $assets.files.static.carousel.sneak-peak.png
 bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
 $cta-event: $show-waitlist-popup
 
--- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-form: 
+title1: Join the
+title2: waitlist 
+title3: to get updated when we go live!
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
