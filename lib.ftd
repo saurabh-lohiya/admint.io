@@ -6,6 +6,7 @@
 -- import: fastn/processors as pr
 
 -- string $selected-item: Advertiser
+-- string $selected-item-medium: Advertiser
 -- integer max-width: 1320
 
 -- pr.sitemap-data sitemap:
@@ -2171,7 +2172,7 @@ role: $inherited.types.fine-print
 color: $inherited.colors.text
 
 -- drop-down:
-drop-down-options-list: $common.option-list
+drop-down-options-list: $common.roles
 
 -- end: ftd.column
 
@@ -3408,9 +3409,8 @@ align-self: start
 
 
 -- component drop-down:
-caption title: $selected-item
 boolean $show-options: false
-common.options list drop-down-options-list:
+common.role-record list drop-down-options-list:
 
 -- ftd.column:
 width: fill-container
@@ -3447,7 +3447,7 @@ align-self: center
 
 -- end: ftd.row
 
--- drop-down-options: $drop-down.title
+-- drop-down-options: $selected-item
 drop-down-options-list: $drop-down.drop-down-options-list
 $show-options: $drop-down.show-options
 
@@ -3465,9 +3465,8 @@ $show-options: $drop-down.show-options
 
 
 -- component drop-down-medium:
-caption title: $selected-item
 boolean $show-options: false
-common.options list drop-down-medium-options-list:
+common.role-record list drop-down-medium-options-list:
 
 -- ftd.column:
 width: fill-container
@@ -3488,21 +3487,21 @@ border-width.px if { drop-down-medium.show-options }: 2
 spacing: space-between
 $on-click$: $ftd.toggle($a = $drop-down-medium.show-options)
 
--- ftd.text: $selected-item
+-- ftd.text: $selected-item-medium
 role: $inherited.types.copy-regular
 color: $inherited.colors.custom.one
 padding-right.px: 52
 min-width.fixed.px: 112
 
 -- ftd.image:
-src: $assets.files.static.faq.down.svg
+src: $assets.files.static.join-waitlist-form.down.svg
 width.fixed.px: 16
 height: auto
 align-self: center
 
 -- end: ftd.row
 
--- drop-down-medium-options: $drop-down-medium.title
+-- drop-down-medium-options: $selected-item-medium
 drop-down-medium-options-list: $drop-down-medium.drop-down-medium-options-list
 $show-options: $drop-down-medium.show-options
 
@@ -3649,7 +3648,7 @@ $brand-objective.body
 
 -- component drop-down-options:
 caption title:
-common.options list drop-down-options-list:
+common.role-record list drop-down-options-list:
 boolean $mouse-in: false
 boolean $show-options: false
 integer $active-cell: -1
@@ -4661,7 +4660,7 @@ width: fill-container
 
 
 -- component join-waitlist-popup:
-caption title:
+ftd.ui list title:
 string name-label:
 string name-warning: Name is required
 string identity-label:
@@ -4705,9 +4704,7 @@ color: $inherited.colors.cta-primary.base
 align-self: end
 $on-click$: $ftd.set-bool($a = $join-waitlist-popup.visible, v = false)
 
--- ftd.text: $join-waitlist-popup.title
-role: $fonts.nunito-40
-region: h1
+-- join-waitlist-popup.title.0:
 
 -- ftd.text: $join-waitlist-popup.name-label
 role: $inherited.types.fine-print
@@ -4743,8 +4740,8 @@ role: $inherited.types.fine-print
 color: $inherited.colors.text
 margin-top.px: 16
 
--- drop-down:
-drop-down-options-list: $common.option-list
+-- drop-down-medium:
+drop-down-medium-options-list: $common.roles
 
 -- end: ftd.column
 
@@ -4840,7 +4837,7 @@ Thanks for your interest...We will update you
 
 -- component drop-down-medium-options:
 caption title:
-common.options list drop-down-medium-options-list:
+common.role-record list drop-down-medium-options-list:
 boolean $mouse-in: false
 boolean $show-options: false
 integer $active-cell: -1
@@ -4893,9 +4890,9 @@ boolean $show-options: false
 border-radius.px: 5
 width: fill-container
 padding-left.px: 20
-$on-mouse-enter$: $ftd.set-integer($a = $drop-down-medium-option.active, v = $drop-down-medium.option.idx )
+$on-mouse-enter$: $ftd.set-integer($a = $drop-down-medium-option.active, v = $drop-down-medium-option.idx )
 $on-mouse-leave$: $ftd.set-integer($a = $drop-down-medium-option.active, v = -1 )
-$on-click$: $ftd.set-string($a = $selected-item, v = $drop-down-medium-option.title)
+$on-click$: $ftd.set-string($a = $selected-item-medium, v = $drop-down-medium-option.title)
 $on-click$: $ftd.toggle($a = $drop-down-medium-option.show-options)
 background.solid if { drop-down-medium-option.active == drop-down-medium-option.idx }: #25A6F7
 
