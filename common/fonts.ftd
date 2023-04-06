@@ -195,7 +195,7 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 -- ftd.type size-19-desktop:
-line-height.px: 27
+line-height.px: 28
 size.px: 19
 letter-spacing.px: 0
 font-family: $nunito-assets.fonts.Nunito
@@ -207,7 +207,7 @@ mobile: $size-19-mobile
 
 
 -- ftd.type size-23-mobile:
-line-height.px: 31
+line-height.px: 34
 size.px: 23
 letter-spacing.px: 0
 weight: 700
@@ -572,6 +572,42 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 
 
+-- ftd.type nunito-24-36-500-type:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type nunito-30-20-400: $nunito-20-30-400-type
+
+
+
+
+
+-- ftd.type 15-18-500-mobile:
+line-height.px: 28
+size.px: 24
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.type 15-18-500-desktop:
+line-height.rem: 1.8
+size.rem: 1.5
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 500
+
+-- ftd.responsive-type 15-18-500:
+desktop: $15-18-500-desktop
+mobile: $15-18-500-mobile
+
+
+
+
+
+-- ftd.color 222b27: #222b27
 
 -- ftd.color bdbdbd: #bdbdbd
 
