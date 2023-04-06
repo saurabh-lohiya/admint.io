@@ -2,6 +2,8 @@
 -- import: fifthtry.github.io/doc-site as ds
 -- import: fifthtry.github.io/admint.io/docs
 -- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint.io/common/fonts
 -- import: fifthtry.github.io/admint-cs as cs
 -- import: fifthtry.github.io/admint-typography as typo
 
@@ -19,11 +21,41 @@ sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
--- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
+-- lib.sneak-peak:
 image: $assets.files.static.carousel.sneak-peak.png
 bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
 cta-url: docs/sneak-peak/
+
+-- lib.sneak-peak.title:
+
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+
+-- ftd.text: A 
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: sneak peek
+role: $fonts.heading-md
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 11
+
+-- ftd.text: into the AdMint platform. See how simple it really is!
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.sneak-peak.title
+
+-- end: lib.sneak-peak
 
 -- docs.footer:
 
@@ -53,11 +85,41 @@ adding all required attributes of it.
 
 -- ds.rendered.input:
 
-\-- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
+\-- lib.sneak-peak:
 image: $assets.files.static.carousel.sneak-peak.png
 bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
-cta-url: docs/sneak-peak/
+cta-url: /
+
+\-- lib.sneak-peak.title:
+
+\-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+
+\-- ftd.text: A 
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+\-- ftd.text: sneak peek
+role: $fonts.heading-md
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 11
+
+\-- ftd.text: into the AdMint platform. See how simple it really is!
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+\-- end: ftd.container
+
+\-- end: lib.sneak-peak.title
+
+\-- end: lib.sneak-peak
 
 -- ds.rendered.output:
 

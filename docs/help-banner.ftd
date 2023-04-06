@@ -47,17 +47,65 @@ adding all required attributes of it.
 
 -- ds.rendered.input:
 
-\-- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!
+\-- lib.help-banner:
 cta-label: Let's Learn
-cta-url: learn/
+cta-url: /learn/
 image: $assets.files.static.help-banner.svg
+body: You ask why? Because... Followed by the WHY NFTs?
+
+\-- lib.help-banner.title:
+
+\-- ftd.container:
+
+\-- ftd.text: NFTs are our preferred
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+region: h1
+display: inline
+
+\-- ftd.text: media vehicle!
+role: $inherited.types.heading-tiny
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-left.px: 8
+
+\-- end: ftd.container
+
+\-- end: lib.help-banner.title
+
+\-- end: lib.help-banner
 
 -- ds.rendered.output:
 
--- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!
+-- lib.help-banner:
 cta-label: Let's Learn
-cta-url: learn/
+cta-url: /learn/
 image: $assets.files.static.help-banner.svg
+body: You ask why? Because... Followed by the WHY NFTs?
+
+-- lib.help-banner.title:
+
+-- ftd.container:
+
+-- ftd.text: NFTs are our preferred
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: media vehicle!
+role: $inherited.types.heading-tiny
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-left.px: 8
+
+-- end: ftd.container
+
+-- end: lib.help-banner.title
+
+-- end: lib.help-banner
 
 -- end: ds.rendered.output
 
