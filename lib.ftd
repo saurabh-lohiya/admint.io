@@ -687,6 +687,7 @@ boolean small-height: false
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.step-1
+align-content: center
 
 -- ftd.row:
 if: { ftd.device != "mobile" }
@@ -712,6 +713,9 @@ height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
 left.px: 8
+top.px if { carousel.small-height }: 130
+left.px if { carousel.small-height }: 11
+z-index: 1000
 
 -- ftd.image:
 if: { carousel.active-item == carousel.min }
@@ -723,13 +727,16 @@ height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
 left.px: 8
+top.px if { carousel.small-height }: 130
+left.px if { carousel.small-height }: 11
+z-index: 1000
 
 -- ftd.column:
 children: $carousel.wrap
 width: fill-container
-max-width.fixed.px: $max-width
 align-content: center
 padding-horizontal.px: 12
+z-index: 0
 
 -- end: ftd.column
 
@@ -743,7 +750,10 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 right.px: 8
+top.px if { carousel.small-height }: 130
+right.px if { carousel.small-height }: 11
 anchor: parent
+z-index: 1000
 
 -- ftd.image:
 if: { carousel.active-item == carousel.max }
@@ -755,6 +765,9 @@ height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
 right.px: 8
+top.px if { carousel.small-height }: 130
+right.px if { carousel.small-height }: 11
+z-index: 1000
 
 -- end: ftd.row
 
@@ -766,6 +779,7 @@ children: $carousel.wrap
 width: fill-container
 padding-horizontal.px: 12
 padding-vertical.px: 40
+z-index: 0
 
 -- end: ftd.column
 
@@ -794,6 +808,8 @@ optional integer reset:
 
 -- ftd.column:
 width: fill-container
+max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- simple-steps-desktop: $simple-steps.title
 if: { ftd.device != "mobile" }
@@ -1003,7 +1019,13 @@ optional integer reset:
 
 -- ftd.column:
 if: { structured-desktop.index == structured-desktop.reset }
+width: fill-container
+align-content: center
+
+-- ftd.column:
 height.fixed.px: 650
+max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- ftd.row:
 width: fill-container
@@ -1039,20 +1061,6 @@ max-width.fixed.percent: 54
 
 -- end: ftd.column
 
--- ftd.column:
-align-content: center
-align-self: center
-anchor: parent 
-right.px: -60
-top.percent: 61
-z-index: 0 
-
--- ftd.image:
-src: $structured-desktop.src
-align-self: center
-
--- end: ftd.column
-
 -- end: ftd.row
 
 -- ftd.row:
@@ -1061,6 +1069,22 @@ children: $structured-desktop.structured-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px: -24
+top.px: 191
+z-index: 0 
+
+-- ftd.image:
+src: $structured-desktop.src
+align-self: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1186,11 +1210,13 @@ optional integer reset:
 
 -- ftd.column:
 if: { keymedia-vehicle-desktop.index == keymedia-vehicle-desktop.reset }
-height.fixed.px: 650
 width: fill-container
+align-content: center
 
 -- ftd.row:
-width: fill-container
+height.fixed.px: 650
+max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
@@ -1199,10 +1225,9 @@ height: fill-container
 -- ftd.text: $keymedia-vehicle-desktop.title
 role: $inherited.types.label-large
 color: $inherited.colors.custom.two
-margin-bottom.px: 28
+margin-bottom.px: 41
 max-width.fixed.percent: 70
 width: fill-container
-
 
 -- ftd.column:
 role: $inherited.types.heading-medium
@@ -1222,21 +1247,7 @@ text: $keymedia-vehicle-desktop.body
 role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 60
-
--- end: ftd.column
-
--- ftd.column:
-align-content: center
-align-self: center
-anchor: parent 
-right.px: -61
-top.percent: 52
-z-index: 0
-
--- ftd.image:
-src: $keymedia-vehicle-desktop.src
-align-self: center
+max-width.fixed.percent: 55
 
 -- end: ftd.column
 
@@ -1248,6 +1259,20 @@ children: $keymedia-vehicle-desktop.keymedia-vehicle-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px: -24
+top.px: 149
+z-index: 0 
+
+-- ftd.image:
+src: $keymedia-vehicle-desktop.src
+align-self: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1316,11 +1341,13 @@ optional integer reset:
 
 -- ftd.column:
 if: { distribute-nft-desktop.index == distribute-nft-desktop.reset }
-height.fixed.px: 650
 width: fill-container
+align-content: center
 
 -- ftd.row:
-width: fill-container
+height.fixed.px: 650
+max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
@@ -1332,19 +1359,16 @@ color: $inherited.colors.custom.two
 margin-bottom.px: 41
 width: fill-container
 
-
 -- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 24
+margin-bottom.px: 20
 region: h3
 width: fill-container
-
 
 -- distribute-nft-desktop.subtitle.0:
 
 -- end: ftd.column
-
 
 -- ftd.text:
 if: { distribute-nft-desktop.body != NULL }
@@ -1352,21 +1376,7 @@ text: $distribute-nft-desktop.body
 role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 80
-
--- end: ftd.column
-
--- ftd.column:
-align-content: center
-align-self: center
-anchor: parent 
-right.px: -61
-top.percent: 88
-z-index: 0 
-
--- ftd.image:
-src: $distribute-nft-desktop.src
-align-self: center
+max-width.fixed.percent: 75
 
 -- end: ftd.column
 
@@ -1378,6 +1388,20 @@ children: $distribute-nft-desktop.distribute-nft-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px: -24
+bottom.px: 0
+z-index: 0 
+
+-- ftd.image:
+src: $distribute-nft-desktop.src
+align-self: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1447,10 +1471,12 @@ optional integer reset:
 -- ftd.column:
 if: { analyze-pane-desktop.index == analyze-pane-desktop.reset }
 width: fill-container
-height.fixed.px: 650
+align-content: center
 
 -- ftd.row:
-width: fill-container
+height.fixed.px: 650
+max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- ftd.column:
 width: fill-container
@@ -1467,10 +1493,10 @@ width: fill-container
 -- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 24
+margin-bottom.px: 20
 region: h3
 width: fill-container
-max-width.fixed.percent: 80
+max-width.fixed.percent: 75
 
 -- analyze-pane-desktop.subtitle.0:
 
@@ -1483,21 +1509,7 @@ text: $analyze-pane-desktop.body
 role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 60
-
--- end: ftd.column
-
--- ftd.column:
-align-content: center
-align-self: center
-anchor: parent 
-right.px: -61
-top.percent: 86
-z-index: 0
-
--- ftd.image:
-src: $analyze-pane-desktop.src
-align-self: center
+max-width.fixed.percent: 55
 
 -- end: ftd.column
 
@@ -1509,6 +1521,20 @@ children: $analyze-pane-desktop.analyze-pane-wrap
 spacing.fixed.px: 24
 
 -- end: ftd.row
+
+-- ftd.column:
+align-content: center
+align-self: center
+anchor: parent 
+right.px: -24
+bottom.px: 0
+z-index: 0
+
+-- ftd.image:
+src: $analyze-pane-desktop.src
+align-self: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4415,6 +4441,7 @@ optional integer reset:
 
 -- ftd.column:
 width: fill-container
+align-content: center
 
 -- works-cell-desktop: $works-cell.title
 if: { ftd.device != "mobile" }
@@ -4479,6 +4506,7 @@ optional integer reset:
 if: { works-cell-desktop.index == works-cell-desktop.reset }
 width: fill-container
 max-width.fixed.px: $max-width
+padding-horizontal.px: 12
 
 -- ftd.image:
 src: $works-cell-desktop.left-src
@@ -4489,7 +4517,7 @@ margin-right.px: 13
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 12
-margin-left.px: -12
+margin-left.px: -13
 
 -- ftd.row:
 width: fill-container
