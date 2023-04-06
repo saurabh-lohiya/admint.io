@@ -22,7 +22,7 @@ sections: $lib.sitemap.sections
 -- lib.carousel:
 $active-item: $current-active
 
--- lib.simple-steps: **WHY ADMINT?** 🚧
+-- lib.simple-steps: **WHY ADMINT?** 
 src: $assets.files.static.carousel.simple.svg
 index: 1
 reset: $current-active
@@ -64,7 +64,7 @@ color: $inherited.colors.text
 
 -- end: lib.simple-steps
 
--- lib.structured: **WHY ADMINT?** 🚧
+-- lib.structured: **WHY ADMINT?** 
 src: $assets.files.static.carousel.structured.svg
 index: 2 
 reset: $current-active
@@ -94,7 +94,7 @@ display: inline-block
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
--- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
+-- lib.keymedia-vehicle: **WHY ADMINT?** 
 src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
 reset: $current-active
@@ -125,7 +125,7 @@ vehicle to run  campaigns. You can even mint your own!
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
--- lib.distribute-nft: **WHY ADMINT?** 🚧
+-- lib.distribute-nft: **WHY ADMINT?** 
 src: $assets.files.static.carousel.distribute.svg
 index: 4 
 reset: $current-active
@@ -157,7 +157,7 @@ With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
--- lib.analyze-pane: **WHY ADMINT?** 🚧
+-- lib.analyze-pane: **WHY ADMINT?** 
 src: $assets.files.static.carousel.analyze.svg
 index: 5
 reset: $current-active
@@ -224,7 +224,7 @@ slide component should be `+1` (as shown in below code snippet).
 \-- lib.carousel:
 $active-item: $current-active
 
-\-- lib.simple-steps: **WHY ADMINT?** 🚧
+\-- lib.simple-steps: **WHY ADMINT?** 
 subtitle: Make your brand Web 3.0 ready  via structured campaign phases:
 src: $assets.files.static.carousel.simple.svg
 index: 1
@@ -244,7 +244,7 @@ reset: $current-active
 
 \-- end: lib.simple-steps
 
-\-- lib.structured: **WHY ADMINT?** 🚧
+\-- lib.structured: **WHY ADMINT?** 
 subtitle: Campaigns are structured to mimic standard known processes:  Planning, Set Up, Execution & Analysis 
 src: $assets.files.static.carousel.structured.svg
 index: 2 
@@ -253,7 +253,7 @@ reset: $current-active
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
-\-- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
+\-- lib.keymedia-vehicle: **WHY ADMINT?** 
 subtitle: NFTs are our key media vehicle to run  campaigns. You can even mint your own! 
 src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
@@ -262,7 +262,7 @@ reset: $current-active
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
-\-- lib.distribute-nft: **WHY ADMINT?** 🚧
+\-- lib.distribute-nft: **WHY ADMINT?** 
 subtitle: We help you distribute, validate & track  your NFTs via custom tools & templates. A one-stop ad stack! 
 src: $assets.files.static.carousel.distribute.svg
 index: 4 
@@ -272,7 +272,7 @@ With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
-\-- lib.analyze-pane: **WHY ADMINT?** 🚧
+\-- lib.analyze-pane: **WHY ADMINT?** 
 subtitle: Analyze & consolidate the strategy that works best for your brand! Run your web 3.0 experiments. 
 src: $assets.files.static.carousel.analyze.svg
 index: 5
