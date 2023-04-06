@@ -3475,7 +3475,9 @@ $on-click-outside$: $ftd.set-bool($a = $drop-down-medium.show-options, v = false
 -- ftd.row:
 id: drop-down-medium-input
 align-self: center
-padding.px: 6
+padding-vertical.px: 6
+padding-left.px: 7
+padding-right.px: 3
 border-radius.px: 10
 margin-top.px: 8
 width: fill-container
@@ -3492,6 +3494,7 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.custom.one
 padding-right.px: 52
 min-width.fixed.px: 112
+align-self: center
 
 -- ftd.image:
 src: $assets.files.static.join-waitlist-form.down.svg
@@ -4708,7 +4711,7 @@ $on-click$: $ftd.set-bool($a = $join-waitlist-popup.visible, v = false)
 
 -- ftd.text: $join-waitlist-popup.name-label
 role: $inherited.types.fine-print
-margin-top.px: 34
+margin-top.px: 32
 
 -- ftd.text-input:
 id: user-name-input
@@ -4732,13 +4735,13 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-width.fixed.px: 224
+width.fixed.px: 225
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $join-waitlist-popup.identity-label
 role: $inherited.types.fine-print
 color: $inherited.colors.text
-margin-top.px: 16
+margin-top.px: 18
 
 -- drop-down-medium:
 drop-down-medium-options-list: $common.roles
@@ -4746,12 +4749,12 @@ drop-down-medium-options-list: $common.roles
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.px: 224
+width.fixed.px: 225
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.text: $join-waitlist-popup.org-label
 role: $inherited.types.fine-print
-margin-top.px: 16
+margin-top.px: 18
 
 -- ftd.text-input:
 id: user-org-input
