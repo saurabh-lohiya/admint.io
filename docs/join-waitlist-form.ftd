@@ -47,21 +47,77 @@ adding all required attributes of it.
 
 -- ds.rendered.input:
 
-\-- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
+\-- lib.join-waitlist-form: 
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
+
+\-- lib.join-waitlist-form.title:
+
+\-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 80
+
+\-- ftd.text: Join the
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+\-- ftd.text: waitlist
+role: $inherited.types.heading-large
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 13
+
+\-- ftd.text: to get updated when we go live!
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+\-- end: ftd.container
+
+\-- end: lib.join-waitlist-form.title
 
 -- ds.rendered.output:
 
--- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
+-- lib.join-waitlist-form: 
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
+
+-- lib.join-waitlist-form.title:
+
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 80
+
+-- ftd.text: Join the
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: waitlist
+role: $inherited.types.heading-large
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 13
+
+-- ftd.text: to get updated when we go live!
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.join-waitlist-form.title
 
 -- end: ds.rendered.output
 
