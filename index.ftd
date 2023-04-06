@@ -64,7 +64,7 @@ reset: $current-active
 
 -- ftd.container:
 
--- ftd.text: Make your brand "
+-- ftd.text: Make your brand &quot;
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -74,12 +74,12 @@ display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.border
 
--- ftd.text: "
+-- ftd.text: &quot;
 display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
--- ftd.text:via structured campaign phases:
+-- ftd.text: via structured campaign phases:
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text

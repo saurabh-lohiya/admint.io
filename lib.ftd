@@ -712,7 +712,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: 8
+left.px: 11
 top.px if { carousel.small-height }: 130
 left.px if { carousel.small-height }: 11
 z-index: 1000
@@ -726,7 +726,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-left.px: 8
+left.px: 11
 top.px if { carousel.small-height }: 130
 left.px if { carousel.small-height }: 11
 z-index: 1000
@@ -749,7 +749,7 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: 8
+right.px: 11
 top.px if { carousel.small-height }: 130
 right.px if { carousel.small-height }: 11
 anchor: parent
@@ -764,7 +764,7 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.custom.three
 anchor: parent
-right.px: 8
+right.px: 11
 top.px if { carousel.small-height }: 130
 right.px if { carousel.small-height }: 11
 z-index: 1000
@@ -897,7 +897,7 @@ margin-top.px: -56
 width: fill-container
 children: $simple-steps-desktop.simple-steps-wrap
 spacing.fixed.px: 24
-margin-top.px: -73
+margin-top.px: -72
 
 -- end: ftd.row
 
