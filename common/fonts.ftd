@@ -559,6 +559,21 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type size-17:
+line-height.px: 24
+size.px: 17
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type button-large:
+desktop: $size-17
+mobile: $size-17
+
+
+
+
+
 -- ftd.type montserrat-16-29-type:
 line-height.px: 29
 size.px: 16
@@ -572,6 +587,9 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 
 
+-- ftd.type label-lg-nunito:
+line-height.px: 30
+size.px: 20
 -- ftd.type nunito-24-36-500-type:
 line-height.px: 36
 size.px: 24
@@ -579,12 +597,55 @@ letter-spacing.px: 0
 weight: 500
 font-family: $nunito-assets.fonts.Nunito
 
+-- ftd.responsive-type label-lg-nunito:
+desktop: $label-lg-nunito
+mobile: $label-lg-nunito
 -- ftd.responsive-type nunito-30-20-400: $nunito-20-30-400-type
 
 
 
 
 
+-- ftd.type heading-md:
+line-height.px: 45
+size.px: 40
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type heading-md:
+desktop: $heading-md
+mobile: $heading-md
+
+
+
+
+
+-- ftd.type size-33-nunito:
+line-height.px: 45
+size.px: 33
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type heading-md:
+desktop: $size-33-nunito
+mobile: $size-33-nunito
+
+
+
+
+
+-- ftd.type button-lg-27:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type button-lg-27:
+desktop: $button-lg-27
+mobile: $button-lg-27
 -- ftd.type 15-18-500-mobile:
 line-height.px: 28
 size.px: 24
@@ -625,7 +686,7 @@ mobile: $15-18-500-mobile
 
 -- ftd.color 3ea880: #3ea880
 
--- ftd.color grey: grey
+-- ftd.color grey: #777
 
 
 

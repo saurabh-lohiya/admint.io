@@ -1,5 +1,6 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/lib
+-- import: fifthtry.github.io/admint.io/common/fonts
 
 -- integer $current-active: 1
 -- boolean $show-waitlist-popup: false
@@ -40,11 +41,16 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
 -- ftd.text: Web 3.0 ready
-display: inline-block
+display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.border
 
--- ftd.text: " via structured campaign phases:
+-- ftd.text: "
+display: inline
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- ftd.text:via structured campaign phases:
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -190,12 +196,32 @@ Stake your claim across the Metaverses!
 
 -- end: lib.carousel
 
--- lib.help-banner: NFTs are our preferred media vehicle! 
-cta-label: Let's Learn🚧
+-- lib.help-banner:
+cta-label: Let's Learn
 cta-url: /learn/
 image: $assets.files.static.help-banner.svg
+body: You ask why? Because... Followed by the WHY NFTs?
 
-You ask why? Because... Followed by the WHY NFTs?
+-- lib.help-banner.title:
+
+-- ftd.container:
+
+-- ftd.text: NFTs are our preferred
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: media vehicle!
+role: $inherited.types.heading-tiny
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-left.px: 8
+
+-- end: ftd.container
+
+-- end: lib.help-banner.title
 
 -- end: lib.help-banner
 
@@ -298,8 +324,29 @@ reset: $current-cell
 
 -- end: lib.how-it-works
 
--- lib.advertisement: How advertising in web 3.0 different....
+-- lib.advertisement:
 tagline: **ADVERTISING IN WEB 3.0**
+
+-- lib.advertisement.title:
+
+-- ftd.container:
+
+-- ftd.text: How advertising in web 3.0
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: different....
+role: $inherited.types.heading-medium
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-left.px: 11
+
+-- end: ftd.container
+
+-- end: lib.advertisement.title
 
 -- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg
@@ -339,24 +386,104 @@ web 3.0 budget?
 
 -- end: lib.advertisement
 
--- lib.help-banner: Confused about everything Web 3.0? Don't worry, we will help you ! Lezzzgoooooo!🚧
+-- lib.help-banner:
 cta-label: Let's Learn
 cta-url: /learn/
 image: $assets.files.static.help-banner.svg
 
+-- lib.help-banner.title:
+
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 80
+
+-- ftd.text: Confused about everything Web 3.0?
+role: $inherited.types.heading-small
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-right.px: 8
+
+-- ftd.text: Don't worry, we will help you ! Lezzzgoooooo!
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.help-banner.title
+
 -- end: lib.help-banner
 
--- lib.sneak-peak: A sneak peek into the AdMint platform. See how simple it really is!
+-- lib.sneak-peak:
 image: $assets.files.static.carousel.sneak-peak.png
 bg-image: $assets.files.static.carousel.sneak-bg.png
 cta-text: Get Started
 $cta-event: $show-waitlist-popup
 
--- lib.join-waitlist-form: Join the waitlist to get updated when we go live!
+-- lib.sneak-peak.title:
+
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+
+-- ftd.text: A 
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: sneak peek
+role: $fonts.heading-md
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 11
+
+-- ftd.text: into the AdMint platform. See how simple it really is!
+role: $fonts.heading-md
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.sneak-peak.title
+
+-- end: lib.sneak-peak
+
+-- lib.join-waitlist-form: 
 name-label: Name
 identity-label: Who are you?
 org-label: Organization Name
 email-label: Email id
 cta-text: Join waitlist
+
+-- lib.join-waitlist-form.title:
+
+-- ftd.container:
+width.fixed.percent if { ftd.device == "desktop" }: 80
+
+-- ftd.text: Join the
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: waitlist
+role: $inherited.types.heading-large
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-horizontal.px: 13
+
+-- ftd.text: to get updated when we go live!
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.join-waitlist-form.title
 
 -- end: lib.page
