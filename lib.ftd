@@ -1017,9 +1017,8 @@ role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
-
 -- ftd.column:
-margin-bottom.px: 28
+margin-bottom.px: 20
 region: h3
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -1036,7 +1035,7 @@ text: $structured-desktop.body
 role: $fonts.nunito-24-36-400
 color: $inherited.colors.text
 margin-bottom.px: 41
-max-width.fixed.percent: 58
+max-width.fixed.percent: 54
 
 -- end: ftd.column
 
@@ -1044,8 +1043,8 @@ max-width.fixed.percent: 58
 align-content: center
 align-self: center
 anchor: parent 
-right.px: -61
-top.percent: 62
+right.px: -60
+top.percent: 61
 z-index: 0 
 
 -- ftd.image:
@@ -4349,7 +4348,7 @@ children works-wrap:
 -- ftd.column:
 width: fill-container
 padding-top.px: 42
-padding-bottom.px: 80
+padding-bottom.px: 63
 id: how-it-works
 background.solid: $inherited.colors.background.step-1
 
@@ -4484,14 +4483,14 @@ max-width.fixed.px: $max-width
 
 -- ftd.image:
 src: $works-cell-desktop.left-src
-padding-right.px: 12
-width: fill-container
-align-self: center
-margin-top.px: 17
+width.fixed.px: 416
+height.fixed.px: 317
+margin-right.px: 13
 
 -- ftd.column:
 width: fill-container
 padding-horizontal.px: 12
+margin-left.px: -12
 
 -- ftd.row:
 width: fill-container
@@ -4533,35 +4532,26 @@ color: $inherited.colors.custom.one
 
 -- ftd.column:
 align-content: center
-width: fill-container
+height.fixed.px: 107
+padding-horizontal.px: 17
+padding-bottom.px: 9
+padding-top.px: 22
 
 -- ftd.text: $works-cell-desktop.bottom-cell
 color: $inherited.colors.background.step-1
-padding-vertical.px: 15
-padding-horizontal.px: 17
 width: fill-container
-height.fixed.px: 107
-
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-height: fill-container
 align-self: center
-padding-left.px: 14
-padding-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- ftd.image:
 src: $works-cell-desktop.right-src
-width: fill-container
-max-height: fill-container
-
--- end: ftd.column
+width.fixed.px: 416
+height.fixed.px: 317
 
 -- end: ftd.row
 
