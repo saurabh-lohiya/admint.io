@@ -253,6 +253,7 @@ on strategy & campaign execution
 $active-item: $current-cell
 min: 1
 max: 6
+small-height: true
 
 -- lib.works-cell: PLANNING
 number: 1
