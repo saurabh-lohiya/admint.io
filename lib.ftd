@@ -1564,13 +1564,13 @@ padding-horizontal.px: 25
 -- ftd.row:
 align-self: center
 padding-vertical.px: 5
+link: $navbar-desktop.site-url
 
 -- ftd.image:
 if: { navbar-desktop.site-name == NULL }
 src: $navbar-desktop.site-logo
 width: auto
 height: auto
-link: $navbar-desktop.site-url
 
 -- ftd.text: $navbar-desktop.site-name
 if: {navbar-desktop.site-name != NULL}
@@ -1582,13 +1582,12 @@ link: $navbar-desktop.site-url
 
 -- ftd.row:
 align-self: end
-spacing.fixed.px: 24
+spacing.fixed.px: 38
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 44
 align-self: center
-padding-left.px: 3
 
 -- sections-list: $obj.title
 url: $obj.url
@@ -1623,9 +1622,6 @@ boolean $is-active: false
 boolean $show-signup: false
 
 -- ftd.row:
-margin-left.px: 11
-
--- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
 border-color if {navbar-button.is-active}: $inherited.colors.cta-primary.hover
 border-radius.px: 50
@@ -1643,8 +1639,6 @@ role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
 $on-click$ if { navbar-button.url == NULL }: $ftd.set-bool($a = $navbar-button.show-signup, v = true)
-
--- end: ftd.row
 
 -- end: ftd.row
 
