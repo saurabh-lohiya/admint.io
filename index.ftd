@@ -41,11 +41,16 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
 -- ftd.text: Web 3.0 ready
-display: inline-block
+display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.border
 
--- ftd.text: " via structured campaign phases:
+-- ftd.text: "
+display: inline
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- ftd.text:via structured campaign phases:
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text

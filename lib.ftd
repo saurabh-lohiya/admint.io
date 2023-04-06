@@ -91,7 +91,6 @@ padding-vertical.px: 60
 width: fill-container
 max-width.fixed.px: $max-width
 padding-horizontal.px: 12
-padding-vertical.px: 12
 align-content: left
 
 -- ftd.text: $advertisement.tagline
@@ -109,6 +108,7 @@ width: fill-container
 max-width.fixed.px: $max-width
 padding-horizontal.px: 12
 children: $advertisement.feature-cards
+margin-top.px: 86
 spacing.fixed.px: 24
 wrap: true
 
@@ -851,7 +851,7 @@ margin-bottom.px: 41
 -- ftd.column:
 margin-bottom.px: 87
 region: h3
-width.fixed.percent: 75
+width.fixed.percent: 80
 
 -- simple-steps-desktop.subtitle.0:
 
@@ -2559,7 +2559,7 @@ ftd.image-src image:
 
 -- ftd.column:
 width: fill-container
-margin-top.px: 60
+padding-vertical.px: 50
 align-content: center
 
 -- ftd.column:
