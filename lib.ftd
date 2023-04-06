@@ -1973,20 +1973,19 @@ ftd.image-src team-thumb:
 
 -- ftd.column:
 width: fill-container
-align-self: center
-max-width.fixed.px: $max-width
 padding-top.px: 53
 padding-bottom.px: 60
 
 -- ftd.image:
 src: $footer-desktop.team-thumb
 anchor: parent
-bottom.px: 0
-left.px: -10
+bottom.px: 1
+left.px: 50
 
 -- ftd.column:
-align-self: end
+align-self: center
 padding-horizontal.px: 12
+min-width.fixed.px: $max-width
 
 -- ftd.image:
 src: $footer-desktop.site-logo
@@ -2693,12 +2692,6 @@ $on-click$: $ftd.set-bool($a = $sneak-peak.cta-event, v = true)
 
 -- ftd.column:
 
--- ftd.image:
-src: $sneak-peak.bg-image
-align-self: end
-top.px: -85
-anchor: parent
-
 -- end: ftd.column
 
 -- end: ftd.row
@@ -2731,6 +2724,12 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 -- end: ftd.column
 
 -- end: ftd.column
+
+-- ftd.image:
+src: $sneak-peak.bg-image
+align-self: end
+bottom.px: 48
+anchor: parent
 
 -- end: ftd.column
 
