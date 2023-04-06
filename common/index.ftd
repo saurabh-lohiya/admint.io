@@ -17,7 +17,7 @@ integer min: 0
 integer max: 5
 
 
-a = (((a - min) + by) % (max - min)) + min
+a = (((a - min) + by) % ((max+1)- min)) + min
 
 
 
@@ -30,7 +30,7 @@ integer min: 0
 integer max: 5
 
 
-a = (((a - min) - by) % (max - min)) + min
+a = (((a - min) - by) % ((max+1)- min)) + min
 
 
 
