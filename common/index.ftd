@@ -136,8 +136,8 @@ caption title:
 -- pr.toc-item list footer-links:
 $processor$: pr.toc
 
-- About Us: about/
-- Terms & Condition: terms-conditions/
+- About us: about/
+- Terms & Conditions: terms-conditions/
 - Privacy Policy: privacy-policy/
 - Pricing: /
 - Learn: learn/
