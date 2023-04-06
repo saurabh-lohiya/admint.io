@@ -2639,7 +2639,7 @@ boolean $cta-event: false
 width: fill-container
 align-content: center
 background.solid: $inherited.colors.background.base
-padding-top.px: 60
+padding-top.px: 10
 padding-bottom.px: 50
 
 -- ftd.column:
