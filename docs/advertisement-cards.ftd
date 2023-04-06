@@ -19,8 +19,29 @@ sections: $lib.sitemap.sections
 
 -- ds.page.footer:
 
--- lib.advertisement: How advertising in web 3.0 different....
+-- lib.advertisement:
 tagline: **ADVERTISING IN WEB 3.0**
+
+-- lib.advertisement.title:
+
+-- ftd.container:
+
+-- ftd.text: How advertising in web 3.0
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h1
+display: inline
+
+-- ftd.text: different....
+role: $inherited.types.heading-medium
+color: $inherited.colors.cta-primary.base
+region: h1
+display: inline
+margin-left.px: 11
+
+-- end: ftd.container
+
+-- end: lib.advertisement.title
 
 -- lib.advertisement-card: Transparent Yet Private
 src: $assets.files.static.advertising.Transparent-Yet-Private.svg

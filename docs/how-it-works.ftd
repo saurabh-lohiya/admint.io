@@ -49,71 +49,63 @@ lang: ftd
 Once you import the `lib` inside your `.ftd` file, use the `how-it-works` component by
 adding all required attributes of it.
 
--- ds.rendered: `how-it-works` without children
+-- ds.rendered:
 
 -- ds.rendered.input:
 
 \-- lib.how-it-works: **HOW IT WORKS** 🚧
-subtitle: Web 3.0 campaigns  set up made simple.
+
+\-- lib.how-it-works.subtitle:
+
+\-- ftd.container:
+
+\-- ftd.text: Web 3.0 campaigns
+display: inline
+color: $inherited.colors.border
+margin-right.px: 10
+
+\-- ftd.text: set up made simple.
+display: inline
+
+\-- end: ftd.container
+
+\-- end: lib.how-it-works.subtitle
+
+\-- lib.how-it-works.body:
 
 AdMint offsets most of the technological challenges 
 associated with Web 3.0, allowing advertisers to focus 
 on strategy & campaign execution
+
+\-- end: lib.how-it-works
 
 -- ds.rendered.output:
 
 -- lib.how-it-works: **HOW IT WORKS** 🚧
-subtitle: Web 3.0 campaigns  set up made simple.
+
+-- lib.how-it-works.subtitle:
+
+-- ftd.container:
+
+-- ftd.text: Web 3.0 campaigns
+display: inline
+color: $inherited.colors.border
+margin-right.px: 10
+
+-- ftd.text: set up made simple.
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.how-it-works.subtitle
+
+-- lib.how-it-works.body:
 
 AdMint offsets most of the technological challenges 
 associated with Web 3.0, allowing advertisers to focus 
 on strategy & campaign execution
 
--- end: ds.rendered.output
-
--- end: ds.rendered
-
--- ds.rendered: `how-it-works` with children
-
--- ds.rendered.input:
-
-\-- lib.how-it-works: **HOW IT WORKS** 🚧
-subtitle: Web 3.0 campaigns  set up made simple.
-
-AdMint offsets most of the technological challenges 
-associated with Web 3.0, allowing advertisers to focus 
-on strategy & campaign execution
-
-\-- lib.works-cell: PLANNING
-number: 1
-right-src: $assets.files.static.carousel.planning-right-img.svg 
-left-src: $assets.files.static.carousel.planning-left-img.svg
-right-mob-src: $assets.files.static.carousel.planning-right-mob-new.svg
-left-mob-src: $assets.files.static.carousel.planning-left-mob.svg
-top-cell: You choose your brand’s campaign objective 
-bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
-index: 1
-reset: 1
-
--- ds.rendered.output:
-
--- lib.how-it-works: **HOW IT WORKS** 🚧
-subtitle: Web 3.0 campaigns  set up made simple.
-
-AdMint offsets most of the technological challenges 
-associated with Web 3.0, allowing advertisers to focus 
-on strategy & campaign execution
-
--- lib.works-cell: PLANNING
-number: 1
-right-src: $assets.files.static.carousel.planning-right-img.svg 
-left-src: $assets.files.static.carousel.planning-left-img.svg
-right-mob-src: $assets.files.static.carousel.planning-right-mob-new.svg
-left-mob-src: $assets.files.static.carousel.planning-left-mob.svg
-top-cell: You choose your brand’s campaign objective 
-bottom-cell: AdMint provides relevant web 3.0 context on the campaign execution.
-index: 1
-reset: 1
+-- end: lib.how-it-works
 
 -- end: ds.rendered.output
 
