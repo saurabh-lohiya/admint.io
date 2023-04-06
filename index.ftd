@@ -263,7 +263,7 @@ margin-left.px: 8
 -- ftd.text: Web 3.0 campaigns
 display: inline
 color: $inherited.colors.border
-margin-right.px: 10
+margin-right.px: 11
 
 -- ftd.text: set up made simple.
 display: inline
