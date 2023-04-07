@@ -185,6 +185,43 @@ mobile: $size-24-mobile
 
 
 
+-- ftd.type size-24-36-600-type:
+line-height.px: 36
+size.px: 24
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-24-36-600: $size-24-36-600-type
+
+
+
+
+
+-- ftd.type font-40-700-60-type:
+line-height.px: 60
+size.px: 40
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-40-700-60: $font-40-700-60-type
+
+
+
+
+-- ftd.type font-18-600-27-type:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-600-27: $font-18-600-27-type
+
+
+
+
 
 -- ftd.type size-19-mobile:
 line-height.px: 24

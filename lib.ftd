@@ -3834,15 +3834,16 @@ right.px: 0
 
 -- component business-card:
 caption title:
-decimal monthly-price:
-decimal annually-price:
+string monthly-price:
+string annually-price:
 optional string id: 
 
 -- ftd.column:
-width.fixed.percent: 33
-width if { ftd.device == "mobile" }: fill-container
+width.fixed.percent: 33.33
+
+-- ftd.column:
+width: fill-container
 background.solid: $inherited.colors.background.step-1
-margin-horizontal.px if { ftd.device != "mobile" }: 16
 padding.px: 20
 border-radius.px: 10
 border-color: $inherited.colors.custom.two
@@ -3850,19 +3851,21 @@ border-width.px:1
 color: $inherited.colors.text
 
 -- ftd.text: $business-card.title
-role: $fonts.size-18
+role: $fonts.font-18-600-27
 
 -- ftd.row:
 width: fill-container
 id: $business-card.id
 spacing.fixed.px: 4
-role: $inherited.types.heading-medium
+role: $fonts.font-40-700-60
 
 -- ftd.text: \$
 
--- ftd.decimal: 
-value if { change-prices }: $business-card.annually-price
-value: $business-card.monthly-price
+-- ftd.text: $business-card.annually-price
+if: { change-prices }
+
+-- ftd.text: $business-card.monthly-price
+if: { !change-prices }
 
 -- end: ftd.row
 
@@ -3874,7 +3877,7 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: $fonts.cdcdcd36
 width: fill-container
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
@@ -3882,6 +3885,8 @@ src: $assets.files.static.pricing.dark-star.svg
 role: $inherited.types.copy-regular
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -3937,15 +3942,16 @@ link: $search.link
 
 -- component business-plus-card:
 caption title:
-decimal monthly-price:
-decimal annually-price:
+string monthly-price:
+string annually-price:
 optional string id: 
 
 -- ftd.column:
+width.fixed.percent: 33.33
+
+-- ftd.column:
 width: fill-container
-width.fixed.percent if { ftd.device != "mobile" }: 33
 background.solid: $inherited.colors.border
-margin-horizontal.px if { ftd.device != "mobile" }: 16
 padding.px: 20
 border-radius.px: 10
 border-color: $inherited.colors.custom.two
@@ -3969,19 +3975,21 @@ src: $assets.files.static.pricing.plus.svg
 -- end: ftd.column
 
 -- ftd.text: $business-plus-card.title
-role: $fonts.size-18
+role: $fonts.font-18-600-27
 
 -- ftd.row:
 width: fill-container
 id: $business-plus-card.id
 spacing.fixed.px: 4
-role: $inherited.types.heading-medium
+role: $fonts.font-40-700-60
 
 -- ftd.text: \$
 
--- ftd.decimal: 
-value if { change-prices }: $business-plus-card.annually-price
-value: $business-plus-card.monthly-price
+-- ftd.text: $business-plus-card.annually-price
+if: { change-prices }
+
+-- ftd.text: $business-plus-card.monthly-price
+if: { !change-prices }
 
 -- end: ftd.row
 
@@ -3993,7 +4001,7 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: #cdcdcd36
 width: fill-container
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
@@ -4003,6 +4011,9 @@ role: $inherited.types.copy-regular
 -- end: ftd.row
 
 -- end: ftd.column
+
+-- end: ftd.column
+
 -- end: business-plus-card
 
 
@@ -4024,23 +4035,28 @@ optional integer index:
 optional integer reset:
 
 -- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+align-content: center
+
+-- ftd.column:
 if: { tab-panel.index == tab-panel.reset }
 width: fill-container
 padding-bottom.px: 56
 max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
-padding-horizontal.px if { ftd.device == "mobile" }: 16
+padding-horizontal.px: 12
 
 -- ftd.row:
 align-self if { ftd.device != "mobile" }: end
 padding-vertical.px: 38
-spacing.fixed.px: 24
 align-content: center
 
 -- ftd.text: Monthly
-role: $fonts.size-24
+role: $fonts.size-24-36-600
 color if { !tab-panel.switch }: $inherited.colors.border
 color: $inherited.colors.custom.one
+margin-right.px: 18
 
 -- slide-toggle:
 $on-click$: $ftd.toggle($a = $tab-panel.switch)
@@ -4049,9 +4065,11 @@ $on-click$: $ftd.toggle($a = $change-prices)
 active: $tab-panel.active
 
 -- ftd.text: Annually (Save 25%)
-role: $fonts.size-24
+role: $fonts.size-24-36-600
 color: $inherited.colors.custom.one
 color if { tab-panel.switch }: $inherited.colors.border
+margin-left.px: 10
+margin-right.px: -3
 
 -- end: ftd.row
 
@@ -4060,6 +4078,9 @@ if: { ftd.device != "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
 align-self: center
+spacing.fixed.px: 24
+margin-top.px: 2
+margin-bottom.px: 23
 
 -- end: ftd.row
 
@@ -4067,8 +4088,10 @@ align-self: center
 if: { ftd.device == "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
-spacing.fixed.px: 24
-margin-bottom.px: 24
+spacing.fixed.px: 20
+margin-bottom.px: 20
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4177,10 +4200,14 @@ children tabs-wrap:
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width: fill-container
 padding-top.px: 56
 max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
-padding-horizontal.px if { ftd.device == "mobile" }: 12
+padding-horizontal.px: 12
 
 -- ftd.text: $business-plan.title
 role: $fonts.size-50
@@ -4194,6 +4221,8 @@ max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 children: $business-plan.tabs-wrap
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4233,16 +4262,15 @@ width.fixed.px if { ftd.device != "mobile" }: 217
 -- ftd.image:
 if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
-height: fill-container
-width: fill-container
-
+height.fixed.px: 135
+width.fixed.px: 217
 
 -- end: ftd.column
 
 -- ftd.text: $tab-label.title
 if: { tab-label.title != NULL }
 role: $fonts.size-20
-color: $inherited.colors.text
+color: $inherited.colors.custom.one
 color if { current-tab == $tab-label.index }: $inherited.colors.cta-primary.base
 white-space: nowrap
 
