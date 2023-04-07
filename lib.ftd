@@ -712,10 +712,10 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: 11
+left.px: 10
 top.px if { carousel.small-height }: 130
-left.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- ftd.image:
 if: { carousel.active-item == carousel.min }
@@ -724,12 +724,12 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.custom.three
+background.solid: rgba(63, 180, 136, 0.5)
 anchor: parent
-left.px: 11
+left.px: 10
 top.px if { carousel.small-height }: 130
-left.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- ftd.column:
 children: $carousel.wrap
@@ -749,11 +749,11 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: 11
+right.px: 10
 top.px if { carousel.small-height }: 130
-right.px if { carousel.small-height }: 11
 anchor: parent
 z-index: 1000
+padding.px: 4
 
 -- ftd.image:
 if: { carousel.active-item == carousel.max }
@@ -762,12 +762,12 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.custom.three
+background.solid: rgba(63, 180, 136, 0.5)
 anchor: parent
-right.px: 11
+right.px: 10
 top.px if { carousel.small-height }: 130
-right.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- end: ftd.row
 
