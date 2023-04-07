@@ -4,8 +4,23 @@
 
 -- lib.page:
 
--- lib.about-us: About AdMint
+-- lib.about-us:
 image: $assets.files.static.about-us.about-us.svg
+
+-- lib.about-us.title:
+
+-- ftd.container:
+
+-- ftd.text: About Ad 
+display: inline
+
+-- ftd.text: Mint
+color: $inherited.colors.cta-primary.base
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.about-us.title
 
 -- lib.about-us.body:
 
