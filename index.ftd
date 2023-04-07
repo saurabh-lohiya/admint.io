@@ -64,7 +64,7 @@ reset: $current-active
 
 -- ftd.container:
 
--- ftd.text: Make your brand "
+-- ftd.text: Make your brand &quot;
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -74,12 +74,12 @@ display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.border
 
--- ftd.text: "
+-- ftd.text: &quot;
 display: inline
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
--- ftd.text:via structured campaign phases:
+-- ftd.text: via structured campaign phases:
 display: inline-block
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
@@ -147,12 +147,12 @@ display: inline-block
 -- ftd.text: key media vehicle
 display: inline-block
 color: $inherited.colors.border
-margin-horizontal.px: 10
+margin-horizontal.px: 11
 
 -- ftd.text: 
 display: inline
 
-vehicle to run  campaigns. You can even mint your own!
+to run  campaigns. You can even mint your own!
 
 -- end: ftd.container
 
@@ -177,7 +177,7 @@ display: inline-block
 
 -- ftd.text: distribute, validate & track
 display: inline-block
-margin-horizontal.px: 10
+margin-horizontal.px: 11
 color: $inherited.colors.border
 
 -- ftd.text:  
@@ -207,7 +207,7 @@ reset: $current-active
 -- ftd.text: Analyze & consolidate
 display: inline
 color: $inherited.colors.border
-margin-right.px: 10
+margin-right.px: 11
 
 -- ftd.text:
 display: inline
@@ -263,7 +263,7 @@ margin-left.px: 8
 -- ftd.text: Web 3.0 campaigns
 display: inline
 color: $inherited.colors.border
-margin-right.px: 10
+margin-right.px: 11
 
 -- ftd.text: set up made simple.
 display: inline
@@ -324,7 +324,7 @@ right-src: $assets.files.static.carousel.dist-right-img.svg
 left-mob-src: $assets.files.static.carousel.dist-left-mob.svg 
 right-mob-src: $assets.files.static.carousel.dist-right-mob.svg
 top-cell: You identify target audience to receive the NFTs
-bottom-cell: AdMint provides tools and templates to enable distribution. execution.
+bottom-cell: AdMint provides tools and templates to enable distribution.
 index: 4
 reset: $current-cell
 
