@@ -3133,7 +3133,6 @@ color: $inherited.colors.text
 
 -- component about-us:
 ftd.ui list title:
-ftd.ui list subtitle:
 body body: 
 optional ftd.image-src image:
 children our-team: 
@@ -3151,14 +3150,12 @@ padding-bottom.px: 12
 -- about-us-desktop: 
 if: { ftd.device != "mobile" }
 title: $about-us.title
-subtitle: $about-us.subtitle
 body: $about-us.body
 src: $about-us.image
 
 -- about-us-mobile:
 if: { ftd.device == "mobile" }
 title: $about-us.title
-subtitle: $about-us.subtitle
 body: $about-us.body
 src: $about-us.image
 
@@ -3188,7 +3185,6 @@ align-content: center
 -- component about-us-desktop:
 ftd.ui list title:
 body body: 
-ftd.ui list subtitle:
 optional ftd.image-src src:
 
 -- ftd.row:
@@ -3220,7 +3216,7 @@ role: $fonts.16-24-400
 color: $inherited.colors.text
 margin-bottom.rem: 1
 
--- about-us-desktop.subtitle.0:
+-- about-us-desktop.title.1:
 
 -- end: ftd.row
 
@@ -3256,7 +3252,6 @@ margin-bottom.px: 12
 
 -- component about-us-mobile:
 ftd.ui list title:
-ftd.ui list subtitle:
 body body: 
 optional ftd.image-src src:
 
@@ -3288,7 +3283,7 @@ role: $fonts.16-24-400
 color: $inherited.colors.text
 margin-bottom.px: 16
 
--- about-us-mobile.subtitle.0:
+-- about-us-mobile.title.1:
 
 -- end: ftd.row
 

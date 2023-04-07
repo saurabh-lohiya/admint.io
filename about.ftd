@@ -20,10 +20,6 @@ display: inline
 
 -- end: ftd.container
 
--- end: lib.about-us.title
-
--- lib.about-us.subtitle:
-
 -- ftd.container:
 
 -- ftd.text: Ad
@@ -39,7 +35,7 @@ display: inline
 
 -- end: ftd.container
 
--- end: lib.about-us.subtitle
+-- end: lib.about-us.title
 
 -- lib.about-us.body:
 
