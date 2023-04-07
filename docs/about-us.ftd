@@ -47,8 +47,40 @@ adding all required attributes of it.
 
 -- ds.rendered.input:
 
-\-- lib.about-us: About AdMint
+\-- lib.about-us:
 image: $assets.files.static.about-us.about-us.svg
+
+\-- lib.about-us.title:
+
+\-- ftd.container:
+
+\-- ftd.text: About Ad 
+display: inline
+
+\-- ftd.text: Mint
+color: $inherited.colors.cta-primary.base
+display: inline
+
+\-- end: ftd.container
+
+\-- ftd.container:
+
+\-- ftd.text: Ad
+display: inline
+
+\-- ftd.text: Mint
+color: $inherited.colors.cta-primary.base
+display: inline
+margin-right.px: 4
+
+\-- ftd.text: happened out of curiosity. Pure & simple.
+display: inline
+
+\-- end: ftd.container
+
+\-- end: lib.about-us.title
+
+\-- lib.about-us.body:
 
 AdMint happened out of curiosity. Pure & simple.
 
@@ -63,8 +95,40 @@ long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 
 -- ds.rendered.output:
 
--- lib.about-us: About AdMint
+-- lib.about-us:
 image: $assets.files.static.about-us.about-us.svg
+
+-- lib.about-us.title:
+
+-- ftd.container:
+
+-- ftd.text: About Ad 
+display: inline
+
+-- ftd.text: Mint
+color: $inherited.colors.cta-primary.base
+display: inline
+
+-- end: ftd.container
+
+-- ftd.container:
+
+-- ftd.text: Ad
+display: inline
+
+-- ftd.text: Mint
+color: $inherited.colors.cta-primary.base
+display: inline
+margin-right.px: 4
+
+-- ftd.text: happened out of curiosity. Pure & simple.
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.about-us.title
+
+-- lib.about-us.body:
 
 AdMint happened out of curiosity. Pure & simple.
 
