@@ -3317,8 +3317,8 @@ height.fixed.px: 340
 
 
 -- component our-team:
-caption title:
-common.team list members-list:
+ftd.ui list title:
+ftd.ui list members-list:
 
 -- ftd.column:
 width: fill-container
@@ -3346,19 +3346,29 @@ anchor: parent
 right.px: 0
 top.px: 0
 
--- ftd.text: $our-team.title
+
+-- ftd.row:
 if: { ftd.device != "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+region: h3
 margin-top.px: 188
 margin-left.px: 0
 
--- ftd.text: $our-team.title
+-- our-team.title.0:
+
+-- end: ftd.row
+
+-- ftd.row:
 if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 260
 margin-left.px: 12
+
+-- our-team.title.0:
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -3368,12 +3378,7 @@ padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
 align-self: start
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+children: $our-team.members-list
 
 -- end: ftd.row
 
@@ -3382,12 +3387,7 @@ if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
 margin-left.px: -10
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+children: $our-team.members-list
 
 -- end: ftd.column
 
