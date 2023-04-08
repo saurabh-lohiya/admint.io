@@ -58,13 +58,75 @@ by adding all required attributes of it.
 
 -- ds.rendered.input:
 
-\-- lib.our-team: Our Team.
-members-list: $common.members
+\-- lib.our-team:
+
+\-- lib.our-team.title:
+
+\-- ftd.container:
+
+\-- ftd.text: Our
+display: inline
+margin-right.px: 11
+
+\-- ftd.text: Team.
+color: $inherited.colors.cta-primary.base
+display: inline
+
+\-- end: ftd.container
+
+\-- end: lib.our-team.title
+
+\-- end: lib.our-team
+
+\-- lib.our-team.members-list: 
+
+\-- lib.member-feature-card: **Harish Shankaran**
+designation: Founder
+avatar: $assets.files.static.about-us.hareesh.jpeg
+link: https://www.linkedin.com/in/harishshankaran/
+
+\-- lib.member-feature-card: **Jaylah Consejo**
+designation: Founder
+avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
+link: https://www.linkedin.com/in/jaylahconsejo/
+
+\-- end: lib.our-team.members-list
 
 -- ds.rendered.output:
 
--- lib.our-team: Our Team.
-members-list: $common.members
+-- lib.our-team:
+
+-- lib.our-team.title:
+
+-- ftd.container:
+
+-- ftd.text: Our
+display: inline
+margin-right.px: 11
+
+-- ftd.text: Team.
+color: $inherited.colors.cta-primary.base
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.our-team.title
+
+-- end: lib.our-team
+
+-- lib.our-team.members-list: 
+
+-- lib.member-feature-card: **Harish Shankaran**
+designation: Founder
+avatar: $assets.files.static.about-us.hareesh.jpeg
+link: https://www.linkedin.com/in/harishshankaran/
+
+-- lib.member-feature-card: **Jaylah Consejo**
+designation: Founder
+avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
+link: https://www.linkedin.com/in/jaylahconsejo/
+
+-- end: lib.our-team.members-list
 
 -- end: ds.rendered.output
 
