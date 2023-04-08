@@ -3233,9 +3233,9 @@ if: { about-us-desktop.src != NULL }
 src: $about-us-desktop.src
 width.fixed.px: 373
 height.fixed.px: 340
-margin-left.px: 24
+margin-left.px: 23
 margin-top.px: 0
-margin-bottom.px: 12
+margin-bottom.px: 11
 
 -- end: ftd.row
 
@@ -3323,7 +3323,7 @@ common.team list members-list:
 -- ftd.column:
 width: fill-container
 align-content: center
-margin-top.px: 86
+margin-top.px: 88
 max-width.fixed.px: 1296
 
 -- ftd.column:
@@ -3351,7 +3351,7 @@ if: { ftd.device != "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 188
-margin-left.px: 2
+margin-left.px: 0
 
 -- ftd.text: $our-team.title
 if: { ftd.device == "mobile" }
