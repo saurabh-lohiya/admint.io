@@ -3889,8 +3889,9 @@ role: $fonts.font-18-600-27
 -- ftd.row:
 width: fill-container
 id: $business-card.id
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 role: $fonts.font-40-700-60
+color: $fonts.121a17
 
 -- ftd.text: \$
 
@@ -4013,7 +4014,7 @@ role: $fonts.font-18-600-27
 -- ftd.row:
 width: fill-container
 id: $business-plus-card.id
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 
 -- ftd.text: \$
