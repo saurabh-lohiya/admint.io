@@ -3376,7 +3376,7 @@ margin-left.px: 12
 if: { ftd.device != "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
+margin-left.px: -12
 align-self: start
 children: $our-team.members-list
 
@@ -3386,7 +3386,7 @@ children: $our-team.members-list
 if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
+margin-left.px: -12
 children: $our-team.members-list
 
 -- end: ftd.column

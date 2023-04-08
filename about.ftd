@@ -58,6 +58,7 @@ long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 
 -- ftd.text: Our
 display: inline
+margin-right.px: 11
 
 -- ftd.text: Team.
 color: $inherited.colors.cta-primary.base
