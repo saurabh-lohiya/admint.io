@@ -791,6 +791,16 @@ weight: 600
 
 
 
+-- ftd.type 30-45-700-type:
+line-height.px: 45
+size.px: 30
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type 30-45-700: $30-45-700-type
+
+
 -- ftd.color 222b27: #222b27
 
 -- ftd.color bdbdbd: #bdbdbd
