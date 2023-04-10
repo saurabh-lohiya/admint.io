@@ -3605,11 +3605,11 @@ padding-horizontal.px: 12
 -- ftd.text: $why-nft-hero.tagline
 role: $inherited.types.label-large
 color: $inherited.colors.custom.two
-margin-bottom.px: 41
 
 -- ftd.text: $why-nft-hero.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+margin-top.px: 41
 region: h3
 margin-bottom.px: 8
 
@@ -3639,14 +3639,11 @@ bottom.px: 0
 
 -- ftd.column:
 width: fill-container
-margin-left.percent: 41.66
-padding-left.px: 6
-padding-right.px: 4
+margin-left.percent: 42.25
 
 -- ftd.text: $why-nft-hero.tagline
 role: $inherited.types.label-large
 color: $inherited.colors.custom.two
-margin-bottom.px: 41
 style if { why-nft-hero.hover-me }: underline
 $on-mouse-enter$: $ftd.set-bool($a = $why-nft-hero.hover-me, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $why-nft-hero.hover-me, v = false)
@@ -3654,11 +3651,12 @@ $on-mouse-leave$: $ftd.set-bool($a = $why-nft-hero.hover-me, v = false)
 -- ftd.text: $why-nft-hero.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+margin-top.px: 41
 region: h3
 margin-bottom.px: 8
 
 -- ftd.text:
-role: $inherited.types.copy-regular
+role: $fonts.copy-regular-body
 color: $inherited.colors.text
 margin-bottom.px: 16
 
@@ -3680,6 +3678,26 @@ $why-nft-hero.body
 
 
 
+-- component ul-section:
+body body:
+
+-- ftd.text:
+role: $fonts.copy-regular-bodyV2
+color: $inherited.colors.text
+margin-top.px: 8
+
+$ul-section.body
+
+-- end: ul-section
+
+
+
+
+
+
+
+
+
 
 -- component brand-objective:
 caption title:
@@ -3687,7 +3705,7 @@ body body:
 
 -- ftd.column:
 width: fill-container
-margin-vertical.px: 20
+margin-top.px: 9
 padding.px: 20
 background.solid: $inherited.colors.custom.three
 
@@ -3695,11 +3713,11 @@ background.solid: $inherited.colors.custom.three
 role: $fonts.size-20-700
 color: $inherited.colors.custom.four
 region: h5
-margin-bottom.px: 8
 
 -- ftd.text:
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
+margin-top.px: 10
+role: $fonts.copy-regular-bodyV3
+color: $inherited.colors.custom.one
 
 $brand-objective.body
 
@@ -3757,7 +3775,7 @@ $show-options: $drop-down-options.show-options
 
 
 
--- component why-nft-card: 
+-- component why-nft-card:
 caption title:
 ftd.image-src image:
 body body:
@@ -3768,13 +3786,13 @@ width: fill-container
 align-self: center
 background.solid: $inherited.colors.background.step-1
 padding-horizontal.px if { ftd.device == "mobile" }: 12
+margin-bottom.px: 48
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
 padding.px: 30
 padding-bottom.px: 0
-margin-bottom.px: 48
 border-width.px: 1
 border-color: $inherited.colors.custom.one
 
@@ -3805,16 +3823,16 @@ max-width.fixed.percent: 100
 -- ftd.row:
 if: { ftd.device != "mobile" }
 width: fill-container
-padding.px: 30
-padding-bottom.px: 0
-margin-bottom.px: 48
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-max-width.fixed.px: 1320
+max-width.fixed.px: 1296
 align-self: center
+spacing: space-between
 
 -- ftd.column:
-width.fixed.percent: 58.33
+padding-horizontal.px: 30
+padding-top.px: 30
+width.fixed.percent: 59.5
 
 -- ftd.text: $why-nft-card.title
 role: $fonts.size-24-700
@@ -3823,7 +3841,7 @@ region: h4
 margin-bottom.px: 8
 
 -- ftd.text:
-role: $inherited.types.copy-regular
+role: $fonts.copy-regular-body
 color: $inherited.colors.text
 
 $why-nft-card.body
@@ -3837,17 +3855,16 @@ children: $why-nft-card.brands
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.px: 525
-align-content: bottom-right
-height: fill-container
+height.fixed.percent: 100
+align-self: end
+padding-right.px: 30
 padding-top.px: 30
+width.fixed.percent: 40.5
 
 -- ftd.image:
+align-self: end
+height.fixed.percent: 100
 src: $why-nft-card.image
-max-width.fixed.percent: 100
-anchor: parent
-bottom.px: 0
-right.px: 0
 
 -- end: ftd.column
 
@@ -3916,7 +3933,8 @@ spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
--- ftd.text:  Launching Soon 
+
+-- ftd.text: Launching Soon 
 role: $inherited.types.copy-regular
 
 -- end: ftd.row

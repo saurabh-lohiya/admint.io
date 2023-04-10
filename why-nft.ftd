@@ -9,12 +9,12 @@
 tagline: **WHY NFTs?**
 image: $assets.files.static.why-nfts.nft-awesome.svg
 
-NFTs started out cool. And then people started pserceiving them to be nothing
-more than overpriced jpegs. That's simply not true. They can be so much more!
-The way a jar could be filled with cookies, candies, pickled stuff or have
-coins in them, it is up to us what value an NFT should have in them. Think of
-NFTs to be a container that depending on what's inside them, can change the
-experience for the NFT owner. Let's get to know NFTs better.
+NFTs started out cool. And then people started perceiving them to be nothing 
+more than overpriced jpegs. That's simply not true. They can be so much more! 
+The way a jar could be filled with cookies, candies, pickled stuff or have 
+coins in them, it is up to us what value an NFT should have in them. Think of 
+NFTs to be a container that depending on what's inside them, can change 
+the experience for the NFT owner. Let's get to know NFTs better.
 
 -- lib.why-nft-card: NFTs Offer Value
 image: $assets.files.static.why-nfts.neft-offer-value.svg
@@ -23,6 +23,8 @@ The other side of the coin really! If something can store value, that value can
 be extended to provide real-world utility. Imagine creating a bunch of extended
 value-adds around the statement, “if a user has a particular NFT then, allow
 them to...”
+
+-- lib.ul-section:
 
 - Access unique offline/online brand experiences.
 - Try samples / buy exclusive items / vote & comment.
@@ -42,6 +44,8 @@ blockchains. Thereby you can check valuable NFTs, valuable collections and high
 value wallets. You can determine or percieve the value of wallets that own your
 brand NFTs!
 
+-- lib.ul-section:
+
 - Use NFTs to track wallets & user behavior
 - NFT Profiles based on NFTs owned / spends
 
@@ -57,6 +61,8 @@ image: $assets.files.static.why-nfts.nft-trade-value.svg
 NFTs allow for barter / swaps / upgrades / downgrades etc. You can also build
 associations like “if user has NFT X, drop NFT Y in to their wallet. This makes
 NFTs highly flexible as a tradeable asset.
+
+-- lib.ul-section:
 
 - Use NFTs to gamify interaction with users.
 - Use Marketplaces to Swap / Trade/ Drop one for one NFT to drive engagement.
@@ -75,6 +81,8 @@ NFTs can be built to allow composability. You can merge multiple composableNFTs
 into one or break down an NFT into smaller components. Makes for interesting
 evolutionary models to be built using NFTs.
 
+-- lib.ul-section:
+
 - Merge & evolve NFTs in collectibles / games.
 - Pro rate ownership of assets
 - Divesting partial assets for $ value
@@ -91,6 +99,8 @@ image: $assets.files.static.why-nfts.nft-lend-value.svg
 
 You can structure your NFT to be shared on a time-bound basis to various
 platforms in return for value of access that can be provided by them.
+
+-- lib.ul-section:
 
 - Use NFT lending to gain liquidity of assets you want.
 - Pro rate ownership of assets
