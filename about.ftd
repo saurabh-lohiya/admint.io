@@ -50,8 +50,39 @@ long term vision is to build an end-to-end AdTech stack for Web 3.0 ecosystem.
 
 -- lib.about-us.our-team:
 
--- lib.our-team: Our Team.
-members-list: $common.members
+-- lib.our-team:
+
+-- lib.our-team.title:
+
+-- ftd.container:
+
+-- ftd.text: Our
+display: inline
+margin-right.px: 11
+
+-- ftd.text: Team.
+color: $inherited.colors.cta-primary.base
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.our-team.title
+
+-- end: lib.our-team
+
+-- lib.our-team.members-list: 
+
+-- lib.member-feature-card: **Harish Shankaran**
+designation: Founder
+avatar: $assets.files.static.about-us.hareesh.jpeg
+link: https://www.linkedin.com/in/harishshankaran/
+
+-- lib.member-feature-card: **Jaylah Consejo**
+designation: Founder
+avatar: $assets.files.static.about-us.Jaylah-Consejo.jpeg
+link: https://www.linkedin.com/in/jaylahconsejo/
+
+-- end: lib.our-team.members-list
 
 -- end: lib.about-us.our-team
 

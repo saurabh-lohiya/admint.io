@@ -583,6 +583,7 @@ title: $page.title
 width: fill-container
 $on-mouse-enter$: $common.global-event()
 background.solid: $inherited.colors.background.base
+min-width.fixed.px if { ftd.device == "desktop" }: $max-width
 
 -- navbar:
 site-name: $page.site-name
@@ -3233,9 +3234,9 @@ if: { about-us-desktop.src != NULL }
 src: $about-us-desktop.src
 width.fixed.px: 373
 height.fixed.px: 340
-margin-left.px: 24
+margin-left.px: 23
 margin-top.px: 0
-margin-bottom.px: 12
+margin-bottom.px: 11
 
 -- end: ftd.row
 
@@ -3317,13 +3318,13 @@ height.fixed.px: 340
 
 
 -- component our-team:
-caption title:
-common.team list members-list:
+ftd.ui list title:
+ftd.ui list members-list:
 
 -- ftd.column:
 width: fill-container
 align-content: center
-margin-top.px: 86
+margin-top.px: 88
 max-width.fixed.px: 1296
 
 -- ftd.column:
@@ -3346,19 +3347,29 @@ anchor: parent
 right.px: 0
 top.px: 0
 
--- ftd.text: $our-team.title
+
+-- ftd.row:
 if: { ftd.device != "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+region: h3
 margin-top.px: 188
-margin-left.px: 2
+margin-left.px: 0
 
--- ftd.text: $our-team.title
+-- our-team.title.0:
+
+-- end: ftd.row
+
+-- ftd.row:
 if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 260
 margin-left.px: 12
+
+-- our-team.title.0:
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -3366,14 +3377,9 @@ margin-left.px: 12
 if: { ftd.device != "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
+margin-left.px: -12
 align-self: start
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+children: $our-team.members-list
 
 -- end: ftd.row
 
@@ -3381,13 +3387,8 @@ link: $obj.link
 if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+margin-left.px: -12
+children: $our-team.members-list
 
 -- end: ftd.column
 
@@ -3889,8 +3890,9 @@ role: $fonts.font-18-600-27
 -- ftd.row:
 width: fill-container
 id: $business-card.id
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 role: $fonts.font-40-700-60
+color: $fonts.121a17
 
 -- ftd.text: \$
 
@@ -4013,7 +4015,7 @@ role: $fonts.font-18-600-27
 -- ftd.row:
 width: fill-container
 id: $business-plus-card.id
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 
 -- ftd.text: \$
