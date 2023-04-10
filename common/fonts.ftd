@@ -733,9 +733,7 @@ letter-spacing.px: 0
 weight: 400
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type copy-regular-16:
-desktop: $copy-regular-16
-mobile: $copy-regular-16
+-- ftd.responsive-type copy-regular-16: $copy-regular-16
 
 
 
@@ -761,9 +759,7 @@ letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
 weight: 600
 
--- ftd.responsive-type copy-regular-body:
-desktop: $copy-regular-body
-mobile: $copy-regular-body
+-- ftd.responsive-type copy-regular-body: $copy-regular-body
 
 
 
@@ -776,9 +772,7 @@ letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
 weight: 600
 
--- ftd.responsive-type copy-regular-bodV2y:
-desktop: $copy-regular-bodyV2
-mobile: $copy-regular-bodyV2
+-- ftd.responsive-type copy-regular-bodV2y: $copy-regular-bodyV2
 
 
 
@@ -791,9 +785,7 @@ letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
 weight: 600
 
--- ftd.responsive-type copy-regular-bodV3:
-desktop: $copy-regular-bodyV3
-mobile: $copy-regular-bodyV3
+-- ftd.responsive-type copy-regular-bodV3: $copy-regular-bodyV3
 
 
 
