@@ -583,6 +583,7 @@ title: $page.title
 width: fill-container
 $on-mouse-enter$: $common.global-event()
 background.solid: $inherited.colors.background.base
+min-width.fixed.px if { ftd.device == "desktop" }: $max-width
 
 -- navbar:
 site-name: $page.site-name
@@ -712,10 +713,10 @@ width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
 anchor: parent
-left.px: 11
+left.px: 10
 top.px if { carousel.small-height }: 130
-left.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- ftd.image:
 if: { carousel.active-item == carousel.min }
@@ -724,12 +725,12 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.custom.three
+background.solid: rgba(63, 180, 136, 0.5)
 anchor: parent
-left.px: 11
+left.px: 10
 top.px if { carousel.small-height }: 130
-left.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- ftd.column:
 children: $carousel.wrap
@@ -749,11 +750,11 @@ border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
 background.solid: $inherited.colors.cta-primary.base
-right.px: 11
+right.px: 10
 top.px if { carousel.small-height }: 130
-right.px if { carousel.small-height }: 11
 anchor: parent
 z-index: 1000
+padding.px: 4
 
 -- ftd.image:
 if: { carousel.active-item == carousel.max }
@@ -762,12 +763,12 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.custom.three
+background.solid: rgba(63, 180, 136, 0.5)
 anchor: parent
-right.px: 11
+right.px: 10
 top.px if { carousel.small-height }: 130
-right.px if { carousel.small-height }: 11
 z-index: 1000
+padding.px: 4
 
 -- end: ftd.row
 
@@ -872,6 +873,8 @@ margin-bottom.px: 41
 margin-bottom.px: 87
 region: h3
 width.fixed.percent: 80
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
 
 -- simple-steps-desktop.subtitle.0:
 
@@ -3130,7 +3133,7 @@ color: $inherited.colors.text
 
 
 -- component about-us:
-caption title:
+ftd.ui list title:
 body body: 
 optional ftd.image-src image:
 children our-team: 
@@ -3142,15 +3145,18 @@ align-content: center
 
 -- ftd.column:
 max-width.fixed.px: $max-width
-padding.px: 12
+padding-horizontal.px: 12
+padding-bottom.px: 12
 
--- about-us-desktop: $about-us.title
+-- about-us-desktop: 
 if: { ftd.device != "mobile" }
+title: $about-us.title
 body: $about-us.body
 src: $about-us.image
 
--- about-us-mobile: $about-us.title
+-- about-us-mobile:
 if: { ftd.device == "mobile" }
+title: $about-us.title
 body: $about-us.body
 src: $about-us.image
 
@@ -3178,7 +3184,7 @@ align-content: center
 
 
 -- component about-us-desktop:
-caption title:
+ftd.ui list title:
 body body: 
 optional ftd.image-src src:
 
@@ -3187,23 +3193,36 @@ width: fill-container
 align-self: center
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-margin-top.px: 63
+margin-top.px: 78
 padding-horizontal.px: 30
 padding-top.px: 30
 background.solid: $inherited.colors.background.step-1
 shadow: $fonts.about
 
 -- ftd.column:
-width.fixed.percent: 66.66
+width.fixed.percent: 66.1
 
--- ftd.text: $about-us-desktop.title
+-- ftd.row:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 region: h3
 margin-bottom.px: 8
 
+-- about-us-desktop.title.0:
+
+-- end: ftd.row
+
+-- ftd.row:
+role: $fonts.16-24-400
+color: $inherited.colors.text
+margin-bottom.rem: 1
+
+-- about-us-desktop.title.1:
+
+-- end: ftd.row
+
 -- ftd.text: 
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 
 $about-us-desktop.body
@@ -3215,9 +3234,9 @@ if: { about-us-desktop.src != NULL }
 src: $about-us-desktop.src
 width.fixed.px: 373
 height.fixed.px: 340
-margin-left.px: 22
+margin-left.px: 23
 margin-top.px: 0
-margin-bottom.px: 12
+margin-bottom.px: 11
 
 -- end: ftd.row
 
@@ -3233,7 +3252,7 @@ margin-bottom.px: 12
 
 
 -- component about-us-mobile:
-caption title:
+ftd.ui list title:
 body body: 
 optional ftd.image-src src:
 
@@ -3250,14 +3269,27 @@ padding-bottom.px: 373
 overflow-x: hidden
 shadow: $fonts.about
 
--- ftd.text: $about-us-mobile.title
+-- ftd.row:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 region: h3
 margin-bottom.px: 8
 
+-- about-us-mobile.title.0:
+
+-- end: ftd.row
+
+-- ftd.row:
+role: $fonts.16-24-400
+color: $inherited.colors.text
+margin-bottom.px: 16
+
+-- about-us-mobile.title.1:
+
+-- end: ftd.row
+
 -- ftd.text: 
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 classes: markdown
 
@@ -3286,25 +3318,27 @@ height.fixed.px: 340
 
 
 -- component our-team:
-caption title:
-common.team list members-list:
+ftd.ui list title:
+ftd.ui list members-list:
 
 -- ftd.column:
 width: fill-container
 align-content: center
-margin-top.px: 86
-max-width.fixed.px: $max-width
+margin-top.px: 88
+max-width.fixed.px: 1296
 
 -- ftd.column:
 width: fill-container
 min-height.fixed.px: 244
+overflow: hidden
 
 -- ftd.image: 
 if: { ftd.device != "mobile" }
 src: $assets.files.static.about-us.our-team.svg
 anchor: parent
-right.px: 22
+right.px: 0
 top.px: -16
+height: fill-container
 
 -- ftd.image: 
 if: { ftd.device == "mobile" }
@@ -3313,19 +3347,29 @@ anchor: parent
 right.px: 0
 top.px: 0
 
--- ftd.text: $our-team.title
+
+-- ftd.row:
 if: { ftd.device != "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+region: h3
 margin-top.px: 188
-margin-left.px: 2
+margin-left.px: 0
 
--- ftd.text: $our-team.title
+-- our-team.title.0:
+
+-- end: ftd.row
+
+-- ftd.row:
 if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
 margin-top.px: 260
 margin-left.px: 12
+
+-- our-team.title.0:
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -3333,14 +3377,9 @@ margin-left.px: 12
 if: { ftd.device != "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
+margin-left.px: -12
 align-self: start
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+children: $our-team.members-list
 
 -- end: ftd.row
 
@@ -3348,13 +3387,8 @@ link: $obj.link
 if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -10
-
--- member-feature-card: $obj.title
-$loop$: $our-team.members-list as $obj
-designation: $obj.designation
-avatar: $obj.avatar
-link: $obj.link
+margin-left.px: -12
+children: $our-team.members-list
 
 -- end: ftd.column
 
@@ -3851,15 +3885,16 @@ src: $why-nft-card.image
 
 -- component business-card:
 caption title:
-decimal monthly-price:
-decimal annually-price:
+string monthly-price:
+string annually-price:
 optional string id: 
 
 -- ftd.column:
-width.fixed.percent: 33
-width if { ftd.device == "mobile" }: fill-container
+width.fixed.percent: 33.33
+
+-- ftd.column:
+width: fill-container
 background.solid: $inherited.colors.background.step-1
-margin-horizontal.px if { ftd.device != "mobile" }: 16
 padding.px: 20
 border-radius.px: 10
 border-color: $inherited.colors.custom.two
@@ -3867,19 +3902,22 @@ border-width.px:1
 color: $inherited.colors.text
 
 -- ftd.text: $business-card.title
-role: $fonts.size-18
+role: $fonts.font-18-600-27
 
 -- ftd.row:
 width: fill-container
 id: $business-card.id
-spacing.fixed.px: 4
-role: $inherited.types.heading-medium
+spacing.fixed.px: 10
+role: $fonts.font-40-700-60
+color: $fonts.121a17
 
 -- ftd.text: \$
 
--- ftd.decimal: 
-value if { change-prices }: $business-card.annually-price
-value: $business-card.monthly-price
+-- ftd.text: $business-card.annually-price
+if: { change-prices }
+
+-- ftd.text: $business-card.monthly-price
+if: { !change-prices }
 
 -- end: ftd.row
 
@@ -3891,7 +3929,7 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: $fonts.cdcdcd36
 width: fill-container
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
@@ -3900,6 +3938,8 @@ src: $assets.files.static.pricing.dark-star.svg
 role: $inherited.types.copy-regular
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -3955,15 +3995,16 @@ link: $search.link
 
 -- component business-plus-card:
 caption title:
-decimal monthly-price:
-decimal annually-price:
+string monthly-price:
+string annually-price:
 optional string id: 
 
 -- ftd.column:
+width.fixed.percent: 33.33
+
+-- ftd.column:
 width: fill-container
-width.fixed.percent if { ftd.device != "mobile" }: 33
 background.solid: $inherited.colors.border
-margin-horizontal.px if { ftd.device != "mobile" }: 16
 padding.px: 20
 border-radius.px: 10
 border-color: $inherited.colors.custom.two
@@ -3987,19 +4028,21 @@ src: $assets.files.static.pricing.plus.svg
 -- end: ftd.column
 
 -- ftd.text: $business-plus-card.title
-role: $fonts.size-18
+role: $fonts.font-18-600-27
 
 -- ftd.row:
 width: fill-container
 id: $business-plus-card.id
-spacing.fixed.px: 4
-role: $inherited.types.heading-medium
+spacing.fixed.px: 10
+role: $fonts.font-40-700-60
 
 -- ftd.text: \$
 
--- ftd.decimal: 
-value if { change-prices }: $business-plus-card.annually-price
-value: $business-plus-card.monthly-price
+-- ftd.text: $business-plus-card.annually-price
+if: { change-prices }
+
+-- ftd.text: $business-plus-card.monthly-price
+if: { !change-prices }
 
 -- end: ftd.row
 
@@ -4011,7 +4054,7 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: #cdcdcd36
 width: fill-container
-spacing.fixed.px: 4
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
@@ -4021,6 +4064,9 @@ role: $inherited.types.copy-regular
 -- end: ftd.row
 
 -- end: ftd.column
+
+-- end: ftd.column
+
 -- end: business-plus-card
 
 
@@ -4042,23 +4088,28 @@ optional integer index:
 optional integer reset:
 
 -- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+align-content: center
+
+-- ftd.column:
 if: { tab-panel.index == tab-panel.reset }
 width: fill-container
 padding-bottom.px: 56
 max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
-padding-horizontal.px if { ftd.device == "mobile" }: 16
+padding-horizontal.px: 12
 
 -- ftd.row:
 align-self if { ftd.device != "mobile" }: end
 padding-vertical.px: 38
-spacing.fixed.px: 24
 align-content: center
 
 -- ftd.text: Monthly
-role: $fonts.size-24
+role: $fonts.size-24-36-600
 color if { !tab-panel.switch }: $inherited.colors.border
 color: $inherited.colors.custom.one
+margin-right.px: 18
 
 -- slide-toggle:
 $on-click$: $ftd.toggle($a = $tab-panel.switch)
@@ -4067,9 +4118,11 @@ $on-click$: $ftd.toggle($a = $change-prices)
 active: $tab-panel.active
 
 -- ftd.text: Annually (Save 25%)
-role: $fonts.size-24
+role: $fonts.size-24-36-600
 color: $inherited.colors.custom.one
 color if { tab-panel.switch }: $inherited.colors.border
+margin-left.px: 10
+margin-right.px: -3
 
 -- end: ftd.row
 
@@ -4078,6 +4131,9 @@ if: { ftd.device != "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
 align-self: center
+spacing.fixed.px: 24
+margin-top.px: 2
+margin-bottom.px: 23
 
 -- end: ftd.row
 
@@ -4085,8 +4141,10 @@ align-self: center
 if: { ftd.device == "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
-spacing.fixed.px: 24
-margin-bottom.px: 24
+spacing.fixed.px: 20
+margin-bottom.px: 20
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4195,10 +4253,14 @@ children tabs-wrap:
 
 -- ftd.column:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+width: fill-container
 padding-top.px: 56
 max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
-padding-horizontal.px if { ftd.device == "mobile" }: 12
+padding-horizontal.px: 12
 
 -- ftd.text: $business-plan.title
 role: $fonts.size-50
@@ -4212,6 +4274,8 @@ max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 children: $business-plan.tabs-wrap
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4251,16 +4315,15 @@ width.fixed.px if { ftd.device != "mobile" }: 217
 -- ftd.image:
 if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
-height: fill-container
-width: fill-container
-
+height.fixed.px: 135
+width.fixed.px: 217
 
 -- end: ftd.column
 
 -- ftd.text: $tab-label.title
 if: { tab-label.title != NULL }
 role: $fonts.size-20
-color: $inherited.colors.text
+color: $inherited.colors.custom.one
 color if { current-tab == $tab-label.index }: $inherited.colors.cta-primary.base
 white-space: nowrap
 
