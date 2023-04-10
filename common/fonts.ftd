@@ -414,8 +414,8 @@ weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type size-24-700:
-desktop: $size-24-700-mobile
-mobile: $size-24-700-desktop
+desktop: $size-24-700-desktop
+mobile: $size-24-700-mobile
 
 
 
@@ -684,6 +684,68 @@ weight: 400
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type font-20-400-30: $font-20-400-30-type
+
+
+
+
+
+-- ftd.type copy-regular-16:
+line-height.px: 16
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type copy-regular-16:
+desktop: $copy-regular-16
+mobile: $copy-regular-16
+
+
+
+
+
+
+
+-- ftd.type copy-regular-body:
+line-height.px: 24
+size.px: 16
+letter-spacing.rem: -0.008
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type copy-regular-body:
+desktop: $copy-regular-body
+mobile: $copy-regular-body
+
+
+
+
+
+-- ftd.type copy-regular-bodyV2:
+line-height.px: 21
+size.px: 16
+letter-spacing.rem: -0.008
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type copy-regular-bodV2y:
+desktop: $copy-regular-bodyV2
+mobile: $copy-regular-bodyV2
+
+
+
+
+
+-- ftd.type copy-regular-bodyV3:
+line-height.px: 22
+size.px: 16
+letter-spacing.rem: -0.008
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type copy-regular-bodV3:
+desktop: $copy-regular-bodyV3
+mobile: $copy-regular-bodyV3
 
 
 
