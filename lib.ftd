@@ -656,10 +656,12 @@ background.solid: $inherited.colors.custom.three
 align-content: center
 
 -- ftd.integer: $feature-card.title
-role: $inherited.types.heading-tiny
+role: $fonts.30-45-700
 color: $inherited.colors.background.step-1
 border-radius.percent: 100
 padding-vertical.px: 14
+height.fixed.px: 73
+width.fixed.px: 73
 padding-horizontal.px: 28
 background.solid: $inherited.colors.cta-primary.base
 
