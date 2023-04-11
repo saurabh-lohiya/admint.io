@@ -247,6 +247,21 @@ desktop: $size-19-desktop
 mobile: $size-19-mobile
 
 
+
+
+-- ftd.type size-19-28-700-type:
+line-height.px: 28
+size.px: 19
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type size-19-28-700: $size-19-28-700-type
+
+
+
+
+
 -- ftd.type size-23-mobile:
 line-height.rem: 2.15
 size.px: 23
@@ -686,16 +701,20 @@ mobile: $size-33-nunito
 
 
 
--- ftd.type button-lg-27:
+-- ftd.type button-lg-27-type:
 line-height.px: 27
 size.px: 18
 letter-spacing.px: 0
-weight: 700
+weight: 600
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type button-lg-27:
-desktop: $button-lg-27
-mobile: $button-lg-27
+-- ftd.responsive-type button-lg-27: $button-lg-27-type
+
+
+
+
+
+
 -- ftd.type 15-18-500-mobile:
 line-height.px: 28
 size.px: 24
@@ -828,6 +847,19 @@ weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type 30-45-700: $30-45-700-type
+
+
+
+
+
+-- ftd.type size-24-29-500-type:
+line-height.px: 29
+size.px: 24
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-24-29-500: $size-24-29-500-type
 
 
 

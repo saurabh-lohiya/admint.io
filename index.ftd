@@ -111,7 +111,7 @@ display: inline-block
 -- ftd.text: standard known processes:
 display: inline-block
 color: $inherited.colors.border
-margin-horizontal.px: 10
+margin-horizontal.px: 11
 
 -- ftd.text: Planning, Set Up, Execution & Analysis
 display: inline-block
@@ -239,7 +239,7 @@ role: $inherited.types.heading-tiny
 color: $inherited.colors.cta-primary.base
 region: h1
 display: inline
-margin-left.px: 8
+margin-left.rem: 0.48
 
 -- end: ftd.container
 
@@ -485,24 +485,23 @@ cta-text: Join waitlist
 
 -- ftd.container:
 width.fixed.percent if { ftd.device == "desktop" }: 80
+region: h1
 
 -- ftd.text: Join the
 role: $inherited.types.heading-large
 color: $inherited.colors.text
-region: h1
 display: inline
 
 -- ftd.text: waitlist
 role: $inherited.types.heading-large
 color: $inherited.colors.cta-primary.base
-region: h1
 display: inline
-margin-horizontal.px: 13
+margin-left.px: 14
+margin-right.px: 13
 
 -- ftd.text: to get updated when we go live!
 role: $inherited.types.heading-large
 color: $inherited.colors.text
-region: h1
 display: inline
 
 -- end: ftd.container
