@@ -790,6 +790,18 @@ weight: 600
 
 
 
+-- ftd.type font-30-45-700-type:
+line-height.px: 45
+size.px: 30
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
+-- ftd.responsive-type font-30-45-700: $font-30-45-700-type
+
+
+
+
 
 -- ftd.type 30-45-700-type:
 line-height.px: 45

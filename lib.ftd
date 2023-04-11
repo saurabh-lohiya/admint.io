@@ -656,7 +656,7 @@ background.solid: $inherited.colors.custom.three
 align-content: center
 
 -- ftd.integer: $feature-card.title
-role: $fonts.30-45-700
+role: $fonts.font-30-45-700
 color: $inherited.colors.background.step-1
 border-radius.percent: 100
 padding-vertical.px: 14
@@ -1844,6 +1844,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 10
 padding-vertical.px: 97
+padding-bottom.px: 96
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
@@ -1851,7 +1852,7 @@ src: $assets.files.static.hero.banner-drone.svg
 width.fixed.px: 122
 height.fixed.px: 232
 anchor: parent
-left.px: 0
+left.px: -1
 top.px: 0
 
 -- ftd.image:
@@ -1896,7 +1897,7 @@ width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
 top.px: 48
-left.px: -65
+left.px: -64
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
@@ -1930,8 +1931,8 @@ align-self: center
 -- ftd.text: 
 role: $fonts.15-18-500
 color: $fonts.222b27
-margin-top.px: 31
-margin-top.px if {ftd.device == "mobile"}: 31
+margin-top.px: 32
+margin-top.px if {ftd.device == "mobile"}: 32
 margin-bottom.px: 6
 text-align: center
 
