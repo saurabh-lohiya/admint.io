@@ -453,7 +453,7 @@ if: { recent-post.thumbnail == NULL }
 width: fill-container
 
 -- ftd.text: $recent-post.title
-role: $fonts.roboto-18-22
+role: $fonts.roboto-18-22-600
 color: $inherited.colors.custom.nine
 link: $recent-post.link
 margin-top.px: 9
@@ -2454,7 +2454,7 @@ padding-vertical.px if { tab.active }: 20
 padding-bottom.px if { !tab.active }: 22
 padding-horizontal.px: 30
 color: $inherited.colors.custom.one
-role: $fonts.button-18-18
+role: $fonts.font-18-18-700
 role if { ftd.device == "mobile" }: $fonts.size-14-m
 border-color if { tab.active }: $inherited.colors.custom.four
 border-radius.px if { tab.active }: 50

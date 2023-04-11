@@ -51,14 +51,14 @@ mobile: $roboto-18-mobile
 
 
 
--- ftd.type roboto-18-22:
+-- ftd.type roboto-18-22-600-type:
 line-height.px: 22
 size.px: 18
 letter-spacing.px: 0
 weight: 600
 font-family: $roboto-assets.fonts.Roboto
 
--- ftd.responsive-type roboto-18-22: $roboto-18-22
+-- ftd.responsive-type roboto-18-22-600: $roboto-18-22-600-type
 
 
 
@@ -826,14 +826,14 @@ weight: 700
 
 
 
--- ftd.type button-18-18:
+-- ftd.type font-18-18-700-type:
 line-height.px: 18
 size.px: 18
 letter-spacing.px: 0
 weight: 700
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type button-large: $button-18-18
+-- ftd.responsive-type font-18-18-700: $font-18-18-700-type
 
 
 
