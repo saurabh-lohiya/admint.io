@@ -145,7 +145,7 @@ ftd.image-src src:
 boolean $hover-me: false
 
 -- ftd.column:
-width.fixed.percent if { ftd.device != "mobile" }: 49
+width.fixed.px if { ftd.device != "mobile" }: 636
 width.fixed.percent if { ftd.device == "mobile" }: 100
 $on-mouse-enter$: $ftd.set-bool($a = $advertisement-card.hover-me, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $advertisement-card.hover-me, v = false)
@@ -155,7 +155,7 @@ border-color: $inherited.colors.custom.one
 border-bottom-color if {$advertisement-card.hover-me}: #005fbb
 margin-top.px if {$advertisement-card.hover-me}: -15
 background.solid: $inherited.colors.background.step-1
-margin-bottom.px: -4
+margin-bottom.px: -5
 
 -- ftd.image: 
 src: $advertisement-card.src
@@ -166,12 +166,12 @@ width.fixed.percent: 80
 padding.px: 35
 
 -- ftd.text: $advertisement-card.title
-role: $fonts.size-29
+role: $fonts.size-24-29-500
 color: $inherited.colors.text
 margin-bottom.px: 8
 
 -- ftd.text:
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 
 $advertisement-card.body
@@ -2027,7 +2027,7 @@ width.fixed.px: 195
 height.fixed.px: 48
 
 -- ftd.row:
-margin-top.px: 48
+margin-top.px: 47
 align-self: end
 
 -- ftd.text: $obj.title
@@ -2040,7 +2040,7 @@ link: $obj.url
 -- end: ftd.row
 
 -- ftd.row:
-margin-top.px: 80
+margin-top.px: 81
 align-self: end
 
 -- ftd.image:
@@ -2153,7 +2153,7 @@ padding-bottom.px: 50
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: $join-waitlist-form.width
-margin-left.px if { ftd.device == "desktop" }: 23
+margin-left.px if { ftd.device == "desktop" }: 24
 
 -- ftd.column:
 background.solid: $inherited.colors.cta-primary.text
@@ -2166,6 +2166,8 @@ z-index: 1
 role: $fonts.size-17
 color: $inherited.colors.cta-primary.base
 align-self: end
+margin-top.px: -1
+margin-bottom.px: 1
 
 -- join-waitlist-form.title.0:
 
@@ -2680,21 +2682,20 @@ padding-bottom.px: 50
 -- ftd.column:
 width: fill-container
 align-content: center
-max-width.fixed.px: 1440
+max-width.fixed.px: 1320
+padding-horizontal.px: 12
 
 -- ftd.column:
-width if { ftd.device != "mobile" }: fill-container
-align-content: center
-margin-horizontal.px if { ftd.device == "mobile" }: 50
-
--- ftd.image:
-src: $sneak-peak.image
+width.fixed.percent if { ftd.device != "mobile" }: 80
+align-self: center
 border-color: $inherited.colors.custom.one
 border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 46
-width.fixed.percent: 100
-max-width.fixed.px: 1037
+
+-- ftd.image:
+src: $sneak-peak.image
+width: fill-container
 
 -- end: ftd.column
 
@@ -2704,7 +2705,6 @@ spacing: space-between
 width: fill-container
 
 -- ftd.column:
-margin-left.px: 72
 margin-top.px: 153
 
 -- sneak-peak.title.0:
@@ -2760,7 +2760,7 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 -- ftd.image:
 src: $sneak-peak.bg-image
 align-self: end
-bottom.px: 48
+bottom.px: 50
 anchor: parent
 
 -- end: ftd.column
@@ -4602,12 +4602,13 @@ margin-right.px: 13
 width: fill-container
 padding-horizontal.px: 12
 margin-left.px: -13
+margin-top.px: 1
 
 -- ftd.row:
 width: fill-container
 align-content: center
-spacing.fixed.px: 6
-role: $fonts.size-19
+spacing.fixed.px: 5
+role: $fonts.size-19-28-700
 color: $inherited.colors.custom.four
 
 -- ftd.text: STEP
