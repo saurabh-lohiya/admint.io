@@ -5,6 +5,8 @@
 
 -- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
 
+-- lib.page-wrapper:
+
 -- lib.why-nft-hero:
 tagline: **WHY NFTs?**
 image: $assets.files.static.why-nfts.nft-awesome.svg
@@ -139,5 +141,7 @@ platforms in return for value of access that can be provided by them.
 Branding x engagement. Always on-campaign
 
 -- end: lib.why-nft-card
+
+-- end: lib.page-wrapper
 
 -- end: lib.page

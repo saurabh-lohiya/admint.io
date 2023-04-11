@@ -5058,3 +5058,24 @@ text-align: center
 
 
 -- end: site-footer
+
+
+
+
+
+
+
+
+
+
+-- component page-wrapper:
+children child:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+children: $page-wrapper.child
+
+-- end: ftd.column
+
+-- end: page-wrapper
