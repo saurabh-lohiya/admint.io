@@ -5,9 +5,38 @@
 
 -- lib.page: AdMint - Deliver refreshing Web 3.0 campaigns!
 
--- lib.why-nft-hero: Because NFTs are awesome!
+-- lib.why-nft-hero:
 tagline: **WHY NFTs?**
 image: $assets.files.static.why-nfts.nft-awesome.svg
+
+-- lib.why-nft-hero.title:
+
+-- ftd.container:
+margin-top.px: 41
+margin-bottom.px: 8
+region: h3
+
+-- ftd.text: Because
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+display: inline
+
+-- ftd.text: NFTs
+role: $inherited.types.heading-medium
+color: $inherited.colors.cta-primary.base
+display: inline
+margin-horizontal.px: 11
+
+-- ftd.text: are awesome!
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.why-nft-hero.title
+
+-- lib.why-nft-hero.body:
 
 NFTs started out cool. And then people started perceiving them to be nothing 
 more than overpriced jpegs. That's simply not true. They can be so much more! 
