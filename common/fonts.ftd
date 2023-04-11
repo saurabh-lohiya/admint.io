@@ -51,6 +51,19 @@ mobile: $roboto-18-mobile
 
 
 
+-- ftd.type roboto-18-22:
+line-height.px: 22
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-18-22: $roboto-18-22
+
+
+
+
+
 -- ftd.type roboto-22-mobile:
 line-height.px: 22
 size.px: 22
@@ -97,24 +110,15 @@ mobile: $roboto-14-mobile
 
 
 
--- ftd.type montserrat-14-mobile:
-line-height.px: 25
+-- ftd.type montserrat-14:
+line-height.px: 26
 size.px: 14
 letter-spacing.px: 0
 weight: 400
 font-family: $montserrat-assets.fonts.Montserrat
 
+-- ftd.responsive-type montserrat-14: $montserrat-14
 
--- ftd.type montserrat-14-desktop:
-line-height.px: 25
-size.px: 14
-letter-spacing.px: 0
-weight: 400
-font-family: $montserrat-assets.fonts.Montserrat
-
--- ftd.responsive-type montserrat-14:
-desktop: $montserrat-14-desktop
-mobile: $montserrat-14-mobile
 
 
 
@@ -786,6 +790,19 @@ font-family: $nunito-assets.fonts.Nunito
 weight: 600
 
 -- ftd.responsive-type copy-regular-bodV3: $copy-regular-bodyV3
+
+
+
+
+
+-- ftd.type button-18-18:
+line-height.px: 18
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type button-large: $button-18-18
 
 
 

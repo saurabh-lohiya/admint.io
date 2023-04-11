@@ -211,7 +211,7 @@ boolean post-page: false
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 align-content: center
-padding-top.px: 30
+padding-top.px: 16
 
 -- ftd.column:
 width: fill-container
@@ -233,7 +233,8 @@ children: $post-list.search-bar
 -- ftd.column:
 width: fill-container
 children: $post-list.articles
-padding.px: 30
+padding-vertical.px: 27
+padding-horizontal.px: 30
 padding.px if { $post-list.post-page }: 10
 
 ;; all short-articles goes here
@@ -339,9 +340,9 @@ role: $fonts.roboto-18
 region: h3
 color: $inherited.colors.custom.nine
 link: $article-item.link
-margin-top.px: 20
+margin-top.px: 14
 
--- ftd.text: 
+-- ftd.text:
 role: $fonts.montserrat-14
 color: $inherited.colors.custom.ten
 classes: markdown
@@ -400,13 +401,13 @@ width: fill-container
 if: { !sidebar.post-page }
 role: $fonts.roboto-22
 color: #131313
-margin-bottom.px: 20
+margin-bottom.px: 24
 
 -- ftd.text: $sidebar.title
 if: { sidebar.post-page }
 role: $fonts.montserrat-15-19
 color: $inherited.colors.cta-primary.base
-margin-bottom.px: 20
+margin-bottom.px: 24
 
 -- ftd.column:
 margin-bottom.px: 20
@@ -419,7 +420,7 @@ border-color: $inherited.colors.custom.one
 -- ftd.column:
 width: fill-container
 children: $sidebar.children
-spacing.fixed.px: 35
+spacing.fixed.px: 42
 
 -- end: ftd.column
 
@@ -452,14 +453,15 @@ if: { recent-post.thumbnail == NULL }
 width: fill-container
 
 -- ftd.text: $recent-post.title
-role: $fonts.roboto-18
+role: $fonts.roboto-18-22
 color: $inherited.colors.custom.nine
 link: $recent-post.link
+margin-top.px: 8
 
 -- ftd.text: 
 role: $fonts.roboto-14
 color: $inherited.colors.cta-secondary.disabled
-margin-bottom.px: 10
+margin-top.px: 6
 
 $recent-post.body
 
@@ -2390,9 +2392,10 @@ background.solid: $inherited.colors.background.step-1
 -- ftd.column:
 width: fill-container
 align-self: center
-max-width.fixed.px: 1140
+max-width.fixed.px: 1145
 padding-horizontal.px: 28
-padding-vertical.px: 16
+padding-top.px: 22
+padding-bottom.px: 16
 
 -- ftd.column:
 border-width.px: 2
@@ -2441,10 +2444,12 @@ string link:
 -- ftd.column:
 
 -- ftd.text: $tab.title
-padding-vertical.px: 20
+padding-top.px if { !tab.active }: 18
+padding-vertical.px if { tab.active }: 20
+padding-bottom.px if { !tab.active }: 22
 padding-horizontal.px: 30
 color: $inherited.colors.custom.one
-role: $inherited.types.button-large
+role: $fonts.button-18-18
 role if { ftd.device == "mobile" }: $fonts.size-14-m
 border-color if { tab.active }: $inherited.colors.custom.four
 border-radius.px if { tab.active }: 50
@@ -3959,7 +3964,8 @@ string link:
 
 -- ftd.row:
 width.fixed.px: 210
-padding.px: 8
+padding-vertical.px: 9
+padding-horizontal.px: 13
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 30
 border-width.px: 1
