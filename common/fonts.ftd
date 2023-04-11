@@ -785,7 +785,7 @@ weight: 600
 
 
 -- ftd.type copy-regular-bodyV2:
-line-height.px: 21
+line-height.px: 20
 size.px: 16
 letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
@@ -798,7 +798,7 @@ weight: 600
 
 
 -- ftd.type copy-regular-bodyV3:
-line-height.px: 22
+line-height.px: 24
 size.px: 16
 letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
