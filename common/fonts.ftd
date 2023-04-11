@@ -111,7 +111,7 @@ mobile: $roboto-14-mobile
 
 
 -- ftd.type montserrat-14:
-line-height.px: 26
+line-height.rem: 1.626
 size.px: 14
 letter-spacing.px: 0
 weight: 400

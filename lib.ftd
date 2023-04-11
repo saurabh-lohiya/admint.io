@@ -233,7 +233,7 @@ children: $post-list.search-bar
 -- ftd.column:
 width: fill-container
 children: $post-list.articles
-padding-vertical.px: 27
+padding-vertical.px: 30
 padding-horizontal.px: 30
 padding.px if { $post-list.post-page }: 10
 
@@ -340,7 +340,7 @@ role: $fonts.roboto-18
 region: h3
 color: $inherited.colors.custom.nine
 link: $article-item.link
-margin-top.px: 14
+margin-top.px: 13
 
 -- ftd.text:
 role: $fonts.montserrat-14
@@ -456,7 +456,7 @@ width: fill-container
 role: $fonts.roboto-18-22
 color: $inherited.colors.custom.nine
 link: $recent-post.link
-margin-top.px: 8
+margin-top.px: 9
 
 -- ftd.text: 
 role: $fonts.roboto-14
@@ -2397,7 +2397,7 @@ width: fill-container
 align-self: center
 max-width.fixed.px: 1145
 padding-horizontal.px: 28
-padding-top.px: 22
+padding-top.px: 20
 padding-bottom.px: 16
 
 -- ftd.column:

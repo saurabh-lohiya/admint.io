@@ -27,7 +27,7 @@ link: learn/advertising-web-3-0/
 -- lib.search:
 link: learn/search-results/
 
--- lib.article-item: Lorem Ipsum is Simply Dummy Text
+-- lib.article-item: Lorem Ipsum Is Simply Dummy Text
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
 link: learn/brand-campaigns-lorem-ipsum-is-simply-dummy-text-2/
 
@@ -58,7 +58,7 @@ the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
 and more recently with desktop publishing software like Aldus PageMaker
 including versions of Lorem Ipsum.
 
--- lib.article-item: Lorem Ipsum is Simply
+-- lib.article-item: Lorem Ipsum Is Simply
 thumbnail: $assets.files.static.blog.bridge.jpeg
 link: learn/lorem-ipsum-is-simply-dummy-text/
 
