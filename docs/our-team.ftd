@@ -26,8 +26,9 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `our-team` component for [admint.io/about](https://admint.io/#/about), 
-which matches the design currently displayed on the live site.
+We have developed the `our-team` component for 
+[admint.io/about](https://admint.io/#/about), which matches the design 
+currently displayed on the live site.
 
 -- ds.h3: How to use?
 

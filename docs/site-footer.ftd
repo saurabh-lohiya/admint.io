@@ -26,13 +26,14 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `site-footer` component for [admint.io/learn/](https://admint.io/learn/), 
-which matches the design currently displayed on the live site.
+We have developed the `site-footer` component for 
+[admint.io/learn/](https://admint.io/learn/), which matches the design 
+currently displayed on the live site.
 
 -- ds.h3: How to use?
 
-To use the `site-footer` component you need to import `lib.ftd` inside your `.ftd`
-file.
+To use the `site-footer` component you need to import `lib.ftd` inside your
+`.ftd` file.
 
 -- ds.code:
 lang: ftd

@@ -25,8 +25,9 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `join-waitlist-popup` component for [admint.io](https://admint.io/), 
-which matches the design currently displayed on the live site.
+We have developed the `join-waitlist-popup` component for 
+[admint.io](https://admint.io/), which matches the design currently displayed 
+on the live site.
 
 -- ds.h3: How to use?
 
@@ -42,8 +43,8 @@ lang: ftd
 
 Once you import `lib` inside your `.ftd` file, use the `join-waitlist-popup`
 component by adding all required attributes of it. Also, add global mutable
-variable `show-waitlist-popup` inside your `.ftd` file and pass it to `$visible:`
-attribute as shown in below code snippet:
+variable `show-waitlist-popup` inside your `.ftd` file and pass it to
+`$visible:` attribute as shown in below code snippet:
 
 -- ds.rendered:
 
