@@ -51,6 +51,19 @@ mobile: $roboto-18-mobile
 
 
 
+-- ftd.type roboto-18-22-600-type:
+line-height.px: 22
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-18-22-600: $roboto-18-22-600-type
+
+
+
+
+
 -- ftd.type roboto-22-mobile:
 line-height.px: 22
 size.px: 22
@@ -97,24 +110,15 @@ mobile: $roboto-14-mobile
 
 
 
--- ftd.type montserrat-14-mobile:
-line-height.px: 25
+-- ftd.type montserrat-14:
+line-height.rem: 1.626
 size.px: 14
 letter-spacing.px: 0
 weight: 400
 font-family: $montserrat-assets.fonts.Montserrat
 
+-- ftd.responsive-type montserrat-14: $montserrat-14
 
--- ftd.type montserrat-14-desktop:
-line-height.px: 25
-size.px: 14
-letter-spacing.px: 0
-weight: 400
-font-family: $montserrat-assets.fonts.Montserrat
-
--- ftd.responsive-type montserrat-14:
-desktop: $montserrat-14-desktop
-mobile: $montserrat-14-mobile
 
 
 
@@ -822,6 +826,19 @@ weight: 700
 
 
 
+-- ftd.type font-18-18-700-type:
+line-height.px: 18
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-18-700: $font-18-18-700-type
+
+
+
+
+
 -- ftd.type 30-45-700-type:
 line-height.px: 45
 size.px: 30
@@ -834,6 +851,7 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+
 -- ftd.type size-24-29-500-type:
 line-height.px: 29
 size.px: 24
@@ -842,6 +860,8 @@ weight: 500
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.responsive-type size-24-29-500: $size-24-29-500-type
+
+
 
 
 
