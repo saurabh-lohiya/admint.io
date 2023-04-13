@@ -1684,25 +1684,50 @@ caption title:
 optional string url: 
 boolean $is-active: false
 boolean $show-signup: false
+boolean blog: false
 
 -- ftd.row:
 background.solid: $inherited.colors.cta-primary.base
-border-color if {navbar-button.is-active}: $inherited.colors.cta-primary.hover
+border-color if { !navbar-button.blog && navbar-button.is-active }: $inherited.colors.cta-primary.hover
 border-radius.px: 50
 $on-mouse-enter$: $ftd.set-bool($a = $navbar-button.is-active, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $navbar-button.is-active, v = false)
 padding-vertical.px: 11
+padding-vertical.px if { navbar-button.blog }: 15
 padding-vertical.px if { ftd.device == " mobile" }: 5
 padding-horizontal.px: 35
+padding-horizontal.px if { navbar-button.blog }: 25
 link: $navbar-button.url
 align-self: center
+border-width.rem if { navbar-button.blog }: 0.15
+border-color if { navbar-button.blog }: $inherited.colors.background.step-1
+margin-right.px: -1
+
+-- ftd.column:
+if: { !navbar-button.blog }
 
 -- ftd.text: $navbar-button.title
-if: {navbar-button.title != NULL}
+if: { navbar-button.title != NULL }
 role: $fonts.size-27
 color: $inherited.colors.background.step-1
 white-space: nowrap
 $on-click$ if { navbar-button.url == NULL }: $ftd.set-bool($a = $navbar-button.show-signup, v = true)
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { navbar-button.blog }
+width.fixed.percent: 99.8
+
+-- ftd.text: $navbar-button.title
+if: { navbar-button.title != NULL }
+role: $fonts.font-19-19-500
+color: $inherited.colors.background.step-1
+white-space: nowrap
+$on-click$ if { navbar-button.url == NULL }: $ftd.set-bool($a = $navbar-button.show-signup, v = true)
+width.fixed.percent: 99.8
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -1817,10 +1842,12 @@ $show-signup: $navbar-mobile.show-signup
 caption title:
 optional string url: /
 boolean is-active: false
+boolean blog: false
 
 -- ftd.column:
 
 -- ftd.text: $sections-list.title
+if: { !sections-list.blog }
 color: $inherited.colors.text
 color if {sections-list.is-active}: $inherited.colors.cta-primary.base
 role: $fonts.nunito-30-20-400
@@ -1828,6 +1855,17 @@ link: $sections-list.url
 width: fill-container
 white-space: nowrap
 padding-vertical.px: 8
+
+-- ftd.text: $sections-list.title
+if: { sections-list.blog }
+color: $inherited.colors.text
+color if {sections-list.is-active}: $inherited.colors.cta-primary.base
+role: $fonts.font-20-20-400
+link: $sections-list.url
+width: fill-container
+white-space: nowrap
+padding-top.px: 16
+padding-bottom.px: 16
 
 -- end: ftd.column
 

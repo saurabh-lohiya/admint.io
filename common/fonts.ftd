@@ -933,7 +933,7 @@ line-height.px: 20
 size.px: 20
 letter-spacing.px: 0
 weight: 400
-font-family: $nunito-assets.fonts.Nunito
+font-family: $nunito-assets.fonts.Nunito-live
 
 -- ftd.responsive-type font-20-20-400: $font-20-20-400-type
 
@@ -946,7 +946,7 @@ line-height.px: 19
 size.px: 19
 letter-spacing.px: 0
 weight: 500
-font-family: $nunito-assets.fonts.Nunito
+font-family: $nunito-assets.fonts.Nunito-live
 
 -- ftd.responsive-type font-19-19-500: $font-19-19-500-type
 
