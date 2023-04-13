@@ -321,7 +321,7 @@ body body:
 optional ftd.image-src thumbnail:
 string link: 
 boolean post-page: false
-boolean inset-body:: false
+boolean inset-body: false
 
 -- ftd.column:
 width: fill-container
@@ -345,10 +345,10 @@ margin-top.px: 13
 
 -- ftd.text:
 role: $fonts.montserrat-14
-role if { article-item.inset-body: }: $fonts.roboto-14-25
+role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
-padding.px if { article-item.inset-body: }: 10
+padding.px if { article-item.inset-body }: 10
 
 $article-item.body
 

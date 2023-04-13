@@ -935,7 +935,7 @@ color: #a9a7a5ba
 x-offset.px: -2
 y-offset.px: 8
 blur.px: 10
-inset-body:: false
+inset-body: false
 spread.px: 0
 
 
