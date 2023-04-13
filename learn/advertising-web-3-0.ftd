@@ -28,7 +28,7 @@ link: learn/search-results/
 -- lib.article-item: Metaverse Is The New Playground For Advertisement.
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-inset: true
+inset-body:: true
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much does digital smartness matter? It
