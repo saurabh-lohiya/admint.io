@@ -71,6 +71,7 @@ site-logo: https://admint.io/assets/images/admint-logo.svg
 contact: Get Started
 contact-url: https://admint.io/
 sections: $lib.sitemap.sections
+blog: false
 
 -- end: ds.rendered.output
 
