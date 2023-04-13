@@ -369,6 +369,19 @@ mobile: $montserrat-15-19-mobile
 
 
 
+-- ftd.type montserrat-15-15-type:
+line-height.px: 15
+size.px: 15
+letter-spacing.px: 0
+weight: 700
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-15-15: $montserrat-15-15-type
+
+
+
+
+
 -- ftd.type montserrat-15-27-mobile:
 line-height.px: 27
 size.px: 15

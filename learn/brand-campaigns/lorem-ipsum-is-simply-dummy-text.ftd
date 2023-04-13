@@ -10,7 +10,7 @@ blog: true
 link: learn/
 
 -- lib.tab: Brand Campaign
-link: learn/brand-campaign/
+link: learn/brand-campaigns/
 
 -- lib.tab: Advertising & Web 3.0
 link: learn/advertising-web-3-0/
@@ -18,7 +18,6 @@ link: learn/advertising-web-3-0/
 -- end: lib.tabs
 
 -- lib.post-list:
-post-page: true
 
 -- lib.post-list.articles:
 
@@ -26,9 +25,6 @@ post-page: true
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 post-page: true
-
-thumbnail: $assets.files.static.blog.StockSnap.jpeg
-link: learn/brand-campaigns:lorem-ipsum-is-simply-dummy-text-2/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
@@ -61,11 +57,11 @@ including versions of Lorem Ipsum.
 
 -- lib.post-list.side-bar:
 
--- lib.sidebar: **Related Posts**
+-- lib.sidebar: Related Posts
 post-page: true
 
 -- lib.recent-post: Lorem Ipsum Is Simply Dummy Text
-link: learn/brand-campaigns-lorem-ipsum-is-simply-dummy-text-2/
+link: learn/brand-campaigns/lorem-ipsum-is-simply-dummy-text-2/
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
 timestamp: December 6, 2022
 comments: No comments

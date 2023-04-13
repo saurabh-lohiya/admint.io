@@ -348,7 +348,6 @@ role: $fonts.montserrat-14
 role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
-padding.px if { article-item.inset-body }: 10
 
 $article-item.body
 
@@ -371,9 +370,10 @@ margin-bottom.px: 20
 
 -- ftd.text: 
 role: $fonts.montserrat-15-27
+role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
-padding.px: 10
+padding.px if { article-item.inset-body }: 10
 
 $article-item.body
 
@@ -408,14 +408,14 @@ margin-bottom.px: 24
 
 -- ftd.text: $sidebar.title
 if: { sidebar.post-page }
-role: $fonts.montserrat-15-19
+role: $fonts.montserrat-15-15
 color: $inherited.colors.cta-primary.base
 margin-bottom.px: 24
 
 -- ftd.column:
 margin-bottom.px: 20
 border-bottom-width.px: 2
-width.fixed.percent: 17
+width.fixed.percent: 16
 border-color: $inherited.colors.custom.one
 
 -- end: ftd.column
@@ -446,7 +446,8 @@ body body:
 string link:
 optional ftd.image-src thumbnail:
 optional string timestamp:
-optional string comments: No comments
+optional string comments:
+optional string cta-text:
 
 -- ftd.column:
 width: fill-container
@@ -478,26 +479,29 @@ src: $recent-post.thumbnail
 width: fill-container
 height: auto
 link: $recent-post.link
+margin-top.px: 3
 
 -- ftd.text: $recent-post.title
 role: $fonts.montserrat-18
 color: $inherited.colors.custom.four
 link: $recent-post.link
-margin-top.px: 20
+margin-top.px: 15
 
 -- ftd.row:
-margin-bottom.px: 13
 spacing.fixed.px: 6
 
 -- ftd.text: $recent-post.timestamp
+if: { recent-post.timestamp != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
 -- ftd.text: /
+if: { recent-post.timestamp != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
 -- ftd.text: $recent-post.comments
+if: { recent-post.comments != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
@@ -510,7 +514,8 @@ margin-bottom.px: 10
 
 $recent-post.body
 
--- button-small: Read More
+-- button-small: $recent-post.cta-text
+if: { recent-post.cta-text != NULL }
 link: $recent-post.link
 
 -- end: ftd.column

@@ -10,7 +10,7 @@ blog: true
 link: learn/
 
 -- lib.tab: Brand Campaign
-link: learn/brand-campaign/
+link: learn/brand-campaigns/
 
 -- lib.tab: Advertising & Web 3.0
 active: true
@@ -149,12 +149,14 @@ dedicated army behind each product, which is an established story in itself.
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
+cta-text: Read More
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
+cta-text: Read More
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much

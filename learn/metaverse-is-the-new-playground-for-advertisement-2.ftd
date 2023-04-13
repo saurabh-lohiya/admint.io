@@ -10,7 +10,7 @@ blog: true
 link: learn/
 
 -- lib.tab: Brand Campaign
-link: learn/brand-campaign/
+link: learn/brand-campaigns/
 
 -- lib.tab: Advertising & Web 3.0
 link: learn/advertising-web-3-0/
@@ -26,6 +26,7 @@ post-page: true
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 post-page: true
+inset-body: true
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much does digital smartness matter? It
@@ -52,7 +53,6 @@ decentralized platform for building and running virtual worlds and social
 experiences.
 
 **The abilities of metaverse are high so are customer’s expectations**
-
 
 If you know more, the Metaverse feature allows brands to create immersive digital
 experiences that customers want to engage with. As a result of this platform,
