@@ -25,13 +25,14 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `help-banner` component for [admint.io](https://admint.io/), 
-which matches the design currently displayed on the live site.
+We have developed the `help-banner` component for 
+[admint.io](https://admint.io/), which matches the design currently displayed 
+on the live site.
 
 -- ds.h3: How to use?
 
-To use the `help-banner` component you need to import `lib.ftd` inside your `.ftd`
-file, as shown below:
+To use the `help-banner` component you need to import `lib.ftd` inside your
+`.ftd` file, as shown below:
 
 -- ds.code:
 lang: ftd
@@ -40,8 +41,8 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import the `lib` inside your `.ftd` file, use the `help-banner` component by
-adding all required attributes of it.
+Once you import the `lib` inside your `.ftd` file, use the `help-banner`
+component by adding all required attributes of it.
 
 -- ds.rendered:
 

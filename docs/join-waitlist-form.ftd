@@ -24,13 +24,14 @@ sections: $lib.sitemap.sections
 
 -- ds.page.body:
 
-We have developed the `join-waitlist-form` component for [admint.io](https://admint.io/), 
-which matches the design currently displayed on the live site.
+We have developed the `join-waitlist-form` component for 
+[admint.io](https://admint.io/), which matches the design currently displayed 
+on the live site.
 
 -- ds.h3: How to use?
 
-To use `join-waitlist-form` component you need to `import` `lib` inside your `.ftd`
-file.
+To use `join-waitlist-form` component you need to `import` `lib` inside your
+`.ftd` file.
 
 -- ds.code:
 lang: ftd
@@ -40,8 +41,8 @@ lang: ftd
 
 -- ds.markdown:
 
-Once you import `lib` inside your `.ftd` file, use the `join-waitlist-form` component by
-adding all required attributes of it.
+Once you import `lib` inside your `.ftd` file, use the `join-waitlist-form`
+component by adding all required attributes of it.
 
 -- ds.rendered:
 

@@ -63,8 +63,9 @@ display: inline
 
 -- ds.page.body:
 
-We have developed the `sneak-peak` component for [admint.io](https://admint.io/), 
-which matches the design currently displayed on the live site.
+We have developed the `sneak-peak` component for 
+[admint.io](https://admint.io/), which matches the design currently displayed
+ on the live site.
 
 -- ds.h3: How to use?
 
