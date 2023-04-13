@@ -10,7 +10,7 @@ blog: true
 link: learn/
 
 -- lib.tab: Brand Campaign
-link: learn/brand-campaign/
+link: learn/brand-campaigns/
 
 -- lib.tab: Advertising & Web 3.0
 active: true
@@ -28,6 +28,7 @@ link: learn/search-results/
 -- lib.article-item: Metaverse Is The New Playground For Advertisement.
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
+inset-body: true
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much does digital smartness matter? It
@@ -113,7 +114,6 @@ experiences.
 
 **The abilities of metaverse are high so are customer’s expectations**
 
-
 If you know more, the Metaverse feature allows brands to create immersive digital
 experiences that customers want to engage with. As a result of this platform,
 brands can build a community, which helps them build a loyal customer base and
@@ -149,18 +149,14 @@ dedicated army behind each product, which is an established story in itself.
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-timestamp: December 6, 2022
-comments: No comments
+cta-text: Read More
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much
 
 -- lib.recent-post: Metaverse Is The New Playground For Advertisement.
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-timestamp: December 6, 2022
-comments: No comments
+cta-text: Read More
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much

@@ -1,6 +1,7 @@
 -- import: fifthtry.github.io/admint-nunito-font/assets as nunito-assets
 -- import: fifthtry.github.io/roboto-font/assets as roboto-assets
 -- import: fifthtry.github.io/montserrat/assets as montserrat-assets
+-- import: fastn-community.github.io/opensans-font/assets as opensans-font-assets
 
 ;; :::: Custom Fonts ::::
 
@@ -64,6 +65,19 @@ font-family: $roboto-assets.fonts.Roboto
 
 
 
+-- ftd.type roboto-18-33-600-type:
+line-height.px: 33
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-18-33-600: $roboto-18-33-600-type
+
+
+
+
+
 -- ftd.type roboto-22-mobile:
 line-height.px: 22
 size.px: 22
@@ -105,6 +119,19 @@ font-family: $roboto-assets.fonts.Roboto
 -- ftd.responsive-type roboto-14:
 desktop: $roboto-14-desktop
 mobile: $roboto-14-mobile
+
+
+
+
+
+-- ftd.type roboto-14-25-type:
+line-height.px: 25
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-14-25: $roboto-14-25-type
 
 
 
@@ -307,6 +334,19 @@ mobile: $montserrat-18-mobile
 
 
 
+-- ftd.type montserrat-18-33-type:
+line-height.px: 
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-18-33: $montserrat-18-33-type
+
+
+
+
+
 -- ftd.type montserrat-15-19-mobile:
 line-height.px: 19
 size.px: 15
@@ -325,6 +365,19 @@ font-family: $montserrat-assets.fonts.Montserrat
 -- ftd.responsive-type montserrat-15-19:
 desktop: $montserrat-15-19-desktop
 mobile: $montserrat-15-19-mobile
+
+
+
+
+
+-- ftd.type montserrat-15-15-type:
+line-height.px: 15
+size.px: 15
+letter-spacing.px: 0
+weight: 700
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-15-15: $montserrat-15-15-type
 
 
 
@@ -899,6 +952,18 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+
+-- ftd.type opensans-12-type:
+size.px: 12
+weight: 400
+font-family: $opensans-font-assets.fonts.Open-Sans
+
+-- ftd.responsive-type opensans-12: $opensans-12-type
+
+
+
+
+
 -- ftd.color 222b27: #222b27
 
 -- ftd.color bdbdbd: #bdbdbd
@@ -931,7 +996,7 @@ color: #a9a7a5ba
 x-offset.px: -2
 y-offset.px: 8
 blur.px: 10
-inset: false
+inset-body: false
 spread.px: 0
 
 

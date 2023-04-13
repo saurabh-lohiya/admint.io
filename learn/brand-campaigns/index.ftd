@@ -11,7 +11,7 @@ link: learn/
 
 -- lib.tab: Brand Campaign
 active: true
-link: learn/brand-campaign/
+link: learn/brand-campaigns/
 
 -- lib.tab: Advertising & Web 3.0
 link: learn/advertising-web-3-0/
@@ -29,7 +29,7 @@ link: learn/search-results/
 
 -- lib.article-item: Lorem Ipsum Is Simply Dummy Text
 thumbnail: $assets.files.static.blog.StockSnap.jpeg
-link: learn/brand-campaigns-lorem-ipsum-is-simply-dummy-text-2/
+link: learn/brand-campaigns/lorem-ipsum-is-simply-dummy-text-2/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
@@ -60,7 +60,7 @@ including versions of Lorem Ipsum.
 
 -- lib.article-item: Lorem Ipsum Is Simply
 thumbnail: $assets.files.static.blog.bridge.jpeg
-link: learn/lorem-ipsum-is-simply-dummy-text/
+link: learn/brand-campaigns/lorem-ipsum-is-simply-dummy-text/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
@@ -96,13 +96,13 @@ including versions of Lorem Ipsum.
 -- lib.sidebar: Recent Posts
 
 -- lib.recent-post: Lorem Ipsum is simply dummy text
-link: learn/brand-campaigns-lorem-ipsum-is-simply-dummy-text-2/
+link: learn/brand-campaigns/lorem-ipsum-is-simply-dummy-text-2/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy
 
 -- lib.recent-post: Lorem Ipsum is simply
-link: learn/lorem-ipsum-is-simply-dummy-text/
+link: learn/brand-campaigns/lorem-ipsum-is-simply-dummy-text/
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Ipsum has been the industry’s standard dummy
