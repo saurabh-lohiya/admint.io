@@ -321,6 +321,7 @@ body body:
 optional ftd.image-src thumbnail:
 string link: 
 boolean post-page: false
+boolean inset: false
 
 -- ftd.column:
 width: fill-container
@@ -344,8 +345,10 @@ margin-top.px: 13
 
 -- ftd.text:
 role: $fonts.montserrat-14
+role if { article-item.inset }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
+padding.px if { article-item.inset }: 10
 
 $article-item.body
 
@@ -453,15 +456,14 @@ if: { recent-post.thumbnail == NULL }
 width: fill-container
 
 -- ftd.text: $recent-post.title
-role: $fonts.roboto-18-22-600
+role: $fonts.roboto-18-33-600
 color: $inherited.colors.custom.nine
 link: $recent-post.link
-margin-top.px: 9
+margin-top.px: 4
 
 -- ftd.text: 
 role: $fonts.roboto-14
 color: $inherited.colors.cta-secondary.disabled
-margin-top.px: 6
 
 $recent-post.body
 

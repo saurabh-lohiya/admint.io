@@ -64,6 +64,19 @@ font-family: $roboto-assets.fonts.Roboto
 
 
 
+-- ftd.type roboto-18-33-600-type:
+line-height.px: 33
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-18-33-600: $roboto-18-33-600-type
+
+
+
+
+
 -- ftd.type roboto-22-mobile:
 line-height.px: 22
 size.px: 22
@@ -105,6 +118,19 @@ font-family: $roboto-assets.fonts.Roboto
 -- ftd.responsive-type roboto-14:
 desktop: $roboto-14-desktop
 mobile: $roboto-14-mobile
+
+
+
+
+
+-- ftd.type roboto-14-25-type:
+line-height.px: 25
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: $roboto-assets.fonts.Roboto
+
+-- ftd.responsive-type roboto-14-25: $roboto-14-25-type
 
 
 
@@ -302,6 +328,19 @@ font-family: $montserrat-assets.fonts.Montserrat
 -- ftd.responsive-type montserrat-18:
 desktop: $montserrat-18-desktop
 mobile: $montserrat-18-mobile
+
+
+
+
+
+-- ftd.type montserrat-18-33-type:
+line-height.px: 
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-18-33: $montserrat-18-33-type
 
 
 
