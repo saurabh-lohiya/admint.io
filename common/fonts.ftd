@@ -155,11 +155,11 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 -- ftd.type size-18-desktop:
-line-height.px: 24
-size.px: 18
+line-height.rem: 1.8
+size.px: 16
 letter-spacing.px: 0
 font-family: $nunito-assets.fonts.Nunito
-weight: 600
+weight: 400
 
 -- ftd.responsive-type size-18:
 desktop: $size-18-desktop
@@ -862,6 +862,40 @@ font-family: $nunito-assets.fonts.Nunito
 -- ftd.responsive-type size-24-29-500: $size-24-29-500-type
 
 
+-- ftd.type font-18-18-600-type:
+line-height.px: 18
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito-live
+
+-- ftd.responsive-type font-18-18-600: $font-18-18-600-type
+
+
+
+
+
+-- ftd.type font-20-20-400-type:
+line-height.px: 20
+size.px: 20
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-20-20-400: $font-20-20-400-type
+
+
+
+
+
+-- ftd.type font-19-19-500-type:
+line-height.px: 19
+size.px: 19
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-19-19-500: $font-19-19-500-type
 
 
 
@@ -887,6 +921,7 @@ font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.color grey: #777
 
+-- ftd.color eeeeee80: #eeeeee80
 
 
 

@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11" width="16" height="11">
+	<title>down</title>
+	<defs>
+		<image  width="14" height="8" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAIBAMAAAA7P9P/AAAAAXNSR0IB2cksfwAAACRQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAplgCRwAAAAx0Uk5Tw8wWAMr/0xXS1xkYkKVZCwAAAEFJREFUeJxjYFQ2NjY2EmBwTQLSaiEMFZGLjc1bZzOYt84yrojczAAklrfONmYwNkpNC1MG0sZqoUClQNpIEKgVABdREHpw583yAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="1" y="2"/>
+</svg>
