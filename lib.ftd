@@ -348,6 +348,7 @@ role: $fonts.montserrat-14
 role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
+padding.px if { article-item.inset-body }: 10
 
 $article-item.body
 
