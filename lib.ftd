@@ -47,7 +47,7 @@ background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
 link: $button.link
-margin-top.px: 56
+margin-top.px: 53
 margin-top.px if {ftd.device == "mobile"}: 55
 margin-bottom.px: 53
 border-radius.px: 50
@@ -59,7 +59,7 @@ color: $inherited.colors.background.step-1
 background.solid: $inherited.colors.cta-primary.base
 padding-horizontal.px: 41
 padding-vertical.px: 11
-margin-top.px: 56
+margin-top.px: 53
 margin-top.px if {ftd.device == "mobile"}: 55
 margin-bottom.px: 53
 border-radius.px: 50
@@ -1905,7 +1905,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 10
 padding-vertical.px: 97
-padding-bottom.px: 96
+padding-bottom.px: 97
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
@@ -1932,7 +1932,7 @@ width.fixed.px: 322
 height.fixed.px: 356
 anchor: parent
 right.px: 0
-bottom.px: 0
+bottom.px: -1
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
@@ -1994,7 +1994,7 @@ role: $fonts.15-18-500
 color: $fonts.222b27
 margin-top.px: 32
 margin-top.px if {ftd.device == "mobile"}: 32
-margin-bottom.px: 6
+margin-bottom.px: 8
 text-align: center
 
 $hero.body
@@ -3916,6 +3916,7 @@ role: $fonts.size-24-700
 color: $inherited.colors.custom.one
 region: h4
 margin-bottom.px: 8
+margin-top.px: -1
 
 -- ftd.text:
 role: $fonts.copy-regular-body
@@ -4888,6 +4889,7 @@ padding.px: 37
 overflow-y: auto
 color: $inherited.colors.text
 z-index: 1
+border-radius.px: 4
 
 -- ftd.text: CLOSE
 role: $fonts.size-17
@@ -4966,7 +4968,7 @@ color: $fonts.dc3545
 
 -- ftd.text: $join-waitlist-popup.email-label
 role: $inherited.types.fine-print
-margin-top.px: 16
+margin-top.px: 17
 
 -- ftd.text-input:
 id: user-email-input

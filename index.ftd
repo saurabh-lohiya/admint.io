@@ -424,7 +424,7 @@ role: $inherited.types.heading-small
 color: $inherited.colors.cta-primary.base
 region: h1
 display: inline
-margin-right.px: 8
+margin-right.px: 9
 
 -- ftd.text: Don't worry, we will help you ! Lezzzgoooooo!
 role: $inherited.types.heading-small

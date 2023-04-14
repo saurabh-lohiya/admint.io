@@ -775,7 +775,7 @@ line-height.px: 27
 size.px: 18
 letter-spacing.px: 0
 weight: 600
-font-family: $nunito-assets.fonts.Nunito
+font-family: $nunito-assets.fonts.Nunito-live
 
 -- ftd.responsive-type button-lg-27: $button-lg-27-type
 
