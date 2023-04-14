@@ -155,7 +155,7 @@ border-color: $inherited.colors.custom.one
 border-bottom-color if {$advertisement-card.hover-me}: #005fbb
 margin-top.px if {$advertisement-card.hover-me}: -15
 background.solid: $inherited.colors.background.step-1
-margin-bottom.px: -5
+margin-bottom.px: -4
 
 -- ftd.image: 
 src: $advertisement-card.src
