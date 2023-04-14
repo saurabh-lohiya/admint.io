@@ -2942,7 +2942,7 @@ margin-bottom.px: 8
 
 -- ftd.text: 
 if: { legal-section-content.body != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 
 $legal-section-content.body
@@ -2955,6 +2955,48 @@ children: $legal-section-content.child
 -- end: ftd.column
 
 -- end: legal-section-content
+
+
+
+
+
+
+
+
+
+
+-- component legal-section-content-2:
+optional caption title:
+optional body body:
+children child:
+integer width: 1320
+optional ftd.image-src image:
+
+-- ftd.column:
+margin-bottom.px: 22
+margin-top.px: -8
+
+-- ftd.text: $legal-section-content-2.title
+if: { legal-section-content-2.title != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.text: 
+if: { legal-section-content-2.body != NULL }
+role: $fonts.16-24-400
+color: $inherited.colors.text
+
+$legal-section-content-2.body
+
+-- ftd.column:
+children: $legal-section-content-2.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-section-content-2
 
 
 
@@ -3046,7 +3088,8 @@ margin-bottom.px: 8
 if: { legal-title-para.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
-margin-bottom.px: 8
+margin-bottom.px: 7
+margin-top.px: -3
 
 -- ftd.text: 
 if: { legal-title-para.body != NULL }
@@ -3084,13 +3127,13 @@ margin-top.px: 16
 
 -- ftd.text: $legal-para-title.title
 if: { legal-para-title.title != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 margin-bottom.px: 8
 
 -- ftd.text: 
 if: { legal-para-title.body != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 
 $legal-para-title.body
@@ -3103,6 +3146,45 @@ children: $legal-para-title.para-child
 -- end: ftd.column
 
 -- end: legal-para-title
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-title-2:
+optional caption title:
+optional body body:
+children para-child:
+
+-- ftd.column:
+margin-top.px: 4
+
+-- ftd.text: $legal-para-title-2.title
+if: { legal-para-title-2.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 6
+
+-- ftd.text: 
+if: { legal-para-title-2.body != NULL }
+role: $fonts.16-24-400-type
+color: $inherited.colors.text
+
+$legal-para-title-2.body
+
+-- ftd.column:
+children: $legal-para-title-2.para-child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: legal-para-title-2
 
 
 
@@ -3136,15 +3218,63 @@ margin-vertical.px: 16
 -- component legal-para-list-item:
 optional caption title:
 boolean active: true
+optional body body:
+
+-- ftd.column:
+width: fill-container
 
 -- ftd.text: $legal-para-list-item.title
 if: { legal-para-list-item.title != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400
 color: $inherited.colors.text
 margin-vertical.px if { legal-para-list-item.active } : -10
-margin-left.px if { legal-para-list-item.active } : 10
+
+-- ftd.text:
+if: { legal-para-list-item.body != NULL }
+role: $fonts.16-24-400
+color: $inherited.colors.text
+margin-vertical.px if { legal-para-list-item.active } : -10
+
+ $legal-para-list-item.body
+
+-- end: ftd.column
 
 -- end: legal-para-list-item
+
+
+
+
+
+
+
+
+
+-- component legal-para-list-item-2:
+optional caption title:
+boolean active: true
+optional body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $legal-para-list-item-2.title
+if: { legal-para-list-item-2.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text:
+if: { legal-para-list-item-2.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: -10
+margin-bottom.px: 10
+
+ $legal-para-list-item-2.body
+
+-- end: ftd.column
+
+-- end: legal-para-list-item-2
+
 
 
 
@@ -3276,6 +3406,74 @@ $legal-paragraph.body
 
 
 
+-- component legal-paragraph-2:
+optional caption title:
+optional body body:
+
+-- ftd.column:
+margin-top.px: -13
+margin-bottom.px: -2
+
+-- ftd.text: $legal-paragraph-2.title
+if: { legal-paragraph-2.title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: 
+if: { legal-paragraph-2.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 18
+
+$legal-paragraph-2.body
+
+-- end: ftd.column
+
+-- end: legal-paragraph-2
+
+
+
+
+
+
+
+
+
+
+-- component legal-paragraph-3:
+optional caption title:
+optional body body:
+
+-- ftd.column:
+margin-top.px: -13
+margin-bottom.px: -2
+
+-- ftd.text: $legal-paragraph-3.title
+if: { legal-paragraph-3.title != NULL }
+role: $fonts.16-24-400
+color: $inherited.colors.text
+
+-- ftd.text: 
+if: { legal-paragraph-3.body != NULL }
+role: $fonts.16-24-400
+color: $inherited.colors.text
+margin-top.px: 14
+
+$legal-paragraph-3.body
+
+-- end: ftd.column
+
+-- end: legal-paragraph-3
+
+
+
+
+
+
+
+
+
+
 -- component legal-title:
 optional caption title:
 
@@ -3285,6 +3483,26 @@ role: $inherited.types.blockquote
 color: $inherited.colors.text
 
 -- end: legal-title
+
+
+
+
+
+
+
+
+
+
+-- component legal-title-2:
+optional caption title:
+
+-- ftd.text: $legal-title-2.title
+if: { legal-title-2.title != NULL }
+role: $inherited.types.blockquote
+color: $inherited.colors.text
+margin-top.px: -10
+
+-- end: legal-title-2
 
 
 
