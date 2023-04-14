@@ -2873,6 +2873,7 @@ align-self: center
 background.solid: $inherited.colors.background.step-1
 children: $legal-pages.child
 shadow: $fonts.about
+padding-bottom.px: 21
 
 -- end: ftd.column
 
@@ -2953,7 +2954,7 @@ margin-bottom.px: 24
 
 -- ftd.text: 
 if: { legal-page-hero.body != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.16-24-400-type
 color: $inherited.colors.text
 
 $legal-page-hero.body
@@ -2969,7 +2970,6 @@ children: $legal-page-hero.ui-list
 if: { ftd.device != "mobile"}
 src: $legal-page-hero.image
 height.fixed.px: 256
-padding-right.px: 3
 
 -- end: ftd.row
 
@@ -3018,6 +3018,7 @@ margin-bottom.px: 8
 if: { legal-title-para.body != NULL }
 role: $fonts.blockquote
 color: $inherited.colors.text
+margin-bottom.px: 9
 
 $legal-title-para.body
 
@@ -3153,6 +3154,52 @@ color: $inherited.colors.text
 -- end: ftd.column
 
 -- end: legal-para-heading
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-heading-2:
+caption title:
+
+-- ftd.column:
+margin-top.px: 8
+
+-- ftd.text: $legal-para-heading-2.title
+role: $fonts.size-29
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: legal-para-heading-2
+
+
+
+
+
+
+
+
+
+
+-- component legal-para-heading-3:
+caption title:
+
+-- ftd.column:
+margin-top.px: 7
+
+-- ftd.text: $legal-para-heading-3.title
+role: $fonts.size-29
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: legal-para-heading-3
 
 
 
