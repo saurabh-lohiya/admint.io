@@ -4588,7 +4588,7 @@ height: auto
 role: $fonts.montserrat-28-28-600
 color: $fonts.44ce9a
 link: $search-result.link
-margin-top.px: 22
+margin-top.px: 21
 
 -- ftd.row:
 margin-bottom.px: 13
@@ -4773,7 +4773,6 @@ children results:
 width: fill-container
 align-self: center
 padding-horizontal.px: 12
-padding-bottom.px: 35
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
@@ -4806,7 +4805,6 @@ $search-results.body
 width: fill-container
 children: $search-results.results
 wrap: true
-spacing.fixed.px: 30
 
 -- end: ftd.row
 
@@ -4815,6 +4813,50 @@ spacing.fixed.px: 30
 -- end: ftd.column
 
 -- end: search-results
+
+
+
+
+
+
+
+
+
+
+-- component wrapper1:
+children child:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 30
+children: $wrapper1.child
+
+-- end: ftd.row
+
+-- end: wrapper1
+
+
+
+
+
+
+
+
+
+
+-- component wrapper2:
+children child:
+
+-- ftd.row:
+width: fill-container
+padding-top.px: 35
+padding-bottom.px: 12
+spacing.fixed.px: 30
+children: $wrapper2.child
+
+-- end: ftd.row
+
+-- end: wrapper2
 
 
 
