@@ -20,6 +20,16 @@ link: learn/advertising-web-3-0/
 -- lib.search-results: Search Results For:
 query: blah blah
 
+-- lib.search-result: Lorem Ipsum Is Simply Dummy Text
+link: learn/metaverse-is-the-new-playground-for-advertisement-2/
+thumbnail: $assets.files.static.lorem-ipsum1.jpeg
+timestamp: December 6, 2022
+comments: No comments
+
+Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry’s standard dummy
+
+
 -- lib.search-result: Metaverse Is The New Playground For Advertisement.
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
 thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
@@ -40,34 +50,14 @@ Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
 leader, professional, or student; how much
 
 
--- lib.search-result: Metaverse Is The New Playground For Advertisement.
+-- lib.search-result: Lorem Ipsum Is Simply Dummy Text
 link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
+thumbnail: $assets.files.static.lorem-ipsum1.jpeg
 timestamp: December 6, 2022
 comments: No comments
 
-Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
-leader, professional, or student; how much
-
-
--- lib.search-result: Metaverse Is The New Playground For Advertisement.
-link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-timestamp: December 6, 2022
-comments: No comments
-
-Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
-leader, professional, or student; how much
-
-
--- lib.search-result: Metaverse Is The New Playground For Advertisement.
-link: learn/metaverse-is-the-new-playground-for-advertisement-2/
-thumbnail: $assets.files.static.blog.01-2048x1366.jpeg
-timestamp: December 6, 2022
-comments: No comments
-
-Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder,
-leader, professional, or student; how much
+Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry’s standard dummy
 
 -- end: lib.search-results
 

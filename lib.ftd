@@ -568,6 +568,38 @@ color: $inherited.colors.cta-primary.text
 
 
 
+-- component button-medium:
+caption title: 
+string link:
+
+-- ftd.row:
+padding-horizontal.px: 12
+background.solid: $fonts.44ce9a
+border-radius.px: 32
+spacing.fixed.px: 5
+link: $button-medium.link
+
+-- ftd.text: $button-medium.title
+role: $fonts.montserrat-16-29-600
+color: $inherited.colors.cta-primary.text
+
+-- ftd.text: »
+role: $fonts.montserrat-16-29-600
+color: $inherited.colors.cta-primary.text
+
+-- end: ftd.row
+
+-- end: button-medium
+
+
+
+
+
+
+
+
+
+
 -- component page:
 caption title: AdMint - Deliver refreshing Web 3.0 campaigns!
 optional string site-name:
@@ -4304,7 +4336,7 @@ optional string timestamp:
 optional string comments: No comments
 
 -- ftd.column:
-width.fixed.percent: 48
+width.fixed.percent: 48.6
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.column:
@@ -4335,10 +4367,10 @@ width: fill-container
 height: auto
 
 -- ftd.text: $search-result.title
-role: $fonts.montserrat-18
-color: $inherited.colors.custom.four
+role: $fonts.montserrat-28-28-600
+color: $fonts.44ce9a
 link: $search-result.link
-margin-top.px: 20
+margin-top.px: 22
 
 -- ftd.row:
 margin-bottom.px: 13
@@ -4355,13 +4387,13 @@ color: $fonts.adadad
 -- end: ftd.row
 
 -- ftd.text: 
-role: $fonts.montserrat-14-19
+role: $fonts.montserrat-14-19-v2
 color: #020101a1
 margin-bottom.px: 10
 
 $search-result.body
 
--- button-small: Read More
+-- button-medium: Read More
 link: $search-result.link
 
 -- end: ftd.column
@@ -4523,17 +4555,17 @@ children results:
 width: fill-container
 align-self: center
 padding-horizontal.px: 12
-padding-bottom.px: 12
+padding-bottom.px: 35
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: 1120
 align-self: center
-margin-top.px: 30
+margin-top.px: 25
 
 -- ftd.row:
-margin-bottom.px: 22
+margin-bottom.px: 21
 spacing.fixed.px: 5
 role: $fonts.size-22-800-montserrat
 color: $inherited.colors.custom.one
