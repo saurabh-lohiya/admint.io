@@ -1905,7 +1905,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 10
 padding-vertical.px: 97
-padding-bottom.px: 96
+padding-bottom.px: 97
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
