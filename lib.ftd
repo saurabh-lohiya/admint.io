@@ -2503,22 +2503,34 @@ children: $tabs.child
 caption title:
 boolean active: false
 string link:
+boolean $hover: false
 
 -- ftd.column:
 
 -- ftd.text: $tab.title
-padding-top.px if { !tab.active }: 16
-padding-vertical.px if { tab.active }: 20
-padding-bottom.px if { !tab.active }: 20
+if: { tab.active }
+padding-vertical.px: 20
 padding-horizontal.px: 30
-color: $inherited.colors.custom.one
 role: $fonts.font-18-18-600
 role if { ftd.device == "mobile" }: $fonts.size-14-m
-border-color if { tab.active }: $inherited.colors.custom.four
-border-radius.px if { tab.active }: 50
-border-width.px if { tab.active }: 2
-color if { tab.active }: $inherited.colors.custom.four
+border-color: $inherited.colors.custom.four
+border-radius.px: 50
+border-width.px: 2
+color: $inherited.colors.custom.four
 link: $tab.link
+
+-- ftd.text: $tab.title
+if: { !tab.active }
+padding-top.px: 16
+padding-bottom.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.one
+color if { $tab.hover }: $fonts.44ce9a
+role: $fonts.font-18-18-600
+role if { ftd.device == "mobile" }: $fonts.size-14-m
+link: $tab.link
+$on-mouse-enter$: $ftd.set-bool($a = $tab.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $tab.hover, v = false)
 
 -- end: ftd.column
 
