@@ -447,6 +447,22 @@ desktop: $montserrat-28-desktop
 mobile: $montserrat-28-mobile
 
 
+
+
+
+-- ftd.type montserrat-22-22-type:
+line-height.px: 22
+size.px: 22
+letter-spacing.px: 0
+font-family: $montserrat-assets.fonts.Montserrat
+weight: 600
+
+-- ftd.responsive-type montserrat-22-22: $montserrat-22-22-type
+
+
+
+
+
 -- ftd.type nunito-40-desktop:
 line-height.px: 44
 size.px: 40
@@ -936,6 +952,19 @@ weight: 700
 font-family: $nunito-assets.fonts.Nunito-live
 
 -- ftd.responsive-type nunito-18-18-700: $nunito-18-18-700-type
+
+
+
+
+
+-- ftd.type blockquote-type:
+line-height.px: 24
+size.px: 16
+letter-spacing.rem: -0.0001
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type blockquote: $blockquote-type
 
 
 
