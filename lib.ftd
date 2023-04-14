@@ -3917,6 +3917,7 @@ role: $fonts.size-24-700
 color: $inherited.colors.custom.one
 region: h4
 margin-bottom.px: 8
+margin-top.px: -1
 
 -- ftd.text:
 role: $fonts.copy-regular-body
