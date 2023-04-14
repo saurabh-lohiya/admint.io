@@ -155,7 +155,7 @@ border-color: $inherited.colors.custom.one
 border-bottom-color if {$advertisement-card.hover-me}: #005fbb
 margin-top.px if {$advertisement-card.hover-me}: -15
 background.solid: $inherited.colors.background.step-1
-margin-bottom.px: -4
+margin-bottom.px: -5
 
 -- ftd.image: 
 src: $advertisement-card.src
@@ -1905,7 +1905,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 padding-horizontal.px: 10
 padding-vertical.px: 97
-padding-bottom.px: 96
+padding-bottom.px: 97
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
