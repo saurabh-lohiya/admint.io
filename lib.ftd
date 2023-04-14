@@ -2874,6 +2874,7 @@ background.solid: $inherited.colors.background.step-1
 children: $legal-pages.child
 shadow: $fonts.about
 padding-bottom.px: 21
+margin-bottom.px: 76
 
 -- end: ftd.column
 
