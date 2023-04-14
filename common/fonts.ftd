@@ -447,6 +447,22 @@ desktop: $montserrat-28-desktop
 mobile: $montserrat-28-mobile
 
 
+
+
+
+-- ftd.type montserrat-22-22-type:
+line-height.px: 22
+size.px: 22
+letter-spacing.px: 0
+font-family: $montserrat-assets.fonts.Montserrat
+weight: 600
+
+-- ftd.responsive-type montserrat-22-22: $montserrat-22-22-type
+
+
+
+
+
 -- ftd.type nunito-40-desktop:
 line-height.px: 44
 size.px: 40

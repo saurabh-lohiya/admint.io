@@ -2522,8 +2522,7 @@ link: $tab.link
 
 -- ftd.text: $tab.title
 if: { !tab.active }
-padding-top.px: 16
-padding-bottom.px: 20
+padding-vertical.px: 20
 padding-horizontal.px: 30
 color: $inherited.colors.custom.one
 color if { $tab.hover }: $fonts.44ce9a
@@ -4471,22 +4470,23 @@ children results:
 width: fill-container
 align-self: center
 padding-horizontal.px: 12
-margin-bottom.px: 30
+padding-bottom.px: 12
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 width: fill-container
-max-width.fixed.px: 1140
+max-width.fixed.px: 1120
 align-self: center
 margin-top.px: 30
 
 -- ftd.row:
-margin-bottom.px: 20
+margin-bottom.px: 22
 spacing.fixed.px: 5
 role: $fonts.size-22-800-montserrat
 color: $inherited.colors.custom.one
 
 -- ftd.text: $search-results.title
+role: $fonts.montserrat-22-22
 
 -- ftd.text: $search-results.query
 
@@ -4496,7 +4496,6 @@ color: $inherited.colors.custom.one
 if: { search-results.body != NULL }
 role: $fonts.roboto-14
 color: $inherited.colors.custom.one
-margin-bottom.px: 220
 
 $search-results.body
 
