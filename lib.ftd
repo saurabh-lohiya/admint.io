@@ -1932,7 +1932,7 @@ width.fixed.px: 322
 height.fixed.px: 356
 anchor: parent
 right.px: 0
-bottom.px: 0
+bottom.px: -1
 
 -- ftd.image:
 if: { ftd.device == "mobile" }
