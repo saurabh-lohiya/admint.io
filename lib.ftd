@@ -424,7 +424,7 @@ border-color: $inherited.colors.custom.one
 -- ftd.column:
 width: fill-container
 children: $sidebar.children
-spacing.fixed.px: 42
+spacing.fixed.px: 35
 
 -- end: ftd.column
 
@@ -461,11 +461,12 @@ width: fill-container
 role: $fonts.roboto-18-33-600
 color: $inherited.colors.custom.nine
 link: $recent-post.link
-margin-top.px: 4
+
 
 -- ftd.text: 
 role: $fonts.roboto-14
 color: $inherited.colors.cta-secondary.disabled
+margin-bottom.px: 10
 
 $recent-post.body
 
@@ -4038,7 +4039,7 @@ string link:
 
 -- ftd.row:
 width.fixed.px: 210
-padding-top.px: 11
+padding-top.px: 8
 padding-vertical.px: 8
 padding-horizontal.px: 10
 background.solid: $inherited.colors.background.step-1
@@ -4053,9 +4054,8 @@ margin-bottom.px: 20
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
-padding-left.px: 4
+padding-left.px: 3
 role: $fonts.opensans-12
-margin-top.px: -3
 
 -- ftd.image:
 src: $assets.files.static.search-icon.svg
