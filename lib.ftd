@@ -2864,7 +2864,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 
 -- ftd.column:
-max-width.fixed.px: 1320
+max-width.fixed.px: 1296
 padding.px: 30
 margin-horizontal.px if { ftd.device == "mobile" }: 12
 margin-vertical.px: 78
@@ -3017,7 +3017,7 @@ margin-bottom.px: 8
 
 -- ftd.text: 
 if: { legal-title-para.body != NULL }
-role: $inherited.types.copy-regular
+role: $fonts.blockquote
 color: $inherited.colors.text
 
 $legal-title-para.body

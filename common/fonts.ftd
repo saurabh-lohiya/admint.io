@@ -941,6 +941,19 @@ font-family: $nunito-assets.fonts.Nunito-live
 
 
 
+-- ftd.type blockquote-type:
+line-height.px: 24
+size.px: 16
+letter-spacing.rem: -0.0001
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type blockquote: $blockquote-type
+
+
+
+
+
 -- ftd.type font-20-20-400-type:
 line-height.px: 20
 size.px: 20
