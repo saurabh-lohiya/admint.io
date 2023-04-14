@@ -2620,7 +2620,7 @@ padding-vertical.px: 15
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
 -- ftd.text: $question-accordion.title
-role: $fonts.font-18-18-600
+role: $fonts.nunito-18-18-700
 color if { question-accordion.open }: $inherited.colors.custom.four
 color: $inherited.colors.custom.one
 align-self: center
@@ -4008,6 +4008,7 @@ align-content: center
 background.solid: $fonts.cdcdcd36
 width: fill-container
 spacing.fixed.px: 10
+border-radius.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
@@ -4134,6 +4135,7 @@ align-content: center
 background.solid: #cdcdcd36
 width: fill-container
 spacing.fixed.px: 10
+border-radius.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
@@ -4326,7 +4328,7 @@ link: $search-result.link
 
 
 -- component business-plan:
-optional caption title:
+ftd.ui list title:
 optional body body:
 children tabs-wrap:
 
@@ -4341,10 +4343,7 @@ max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
 padding-horizontal.px: 12
 
--- ftd.text: $business-plan.title
-role: $fonts.size-50
-color: $inherited.colors.text
-margin-bottom.px: 89
+-- business-plan.title.0:
 
 -- ftd.row:
 align-content: center

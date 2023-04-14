@@ -1,13 +1,38 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/lib as lib
-
+-- import: fifthtry.github.io/admint.io/common/fonts
 
 
 
 
 -- lib.page:
 
--- lib.business-plan: The right plan for your business plan.
+-- lib.business-plan:
+
+-- lib.business-plan.title:
+
+-- ftd.container:
+margin-bottom.px: 89
+
+-- ftd.text: The right
+role: $fonts.size-50
+color: $inherited.colors.text
+display: inline
+
+-- ftd.text: plan
+role: $fonts.size-50
+color: $inherited.colors.cta-primary.base
+display: inline
+margin-horizontal.px: 14
+
+-- ftd.text: for your business plan.
+role: $fonts.size-50
+color: $inherited.colors.text
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.business-plan.title
 
 -- lib.tab-label: For Agencies
 index: 1
