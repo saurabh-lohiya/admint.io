@@ -4053,11 +4053,14 @@ margin-bottom.px: 20
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
-role: $fonts.12-28-400
+padding-left.px: 4
+role: $fonts.opensans-12
+margin-top.px: -3
 
 -- ftd.image:
 src: $assets.files.static.search-icon.svg
 width.fixed.px: 22
+height.fixed.px: 28
 cursor: pointer
 link: $search.link
 
