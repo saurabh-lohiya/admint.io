@@ -341,7 +341,7 @@ role: $fonts.roboto-18
 region: h3
 color: $inherited.colors.custom.nine
 link: $article-item.link
-margin-top.px: 13
+margin-top.px: 11
 
 -- ftd.text:
 role: $fonts.montserrat-14
@@ -405,17 +405,17 @@ width: fill-container
 if: { !sidebar.post-page }
 role: $fonts.roboto-22
 color: #131313
-margin-bottom.px: 24
+margin-bottom.px: 23
 
 -- ftd.text: $sidebar.title
 if: { sidebar.post-page }
 role: $fonts.montserrat-15-19
 color: $inherited.colors.cta-primary.base
-margin-bottom.px: 24
+margin-bottom.px: 20
 
 -- ftd.column:
-margin-bottom.px: 20
-border-bottom-width.px: 2
+margin-bottom.px: 24
+border-bottom-width.px: 3
 width.fixed.percent: 17
 border-color: $inherited.colors.custom.one
 
@@ -424,7 +424,7 @@ border-color: $inherited.colors.custom.one
 -- ftd.column:
 width: fill-container
 children: $sidebar.children
-spacing.fixed.px: 42
+spacing.fixed.px: 35
 
 -- end: ftd.column
 
@@ -461,11 +461,12 @@ width: fill-container
 role: $fonts.roboto-18-33-600
 color: $inherited.colors.custom.nine
 link: $recent-post.link
-margin-top.px: 4
+
 
 -- ftd.text: 
 role: $fonts.roboto-14
 color: $inherited.colors.cta-secondary.disabled
+margin-bottom.px: 10
 
 $recent-post.body
 
@@ -557,6 +558,38 @@ color: $inherited.colors.cta-primary.text
 -- end: ftd.row
 
 -- end: button-small
+
+
+
+
+
+
+
+
+
+
+-- component button-medium:
+caption title: 
+string link:
+
+-- ftd.row:
+padding-horizontal.px: 12
+background.solid: $fonts.44ce9a
+border-radius.px: 32
+spacing.fixed.px: 5
+link: $button-medium.link
+
+-- ftd.text: $button-medium.title
+role: $fonts.montserrat-16-29-600
+color: $inherited.colors.cta-primary.text
+
+-- ftd.text: »
+role: $fonts.montserrat-16-29-600
+color: $inherited.colors.cta-primary.text
+
+-- end: ftd.row
+
+-- end: button-medium
 
 
 
@@ -4304,8 +4337,9 @@ string link:
 
 -- ftd.row:
 width.fixed.px: 210
-padding-vertical.px: 9
-padding-horizontal.px: 13
+padding-top.px: 8
+padding-vertical.px: 8
+padding-horizontal.px: 10
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 30
 border-width.px: 1
@@ -4318,11 +4352,13 @@ margin-bottom.px: 20
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
+padding-left.px: 3
+role: $fonts.opensans-12
 
 -- ftd.image:
 src: $assets.files.static.search-icon.svg
 width.fixed.px: 22
-height: fill-container
+height.fixed.px: 28
 cursor: pointer
 link: $search.link
 
@@ -4518,7 +4554,7 @@ optional string timestamp:
 optional string comments: No comments
 
 -- ftd.column:
-width.fixed.percent: 48
+width.fixed.percent: 48.6
 width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.column:
@@ -4549,10 +4585,10 @@ width: fill-container
 height: auto
 
 -- ftd.text: $search-result.title
-role: $fonts.montserrat-18
-color: $inherited.colors.custom.four
+role: $fonts.montserrat-28-28-600
+color: $fonts.44ce9a
 link: $search-result.link
-margin-top.px: 20
+margin-top.px: 22
 
 -- ftd.row:
 margin-bottom.px: 13
@@ -4569,13 +4605,13 @@ color: $fonts.adadad
 -- end: ftd.row
 
 -- ftd.text: 
-role: $fonts.montserrat-14-19
+role: $fonts.montserrat-14-19-v2
 color: #020101a1
 margin-bottom.px: 10
 
 $search-result.body
 
--- button-small: Read More
+-- button-medium: Read More
 link: $search-result.link
 
 -- end: ftd.column
@@ -4737,17 +4773,17 @@ children results:
 width: fill-container
 align-self: center
 padding-horizontal.px: 12
-padding-bottom.px: 12
+padding-bottom.px: 35
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 width: fill-container
 max-width.fixed.px: 1120
 align-self: center
-margin-top.px: 30
+margin-top.px: 25
 
 -- ftd.row:
-margin-bottom.px: 22
+margin-bottom.px: 21
 spacing.fixed.px: 5
 role: $fonts.size-22-800-montserrat
 color: $inherited.colors.custom.one
