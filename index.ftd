@@ -220,7 +220,7 @@ Stake your claim across the Metaverses!
 
 -- lib.help-banner:
 cta-label: Let's Learn
-cta-url: /learn/
+cta-url: learn/
 image: $assets.files.static.help-banner.svg
 body: You ask why? Because... Followed by the WHY NFTs?
 
@@ -411,7 +411,7 @@ web 3.0 budget?
 
 -- lib.help-banner:
 cta-label: Let's Learn
-cta-url: /learn/
+cta-url: learn/
 image: $assets.files.static.help-banner.svg
 
 -- lib.help-banner.title:
