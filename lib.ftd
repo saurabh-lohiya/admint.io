@@ -321,6 +321,7 @@ body body:
 optional ftd.image-src thumbnail:
 string link: 
 boolean post-page: false
+boolean inset-body: false
 
 -- ftd.column:
 width: fill-container
@@ -344,6 +345,7 @@ margin-top.px: 13
 
 -- ftd.text:
 role: $fonts.montserrat-14
+role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
 
@@ -368,9 +370,10 @@ margin-bottom.px: 20
 
 -- ftd.text: 
 role: $fonts.montserrat-15-27
+role if { article-item.inset-body }: $fonts.roboto-14-25
 color: $inherited.colors.custom.ten
 classes: markdown
-padding.px: 10
+padding.px if { article-item.inset-body }: 10
 
 $article-item.body
 
@@ -443,7 +446,8 @@ body body:
 string link:
 optional ftd.image-src thumbnail:
 optional string timestamp:
-optional string comments: No comments
+optional string comments:
+optional string cta-text:
 
 -- ftd.column:
 width: fill-container
@@ -453,15 +457,14 @@ if: { recent-post.thumbnail == NULL }
 width: fill-container
 
 -- ftd.text: $recent-post.title
-role: $fonts.roboto-18-22-600
+role: $fonts.roboto-18-33-600
 color: $inherited.colors.custom.nine
 link: $recent-post.link
-margin-top.px: 9
+margin-top.px: 4
 
 -- ftd.text: 
 role: $fonts.roboto-14
 color: $inherited.colors.cta-secondary.disabled
-margin-top.px: 6
 
 $recent-post.body
 
@@ -476,26 +479,29 @@ src: $recent-post.thumbnail
 width: fill-container
 height: auto
 link: $recent-post.link
+margin-top.px: 3
 
 -- ftd.text: $recent-post.title
 role: $fonts.montserrat-18
 color: $inherited.colors.custom.four
 link: $recent-post.link
-margin-top.px: 20
+margin-top.px: 15
 
 -- ftd.row:
-margin-bottom.px: 13
 spacing.fixed.px: 6
 
 -- ftd.text: $recent-post.timestamp
+if: { recent-post.timestamp != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
 -- ftd.text: /
+if: { recent-post.timestamp != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
 -- ftd.text: $recent-post.comments
+if: { recent-post.comments != NULL }
 role: $fonts.montserrat-15-19
 color: $fonts.adadad
 
@@ -508,7 +514,8 @@ margin-bottom.px: 10
 
 $recent-post.body
 
--- button-small: Read More
+-- button-small: $recent-post.cta-text
+if: { recent-post.cta-text != NULL }
 link: $recent-post.link
 
 -- end: ftd.column
@@ -2496,22 +2503,34 @@ children: $tabs.child
 caption title:
 boolean active: false
 string link:
+boolean $hover: false
 
 -- ftd.column:
 
 -- ftd.text: $tab.title
-padding-top.px if { !tab.active }: 16
-padding-vertical.px if { tab.active }: 20
-padding-bottom.px if { !tab.active }: 20
+if: { tab.active }
+padding-vertical.px: 20
 padding-horizontal.px: 30
-color: $inherited.colors.custom.one
 role: $fonts.font-18-18-600
 role if { ftd.device == "mobile" }: $fonts.size-14-m
-border-color if { tab.active }: $inherited.colors.custom.four
-border-radius.px if { tab.active }: 50
-border-width.px if { tab.active }: 2
-color if { tab.active }: $inherited.colors.custom.four
+border-color: $inherited.colors.custom.four
+border-radius.px: 50
+border-width.px: 2
+color: $inherited.colors.custom.four
 link: $tab.link
+
+-- ftd.text: $tab.title
+if: { !tab.active }
+padding-top.px: 16
+padding-bottom.px: 20
+padding-horizontal.px: 30
+color: $inherited.colors.custom.one
+color if { $tab.hover }: $fonts.44ce9a
+role: $fonts.font-18-18-600
+role if { ftd.device == "mobile" }: $fonts.size-14-m
+link: $tab.link
+$on-mouse-enter$: $ftd.set-bool($a = $tab.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $tab.hover, v = false)
 
 -- end: ftd.column
 
