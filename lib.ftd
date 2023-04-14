@@ -341,7 +341,7 @@ role: $fonts.roboto-18
 region: h3
 color: $inherited.colors.custom.nine
 link: $article-item.link
-margin-top.px: 13
+margin-top.px: 11
 
 -- ftd.text:
 role: $fonts.montserrat-14
@@ -414,7 +414,7 @@ color: $inherited.colors.cta-primary.base
 margin-bottom.px: 20
 
 -- ftd.column:
-margin-bottom.px: 20
+margin-bottom.px: 24
 border-bottom-width.px: 3
 width.fixed.percent: 17
 border-color: $inherited.colors.custom.one
