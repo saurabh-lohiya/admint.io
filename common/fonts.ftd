@@ -1006,19 +1006,6 @@ font-family: $opensans-font-assets.fonts.Open-Sans
 
 
 
--- ftd.type 12-28-400-type:
-line-height.px: 28
-size.px: 12
-letter-spacing.px: 0
-weight: 400
-font-family: $nunito-assets.fonts.Nunito-live
-
--- ftd.responsive-type 12-28-400: $12-28-400-type
-
-
-
-
-
 -- ftd.color 222b27: #222b27
 
 -- ftd.color bdbdbd: #bdbdbd
