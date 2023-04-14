@@ -4306,7 +4306,7 @@ link: $search-result.link
 
 
 -- component business-plan:
-optional caption title:
+ftd.ui string title:
 optional body body:
 children tabs-wrap:
 
@@ -4321,10 +4321,7 @@ max-width.fixed.px if { ftd.device != "mobile" }: $max-width
 align-self: center
 padding-horizontal.px: 12
 
--- ftd.text: $business-plan.title
-role: $fonts.size-50
-color: $inherited.colors.text
-margin-bottom.px: 89
+-- business-plan.title.0:
 
 -- ftd.row:
 align-content: center

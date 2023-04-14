@@ -9,6 +9,31 @@
 
 -- lib.business-plan: The right plan for your business plan.
 
+-- lib.business-plan.title:
+
+-- ftd.container:
+margin-bottom.px: 89
+
+-- ftd.text: The right
+role: $fonts.size-50
+color: $inherited.colors.text
+display: inline
+
+-- ftd.text: plan
+role: $fonts.nunito-40
+color: $inherited.colors.cta-primary.base
+display: inline
+margin-horizontal.px: 11
+
+-- ftd.text: for your business plan.
+role: $fonts.size-50
+color: $inherited.colors.text
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.business-plan.title
+
 -- lib.tab-label: For Agencies
 index: 1
 $active-item: true
