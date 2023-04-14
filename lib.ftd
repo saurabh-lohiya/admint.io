@@ -4890,6 +4890,7 @@ padding.px: 37
 overflow-y: auto
 color: $inherited.colors.text
 z-index: 1
+border-radius.px: 4
 
 -- ftd.text: CLOSE
 role: $fonts.size-17
@@ -4968,7 +4969,7 @@ color: $fonts.dc3545
 
 -- ftd.text: $join-waitlist-popup.email-label
 role: $inherited.types.fine-print
-margin-top.px: 16
+margin-top.px: 17
 
 -- ftd.text-input:
 id: user-email-input
