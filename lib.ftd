@@ -405,17 +405,17 @@ width: fill-container
 if: { !sidebar.post-page }
 role: $fonts.roboto-22
 color: #131313
-margin-bottom.px: 24
+margin-bottom.px: 23
 
 -- ftd.text: $sidebar.title
 if: { sidebar.post-page }
 role: $fonts.montserrat-15-19
 color: $inherited.colors.cta-primary.base
-margin-bottom.px: 24
+margin-bottom.px: 20
 
 -- ftd.column:
 margin-bottom.px: 20
-border-bottom-width.px: 2
+border-bottom-width.px: 3
 width.fixed.percent: 17
 border-color: $inherited.colors.custom.one
 
@@ -4038,8 +4038,9 @@ string link:
 
 -- ftd.row:
 width.fixed.px: 210
-padding-vertical.px: 9
-padding-horizontal.px: 13
+padding-top.px: 11
+padding-vertical.px: 8
+padding-horizontal.px: 10
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 30
 border-width.px: 1
@@ -4052,11 +4053,11 @@ margin-bottom.px: 20
 width: fill-container
 placeholder: Search here...
 margin-left.px: 10
+role: $fonts.12-28-400
 
 -- ftd.image:
 src: $assets.files.static.search-icon.svg
 width.fixed.px: 22
-height: fill-container
 cursor: pointer
 link: $search.link
 
