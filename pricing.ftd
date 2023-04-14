@@ -1,13 +1,13 @@
 -- import: fifthtry.github.io/admint.io/assets
 -- import: fifthtry.github.io/admint.io/lib as lib
-
+-- import: fifthtry.github.io/admint.io/common/fonts
 
 
 
 
 -- lib.page:
 
--- lib.business-plan: The right plan for your business plan.
+-- lib.business-plan:
 
 -- lib.business-plan.title:
 
@@ -20,10 +20,10 @@ color: $inherited.colors.text
 display: inline
 
 -- ftd.text: plan
-role: $fonts.nunito-40
+role: $fonts.size-50
 color: $inherited.colors.cta-primary.base
 display: inline
-margin-horizontal.px: 11
+margin-horizontal.px: 14
 
 -- ftd.text: for your business plan.
 role: $fonts.size-50

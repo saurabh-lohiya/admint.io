@@ -4007,6 +4007,7 @@ align-content: center
 background.solid: $fonts.cdcdcd36
 width: fill-container
 spacing.fixed.px: 10
+border-radius.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
@@ -4133,6 +4134,7 @@ align-content: center
 background.solid: #cdcdcd36
 width: fill-container
 spacing.fixed.px: 10
+border-radius.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
@@ -4325,7 +4327,7 @@ link: $search-result.link
 
 
 -- component business-plan:
-ftd.ui string title:
+ftd.ui list title:
 optional body body:
 children tabs-wrap:
 
