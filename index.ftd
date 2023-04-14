@@ -55,7 +55,7 @@ Build your brand's fan-base in web 3.0 with us!
 -- lib.carousel:
 $active-item: $current-active
 
--- lib.simple-steps: **WHY ADMINT?** 🚧
+-- lib.simple-steps: **WHY ADMINT?**
 src: $assets.files.static.carousel.simple.svg
 index: 1
 reset: $current-active
@@ -95,7 +95,7 @@ display: inline-block
 
 -- end: lib.simple-steps
 
--- lib.structured: **WHY ADMINT?** 🚧
+-- lib.structured: **WHY ADMINT?**
 src: $assets.files.static.carousel.structured.svg
 index: 2 
 reset: $current-active
@@ -125,7 +125,7 @@ display: inline-block
 Follow along our guided walkthroughs to sequentially construct
 all the necessary components to launch a campaign.
 
--- lib.keymedia-vehicle: **WHY ADMINT?** 🚧
+-- lib.keymedia-vehicle: **WHY ADMINT?**
 src: $assets.files.static.carousel.keymedia.svg 
 index: 3 
 reset: $current-active
@@ -156,7 +156,7 @@ to run  campaigns. You can even mint your own!
 With AdMint you can create your very own custom NFT collection
 or use pre-minted NFTs (if yet unsure!) to power your campaigns.
 
--- lib.distribute-nft: **WHY ADMINT?** 🚧
+-- lib.distribute-nft: **WHY ADMINT?**
 src: $assets.files.static.carousel.distribute.svg
 index: 4 
 reset: $current-active
@@ -188,7 +188,7 @@ With AdMint's custom tools & templates, you can ensure that
 your intended audience receive the NFTs and avail the 
 associated real-world brand offerings.
 
--- lib.analyze-pane: **WHY ADMINT?** 🚧
+-- lib.analyze-pane: **WHY ADMINT?**
 src: $assets.files.static.carousel.analyze.svg
 index: 5
 reset: $current-active
@@ -247,7 +247,7 @@ margin-left.rem: 0.48
 
 -- end: lib.help-banner
 
--- lib.how-it-works: **HOW IT WORKS** 🚧
+-- lib.how-it-works: **HOW IT WORKS**
 
 -- lib.how-it-works.subtitle:
 
