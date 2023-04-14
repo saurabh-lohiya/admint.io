@@ -2620,7 +2620,7 @@ padding-vertical.px: 15
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
 -- ftd.text: $question-accordion.title
-role: $fonts.font-18-18-600
+role: $fonts.nunito-18-18-700
 color if { question-accordion.open }: $inherited.colors.custom.four
 color: $inherited.colors.custom.one
 align-self: center
