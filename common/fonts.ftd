@@ -150,24 +150,27 @@ font-family: $montserrat-assets.fonts.Montserrat
 
 
 
--- ftd.type montserrat-14-19-mobile:
+-- ftd.type montserrat-14-19-type:
 line-height.px: 21
 size.px: 14
 letter-spacing.px: 0
 weight: 400
 font-family: $montserrat-assets.fonts.Montserrat
 
+-- ftd.responsive-type montserrat-14-19: $montserrat-14-19-type
 
--- ftd.type montserrat-14-19-desktop:
-line-height.px: 21
+
+
+
+
+-- ftd.type montserrat-14-19-v2:
+line-height.px: 22
 size.px: 14
-letter-spacing.px: 0
+letter-spacing.rem: 0.0343
 weight: 400
 font-family: $montserrat-assets.fonts.Montserrat
 
--- ftd.responsive-type montserrat-14-19:
-desktop: $montserrat-14-19-desktop
-mobile: $montserrat-14-19-mobile
+-- ftd.responsive-type montserrat-14-19-v2: $montserrat-14-19-v2
 
 
 
@@ -450,6 +453,19 @@ mobile: $montserrat-28-mobile
 
 
 
+-- ftd.type montserrat-28-28-600-type:
+line-height.px: 33
+size.px: 28
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-28-28-600: $montserrat-28-28-600-type
+
+
+
+
+
 -- ftd.type montserrat-22-22-type:
 line-height.px: 22
 size.px: 22
@@ -707,6 +723,19 @@ weight: 400
 font-family: $montserrat-assets.fonts.Montserrat
 
 -- ftd.responsive-type montserrat-16-29: $montserrat-16-29-type
+
+
+
+
+
+-- ftd.type montserrat-16-29-600-type:
+line-height.px: 29
+size.px: 16
+letter-spacing.px: 0
+weight: 600
+font-family: $montserrat-assets.fonts.Montserrat
+
+-- ftd.responsive-type montserrat-16-29-600: $montserrat-16-29-600-type
 
 
 
