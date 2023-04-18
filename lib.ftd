@@ -975,17 +975,24 @@ optional integer reset:
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 16
-padding-horizontal.px: 12
+
 
 -- ftd.text: $simple-steps-mobile.title
 role: $inherited.types.label-large
-color: $inherited.colors.text
+color: $inherited.colors.custom.two
 margin-bottom.px: 41
 width: fill-container
 
--- simple-steps-mobile.subtitle.0:
+-- ftd.column:
 margin-bottom.px: 87
 region: h3
+width: fill-container
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- simple-steps-mobile.subtitle.0:
+
+-- end: ftd.column
 
 -- ftd.text:
 if: { simple-steps-mobile.body != NULL }
@@ -1815,6 +1822,7 @@ spacing: space-between
 
 -- ftd.row:
 width: fill-container
+link: $navbar-mobile.site-url
 
 -- ftd.image:
 if: { navbar-mobile.site-name == NULL }
@@ -1822,7 +1830,7 @@ src: $navbar-mobile.site-logo
 width: auto
 height.fixed.px: 44
 padding-vertical.px: 5
-link: $navbar-mobile.site-url
+align-self: center
 
 -- ftd.text: $navbar-mobile.site-name
 if: { navbar-mobile.site-name != NULL }
@@ -1837,7 +1845,7 @@ align-self: center
 padding-vertical.px: 4
 padding-horizontal.px: 12
 border-radius.px: 6
-border-color: $inherited.colors.text
+border-color: $fonts.border
 border-width.px: 1
 
 -- ftd.image:
@@ -1956,7 +1964,7 @@ width.fixed.percent: 20
 height.fixed.percent: 30
 anchor: parent
 left.px: 0
-top.px: -45
+top.px: -47
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
@@ -1999,8 +2007,8 @@ src: $assets.files.static.hero.web3-round.svg
 width.fixed.px: 380
 height.fixed.px: 183
 anchor: parent
-top.px: 140
-left.px: -20
+top.px: 141
+left.px: -37
 
 -- ftd.text: $hero.title
 if: { ftd.device != "mobile" }
@@ -2735,7 +2743,25 @@ width: fill-container
 max-width.fixed.px: 868
 align-self: center
 
+-- ftd.column:
+if: { ftd.device != "mobile" }
+role: $fonts.font-40-29
+color: $inherited.colors.text
+region: h1
+
 -- help-banner.title.0:
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+role: $fonts.font-40-29
+color: $inherited.colors.text
+region: h1
+
+-- help-banner.title.0:
+
+-- end: ftd.column
 
 -- ftd.text: 
 if: { help-banner.body != NULL }

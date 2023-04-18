@@ -1035,6 +1035,30 @@ font-family: $opensans-font-assets.fonts.Open-Sans
 
 
 
+-- ftd.type font-40-29-mobile:
+line-height.px: 40
+size.px: 29
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+
+-- ftd.type font-40-29-desktop:
+line-height.px: 45
+size.px: 28
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-40-29:
+desktop: $font-40-29-desktop
+mobile: $font-40-29-mobile
+
+
+
+
+
+
 -- ftd.color 222b27: #222b27
 
 -- ftd.color bdbdbd: #bdbdbd
@@ -1058,6 +1082,8 @@ font-family: $opensans-font-assets.fonts.Open-Sans
 -- ftd.color grey: #777
 
 -- ftd.color eeeeee80: #eeeeee80
+
+-- ftd.color border: rgba(0, 0, 0, 0.1)
 
 
 
