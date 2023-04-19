@@ -241,13 +241,13 @@ display: inline
 
 -- ftd.text: media vehicle!
 color: $inherited.colors.cta-primary.base
-display if { ftd.device == "mobile }: inline
 display: inline-block
+display if { ftd.device == "mobile" }: inline
 margin-horizontal.rem: 0.48
 
 -- ftd.text:
-display if { ftd.device == "mobile }: inline
 display: inline-block
+display if { ftd.device == "mobile" }: inline
 
 You ask why? Because... Followed by the WHY NFTs?
 

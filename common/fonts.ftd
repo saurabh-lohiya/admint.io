@@ -1107,7 +1107,7 @@ mobile: $font-40-29-mobile
 
 -- ftd.color outset-border: rgba(0, 0, 0, 0.1)
 
-
+-- ftd.color faf8f4: #faf8f4
 
 
 -- ftd.shadow help-banner:
