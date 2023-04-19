@@ -595,6 +595,19 @@ mobile: $size-20-700-type-mobile
 
 
 
+-- ftd.type size-20-24-700-type:
+line-height.px: 24
+size.px: 20
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-20-24-700: $size-20-24-700-type
+
+
+
+
+
 -- ftd.type size-22-800-mont-type:
 line-height.px: 22
 size.px: 22
@@ -886,14 +899,23 @@ weight: 600
 
 
 
--- ftd.type copy-regular-bodyV2:
+-- ftd.type copy-regular-bodyV2-desktop:
 line-height.px: 20
 size.px: 16
 letter-spacing.rem: -0.008
 font-family: $nunito-assets.fonts.Nunito
 weight: 600
 
--- ftd.responsive-type copy-regular-bodV2y: $copy-regular-bodyV2
+-- ftd.type copy-regular-bodyV2-mobile:
+line-height.px: 22
+size.px: 16
+letter-spacing.rem: -0.008
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type copy-regular-bodyV2: 
+mobile: $copy-regular-bodyV2-mobile
+desktop: $copy-regular-bodyV2-desktop
 
 
 
