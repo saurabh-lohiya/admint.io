@@ -100,7 +100,14 @@ role: $inherited.types.label-large
 color: $inherited.colors.custom.two
 margin-bottom.px: 41
 
+-- ftd.column:
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+region: h1
+margin-bottom.px if { ftd.device == "mobile" }: 86
 -- advertisement.title.0:
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -2717,6 +2724,7 @@ ftd.image-src image:
 -- ftd.column:
 width: fill-container
 padding-vertical.px: 50
+padding-horizontal.px if { ftd.device == "mobile" }: 12
 align-content: center
 
 -- ftd.column:
@@ -5187,6 +5195,7 @@ width: fill-container
 padding-vertical.px: 17
 padding-horizontal.px: 10
 role: $inherited.types.blockquote
+background.solid: $fonts.faf8f4
 color: $inherited.colors.text-strong
 
 -- ftd.text: $works-cell-mobile.top-cell
