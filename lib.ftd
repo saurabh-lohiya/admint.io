@@ -1845,7 +1845,7 @@ align-self: center
 padding-vertical.px: 4
 padding-horizontal.px: 12
 border-radius.px: 6
-border-color: $fonts.border
+border-color: $fonts.outset-border
 border-width.px: 1
 
 -- ftd.image:
