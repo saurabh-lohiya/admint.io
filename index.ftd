@@ -76,6 +76,8 @@ display: inline
 
 -- ftd.text: via structured campaign phases:
 display: inline-block
+display if { ftd.device == "mobile" }: inline
+margin-left.px if { ftd.device == "mobile" }: 6
 
 -- end: ftd.container
 
@@ -111,10 +113,14 @@ display: inline-block
 -- ftd.text: standard known processes:
 display: inline-block
 color: $inherited.colors.border
-margin-horizontal.px: 11
+margin-horizontal.px if { ftd.device != "mobile" }: 11
+display if { ftd.device == "mobile" }: inline
 
 -- ftd.text: Planning, Set Up, Execution & Analysis
 display: inline-block
+display if { ftd.device == "mobile" }: inline
+margin-left.px if { ftd.device == "mobile" }: 8
+
 
 -- end: ftd.container
 
@@ -141,6 +147,7 @@ display: inline-block
 display: inline-block
 color: $inherited.colors.border
 margin-horizontal.px: 11
+display if { ftd.device == "mobile" }: inline
 
 -- ftd.text: 
 display: inline
@@ -172,6 +179,7 @@ display: inline-block
 display: inline-block
 margin-horizontal.px: 11
 color: $inherited.colors.border
+display if { ftd.device == "mobile" }: inline
 
 -- ftd.text:  
 display: inline
@@ -201,6 +209,7 @@ reset: $current-active
 display: inline
 color: $inherited.colors.border
 margin-right.px: 11
+display if { ftd.device == "mobile" }: inline-block
 
 -- ftd.text:
 display: inline
@@ -222,24 +231,25 @@ Stake your claim across the Metaverses!
 cta-label: Let's Learn
 cta-url: learn/
 image: $assets.files.static.help-banner.svg
-body: You ask why? Because... Followed by the WHY NFTs?
 
 -- lib.help-banner.title:
 
 -- ftd.container:
 
 -- ftd.text: NFTs are our preferred
-role: $inherited.types.heading-tiny
-color: $inherited.colors.text
-region: h1
 display: inline
 
 -- ftd.text: media vehicle!
-role: $inherited.types.heading-tiny
 color: $inherited.colors.cta-primary.base
-region: h1
-display: inline
-margin-left.rem: 0.48
+display if { ftd.device == "mobile }: inline
+display: inline-block
+margin-horizontal.rem: 0.48
+
+-- ftd.text:
+display if { ftd.device == "mobile }: inline
+display: inline-block
+
+You ask why? Because... Followed by the WHY NFTs?
 
 -- end: ftd.container
 
