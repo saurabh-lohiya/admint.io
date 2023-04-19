@@ -2185,21 +2185,22 @@ ftd.image-src team-thumb:
 
 -- ftd.column:
 width: fill-container
-padding-vertical.px: 53
+padding-top.px: 53
+padding-bottom.px: 49
 padding-horizontal.px: 12
 
 -- ftd.image:
 src: $footer-mobile.site-logo
 link: $footer-mobile.site-url
-width.fixed.px: 194
+width.fixed.px: 195
 
 -- ftd.column:
-margin-top.px: 46
+margin-top.px: 44
 padding-left.px: 16
 
 -- ftd.text: $obj.title
 $loop$: $footer-mobile.footer-links as $obj
-role: $inherited.types.label-large
+role: $fonts.nunito-30-20-400
 color: $inherited.colors.background.step-1
 link: $obj.url
 
@@ -2210,7 +2211,7 @@ margin-top.px: 80
 padding-left.px: 20
 
 -- ftd.image:
-margin-right.px: 20
+margin-right.px: 10
 $loop$: $footer-mobile.social-links as $obj
 src: $obj.src
 link: $obj.link
@@ -2222,7 +2223,7 @@ src: $footer-mobile.team-thumb
 anchor: parent
 bottom.px: 0
 left.px: 50
-width.fixed.px: 196
+width.fixed.px: 195
 
 -- end: ftd.column
 
@@ -4086,10 +4087,12 @@ $why-nft-hero.body
 -- component ul-section:
 body body:
 
+
 -- ftd.text:
 role: $fonts.copy-regular-bodyV2
 color: $inherited.colors.text
 margin-top.px: 8
+margin-top.px if { ftd.device == "mobile" }: 7
 
 $ul-section.body
 
@@ -4111,11 +4114,12 @@ body body:
 -- ftd.column:
 width: fill-container
 margin-top.px: 12
+margin-top.px if { ftd.device == "mobile" }: 13
 padding.px: 20
 background.solid: $inherited.colors.custom.three
 
 -- ftd.text: $brand-objective.title
-role: $fonts.size-20-700
+role: $fonts.size-20-24-700
 color: $inherited.colors.custom.four
 region: h5
 
@@ -4227,6 +4231,7 @@ children: $why-nft-card.brands
 -- ftd.image:
 src: $why-nft-card.image
 max-width.fixed.percent: 100
+margin-top.px: 24
 
 -- end: ftd.column
 

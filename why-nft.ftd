@@ -28,6 +28,7 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.cta-primary.base
 display: inline
 margin-horizontal.px: 11
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 
 -- ftd.text: are awesome!
 role: $inherited.types.heading-medium
