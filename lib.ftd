@@ -784,7 +784,7 @@ left.px: 10
 top.px if { carousel.small-height }: 130
 z-index: 1000
 padding.px: 4
-opacity: 0.6
+opacity: 0.5
 
 -- ftd.column:
 children: $carousel.wrap
@@ -4328,7 +4328,7 @@ spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 color: $fonts.121a17
 css: $assets.files.pricing.css
-classes: pricing
+classes: filter-0-6
 
 -- ftd.text: \$
 
@@ -4459,7 +4459,7 @@ width: fill-container
 id: $business-plus-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
-classes: pricing
+classes: filter-0-6
 
 -- ftd.text: \$
 
