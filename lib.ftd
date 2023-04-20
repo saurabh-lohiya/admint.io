@@ -3678,7 +3678,7 @@ width: fill-container
 align-self: center
 border-width.px: 1
 border-color: $inherited.colors.custom.one
-margin-top.px: 63
+margin-top.px: 78
 padding-horizontal.px: 30
 padding-top.px: 30
 background.solid: $inherited.colors.background.step-1
@@ -3757,12 +3757,18 @@ right.px: 0
 top.px: -16
 height: fill-container
 
--- ftd.image: 
+-- ftd.column:
 if: { ftd.device == "mobile" }
+height.fixed.px: 192
+width: fill-container
+
+-- ftd.image: 
 src: $assets.files.static.about-us.our-team.svg
 anchor: parent
 right.px: 0
-top.px: 0
+top.px: -52
+
+-- end: ftd.column
 
 
 -- ftd.row:
@@ -3781,7 +3787,7 @@ margin-left.px: 0
 if: { ftd.device == "mobile" }
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-top.px: 260
+margin-top.px: 12
 margin-left.px: 12
 
 -- our-team.title.0:
@@ -3804,7 +3810,7 @@ children: $our-team.members-list
 if: { ftd.device == "mobile" }
 padding-bottom.px: 150
 margin-top.rem: 3
-margin-left.px: -12
+align-self: center
 children: $our-team.members-list
 
 -- end: ftd.column
@@ -3832,8 +3838,6 @@ string link:
 width: fill-container
 min-width.fixed.percent if {ftd.device == "desktop"}: 33.33
 padding-horizontal.px: 12
-padding-horizontal.px if {ftd.device == "mobile"}: 20
-margin-bottom.px if { ftd.device == "mobile" }: 20
 
 -- ftd.column:
 width: fill-container
