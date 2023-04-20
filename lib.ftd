@@ -764,7 +764,7 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.border
 anchor: parent
 left.px: 10
 top.px if { carousel.small-height }: 130
@@ -778,12 +778,13 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: rgba(63, 180, 136, 0.5)
+background.solid: $inherited.colors.border
 anchor: parent
 left.px: 10
 top.px if { carousel.small-height }: 130
 z-index: 1000
 padding.px: 4
+opacity: 0.5
 
 -- ftd.column:
 children: $carousel.wrap
@@ -802,7 +803,7 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.border
 right.px: 10
 top.px if { carousel.small-height }: 130
 anchor: parent
@@ -816,13 +817,13 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: rgba(63, 180, 136, 0.5)
+background.solid: $inherited.colors.border
 anchor: parent
 right.px: 10
 top.px if { carousel.small-height }: 130
 z-index: 1000
 padding.px: 4
-
+opacity: 0.5
 -- end: ftd.row
 
 -- end: ftd.row
@@ -4298,7 +4299,6 @@ src: $why-nft-card.image
 
 
 
-
 -- component business-card:
 caption title:
 string monthly-price:
@@ -4307,6 +4307,7 @@ optional string id:
 
 -- ftd.column:
 width.fixed.percent: 33.33
+width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.column:
 width: fill-container
@@ -4326,6 +4327,8 @@ id: $business-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 color: $fonts.121a17
+css: $assets.files.pricing.css
+classes: filter-0-6
 
 -- ftd.text: \$
 
@@ -4422,7 +4425,7 @@ optional string id:
 
 -- ftd.column:
 width.fixed.percent: 33.33
-
+width if { ftd.device == "mobile" }: fill-container
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.border
@@ -4456,6 +4459,7 @@ width: fill-container
 id: $business-plus-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
+classes: filter-0-6
 
 -- ftd.text: \$
 
@@ -4490,8 +4494,6 @@ role: $inherited.types.copy-regular
 -- end: ftd.column
 
 -- end: business-plus-card
-
-
 
 
 
@@ -4726,8 +4728,7 @@ align-self: center
 -- ftd.column:
 anchor: parent
 top.px: 0
-height.fixed.px: 85
-width.fixed.px: 178
+top.px if { ftd.device == "mobile" }: 7
 height.fixed.px if { ftd.device != "mobile" }: 100
 width.fixed.px if { ftd.device != "mobile" }: 217
 
@@ -4736,6 +4737,8 @@ if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
 height.fixed.px: 135
 width.fixed.px: 217
+height.fixed.px if { ftd.device == "mobile" }: 85
+width.fixed.px if { ftd.device == "mobile" }: 182
 
 -- end: ftd.column
 
@@ -5064,6 +5067,7 @@ margin-top.px: 1
 
 -- ftd.row:
 width: fill-container
+align-self: center
 align-content: center
 spacing.fixed.px: 5
 role: $fonts.size-19-28-700
