@@ -764,7 +764,7 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.border
 anchor: parent
 left.px: 10
 top.px if { carousel.small-height }: 130
@@ -778,12 +778,13 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: rgba(63, 180, 136, 0.5)
+background.solid: $inherited.colors.border
 anchor: parent
 left.px: 10
 top.px if { carousel.small-height }: 130
 z-index: 1000
 padding.px: 4
+opacity: 0.6
 
 -- ftd.column:
 children: $carousel.wrap
@@ -802,7 +803,7 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: $inherited.colors.cta-primary.base
+background.solid: $inherited.colors.border
 right.px: 10
 top.px if { carousel.small-height }: 130
 anchor: parent
@@ -816,13 +817,13 @@ align-self: center
 border-radius.px: 100
 width.fixed.px: 40
 height.fixed.px: 40
-background.solid: rgba(63, 180, 136, 0.5)
+background.solid: $inherited.colors.border
 anchor: parent
 right.px: 10
 top.px if { carousel.small-height }: 130
 z-index: 1000
 padding.px: 4
-
+opacity: 0.5
 -- end: ftd.row
 
 -- end: ftd.row
