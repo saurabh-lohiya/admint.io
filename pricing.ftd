@@ -50,17 +50,14 @@ reset: $lib.current-tab
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
 annually-price: 30.90
-id: blur-business-a
 
 -- lib.business-plus-card: BUSINESS PLUS
 monthly-price: 189.99
 annually-price: 80.99
-id: blur-plus-a
 
 -- lib.business-card: ENTERPRISE
 monthly-price: 126.98
 annually-price: 70.98
-id: blur-enterprise-a
 
 -- end: lib.tab-panel
 
@@ -71,17 +68,14 @@ reset: $lib.current-tab
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
 annually-price: 30.90
-id: blur-business-b
 
 -- lib.business-plus-card: BUSINESS PLUS
 monthly-price: 189.99
 annually-price: 80.99
-id: blur-plus-b
 
 -- lib.business-card: ENTERPRISE
 monthly-price: 126.98
 annually-price: 70.98
-id: blur-enterprise-b
 
 -- end: lib.tab-panel
 
