@@ -500,19 +500,19 @@ region: h1
 -- ftd.text: Join the
 role: $inherited.types.heading-large
 color: $inherited.colors.text
-display: inline
+display: inline-block
 
 -- ftd.text: waitlist
 role: $inherited.types.heading-large
 color: $inherited.colors.cta-primary.base
-display: inline
-margin-left.px: 14
-margin-right.px: 13
+display: inline-block
+margin-horizontal.px: 14
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 
 -- ftd.text: to get updated when we go live!
 role: $inherited.types.heading-large
 color: $inherited.colors.text
-display: inline
+display: inline-block
 
 -- end: ftd.container
 
