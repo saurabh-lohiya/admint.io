@@ -273,7 +273,7 @@ width: fill-container
 
 -- ftd.column:
 width: fill-container
-padding.px: 10
+padding.px: 30
 
 -- ftd.column:
 width: fill-container
@@ -342,6 +342,7 @@ width: fill-container
 src: $article-item.thumbnail
 width: fill-container
 link: $article-item.link
+height.fixed.px if { ftd.device == "mobile" }: 165
 
 -- ftd.text: $article-item.title
 role: $fonts.roboto-18
@@ -349,6 +350,7 @@ region: h3
 color: $inherited.colors.custom.nine
 link: $article-item.link
 margin-top.px: 11
+margin-top.px if { ftd.device == "mobile" }: 18
 
 -- ftd.text:
 role: $fonts.montserrat-14
@@ -4388,6 +4390,7 @@ string link:
 
 -- ftd.row:
 width.fixed.px: 210
+width if { ftd.device == "mobile" }: fill-container
 padding-top.px: 8
 padding-vertical.px: 8
 padding-horizontal.px: 10
