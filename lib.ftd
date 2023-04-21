@@ -219,6 +219,7 @@ width: fill-container
 background.solid: $inherited.colors.background.step-1
 align-content: center
 padding-top.px: 16
+padding-top.px if { ftd.device == "mobile" }: 24
 
 -- ftd.column:
 width: fill-container
