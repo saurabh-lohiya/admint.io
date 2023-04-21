@@ -782,18 +782,23 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
-
-
--- ftd.type heading-md:
+-- ftd.type heading-md-desktop:
 line-height.px: 45
 size.px: 40
 letter-spacing.px: 0
 font-family: $nunito-assets.fonts.Nunito
 weight: 700
 
+-- ftd.type heading-md-mobile:
+line-height.px: 40
+size.px: 29
+letter-spacing.px: 0
+font-family: $nunito-assets.fonts.Nunito
+weight: 700
+
 -- ftd.responsive-type heading-md:
-desktop: $heading-md
-mobile: $heading-md
+desktop: $heading-md-desktop
+mobile: $heading-md-mobile
 
 
 
