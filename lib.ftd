@@ -5081,9 +5081,7 @@ margin-left.px: -13
 margin-top.px: 1
 
 -- ftd.row:
-width: fill-container
 align-self: center
-align-content: center
 spacing.fixed.px: 5
 role: $fonts.size-19-28-700
 color: $inherited.colors.custom.four
