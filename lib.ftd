@@ -2844,12 +2844,13 @@ border-color: $inherited.colors.custom.one
 border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 46
+border-radius.px if { ftd.device == "mobile" }: 30
 overflow: hidden
 
 -- ftd.image:
 src: $sneak-peak.image
 width: fill-container
-
+width.fixed.px if { ftd.device == "mobile" }: 260
 
 -- end: ftd.column
 
