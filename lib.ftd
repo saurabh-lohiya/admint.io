@@ -4331,8 +4331,13 @@ id: $business-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 color: $fonts.121a17
-css: $assets.files.pricing.css
 classes: filter-0-6
+
+-- ftd.row.css:
+
+-- string: $assets.files.filter.css
+
+-- end: ftd.row.css
 
 -- ftd.text: \$
 
@@ -4464,6 +4469,12 @@ id: $business-plus-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 classes: filter-0-6
+
+-- ftd.row.css:
+
+-- string: $assets.files.filter.css
+
+-- end: ftd.row.css
 
 -- ftd.text: \$
 
