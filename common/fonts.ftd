@@ -103,7 +103,7 @@ mobile: $roboto-22-mobile
 
 -- ftd.type roboto-14-mobile:
 line-height.px: 21
-size.px: 18
+size.px: 14
 letter-spacing.px: 0
 weight: 400
 font-family: $roboto-assets.fonts.Roboto
@@ -1056,13 +1056,19 @@ font-family: $nunito-assets.fonts.Nunito-live
 
 
 
--- ftd.type opensans-12-type:
-size.px: 12
+-- ftd.type opensans-12-type-mobile:
+size.px: 16
 weight: 400
 font-family: $opensans-font-assets.fonts.Open-Sans
 
--- ftd.responsive-type opensans-12: $opensans-12-type
+-- ftd.type opensans-12-type-desktop:
+size.px: 14
+weight: 400
+font-family: $opensans-font-assets.fonts.Open-Sans
 
+-- ftd.responsive-type opensans-12: 
+desktop: $opensans-12-type-desktop
+mobile: $opensans-12-type-mobile
 
 
 
