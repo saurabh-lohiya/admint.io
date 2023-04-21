@@ -5089,7 +5089,7 @@ spacing.fixed.px: 5
 role: $fonts.size-19-28-700
 color: $inherited.colors.custom.four
 
--- ftd.text: STE
+-- ftd.text: STEP
 
 -- ftd.integer: $works-cell-desktop.number
 
