@@ -376,7 +376,6 @@ margin-bottom.px: 20
 -- ftd.image:
 src: $article-item.thumbnail
 width: fill-container
-height.fixed.px if { ftd.device == "mobile" }: 165
 margin-bottom.px: 20
 
 -- ftd.text: 
