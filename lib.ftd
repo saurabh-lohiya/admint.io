@@ -2844,10 +2844,12 @@ border-color: $inherited.colors.custom.one
 border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 46
+overflow: hidden
 
 -- ftd.image:
 src: $sneak-peak.image
 width: fill-container
+
 
 -- end: ftd.column
 
@@ -2886,10 +2888,11 @@ if: { ftd.device == "mobile" }
 -- ftd.image:
 src: $sneak-peak.bg-image
 align-self: end
-width.fixed.percent: 100
+width: fill-container
 
 -- ftd.column:
 margin-horizontal.px: 12
+margin-top.px: 12
 
 -- sneak-peak.title.0:
 
@@ -2910,6 +2913,7 @@ link if { sneak-peak.cta-url != NULL }: $sneak-peak.cta-url
 -- end: ftd.column
 
 -- ftd.image:
+if: { ftd.device != "mobile" }
 src: $sneak-peak.bg-image
 align-self: end
 bottom.px: 50
