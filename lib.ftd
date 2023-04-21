@@ -4331,7 +4331,7 @@ classes: filter-0-6
 
 -- ftd.row.css:
 
--- string: $assets.files.pricing.css
+-- string: $assets.files.filter.css
 
 -- end: ftd.row.css
 
@@ -4468,7 +4468,7 @@ classes: filter-0-6
 
 -- ftd.row.css:
 
--- string: $assets.files.pricing.css
+-- string: $assets.files.filter.css
 
 -- end: ftd.row.css
 
