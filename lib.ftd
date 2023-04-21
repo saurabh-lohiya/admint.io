@@ -2508,8 +2508,10 @@ width: fill-container
 align-self: center
 max-width.fixed.px: 1145
 padding-horizontal.px: 28
+padding-horizontal.px if { ftd.device == "mobile" }: 29
 padding-top.px: 20
 padding-bottom.px: 16
+padding-bottom.px if { ftd.device == "mobile" }: 9
 
 -- ftd.column:
 border-width.px: 2
@@ -2563,7 +2565,7 @@ if: { tab.active }
 padding-vertical.px: 20
 padding-horizontal.px: 30
 role: $fonts.font-18-18-600
-role if { ftd.device == "mobile" }: $fonts.size-14-m
+role if { ftd.device == "mobile" }: $fonts.nunito-14-14
 border-color: $inherited.colors.custom.four
 border-radius.px: 50
 border-width.px: 2
@@ -2577,7 +2579,7 @@ padding-horizontal.px: 30
 color: $inherited.colors.custom.one
 color if { $tab.hover }: $fonts.44ce9a
 role: $fonts.font-18-18-600
-role if { ftd.device == "mobile" }: $fonts.size-14-m
+role if { ftd.device == "mobile" }: $fonts.nunito-14-14
 link: $tab.link
 $on-mouse-enter$: $ftd.set-bool($a = $tab.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $tab.hover, v = false)
@@ -2613,7 +2615,7 @@ padding-bottom.px if { ftd.device == "desktop" }: 37
 -- ftd.column:
 max-width.fixed.px: 1140
 width: fill-container
-padding.px if { ftd.device == "mobile" }: 20
+padding-horizontal.px if { ftd.device == "mobile" }: 19
 align-self: center
 
 -- ftd.text: $faq.title
@@ -2654,7 +2656,7 @@ ftd.image-src src2: $assets.files.static.faq.up.svg
 
 -- ftd.column:
 width: fill-container
-margin-bottom.px: 23
+margin-top.px: 23
 background.solid: $inherited.colors.background.step-1
 align-content: center
 classes: markdown
@@ -2663,13 +2665,12 @@ classes: markdown
 background.solid: $fonts.eeeeee80
 width: fill-container
 spacing: space-between
-padding-horizontal.px: 15
-padding-horizontal.px if { ftd.device == "mobile" } : 12
-padding-vertical.px: 15
+padding.px: 15
+padding.px if { ftd.device == "mobile" } : 12
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
 -- ftd.text: $question-accordion.title
-role: $fonts.nunito-18-18-700
+role: $fonts.nunito-700
 color if { question-accordion.open }: $inherited.colors.custom.four
 color: $inherited.colors.custom.one
 align-self: center
