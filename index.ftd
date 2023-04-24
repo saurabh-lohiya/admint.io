@@ -77,7 +77,7 @@ display: inline
 -- ftd.text: via structured campaign phases:
 display: inline-block
 display if { ftd.device == "mobile" }: inline
-margin-left.px if { ftd.device == "mobile" }: 6
+margin-left.px if { ftd.device == "mobile" }: 8
 
 -- end: ftd.container
 
@@ -147,6 +147,7 @@ display: inline-block
 display: inline-block
 color: $inherited.colors.border
 margin-horizontal.px: 11
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 display if { ftd.device == "mobile" }: inline
 
 -- ftd.text: 
@@ -178,6 +179,7 @@ display: inline-block
 -- ftd.text: distribute, validate & track
 display: inline-block
 margin-horizontal.px: 11
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 color: $inherited.colors.border
 display if { ftd.device == "mobile" }: inline
 
@@ -471,6 +473,7 @@ color: $inherited.colors.cta-primary.base
 region: h1
 display: inline
 margin-horizontal.px: 11
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 
 -- ftd.text: into the AdMint platform. See how simple it really is!
 role: $fonts.heading-md

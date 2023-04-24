@@ -836,7 +836,7 @@ if: { ftd.device == "mobile"}
 children: $carousel.wrap
 width: fill-container
 padding-horizontal.px: 12
-padding-vertical.px: 40
+padding-vertical.px: 2
 z-index: 0
 
 -- end: ftd.column
@@ -1189,7 +1189,7 @@ height: auto
 -- ftd.column:
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
-margin-bottom.px: 28
+margin-bottom.px: 20
 region: h3
 
 -- slide-mobile.subtitle.0:
@@ -1975,7 +1975,7 @@ width.fixed.percent: 20
 height.fixed.percent: 30
 anchor: parent
 left.px: 0
-top.px: -47
+top.px: -50
 
 -- ftd.image:
 if: { ftd.device != "mobile" }
@@ -1993,7 +1993,7 @@ width.fixed.percent: 30
 height.fixed.percent: 30
 anchor: parent
 right.px: 0
-bottom.px: -58
+bottom.px: -61
 
 -- ftd.column:
 max-width.fixed.px: $max-width
@@ -2752,7 +2752,8 @@ max-width.fixed.percent: 100
 
 -- ftd.column:
 padding-vertical.px: 40
-padding-horizontal.px if { ftd.device == "mobile" }: 40
+padding-vertical.px if { ftd.device == "mobile" }: 48
+padding-horizontal.px if { ftd.device == "mobile" }: 36
 width: fill-container
 max-width.fixed.px: 868
 align-self: center
@@ -2835,7 +2836,7 @@ padding-bottom.px: 50
 width: fill-container
 align-content: center
 max-width.fixed.px: 1320
-padding-horizontal.px: 12
+padding-horizontal.px if { ftd.device == "desktop" }: 12
 
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 80
@@ -2844,13 +2845,13 @@ border-color: $inherited.colors.custom.one
 border-width.px: 20
 border-width.px if { ftd.device == "mobile" }: 11
 border-radius.px: 46
-border-radius.px if { ftd.device == "mobile" }: 30
+border-radius.px if { ftd.device == "mobile" }: 36
 overflow: hidden
 
 -- ftd.image:
 src: $sneak-peak.image
 width: fill-container
-width.fixed.px if { ftd.device == "mobile" }: 260
+width.fixed.px if { ftd.device == "mobile" }: 259
 
 -- end: ftd.column
 
@@ -2877,23 +2878,20 @@ $on-click$: $ftd.set-bool($a = $sneak-peak.cta-event, v = true)
 
 -- end: ftd.column
 
--- ftd.column:
-
--- end: ftd.column
-
 -- end: ftd.row
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
+margin-top.px: 6
 
 -- ftd.image:
 src: $sneak-peak.bg-image
 align-self: end
-width: fill-container
+width.fixed.percent: 98
 
 -- ftd.column:
 margin-horizontal.px: 12
-margin-top.px: 12
+margin-top.px: 6
 
 -- sneak-peak.title.0:
 
@@ -5177,12 +5175,12 @@ optional integer reset:
 
 -- ftd.column:
 width: fill-container
-margin-top.px: 25
 margin-bottom.px: 24
 
 -- ftd.row:
 width: fill-container
 spacing: space-between
+align-content: center
 
 -- ftd.image:
 src if { works-cell-mobile.left-mob-src != NULL }: $works-cell-mobile.left-mob-src
@@ -5204,7 +5202,7 @@ background.solid: $inherited.colors.border
 padding-vertical.px: 7
 padding-horizontal.px: 12
 width: fill-container
-spacing.fixed.px: 6
+spacing.fixed.px: 3
 role: $fonts.size-19
 color: $inherited.colors.background.step-1
 
@@ -5226,7 +5224,7 @@ width: fill-container
 width: fill-container
 padding-vertical.px: 17
 padding-horizontal.px: 10
-role: $inherited.types.blockquote
+role: $fonts.size-19-28-500
 background.solid: $fonts.faf8f4
 color: $inherited.colors.text-strong
 
