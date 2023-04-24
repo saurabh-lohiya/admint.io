@@ -258,10 +258,10 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 -- ftd.type size-19-mobile:
-line-height.px: 24
+line-height.rem: 1.8
 size.px: 19
 letter-spacing.px: 0
-weight: 700
+weight: 800
 font-family: $nunito-assets.fonts.Nunito
 
 
@@ -275,6 +275,20 @@ weight: 700
 -- ftd.responsive-type size-19:
 desktop: $size-19-desktop
 mobile: $size-19-mobile
+
+
+
+
+
+-- ftd.type size-19-28-500-type:
+line-height.rem: 1.8
+size.px: 19
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-19-28-500: $size-19-28-500-type
+
 
 
 
@@ -578,8 +592,8 @@ font-family: $nunito-assets.fonts.Nunito
 -- ftd.type size-20-700-type-mobile:
 line-height.px: 36
 size.px: 24
-letter-spacing.px: 0
-weight: 700
+letter-spacing.rem: -0.01
+weight: 600
 font-family: $nunito-assets.fonts.Nunito
 
 -- ftd.type size-20-700-type-desktop:
@@ -659,7 +673,7 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 
 -- ftd.type size-20-mobile:
-line-height.px: 36
+line-height.px: 30
 size.px: 20
 letter-spacing.px: 0
 weight: 400
