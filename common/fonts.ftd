@@ -1023,15 +1023,23 @@ desktop: $nunito-18-18-700-desktop
 
 
 
--- ftd.type blockquote-type:
+-- ftd.type blockquote-type-desktop:
 line-height.px: 24
 size.px: 16
 letter-spacing.rem: -0.0001
 weight: 500
 font-family: $nunito-assets.fonts.Nunito
 
--- ftd.responsive-type blockquote: $blockquote-type
+-- ftd.type blockquote-type-mobile:
+line-height.px: 24
+size.px: 16
+letter-spacing.rem: -0.0001
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
 
+-- ftd.responsive-type blockquote:
+desktop: $blockquote-type-desktop
+mobile: $blockquote-type-mobile
 
 
 
