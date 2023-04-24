@@ -3099,7 +3099,8 @@ if: { ftd.device == "mobile"}
 src: $legal-page-hero.image
 height.fixed.px: 256
 max-width.fixed.percent: 100
-margin-top.px: 30
+margin-top.px: 7
+align-self: end
 
 -- end: ftd.column
 
