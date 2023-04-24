@@ -673,7 +673,7 @@ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 
 -- ftd.type size-20-mobile:
-line-height.px: 36
+line-height.px: 30
 size.px: 20
 letter-spacing.px: 0
 weight: 400

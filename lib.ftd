@@ -4744,13 +4744,14 @@ $on-click$: $ftd.toggle($a = $tab-label.active-item)
 $on-click$: $ftd.set-integer($a = $current-tab, v = $tab-label.index)
 padding-horizontal.px: 24
 height.fixed.px: 100
+height.fixed.px if { ftd.device == "mobile" }: 86
 width.fixed.px: 217
 align-content: center
 align-self: center
 
 -- ftd.column:
 anchor: parent
-top.px: 0
+bottom.px: 0
 top.px if { ftd.device == "mobile" }: 7
 height.fixed.px if { ftd.device != "mobile" }: 100
 width.fixed.px if { ftd.device != "mobile" }: 217
@@ -4760,7 +4761,7 @@ if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
 height.fixed.px: 135
 width.fixed.px: 217
-height.fixed.px if { ftd.device == "mobile" }: 85
+height.fixed.px if { ftd.device == "mobile" }: 100
 width.fixed.px if { ftd.device == "mobile" }: 182
 
 -- end: ftd.column

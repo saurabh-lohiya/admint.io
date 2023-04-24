@@ -24,6 +24,7 @@ role: $fonts.size-50
 color: $inherited.colors.cta-primary.base
 display: inline
 margin-horizontal.px: 14
+margin-horizontal.px if { ftd.device == "mobile" }: 8
 
 -- ftd.text: for your business plan.
 role: $fonts.size-50
