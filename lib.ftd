@@ -4365,14 +4365,18 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: $fonts.cdcdcd36
 width: fill-container
-spacing.fixed.px: 10
 border-radius.px: 10
+
+-- ftd.row:
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
 
 -- ftd.text: Launching Soon 
-role: $inherited.types.copy-regular
+role: $fonts.size-16-24-600
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -4503,13 +4507,18 @@ padding-horizontal.px: 23
 align-content: center
 background.solid: #cdcdcd36
 width: fill-container
-spacing.fixed.px: 10
 border-radius.px: 10
+
+-- ftd.row:
+spacing.fixed.px: 10
 
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
+
 -- ftd.text: Launching Soon 
-role: $inherited.types.copy-regular
+role: $fonts.size-16-24-600
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -4581,7 +4590,7 @@ width: fill-container
 align-self: center
 spacing.fixed.px: 24
 margin-top.px: 2
-margin-bottom.px: 23
+margin-bottom.px: 24
 
 -- end: ftd.row
 
@@ -4590,7 +4599,7 @@ if: { ftd.device == "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
 spacing.fixed.px: 20
-margin-bottom.px: 20
+margin-bottom.px: 24
 
 -- end: ftd.column
 

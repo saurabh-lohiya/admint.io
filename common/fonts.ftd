@@ -907,6 +907,19 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type 16-24-600-type:
+line-height.px: 24
+size.px: 16
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type size-16-24-600: $16-24-600-type
+
+
+
+
+
 -- ftd.type copy-regular-body:
 line-height.px: 24
 size.px: 16
