@@ -257,6 +257,19 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type font-18-27-500-type:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-27-500: $font-18-27-500-type
+
+
+
+
+
 -- ftd.type size-19-mobile:
 line-height.rem: 1.8
 size.px: 19

@@ -1,0 +1,92 @@
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/lib
+
+-- lib.page: Advertising &#038; Web 3.0 &#8211; Admint
+
+-- lib.tabs:
+
+-- lib.tab: Web 3.0 Basics
+link: learn/
+
+-- lib.tab: Brand Campaign
+link: learn/brand-campaigns/
+
+-- lib.tab: Advertising & Web 3.0
+active: true
+link: learn/advertising-web-3-0/
+
+-- end: lib.tabs
+
+-- lib.new-article: is the new playground for advertisment.
+date: 12th August
+article-length: 2 min read
+src: $assets.files.static.advertising.new-article-thumbnail.png
+
+Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder, leader, professional, or student; how much does 
+digital smartness matter? It certainly matters a lot. The buzzing trend word ‘Metaverse’ that ruled across platforms, is a mix of 
+3D ecosystems where brands can create their personalized Metaverse startups and arrange successful marketing by interacting with 
+customers, helping them build solid product placement in metaverse virtues.
+
+The trademark has established a community combining Metaverse startups and social worlds that can improve visibility. Everyone can 
+create digital rooms and digital products, and customers can interact with them. In addition, Metaverse advertisement and many 
+brands have created immersive digital products, including digital banks. By building a deeper connection like a customer, the 
+brand also produces a sense of affiliation.
+
+The Metaverse concept quickly caught the attention of brands such as large corporations, small businesses, and government agencies 
+when it was announced. Since then, the number of active users per day has increased by 45% in 30 days, and millions of users are 
+now active.
+
+Over the past year, Metaverse startups have significantly raised the bar in line with expected growth. It’s amazing to know that 
+this is currently the largest decentralized platform for building and running virtual worlds and social experiences.
+
+The abilities of metaverse are high so are customer’s expectations
+If you know more, the Metaverse feature allows brands to create immersive digital experiences that customers want to engage with.
+As a result of this platform, brands can build a community, which helps them build a loyal customer base and raise awareness.
+
+Imagine a digital universe with endless possibilities to explore and grow your vision. Today, metaverse technologies such as
+virtual reality, augmented reality, and 3D environments are being used to enhance brands entering metaverse strategy.
+
+A series of poems from the Metaverse in the air reveals a new world. To date, advances in Metaverse technology have impacted
+billions of dollars in enterprises. As a result, the way we do business has changed radically. We are witnessing a major
+revolution around us in how our brands are sold as a result of this evolution, which is the way to drive the digital economy in 
+the digital age.
+
+ 
+
+What exactly is it doing?
+By leveraging the fascinating potential of virtual reality, Metaverse startups can offer their customers memorable, hassle-free
+tours while solving the smallest problems. After augmented reality technology, companies can bring their products to life by
+introducing them to the real world. As a community-building forum where people share their experiences and ideas, Metaverse opened
+the door to the brand, reviewed marketing, and built a dedicated army behind each product, which is an established story in itself.
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- lib.border-btw:
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- lib.border-btw:
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- lib.border-btw:
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- lib.border-btw:
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- lib.border-btw:
+
+-- lib.article-window: Metaverse is the ultimate playground for the virtual world.
+src: $assets.files.static.advertising.article-window1.png
+
+-- end: lib.new-article
+
+-- end: lib.page

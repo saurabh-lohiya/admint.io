@@ -5586,3 +5586,128 @@ children: $page-wrapper.child
 -- end: ftd.column
 
 -- end: page-wrapper
+
+
+
+
+
+
+
+
+
+
+-- component new-article:
+caption title:
+string date:
+string article-length:
+body body:
+ftd.image-src src:
+children child:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 84
+margin-bottom.px: 200
+
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: 1145
+spacing: space-between
+
+-- ftd.column:
+width.fixed.percent: 70
+background.solid: white
+
+-- ftd.row:
+
+-- ftd.image: 
+src: $new-article.src
+
+-- end: ftd.row
+
+-- ftd.text:
+padding-top.px: 50
+padding-horizontal.px: 40
+padding-bottom.px: 68
+role: $fonts.font-18-600-27
+
+$new-article.body
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 25.5
+
+-- ftd.text: Find more blogs to read below
+margin-bottom.px: 34
+
+-- ftd.column:
+children: $new-article.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: new-article
+
+
+
+
+
+
+
+
+
+
+-- component article-window:
+caption title:
+ftd.image-src src:
+
+-- ftd.column:
+padding.px: 12
+padding-bottom.px: 36
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $article-window.src
+
+-- ftd.text: $article-window.title
+role: $inherited.types.copy-regular
+color: black
+
+-- end: ftd.column
+
+-- end: article-window
+
+
+
+
+
+
+
+
+
+
+-- component border-btw:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+height.fixed.px: 1
+width.fixed.px: 252
+background.solid: black
+margin-bottom.px: 20
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: border-btw
