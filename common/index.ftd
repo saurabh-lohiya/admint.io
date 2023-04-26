@@ -175,6 +175,7 @@ repeat: no-repeat
 
 
 
+
 -- ftd.background-size.length bg-size:
 x.percent: 100
 y.percent: 100
@@ -189,10 +190,8 @@ size: $bg-size
 
 
 
-
 -- ftd.background-image bg-footer-active-img: 
 src: $assets.files.static.pricing.tab-highlight-white.svg
 position: center
 repeat: no-repeat
 size: $bg-size
-
