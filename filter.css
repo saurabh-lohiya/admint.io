@@ -2,11 +2,3 @@
 {
 	 filter: blur(6px);
 }
-.box-shadow
-{
-color: blue;
-x-offset: 10px;
-y-offset: 10px;
-blur: 1px;
-transition: all 0.3s ease-in-out;
-}
