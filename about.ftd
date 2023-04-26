@@ -3,6 +3,7 @@
 -- import: fifthtry.github.io/admint.io/lib
 
 -- lib.page:
+active-page: about/
 
 -- lib.about-us:
 image: $assets.files.static.about-us.about-us.svg

@@ -628,6 +628,7 @@ ftd.type-data types: $typo.types
 ftd.color-scheme colors: $cs.main
 boolean blog: false
 boolean $show-signup: false
+optional string active-page:
 
 -- ftd.document:
 title: $page.title
@@ -662,7 +663,7 @@ site-url: $page.site-url
 footer-links: $page.footer-links
 social-links: $page.social-links
 team-thumb: $page.team-thumb
-
+active-page: $page.active-page
 
 -- site-footer: Copyright © 2022 Admint
 if: { page.blog }
@@ -2075,6 +2076,7 @@ string site-url:
 pr.toc-item list footer-links:
 common.social-media list social-links: 
 ftd.image-src team-thumb: 
+optional string active-page:
 
 -- ftd.column:
 width: fill-container
@@ -2087,6 +2089,7 @@ site-url: $footer.site-url
 footer-links: $footer.footer-links
 social-links: $footer.social-links
 team-thumb: $footer.team-thumb
+active-page: $footer.active-page
 
 -- footer-mobile:
 if: { ftd.device == "mobile" }
@@ -2108,13 +2111,13 @@ team-thumb: $footer.team-thumb
 
 
 
-
 -- component footer-desktop:
 ftd.image-src site-logo:
 string site-url:
 pr.toc-item list footer-links:
 common.social-media list social-links: 
 ftd.image-src team-thumb: 
+optional string active-page:
 
 -- ftd.column:
 width: fill-container
@@ -2142,13 +2145,13 @@ height.fixed.px: 48
 -- ftd.row:
 margin-top.px: 47
 align-self: end
+max-width.fixed.percent: 42.32
+wrap: true
 
--- ftd.text: $obj.title
+-- footer-list: $obj.title
 $loop$: $footer-desktop.footer-links as $obj
-role: $fonts.label-lg-nunito
-color: $inherited.colors.background.step-1
-padding-left.px: 32
-link: $obj.url
+url: $obj.url
+is-active: $common.check-is-active(a=$footer-desktop.active-page, b=$obj.url)
 
 -- end: ftd.row
 
@@ -2186,6 +2189,7 @@ string site-url:
 pr.toc-item list footer-links:
 common.social-media list social-links: 
 ftd.image-src team-thumb: 
+optional string active-page:
 
 -- ftd.column:
 width: fill-container
@@ -2202,11 +2206,11 @@ width.fixed.px: 195
 margin-top.px: 44
 padding-left.px: 16
 
--- ftd.text: $obj.title
+-- footer-list: $obj.title
 $loop$: $footer-mobile.footer-links as $obj
-role: $fonts.nunito-30-20-400
-color: $inherited.colors.background.step-1
-link: $obj.url
+url: $obj.url
+is-active: $common.check-is-active(a=$footer-mobile.active-page, b=$obj.url)
+
 
 -- end: ftd.column
 
@@ -2554,7 +2558,6 @@ children: $tabs.child
 
 
 
-
 -- component tab:
 caption title:
 boolean active: false
@@ -2563,17 +2566,21 @@ boolean $hover: false
 
 -- ftd.column:
 
--- ftd.text: $tab.title
+-- ftd.column:
 if: { tab.active }
-padding-vertical.px: 20
+background.image: $common.bg-tab-active-img
+height.fixed.px: 135
+width.fixed.px: 339
+height.fixed.px if { ftd.device == "mobile" }: 76
+align-content: center
+
+-- ftd.text: $tab.title
 padding-horizontal.px: 30
 role: $fonts.font-18-18-600
 role if { ftd.device == "mobile" }: $fonts.nunito-14-14
-border-color: $inherited.colors.custom.four
-border-radius.px: 50
-border-width.px: 2
 color: $inherited.colors.custom.four
-link: $tab.link
+
+-- end: ftd.column
 
 -- ftd.text: $tab.title
 if: { !tab.active }
@@ -2656,6 +2663,7 @@ body body:
 boolean $open: false
 ftd.image-src src1: $assets.files.static.faq.down.svg
 ftd.image-src src2: $assets.files.static.faq.up.svg
+boolean $yes: false
 
 -- ftd.column:
 width: fill-container
@@ -2663,6 +2671,9 @@ margin-top.px: 23
 background.solid: $inherited.colors.background.step-1
 align-content: center
 classes: markdown
+shadow if { question-accordion.yes }: $fonts.help-banner-1
+$on-mouse-enter$: $ftd.set-bool($a = $question-accordion.yes, v=true)
+$on-mouse-leave$: $ftd.set-bool($a = $question-accordion.yes, v=false)
 
 -- ftd.row:
 background.solid: $fonts.eeeeee80
@@ -2671,6 +2682,8 @@ spacing: space-between
 padding.px: 15
 padding.px if { ftd.device == "mobile" } : 12
 $on-click$: $ftd.toggle($a = $question-accordion.open)
+
+
 
 -- ftd.text: $question-accordion.title
 role: $fonts.nunito-700
@@ -5586,3 +5599,105 @@ children: $page-wrapper.child
 -- end: ftd.column
 
 -- end: page-wrapper
+
+
+-- component footer-list:
+caption title:
+optional string url: 
+boolean is-active: 
+
+-- ftd.column:
+
+-- footer-list-desktop: $footer-list.title
+if: { ftd.device != "mobile"}
+url: $footer-list.url
+is-active: $footer-list.is-active
+
+-- footer-list-mobile: $footer-list.title
+if: { ftd.device == "mobile"}
+url: $footer-list.url
+is-active: $footer-list.is-active
+
+-- end: ftd.column
+
+-- end: footer-list
+
+
+
+
+
+
+
+
+
+
+-- component footer-list-desktop:
+caption title:
+optional string url: 
+boolean is-active: 
+
+-- ftd.row:
+
+-- ftd.column:
+background.image if { footer-list-desktop.is-active }: $common.bg-footer-active-img
+height.fixed.px: 113
+align-content: center
+margin-left.px: 40
+margin-left.px if { footer-list-desktop.is-active }: 24
+
+-- ftd.text: $footer-list-desktop.title
+if: { footer-list-desktop.url != NULL }
+role: $fonts.label-lg-nunito
+color: $inherited.colors.background.step-1
+link: $footer-list-desktop.url
+width: hug-content
+padding-horizontal.px if { footer-list-desktop.is-active }: 32
+
+-- end: ftd.column
+
+-- ftd.text: $footer-list-desktop.title
+if: { footer-list-desktop.url == NULL }
+role: $fonts.label-lg-nunito
+color: $inherited.colors.background.step-1
+padding-left.px: 32
+
+
+-- end: ftd.row
+
+-- end: footer-list-desktop
+
+
+
+
+-- component footer-list-mobile:
+caption title:
+optional string url: 
+boolean is-active: 
+
+-- ftd.row:
+
+-- ftd.column:
+background.image if { footer-list-mobile.is-active }: $common.bg-footer-active-img
+;;height.fixed.px: 113
+align-content: center
+
+-- ftd.text: $footer-list-mobile.title
+if: { footer-list-mobile.url != NULL }
+role: $fonts.nunito-30-20-400
+color: $inherited.colors.background.step-1
+link: $footer-list-mobile.url
+width: hug-content
+padding-horizontal.px if { footer-list-mobile.is-active }: 32
+
+-- end: ftd.column
+
+-- ftd.text: $footer-list-mobile.title
+if: { footer-list-mobile.url == NULL }
+role: $fonts.nunito-30-20-400
+color: $inherited.colors.background.step-1
+padding-left.px: 32
+
+-- end: ftd.row
+
+-- end: footer-list-mobile
+
