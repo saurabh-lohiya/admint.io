@@ -2663,7 +2663,7 @@ body body:
 boolean $open: false
 ftd.image-src src1: $assets.files.static.faq.down.svg
 ftd.image-src src2: $assets.files.static.faq.up.svg
-boolean $yes: false
+boolean $hover: false
 
 -- ftd.column:
 width: fill-container
@@ -2671,9 +2671,9 @@ margin-top.px: 23
 background.solid: $inherited.colors.background.step-1
 align-content: center
 classes: markdown
-shadow if { question-accordion.yes }: $fonts.help-banner-1
-$on-mouse-enter$: $ftd.set-bool($a = $question-accordion.yes, v=true)
-$on-mouse-leave$: $ftd.set-bool($a = $question-accordion.yes, v=false)
+shadow if { question-accordion.hover }: $fonts.help-banner-1
+$on-mouse-enter$: $ftd.set-bool($a = $question-accordion.hover, v=true)
+$on-mouse-leave$: $ftd.set-bool($a = $question-accordion.hover, v=false)
 
 -- ftd.row:
 background.solid: $fonts.eeeeee80
