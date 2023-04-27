@@ -5596,13 +5596,13 @@ children: $page-wrapper.child
 
 
 
--- component new-article:
+-- component article:
 caption title:
 string date:
-string article-length:
+string read-time:
 body body:
 ftd.image-src src:
-ftd.image-src paperclip:
+optional ftd.image-src clip:
 children child:
 
 -- ftd.column:
@@ -5625,7 +5625,7 @@ background.solid: white
 -- ftd.row:
 
 -- ftd.image: 
-src: $new-article.src
+src: $article.src
 left.px: -10
 anchor: parent
 
@@ -5634,7 +5634,7 @@ margin-top.px: 92
 margin-bottom.px: 50
 margin-left.px: 340
 
--- ftd.text: $new-article.title
+-- ftd.text: $article.title
 role: $fonts.font-40-700-60
 width.fixed.percent: 70
 
@@ -5642,9 +5642,9 @@ width.fixed.percent: 70
 role: $fonts.font-18-27-500
 color: $fonts.005fbb
 
--- ftd.text: $new-article.date
+-- ftd.text: $article.date
 
--- ftd.text: $new-article.article-length
+-- ftd.text: $article.read-time
 margin-left.px: 16
 
 -- end: ftd.row
@@ -5652,7 +5652,7 @@ margin-left.px: 16
 -- end: ftd.column
 
 -- ftd.image:
-src: $new-article.paperclip
+src: $article.clip
 top.px: -20
 left.px: 15
 anchor: parent
@@ -5666,7 +5666,7 @@ padding-bottom.px: 68
 role: $fonts.font-18-600-27
 color: $fonts.121a17
 
-$new-article.body
+$article.body
 
 -- end: ftd.column
 
@@ -5690,7 +5690,7 @@ color: $fonts.7d8180
 margin-bottom.px: 34
 
 -- ftd.column:
-children: $new-article.child
+children: $article.child
 
 -- end: ftd.column
 
@@ -5700,7 +5700,7 @@ children: $new-article.child
 
 -- end: ftd.column
 
--- end: new-article
+-- end: article
 
 
 
@@ -5711,25 +5711,25 @@ children: $new-article.child
 
 
 
--- component article-window:
+-- component article-thumbnail:
 caption title:
-ftd.image-src src:
+ftd.image-src thumbnail:
 
 -- ftd.column:
 margin-bottom.px: 20
 padding-bottom.px: 36
 
 -- ftd.image:
-src: $article-window.src
+src: $article-thumbnail.thumbnail
 
--- ftd.text: $article-window.title
+-- ftd.text: $article-thumbnail.title
 role: $inherited.types.copy-regular
 color: black
 margin-top.px: 16
 
 -- end: ftd.column
 
--- end: article-window
+-- end: article-thumbnail
 
 
 
