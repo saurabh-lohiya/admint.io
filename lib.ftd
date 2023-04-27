@@ -5632,7 +5632,7 @@ anchor: parent
 -- ftd.column:
 margin-top.px: 92
 margin-bottom.px: 50
-margin-left.px: 340
+margin-left.percent: 45
 
 -- ftd.text: $article.title
 role: $fonts.font-40-700-60
