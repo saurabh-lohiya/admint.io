@@ -2098,6 +2098,7 @@ site-url: $footer.site-url
 footer-links: $footer.footer-links
 social-links: $footer.social-links
 team-thumb: $footer.team-thumb
+active-page: $footer.active-page
 
 -- end: ftd.column
 
@@ -5601,6 +5602,14 @@ children: $page-wrapper.child
 -- end: page-wrapper
 
 
+
+
+
+
+
+
+
+
 -- component footer-list:
 caption title:
 optional string url: 
@@ -5661,10 +5670,15 @@ role: $fonts.label-lg-nunito
 color: $inherited.colors.background.step-1
 padding-left.px: 32
 
-
 -- end: ftd.row
 
 -- end: footer-list-desktop
+
+
+
+
+
+
 
 
 
@@ -5678,8 +5692,9 @@ boolean is-active:
 
 -- ftd.column:
 background.image if { footer-list-mobile.is-active }: $common.bg-footer-active-img
-;;height.fixed.px: 113
+height.fixed.px if { footer-list-mobile.is-active }: 101
 align-content: center
+margin-left.px if { footer-list-mobile.is-active }: -23
 
 -- ftd.text: $footer-list-mobile.title
 if: { footer-list-mobile.url != NULL }
@@ -5700,4 +5715,3 @@ padding-left.px: 32
 -- end: ftd.row
 
 -- end: footer-list-mobile
-
