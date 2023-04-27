@@ -6,6 +6,7 @@
 
 
 -- lib.page:
+active-page: pricing/
 
 -- lib.business-plan:
 
