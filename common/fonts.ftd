@@ -1210,6 +1210,16 @@ spread.px: 0
 
 
 
+-- ftd.shadow help-banner-1:
+color: #005FBB
+x-offset.px: 12
+y-offset.px: 12
+blur.px: 1
+inset-body: false
+spread.px: 0
+
+
+
 
 -- ftd.shadow about:
 color: #000

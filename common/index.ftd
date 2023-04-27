@@ -63,6 +63,18 @@ highlightBorder();
 
 
 
+
+-- boolean check-is-active(a,b):
+optional string a:
+optional string b:
+
+a == b
+
+
+
+
+
+
 -- record team:
 caption title:
 string designation:
@@ -116,7 +128,7 @@ $processor$: pr.toc
 - About us: about/
 - Terms & Conditions: terms-conditions/
 - Privacy Policy: privacy-policy/
-- Pricing: /
+- Pricing: pricing/
 - Learn: learn/
 
 
@@ -159,3 +171,27 @@ y.px: -56
 src: $assets.files.static.carousel.simple.svg
 position: right-top
 repeat: no-repeat
+
+
+
+
+
+-- ftd.background-size.length bg-size:
+x.percent: 100
+y.percent: 100
+
+-- ftd.background-image bg-tab-active-img: 
+src: $assets.files.static.highlight-tab-active.svg
+position: center
+repeat: no-repeat
+size: $bg-size
+
+
+
+
+
+-- ftd.background-image bg-footer-active-img: 
+src: $assets.files.static.pricing.tab-highlight-white.svg
+position: center
+repeat: no-repeat
+size: $bg-size
