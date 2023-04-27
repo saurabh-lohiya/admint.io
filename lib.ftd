@@ -2439,7 +2439,7 @@ bottom.px: 50
 caption title:
 optional string role: tertiary
 ftd.color bg-color: transparent
-ftd.color text-color: black
+ftd.color text-color: $inherited.colors.custom.one
 ftd.color border-color: $inherited.colors.border
 integer border-radius: 30
 optional string link:
@@ -5632,7 +5632,7 @@ spacing: space-between
 width.fixed.percent: 70
 
 -- ftd.column:
-background.solid: white
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.row:
 
@@ -5767,7 +5767,7 @@ src: $article-thumbnail.thumbnail
 
 -- ftd.text: $article-thumbnail.title
 role: $inherited.types.copy-regular
-color: black
+color: $inherited.colors.custom.one
 margin-top.px: 16
 
 -- end: ftd.column
@@ -5788,7 +5788,7 @@ margin-top.px: 16
 -- ftd.column:
 width: fill-container
 height.fixed.px: 1
-background.solid: black
+background.solid: $inherited.colors.custom.one
 margin-bottom.px: 44
 
 -- end: ftd.column
