@@ -5614,7 +5614,6 @@ string date:
 string read-time:
 body body:
 ftd.image-src thumbnail:
-optional ftd.image-src clip:
 string link:
 children child:
 
@@ -5665,7 +5664,7 @@ margin-left.px: 16
 -- end: ftd.column
 
 -- ftd.image:
-src: $article.clip
+src: $assets.files.static.advertising.paperclip.png
 top.px: -20
 left.px: 15
 anchor: parent
