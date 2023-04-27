@@ -5601,7 +5601,7 @@ caption title:
 string date:
 string read-time:
 body body:
-ftd.image-src src:
+ftd.image-src thumbnail:
 optional ftd.image-src clip:
 children child:
 
@@ -5625,7 +5625,7 @@ background.solid: white
 -- ftd.row:
 
 -- ftd.image: 
-src: $article.src
+src: $article.thumbnail
 left.px: -10
 anchor: parent
 

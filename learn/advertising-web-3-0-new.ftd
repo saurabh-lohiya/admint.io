@@ -20,7 +20,7 @@ link: learn/advertising-web-3-0/
 -- lib.article: is the new playground for advertisment.
 date: 12th August
 read-time: 2 min read
-src: $assets.files.static.advertising.new-article-thumbnail.png
+thumbnail: $assets.files.static.advertising.new-article-thumbnail.png
 clip: $assets.files.static.advertising.paperclip.png
 
 Ladies and gentlemen welcome to the bizarre world of Metaverse. Be it a founder, leader, professional, or student; how much does 
