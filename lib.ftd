@@ -2684,8 +2684,6 @@ padding.px: 15
 padding.px if { ftd.device == "mobile" } : 12
 $on-click$: $ftd.toggle($a = $question-accordion.open)
 
-
-
 -- ftd.text: $question-accordion.title
 role: $fonts.nunito-700
 color if { question-accordion.open }: $inherited.colors.custom.four
