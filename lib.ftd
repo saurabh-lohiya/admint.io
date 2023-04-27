@@ -5615,6 +5615,7 @@ string read-time:
 body body:
 ftd.image-src thumbnail:
 optional ftd.image-src clip:
+string link:
 children child:
 
 -- ftd.column:
@@ -5687,6 +5688,7 @@ role: $fonts.font-18-27-500
 color: $fonts.3fb488
 align-self: end
 margin-top.px: 16
+link: $article.link
 
 -- end: ftd.column
 
@@ -5782,7 +5784,7 @@ margin-top.px: 16
 
 
 
--- component border-btw:
+-- component hr:
 
 -- ftd.column:
 width: fill-container
@@ -5798,7 +5800,7 @@ margin-bottom.px: 44
 
 -- end: ftd.column
 
--- end: border-btw
+-- end: hr
 
 
 
