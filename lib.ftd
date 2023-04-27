@@ -5787,15 +5787,9 @@ margin-top.px: 16
 
 -- ftd.column:
 width: fill-container
-align-content: center
-
--- ftd.column:
 height.fixed.px: 1
-width.fixed.px: 252
 background.solid: black
 margin-bottom.px: 44
-
--- end: ftd.column
 
 -- end: ftd.column
 
