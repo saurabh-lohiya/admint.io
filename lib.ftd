@@ -2439,7 +2439,7 @@ bottom.px: 50
 caption title:
 optional string role: tertiary
 ftd.color bg-color: transparent
-ftd.color text-color: black
+ftd.color text-color: $inherited.colors.custom.one
 ftd.color border-color: $inherited.colors.border
 integer border-radius: 30
 optional string link:
@@ -5608,6 +5608,122 @@ children: $page-wrapper.child
 
 
 
+-- component article:
+caption title:
+string date:
+string read-time:
+body body:
+ftd.image-src thumbnail:
+string link:
+children child:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-top.px: 84
+margin-bottom.px: 200
+
+-- ftd.row:
+width: fill-container
+max-width.fixed.px: 1145
+spacing: space-between
+
+-- ftd.column:
+width.fixed.percent: 70
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+
+-- ftd.image: 
+src: $article.thumbnail
+left.px: -10
+anchor: parent
+
+-- ftd.column:
+margin-top.px: 92
+margin-bottom.px: 50
+margin-left.percent: 45
+
+-- ftd.text: $article.title
+role: $fonts.font-40-700-60
+width.fixed.percent: 70
+
+-- ftd.row:
+role: $fonts.font-18-27-500
+color: $fonts.005fbb
+
+-- ftd.text: $article.date
+
+-- ftd.text: $article.read-time
+margin-left.px: 16
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $assets.files.static.advertising.paperclip.png
+top.px: -20
+left.px: 15
+anchor: parent
+
+-- end: ftd.row
+
+-- ftd.text:
+padding-top.px: 50
+padding-horizontal.px: 40
+padding-bottom.px: 68
+role: $fonts.font-18-600-27
+color: $fonts.121a17
+
+$article.body
+
+-- end: ftd.column
+
+-- ftd.text: Next Read >
+role: $fonts.font-18-27-500
+color: $fonts.3fb488
+align-self: end
+margin-top.px: 16
+link: $article.link
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 25.5
+padding-left.px: 24
+padding-right.px: 12
+
+-- ftd.text: Find more blogs to read below
+role: $fonts.font-16-22-700
+color: $fonts.7d8180
+margin-bottom.px: 34
+
+-- ftd.column:
+children: $article.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: article
+
+
+
+
+
+
+
+
+
+
 -- component footer-list:
 caption title:
 optional string url: 
@@ -5628,6 +5744,56 @@ is-active: $footer-list.is-active
 -- end: ftd.column
 
 -- end: footer-list
+
+
+
+
+
+
+
+
+
+
+-- component article-thumbnail:
+caption title:
+ftd.image-src thumbnail:
+
+-- ftd.column:
+margin-bottom.px: 20
+padding-bottom.px: 36
+
+-- ftd.image:
+src: $article-thumbnail.thumbnail
+
+-- ftd.text: $article-thumbnail.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.custom.one
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: article-thumbnail
+
+
+
+
+
+
+
+
+
+
+-- component hr:
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 1
+background.solid: $inherited.colors.custom.one
+margin-bottom.px: 44
+
+-- end: ftd.column
+
+-- end: hr
 
 
 

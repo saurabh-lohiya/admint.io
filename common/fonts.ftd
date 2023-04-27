@@ -257,6 +257,19 @@ font-family: $nunito-assets.fonts.Nunito
 
 
 
+-- ftd.type font-18-27-500-type:
+line-height.px: 27
+size.px: 18
+letter-spacing.px: 0
+weight: 500
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-27-500: $font-18-27-500-type
+
+
+
+
+
 -- ftd.type size-19-mobile:
 line-height.rem: 1.8
 size.px: 19
@@ -967,6 +980,19 @@ weight: 600
 
 
 
+
+-- ftd.type font-16-22-700-type:
+line-height.px: 24
+size.px: 16
+letter-spacing.rem: -0.008
+font-family: $nunito-assets.fonts.Nunito
+weight: 600
+
+-- ftd.responsive-type font-16-22-700: $font-16-22-700-type
+
+
+
+
 -- ftd.type font-30-45-700-type:
 line-height.px: 45
 size.px: 30
@@ -1164,6 +1190,13 @@ mobile: $font-40-29-mobile
 -- ftd.color outset-border: rgba(0, 0, 0, 0.1)
 
 -- ftd.color faf8f4: #faf8f4
+
+-- ftd.color 005fbb: #005FBB
+
+-- ftd.color 7d8180: #7d8180
+
+-- ftd.color 3fb488: #3fb488
+
 
 
 -- ftd.shadow help-banner:
