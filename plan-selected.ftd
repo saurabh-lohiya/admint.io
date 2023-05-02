@@ -1,0 +1,38 @@
+-- component plan-selected:
+caption title: Plan Selected
+string plan: Business+
+string plan-select: Annually Billed
+integer amount:
+
+
+-- ft.column:
+
+-- ftd.text:
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+-- ftd.column:
+width.fixed.px: percent 60
+height.fixed.px: 457
+background-color: $inherited.colors.background.step-1
+padding-vertical.px: 20
+padding-horizontal.px: 20
+
+-- ftd.row:
+background.solid: $fonts.C3D9EE
+padding-horizontal.px: 20
+padding-vertical.px: 20
+
+-- ftd.column:
+
+-- ftd.row:
+
+-- end: ftd.row
+
+-- end: ftd.column
+-- end: ftd.row
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: plan-selected

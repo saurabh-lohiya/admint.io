@@ -1248,7 +1248,9 @@ font-family: $nunito-assets.fonts.Nunito-live
 
 -- ftd.color 3fb488: #3fb488
 
+-- ftd.color C3D9EE: #C3D9EE
 
+-- ftd.color 005FBB: #005FBB
 
 -- ftd.shadow help-banner:
 color: #a9a7a5ba
