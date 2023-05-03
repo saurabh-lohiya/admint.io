@@ -1,20 +1,55 @@
+-- import: fifthtry.github.io/admint.io/common/fonts
+-- import: fifthtry.github.io/admint-cs as cs
+-- import: fifthtry.github.io/admint-typography as typo
+-- import: fifthtry.github.io/admint.io/common
+-- import: fifthtry.github.io/admint.io/assets
+-- import: fastn/processors as pr
+-- import: fifthtry.github.io/admint.io/lib
+
+-- lib.page:
+
+-- plans:
+
+-- verification:
+
+-- plan-selected:
+
+-- question-accordion: What is an NFT?
+
+An NFT, or non-fungible token, is a unique digital asset that is stored on a
+blockchain. It is a type of digital asset that represents ownership of a
+
+-- end: plan-selected
+
+-- card-component:
+
+-- end: plans
+
+-- end: lib.page
+
 -- component plan-selected:
+common.benefits-record list benefits: $common.benefits
 caption title: Plan Selected
 string plan: Business+
 string plan-select: Annually Billed
-integer amount:
-
-
--- ft.column:
-
--- ftd.text:
-role: $inherited.types.fine-print
-color: $inherited.colors.text
+integer amount: 239
+children wrap:
 
 -- ftd.column:
-width.fixed.px: percent 60
+width.fixed.px: 720
+
+-- ftd.text: $plan-selected.title
+role: $fonts.font-18-24-600
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.column:
+width: fill-container
 height.fixed.px: 457
-background-color: $inherited.colors.background.step-1
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 2
+border-width.px: 1
+border-color: $inherited.colors.custom.two
 padding-vertical.px: 20
 padding-horizontal.px: 20
 
@@ -22,17 +57,470 @@ padding-horizontal.px: 20
 background.solid: $fonts.C3D9EE
 padding-horizontal.px: 20
 padding-vertical.px: 20
+width: fill-container
 
 -- ftd.column:
+spacing.fixed.px: 16
+width.fixed.percent: 60
 
 -- ftd.row:
+spacing.fixed.px: 6
+
+-- ftd.text: $plan-selected.plan
+color: $fonts.005FBB
+role: $fonts.font-16-21-700
+
+-- ftd.row:
+width.fixed.px: 4
+height.fixed.px: 4
+border-radius.px: 100
+background.solid: $fonts.005FBB
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.text: $plan-selected.plan-select
+color: $fonts.005FBB
+role: $fonts.font-16-21-700
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 8
+
+-- ftd.text: \$
+color: $fonts.005FBB
+role: $fonts.font-16-98-700
+
+-- ftd.integer: $plan-selected.amount
+color: $fonts.005FBB
+role: $fonts.font-16-98-700
 
 -- end: ftd.row
 
 -- end: ftd.column
+
+-- ftd.column:
+background.solid: #FFFFFF
+opacity: 0.5
+border-radius.px: 10
+padding-vertical.px: 11
+padding-horizontal.px: 11
+align-self: end
+width.fixed.percent:  40
+height: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+margin-bottom.px: 9
+
+-- ftd.image:
+src: $assets.files.static.discount.svg
+
+-- ftd.text: Benefits
+color: $fonts.005FBB
+role: $fonts.font-14-16-600
+
 -- end: ftd.row
+
+-- ftd.text: heelo
+if: { ftd.is_empty(plan-selected.benefits) }
+
+-- benefits-list: $obj.title
+$loop$: $plan-selected.benefits as $obj
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.column:
+children: $plan-selected.wrap
+width: fill-container
+
+-- end: ftd.column
+
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: plan-selected
+
+
+
+
+-- component plans:
+children wrap:
+
+-- ftd.row:
+width: fill-container
+children: $plans.wrap
+spacing.fixed.px: 50
+
+-- end: ftd.row
+
+-- end: plans
+
+
+
+
+
+
+
+
+-- component benefits-list:
+caption title:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 4
+align-content: center
+padding-left.px: 12
+
+-- ftd.row:
+width.fixed.px: 4
+height.fixed.px: 4
+border-radius.px: 100
+background.solid: $fonts.005FBB
+
+-- end: ftd.row
+
+-- ftd.text: $benefits-list.title
+color: $fonts.005FBB
+role: $fonts.font-14-16-600
+
+-- end: ftd.row
+
+-- end: benefits-list
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: Hi
+body body:
+boolean $open: false
+ftd.image-src src1: $assets.files.static.faq.down.svg
+ftd.image-src src2: $assets.files.static.faq.up-fill.svg
+boolean $hover: false
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 23
+align-content: center
+border-bottom-width.px: 1
+border-color: $inherited.colors.text
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+padding.px: 15
+padding.px if { ftd.device == "mobile" } : 12
+$on-click$: $ftd.toggle($a = $question-accordion.open)
+
+-- ftd.text: $question-accordion.title
+role: $fonts.font-18-36-700
+color: $fonts.121a17
+align-self: center
+
+-- ftd.image:
+if: { !question-accordion.open }
+src: $question-accordion.src1
+width.fixed.px: 12
+height.fixed.px: 14
+
+-- ftd.image:
+if: { question-accordion.open }
+src: $question-accordion.src2
+width.fixed.px: 12
+height.fixed.px: 14
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { question-accordion.open }
+padding-vertical.px: 15
+padding-horizontal.px: 15
+width: fill-container
+
+-- ftd.text:
+role: $fonts.size-18
+color: $inherited.colors.text
+
+$question-accordion.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
+
+
+-- component card-component:
+caption name: Add Your Card
+integer card-number: 99
+integer CV-number: 99
+integer expiry-month: 99
+integer expiry-year: 99
+boolean $is-checked: false
+
+-- ftd.column:
+width.fixed.px: 390
+
+-- ftd.text: $card-component.name
+role: $fonts.font-18-24-600
+color: $inherited.colors.text
+margin-bottom.px: 8
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 457
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 2
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+padding-vertical.px: 20
+padding-horizontal.px: 20
+
+-- ftd.text: CARD NUMBER
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+min-height.fixed.px: 43
+margin-top.px: 8
+
+-- ftd.text: Card Holder Name
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+margin-top.px: 24
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+min-height.fixed.px: 43
+margin-top.px: 8
+
+-- ftd.row:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.column:
+
+-- ftd.text: Expiry date
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+margin-top.px: 24
+margin-bottom.px: 7
+
+-- ftd.row:
+spacing.fixed.px: 8
+height.fixed.px: 52
+
+-- ftd.text-input:
+padding.px: 6
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+width.fixed.px: 52
+min-height.fixed.px: 52
+
+-- ftd.image:
+src: $assets.files.static.line.svg
+align-self: center
+
+-- ftd.text-input:
+padding.px: 6
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+width.fixed.px: 52
+min-height.fixed.px: 52
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.text: CVV
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+margin-top.px: 24
+
+-- ftd.text-input:
+padding.px: 6
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+min-height.fixed.px: 52
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.px: 24
+align-content: center
+
+-- ftd.checkbox:
+enabled: true
+checked: $card-component.is-checked
+$on-click$: $ftd.set-bool($a = $card-component.is-checked, v = $CHECKED)
+height.fixed.px: 16
+width.fixed.px: 16
+margin-right.px: 10
+
+-- ftd.text: Save this card for future use.
+role: $fonts.font-16-36-400
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- button:
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: card-component
+
+-- component button:
+caption title: bjh
+
+-- ftd.row:
+background.solid: $fonts.3fb488
+border-radius.px: 30
+width: fill-container
+padding-vertical.px: 18
+margin-top.px: 40
+align-content: center
+
+-- ftd.text: Proceed
+role: $fonts.font-18-06-600
+color: $inherited.colors.background.step-1
+
+-- end: ftd.row
+
+-- end: button 
+
+
+
+-- component verification:
+optional integer one: 
+optional integer two: 
+optional integer three: 
+optional integer four:
+optional integer five:
+optional integer six:
+
+-- ftd.column:
+
+-- ftd.text: Verifrication code
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- input:
+
+-- input:
+
+-- input:
+
+-- input:
+
+-- input:
+
+-- input:
+
+-- end: ftd.row
+
+-- email-verification: abc@gmail.com
+
+-- end: ftd.column
+
+-- end: verification
+
+
+
+
+-- component input:
+
+-- ftd.column:
+margin-top.px: 8
+align-content: center
+
+-- ftd.text-input:
+padding.px: 6
+width.fixed.px: 60
+min-height.fixed.px: 52
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+border-width.px: 1
+
+-- ftd.row:
+background.solid: $inherited.colors.text-strong
+height.fixed.px: 1
+width.fixed.percent: 30
+margin-top.px: -20
+z-index: 10
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: input
+
+
+-- component email-verification:
+caption email:
+
+-- ftd.row:
+width: fill-container
+role: $fonts.font-14-19-400
+color: $inherited.colors.text
+margin-top.px: 40
+
+-- ftd.container:
+
+-- ftd.text: The verification code is sent to 
+display: inline
+
+-- ftd.text: $email-verification.email
+display: inline
+margin-horizontal.px: 11
+
+-- ftd.text: ,Please check the inbox.
+display: inline
+
+-- end: ftd.container
+
+-- end: ftd.row
+
+-- end: email-verification
+
