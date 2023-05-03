@@ -6036,7 +6036,7 @@ if: { account-form.show }
 width: fill-container
 max-width.fixed.px: 500
 padding.px: 16
-background.solid: white
+background.solid: $inherited.colors.step-1
 
 -- ftd.text: Name
 role: $fonts.size-14-19-400
@@ -6106,7 +6106,7 @@ role: $fonts.size-14-19-400
 
 -- ftd.text: (Optional)
 margin-left.px: 4
-color: black
+color: $inherited.colors.custom-one
 role: $fonts.size-14-19-400
 
 -- end: ftd.row
@@ -6116,7 +6116,7 @@ margin-top.px: 24
 
 -- ftd.text: I have read and agree to the AdMint’s
 margin-left.px: 4
-color: black
+color: $inherited.colors.custom-one
 role: $fonts.size-16-22-400
 
 -- ftd.text: Terms of Service
@@ -6129,7 +6129,7 @@ role: $fonts.size-16-22-400
 -- ftd.row:
 
 -- ftd.text: and
-color: black
+color: $inherited.colors.custom-one
 role: $fonts.size-16-22-400
 
 -- ftd.text: Privacy Policy
@@ -6141,7 +6141,7 @@ role: $fonts.size-16-22-400
 
 -- ftd.text: I agree to receive admint email newsletter
 margin-top.px: 18
-color: black
+color: $inherited.colors.custom-one
 role: $fonts.size-16-22-400
 
 -- ftd.column:
