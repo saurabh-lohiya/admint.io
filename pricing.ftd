@@ -82,6 +82,8 @@ password-label: Create a Password
 show if { stage == 2 }: true
 show if { stage == 3 }: true
 newsletter: I agree to recive AdMint email newsletter.
+cta-label: Create Account
+cta-link: /
 
 -- lib.account-form.condition1:
 

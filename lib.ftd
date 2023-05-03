@@ -6028,6 +6028,8 @@ string password-label:
 ftd.ui list condition1:
 ftd.ui list condition2:
 string newsletter:
+string cta-label:
+string cta-link:
 
 -- ftd.column:
 width: fill-container
@@ -6117,8 +6119,8 @@ role: $fonts.size-16-22-400
 width: fill-container
 align-content: center
 
--- button: Create Account
-link: /
+-- button: $account-form.cta-label
+link: $account-form.cta-link
 
 -- end: ftd.column
 
