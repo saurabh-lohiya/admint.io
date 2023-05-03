@@ -31,6 +31,9 @@ display: inline
 
 -- lib.pricing-tabs:
 stage: $stage
+tab1-title: Choose a plan
+tab2-title: Create Your account
+tab3-title: Add your card
 
 -- end: lib.pricing-tabs
 

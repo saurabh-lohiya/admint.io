@@ -5906,6 +5906,9 @@ color: $inherited.colors.background.step-1
 
 -- component pricing-tabs:
 integer stage: 1
+string tab1-title:
+string tab2-title:
+string tab3-title:
 
 -- ftd.column:
 width: fill-container
@@ -5918,14 +5921,14 @@ width: fill-container
 spacing: space-between
 align-content: center
 
--- pricing-tab: Choose a plan
+-- pricing-tab: $pricing-tabs.tab1-title
 success if {pricing-tabs.stage > 1}: true
 inprogress if { pricing-tabs.stage == 1 }: true
 
 -- ftd.image:
 src: $assets.files.static.pricing.next.svg
 
--- pricing-tab: Create your profile
+-- pricing-tab: $pricing-tabs.tab2-title
 success if {pricing-tabs.stage > 3}: true
 inprogress if { pricing-tabs.stage == 2 }: true
 inprogress if { pricing-tabs.stage == 3 }: true
@@ -5933,7 +5936,7 @@ inprogress if { pricing-tabs.stage == 3 }: true
 -- ftd.image:
 src: $assets.files.static.pricing.next.svg
 
--- pricing-tab: Add your card
+-- pricing-tab: $pricing-tabs.tab3-title
 inprogress if { pricing-tabs.stage == 4 }: true
 
 -- end: ftd.row
@@ -5943,19 +5946,19 @@ if: { ftd.device == "mobile" }
 width: fill-container
 align-content: center
 
--- pricing-tab: Choose a plan
+-- pricing-tab: $pricing-tabs.tab1-title
 if: { pricing-tabs.stage == 1 }
 success if {pricing-tabs.stage > 1}: true
 inprogress if { pricing-tabs.stage == 1 }: true
 
--- pricing-tab: Create your profile
+-- pricing-tab: $pricing-tabs.tab2-title
 if: { pricing-tabs.stage == 2 }
 if: { pricing-tabs.stage == 3 }
 success if {pricing-tabs.stage > 3}: true
 inprogress if { pricing-tabs.stage == 2 }: true
 inprogress if { pricing-tabs.stage == 3 }: true
 
--- pricing-tab: Add your card
+-- pricing-tab: $pricing-tabs.tab3-title
 if: { pricing-tabs.stage == 4 }
 inprogress if { pricing-tabs.stage == 4 }: true
 
