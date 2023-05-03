@@ -75,7 +75,66 @@ annually-price: 70.98
 -- end: lib.tab-panel
 
 -- lib.account-form:
+name-label: Name
+org-label: Organization Name
+email-label: Enter Your Email
+password-label: Create a Password
 show if { stage == 2 }: true
 show if { stage == 3 }: true
+newsletter: I agree to recive AdMint email newsletter.
+
+-- lib.account-form.condition1:
+
+-- ftd.container:
+margin-top.px: 24
+
+-- ftd.text: I have read and agree to the AdMint’s
+margin-left.px: 4
+color: $inherited.colors.custom.one
+role: $fonts.size-16-22-400
+display: inline
+
+-- ftd.text: Terms of Service
+margin-left.px: 4
+color: $fonts.005fbb
+role: $fonts.size-16-22-400
+display: inline-block
+
+-- ftd.text: and
+color: $inherited.colors.custom.one
+role: $fonts.size-16-22-400
+margin-horizontal.px: 4
+display: inline
+
+-- ftd.text: Privacy Policy
+color: $fonts.005fbb
+role: $fonts.size-16-22-400
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.account-form.condition1
+
+-- lib.account-form.condition2:
+
+-- ftd.container:
+margin-top.px: 16
+
+-- ftd.text: Referral Id
+color: $fonts.005fbb
+role: $fonts.size-14-19-400
+display: inline
+
+-- ftd.text: (Optional)
+margin-left.px: 4
+color: $inherited.colors.custom.one
+role: $fonts.size-14-19-400
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.account-form.condition2
+
+-- end: lib.account-form
 
 -- end: lib.page
