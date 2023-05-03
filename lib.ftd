@@ -5833,19 +5833,21 @@ align-content: center
 margin-left.px: 40
 margin-left.px if { footer-list-desktop.is-active }: 24
 role: $fonts.label-lg-nunito
-color: $inherited.colors.background.step-1
+
 
 -- ftd.text: $footer-list-desktop.title
 if: { footer-list-desktop.url != NULL }
 link: $footer-list-desktop.url
 width: hug-content
 padding-horizontal.px if { footer-list-desktop.is-active }: 32
+color: $inherited.colors.background.step-1
 
 -- end: ftd.column
 
 -- ftd.text: $footer-list-desktop.title
 if: { footer-list-desktop.url == NULL }
 padding-left.px: 32
+color: $inherited.colors.background.step-1
 
 -- end: ftd.row
 
@@ -5873,12 +5875,13 @@ height.fixed.px if { footer-list-mobile.is-active }: 101
 align-content: center
 margin-left.px if { footer-list-mobile.is-active }: -23
 role: $fonts.nunito-30-20-400
-color: $inherited.colors.background.step-1
+
 
 -- ftd.text: $footer-list-mobile.title
 if: { footer-list-mobile.url != NULL }
 link: $footer-list-mobile.url
 width: hug-content
+color: $inherited.colors.background.step-1
 padding-horizontal.px if { footer-list-mobile.is-active }: 32
 
 -- end: ftd.column
@@ -5886,6 +5889,7 @@ padding-horizontal.px if { footer-list-mobile.is-active }: 32
 -- ftd.text: $footer-list-mobile.title
 if: { footer-list-mobile.url == NULL }
 padding-left.px: 32
+color: $inherited.colors.background.step-1
 
 -- end: ftd.row
 
