@@ -3,51 +3,43 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
-
+-- integer stage: 2
 
 -- lib.page:
 active-page: pricing/
 
 -- lib.business-plan:
+subtitle: Create your first web 3.0 campaign.
 
 -- lib.business-plan.title:
 
 -- ftd.container:
-margin-bottom.px: 89
 
--- ftd.text: The right
-role: $fonts.size-50
-color: $inherited.colors.text
+-- ftd.text: Welcome to Ad
+role: $fonts.font-40-80-700
+color: black
 display: inline
 
--- ftd.text: plan
-role: $fonts.size-50
+-- ftd.text: mint
+role: $fonts.font-40-80-700
 color: $inherited.colors.cta-primary.base
-display: inline
-margin-horizontal.px: 14
-margin-horizontal.px if { ftd.device == "mobile" }: 8
-
--- ftd.text: for your business plan.
-role: $fonts.size-50
-color: $inherited.colors.text
 display: inline
 
 -- end: ftd.container
 
 -- end: lib.business-plan.title
 
--- lib.tab-label: For Agencies
-index: 1
-$active-item: true
+-- lib.pricing-tabs:
+stage: $stage
 
--- lib.tab-label: For Advertisers
-index: 2
+-- end: lib.pricing-tabs
 
 -- end: lib.business-plan
 
 -- lib.tab-panel:
 index: 1
 reset: $lib.current-tab
+show if { stage != 1 }: false
 
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
@@ -66,6 +58,7 @@ annually-price: 70.98
 -- lib.tab-panel:
 index: 2
 reset: $lib.current-tab
+show if { stage != 1 }: false
 
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
@@ -80,5 +73,9 @@ monthly-price: 126.98
 annually-price: 70.98
 
 -- end: lib.tab-panel
+
+-- lib.account-form:
+show if { stage == 2 }: true
+show if { stage == 3 }: true
 
 -- end: lib.page
