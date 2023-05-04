@@ -2,6 +2,7 @@
 -- import: fifthtry.github.io/roboto-font/assets as roboto-assets
 -- import: fifthtry.github.io/montserrat/assets as montserrat-assets
 -- import: fastn-community.github.io/opensans-font/assets as opensans-font-assets
+-- import: fifthtry.github.io/lato-font/assets as lato-font-assets
 
 ;; :::: Custom Fonts ::::
 
@@ -1240,6 +1241,119 @@ mobile: $font-40-29-mobile
 
 
 
+-- ftd.type font-18-24-600-type:
+line-height.rem: 1.53
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito-live
+
+-- ftd.responsive-type font-18-24-600: $font-18-24-600-type
+
+
+
+
+
+-- ftd.type font-16-21-700-type:
+line-height.rem: 1.33
+size.px: 16
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito-live
+
+-- ftd.responsive-type font-16-21-700: $font-16-21-700-type
+
+
+
+
+
+-- ftd.type font-16-98-700-type:
+line-height.rem: 4.98
+size.px: 60
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito-live
+
+-- ftd.responsive-type font-16-98-700: $font-16-98-700-type
+
+
+
+
+
+-- ftd.type font-14-16-600-type:
+line-height.rem: 1.16
+size.px: 14
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Inter
+
+-- ftd.responsive-type font-14-16-600: $font-14-16-600-type
+
+
+
+
+
+-- ftd.type font-18-36-700-type:
+line-height.rem: 1.36
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $lato-font-assets.fonts.Lato
+
+-- ftd.responsive-type font-18-36-700: $font-18-36-700-type
+
+
+
+
+
+
+-- ftd.type font-16-36-400-type:
+line-height.rem: 1.36
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito-live
+
+-- ftd.responsive-type font-16-36-400: $font-16-36-400-type
+
+
+
+
+-- ftd.type font-18-06-600-type:
+line-height.rem: 1.06
+size.px: 18
+letter-spacing.px: 0
+weight: 600
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-06-600: $font-18-06-600-type
+
+
+
+
+
+
+-- ftd.type font-14-19-400-type:
+line-height.rem: 1.19
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-14-19-400: $font-14-19-400-type
+
+
+
+
+
+-- ftd.type font-18-52-700-type:
+line-height.px: 52
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-18-52-700: $font-18-52-700-type
 
 -- ftd.color 222b27: #222b27
 
@@ -1280,6 +1394,7 @@ mobile: $font-40-29-mobile
 -- ftd.color c9efde: #c9efde
 
 
+-- ftd.color 005FBB: #005FBB
 
 -- ftd.shadow help-banner:
 color: #a9a7a5ba

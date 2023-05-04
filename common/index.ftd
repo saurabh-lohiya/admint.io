@@ -195,3 +195,18 @@ src: $assets.files.static.pricing.tab-highlight-white.svg
 position: center
 repeat: no-repeat
 size: $bg-size
+
+
+
+
+
+-- record benefits-record:
+caption title:
+
+-- benefits-record list benefits:
+
+-- benefits-record: Saving 50% with this combination
+
+-- benefits-record: Get all exclusive features
+
+-- end: benefits
