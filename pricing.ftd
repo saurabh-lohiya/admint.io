@@ -4,6 +4,8 @@
 
 
 -- integer stage: 2
+-- boolean $tos-ischecked: false
+-- boolean $newsletter-ischecked: false
 
 -- lib.page:
 active-page: pricing/
@@ -93,6 +95,14 @@ cta-link: /
 -- ftd.container:
 margin-top.px: 24
 
+-- ftd.checkbox:
+enabled: true
+checked: $tos-ischecked
+$on-click$: $ftd.set-bool($a = $tos-ischecked, v = $CHECKED)
+height.fixed.px: 16
+width.fixed.px: 16
+margin-right.px: 10
+
 -- ftd.text: I have read and agree to the AdMint’s
 margin-left.px: 4
 color: $inherited.colors.custom.one
@@ -124,6 +134,14 @@ display: inline
 
 -- ftd.container:
 margin-top.px: 16
+
+-- ftd.checkbox:
+enabled: true
+checked: $newsletter-ischecked
+$on-click$: $ftd.set-bool($a = $newsletter-ischecked, v = $CHECKED)
+height.fixed.px: 16
+width.fixed.px: 16
+margin-right.px: 10
 
 -- ftd.text: Referral Id
 color: $fonts.005fbb
