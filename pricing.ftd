@@ -3,7 +3,8 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer stage: 1
+-- integer stage: 4
+
 -- boolean $tos-ischecked: false
 -- boolean $newsletter-ischecked: false
 
@@ -153,6 +154,28 @@ display: inline
 
 -- end: lib.account-form.condition2
 
+
+-- lib.verification:
+show if { stage == 3 }: true
+
 -- end: lib.account-form
+
+-- lib.plans:
+show if { stage == 4 }: true
+
+-- lib.plan-selected:
+
+-- lib.QNA: What is an NFT?
+
+An NFT, or non-fungible token, is a unique digital asset that is stored on a
+blockchain. It is a type of digital asset that represents ownership of a
+
+-- end: lib.plan-selected
+
+-- lib.card-component:
+
+-- end: lib.plans
+
+
 
 -- end: lib.page

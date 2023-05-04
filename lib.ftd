@@ -6121,11 +6121,16 @@ inprogress if { pricing-tabs.stage == 4 }: true
 
 -- component plans:
 children wrap:
+boolean show: false
 
 -- ftd.row:
+if: { plans.show }
 width: fill-container
 children: $plans.wrap
 spacing.fixed.px: 50
+max-width.fixed.px: 1160
+align-self: center
+padding-bottom.px: 90
 
 -- end: ftd.row
 
@@ -6466,9 +6471,11 @@ string email: abc@gmail.com
 string verification-code: Verifrication code
 string cta-text: Submit
 string cta-url: /
+boolean show: false
 
 
 -- ftd.column:
+if: { verification.show }
 background.solid: $inherited.colors.background.step-1
 padding.px: 16
 height.fixed.px: 457
@@ -6571,7 +6578,7 @@ align-self: center
 border-width.px: 0
 border-color: transparent
 background.solid: transparent
-width.fixed.px: 60
+
 
 -- end: ftd.column
 
@@ -6635,13 +6642,14 @@ ftd.ui list condition2:
 string newsletter:
 string cta-label:
 string cta-link:
+children child:
 boolean $newsletter-ischecked:
 
 -- ftd.column:
 width: fill-container
 align-content: center
 
--- ftd.column:
+-- ftd.row:
 width: fill-container
 max-width.fixed.px: 1160
 padding-vertical.px: 60
@@ -6744,7 +6752,13 @@ link: $account-form.cta-link
 
 -- end: ftd.column
 
+-- ftd.column:
+children: $account-form.child
+
+
 -- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.column
 
