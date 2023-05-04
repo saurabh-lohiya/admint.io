@@ -4327,11 +4327,7 @@ src: $why-nft-card.image
 caption title:
 string monthly-price:
 string annually-price:
-optional string id: 
-
--- ftd.column:
-width.fixed.percent: 33.33
-width if { ftd.device == "mobile" }: fill-container
+optional string id:
 
 -- ftd.column:
 width: fill-container
@@ -4391,8 +4387,6 @@ role: $fonts.size-16-24-600
 -- end: ftd.row
 
 -- end: ftd.row
-
--- end: ftd.column
 
 -- end: ftd.column
 
@@ -4457,9 +4451,6 @@ string monthly-price:
 string annually-price:
 optional string id: 
 
--- ftd.column:
-width.fixed.percent: 33.33
-width if { ftd.device == "mobile" }: fill-container
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.border
@@ -4536,8 +4527,6 @@ role: $fonts.size-16-24-600
 
 -- end: ftd.column
 
--- end: ftd.column
-
 -- end: business-plus-card
 
 
@@ -4555,24 +4544,43 @@ boolean $active: false
 children tab-panel-wrap:
 optional integer index:
 optional integer reset:
+integer width: 1160
+boolean show: true
 
 -- ftd.column:
+if: { tab-panel.show }
 width: fill-container
-background.solid: $inherited.colors.background.step-1
 align-content: center
+margin-top.px: 57
 
 -- ftd.column:
+background.solid: $inherited.colors.background.step-1
 if: { tab-panel.index == tab-panel.reset }
 width: fill-container
 padding-bottom.px: 56
-max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+max-width.fixed.px: $tab-panel.width
 align-self: center
-padding-horizontal.px: 12
 
 -- ftd.row:
-align-self if { ftd.device != "mobile" }: end
-padding-vertical.px: 38
+spacing: space-between
+padding-bottom.px: 38
 align-content: center
+width: fill-container
+
+-- ftd.row:
+
+-- tab-label: For Agencies
+index: 1
+$active-item: true
+
+-- tab-label: For Advertisers
+index: 2
+
+-- end: ftd.row
+
+-- ftd.row:
+align-content: center
+padding-right.px: 14
 
 -- ftd.text: Monthly
 role: $fonts.size-24-36-600
@@ -4595,14 +4603,16 @@ margin-right.px: -3
 
 -- end: ftd.row
 
+-- end: ftd.row
+
 -- ftd.row:
 if: { ftd.device != "mobile" }
 children: $tab-panel.tab-panel-wrap
 width: fill-container
 align-self: center
-spacing.fixed.px: 24
-margin-top.px: 2
-margin-bottom.px: 24
+spacing.fixed.px: 54
+margin-top.px: 31
+margin-bottom.px: 154
 
 -- end: ftd.row
 
@@ -4717,21 +4727,24 @@ link: $search-result.link
 
 -- component business-plan:
 ftd.ui list title:
-optional body body:
+string subtitle:
 children tabs-wrap:
+integer width: 1160
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.step-1
 
 -- ftd.column:
 width: fill-container
 padding-top.px: 56
-max-width.fixed.px if { ftd.device != "mobile" }: $max-width
+max-width.fixed.px if { ftd.device != "mobile" }: $business-plan.width
 align-self: center
-padding-horizontal.px: 12
 
 -- business-plan.title.0:
+
+-- ftd.text: $business-plan.subtitle
+role: $fonts.nunito-24-48-500
+color: $inherited.colors.text
 
 -- ftd.row:
 align-content: center
@@ -5757,6 +5770,7 @@ is-active: $footer-list.is-active
 -- component article-thumbnail:
 caption title:
 ftd.image-src thumbnail:
+string link: /
 
 -- ftd.column:
 margin-bottom.px: 20
@@ -5769,6 +5783,7 @@ src: $article-thumbnail.thumbnail
 role: $inherited.types.copy-regular
 color: $inherited.colors.custom.one
 margin-top.px: 16
+link: $article-thumbnail.link
 
 -- end: ftd.column
 
@@ -5879,3 +5894,243 @@ color: $inherited.colors.background.step-1
 -- end: ftd.row
 
 -- end: footer-list-mobile
+
+
+
+
+
+
+
+
+
+
+-- component pricing-tabs:
+integer stage: 1
+string tab1-title:
+string tab2-title:
+string tab3-title:
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 39
+align-content: center
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+width: fill-container
+spacing: space-between
+align-content: center
+
+-- pricing-tab: $pricing-tabs.tab1-title
+success if {pricing-tabs.stage > 1}: true
+inprogress if { pricing-tabs.stage == 1 }: true
+
+-- ftd.image:
+src: $assets.files.static.pricing.next.svg
+
+-- pricing-tab: $pricing-tabs.tab2-title
+success if {pricing-tabs.stage > 3}: true
+inprogress if { pricing-tabs.stage == 2 }: true
+inprogress if { pricing-tabs.stage == 3 }: true
+
+-- ftd.image:
+src: $assets.files.static.pricing.next.svg
+
+-- pricing-tab: $pricing-tabs.tab3-title
+inprogress if { pricing-tabs.stage == 4 }: true
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+align-content: center
+
+-- pricing-tab: $pricing-tabs.tab1-title
+if: { pricing-tabs.stage == 1 }
+success if {pricing-tabs.stage > 1}: true
+inprogress if { pricing-tabs.stage == 1 }: true
+
+-- pricing-tab: $pricing-tabs.tab2-title
+if: { pricing-tabs.stage == 2 }
+if: { pricing-tabs.stage == 3 }
+success if {pricing-tabs.stage > 3}: true
+inprogress if { pricing-tabs.stage == 2 }: true
+inprogress if { pricing-tabs.stage == 3 }: true
+
+-- pricing-tab: $pricing-tabs.tab3-title
+if: { pricing-tabs.stage == 4 }
+inprogress if { pricing-tabs.stage == 4 }: true
+
+-- end: pricing-tab
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: pricing-tabs
+
+
+
+
+
+
+
+
+
+
+-- component pricing-tab:
+caption title:
+boolean success: false
+boolean inprogress: false
+
+-- ftd.row:
+border-width.px: 1
+padding.px: 18
+width: fill-container
+max-width.fixed.px: 360
+align-content: center
+border-color: 
+border-color if { pricing-tab.inprogress }: $fonts.005fbb
+border-color if { pricing-tab.success }: $fonts.3fb488
+background.solid if { pricing-tab.inprogress }: $fonts.c3d9ee
+background.solid if { pricing-tab.success }: $fonts.c9efde
+
+-- ftd.text: $pricing-tab.title
+role: $fonts.size-20-700
+color: $fonts.7d8180
+color if { pricing-tab.inprogress }: $fonts.005fbb
+color if { pricing-tab.success }: $fonts.3fb488
+
+-- ftd.image:
+if: { pricing-tab.success }
+src: $assets.files.static.pricing.success.svg
+anchor: parent
+right.px: 18
+
+-- end: ftd.row
+
+-- end: pricing-tab
+
+
+
+
+
+
+
+
+
+
+-- component account-form:
+boolean show: false
+integer width: 1160
+string name-label:
+string org-label:
+string email-label:
+string password-label:
+ftd.ui list condition1:
+ftd.ui list condition2:
+string newsletter:
+string cta-label:
+string cta-link:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 1160
+padding-vertical.px: 60
+
+-- ftd.column:
+if: { account-form.show }
+width: fill-container
+max-width.fixed.px: 500
+padding.px: 16
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.text: $account-form.name-label
+role: $fonts.size-14-19-400
+color: $fonts.7d8180
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 52
+margin-top.px: 2
+
+-- ftd.text: $account-form.org-label
+role: $fonts.size-14-19-400
+color: $fonts.7d8180
+margin-top.px: 10
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 52
+margin-top.px: 2
+
+-- ftd.text: $account-form.email-label
+role: $fonts.size-14-19-400
+color: $fonts.7d8180
+margin-top.px: 10
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 52
+margin-top.px: 2
+
+-- ftd.text: $account-form.password-label
+role: $fonts.size-14-19-400
+color: $fonts.7d8180
+margin-top.px: 10
+
+-- ftd.text-input:
+padding.px: 6
+width: fill-container
+border-width.px: 1
+border-color: $inherited.colors.custom.two
+border-radius.px: 10
+color: $inherited.colors.text
+height.fixed.px: 52
+margin-top.px: 2
+
+-- account-form.condition2.0:
+
+-- account-form.condition1.0:
+
+-- ftd.text: $account-form.newsletter
+margin-top.px: 18
+color: $inherited.colors.custom.one
+role: $fonts.size-16-22-400
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- button: $account-form.cta-label
+link: $account-form.cta-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: account-form
