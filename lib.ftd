@@ -6540,16 +6540,18 @@ align-content: center
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 border-width.px: 1
-
+min-width.fixed.px: 60
 
 -- ftd.text-input:
+width.fixed.px: 30
 padding.px: 6
 min-height.fixed.px: 52
-placeholder: _
+placeholder: -
 role: $inherited.types.heading-small
 style: bold
 align-self: center
 border-width.px: 0
+border-color: transparent
 background.solid: transparent
 width.fixed.px: 60
 
