@@ -6280,6 +6280,8 @@ string  holder-name: Card Holder Name
 string  card:  CARD NUMBER
 string cta-text: Proceed
 string cta-url: /
+string placeholder-name: Enter name
+string placeholder-number: Enter value
 
 -- ftd.column:
 width.fixed.px: 390
@@ -6311,8 +6313,9 @@ border-color: $inherited.colors.custom.two
 border-radius.px: 10
 min-height.fixed.px: 43
 margin-top.px: 8
+placeholder: $card-component.placeholder-number
 
--- ftd.text:  $card-component.holder-name
+-- ftd.text: $card-component.holder-name
 role: $fonts.font-14-19-400
 color: $inherited.colors.text
 margin-top.px: 24
@@ -6325,6 +6328,7 @@ border-color: $inherited.colors.custom.two
 border-radius.px: 10
 min-height.fixed.px: 43
 margin-top.px: 8
+placeholder: $card-component.placeholder-name
 
 -- ftd.row:
 
@@ -6382,6 +6386,7 @@ border-color: $inherited.colors.custom.two
 border-radius.px: 10
 min-height.fixed.px: 52
 margin-top.px: 8
+placeholder: $card-component.placeholder-number
 
 -- end: ftd.column
 
@@ -6439,7 +6444,7 @@ integer four: 0
 integer five: 0
 integer six: 0
 string email: abc@gmail.com
-string verification-code:  Verifrication code
+string verification-code: Verifrication code
 string cta-text: Submit
 string cta-url: /
 
@@ -6452,7 +6457,7 @@ border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 2
 
--- ftd.text: $vertification.vertification-code
+-- ftd.text: $verification.verification-code
 role: $fonts.font-14-19-400
 color: $inherited.colors.text
 
@@ -6532,23 +6537,20 @@ link: $verification.cta-url
 -- ftd.column:
 margin-top.px: 8
 align-content: center
-
--- ftd.text-input:
-padding.px: 6
-width.fixed.px: 60
-min-height.fixed.px: 52
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 border-width.px: 1
+width.fixed.px: 60
 
--- ftd.row:
-background.solid: $inherited.colors.text-strong
-height.fixed.px: 1
-width.fixed.percent: 30
-margin-top.px: -20
-z-index: 10
-
--- end: ftd.row
+-- ftd.text-input:
+padding.px: 6
+min-height.fixed.px: 52
+placeholder: _
+role: $inherited.types.heading-small
+style: bold
+align-self: center
+border-width.px: 0
+background.solid: transparent
 
 -- end: ftd.column
 
