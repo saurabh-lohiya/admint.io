@@ -14,7 +14,7 @@
 
 -- plan-selected:
 
--- question-accordion: What is an NFT?
+-- QNA: What is an NFT?
 
 An NFT, or non-fungible token, is a unique digital asset that is stored on a
 blockchain. It is a type of digital asset that represents ownership of a
@@ -26,6 +26,13 @@ blockchain. It is a type of digital asset that represents ownership of a
 -- end: plans
 
 -- end: lib.page
+
+
+
+
+
+
+
 
 -- component plan-selected:
 common.benefits-record list benefits: $common.benefits
@@ -52,6 +59,7 @@ border-width.px: 1
 border-color: $inherited.colors.custom.two
 padding-vertical.px: 20
 padding-horizontal.px: 20
+color: $fonts.005FBB
 
 -- ftd.row:
 background.solid: $fonts.C3D9EE
@@ -67,7 +75,6 @@ width.fixed.percent: 60
 spacing.fixed.px: 6
 
 -- ftd.text: $plan-selected.plan
-color: $fonts.005FBB
 role: $fonts.font-16-21-700
 
 -- ftd.row:
@@ -80,21 +87,17 @@ align-self: center
 -- end: ftd.row
 
 -- ftd.text: $plan-selected.plan-select
-color: $fonts.005FBB
 role: $fonts.font-16-21-700
 
 -- end: ftd.row
 
 -- ftd.row:
 spacing.fixed.px: 8
+role: $fonts.font-16-98-700
 
 -- ftd.text: \$
-color: $fonts.005FBB
-role: $fonts.font-16-98-700
 
 -- ftd.integer: $plan-selected.amount
-color: $fonts.005FBB
-role: $fonts.font-16-98-700
 
 -- end: ftd.row
 
@@ -119,7 +122,6 @@ margin-bottom.px: 9
 src: $assets.files.static.discount.svg
 
 -- ftd.text: Benefits
-color: $fonts.005FBB
 role: $fonts.font-14-16-600
 
 -- end: ftd.row
@@ -145,6 +147,12 @@ width: fill-container
 -- end: ftd.column
 
 -- end: plan-selected
+
+
+
+
+
+
 
 
 
@@ -205,8 +213,8 @@ role: $fonts.font-14-16-600
 
 
 
--- component question-accordion: 
-caption title: Hi
+-- component QNA: 
+caption title: 
 body body:
 boolean $open: false
 ftd.image-src src1: $assets.files.static.faq.down.svg
@@ -225,29 +233,29 @@ width: fill-container
 spacing: space-between
 padding.px: 15
 padding.px if { ftd.device == "mobile" } : 12
-$on-click$: $ftd.toggle($a = $question-accordion.open)
+$on-click$: $ftd.toggle($a = $QNA.open)
 
--- ftd.text: $question-accordion.title
+-- ftd.text: $QNA.title
 role: $fonts.font-18-36-700
 color: $fonts.121a17
 align-self: center
 
 -- ftd.image:
-if: { !question-accordion.open }
-src: $question-accordion.src1
+if: { !QNA.open }
+src: $QNA.src1
 width.fixed.px: 12
 height.fixed.px: 14
 
 -- ftd.image:
-if: { question-accordion.open }
-src: $question-accordion.src2
+if: { QNA.open }
+src: $QNA.src2
 width.fixed.px: 12
 height.fixed.px: 14
 
 -- end: ftd.row
 
 -- ftd.column:
-if: { question-accordion.open }
+if: { QNA.open }
 padding-vertical.px: 15
 padding-horizontal.px: 15
 width: fill-container
@@ -256,13 +264,19 @@ width: fill-container
 role: $fonts.size-18
 color: $inherited.colors.text
 
-$question-accordion.body
+$QNA.body
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: question-accordion
+-- end: QNA
+
+
+
+
+
+
 
 
 
@@ -407,8 +421,19 @@ color: $inherited.colors.text
 
 -- end: card-component
 
+
+
+
+
+
+
+
+
+
+
+
+
 -- component button:
-caption title: bjh
 
 -- ftd.row:
 background.solid: $fonts.3fb488
@@ -428,6 +453,13 @@ color: $inherited.colors.background.step-1
 
 
 
+
+
+
+
+
+
+
 -- component verification:
 optional integer one: 
 optional integer two: 
@@ -435,8 +467,15 @@ optional integer three:
 optional integer four:
 optional integer five:
 optional integer six:
+string email: abc@gmail.com
 
 -- ftd.column:
+background.solid: $inherited.colors.background.step-1
+padding.px: 16
+height.fixed.px: 457
+border-color: $inherited.colors.custom.two
+border-width.px: 1
+border-radius.px: 2
 
 -- ftd.text: Verifrication code
 role: $fonts.font-14-19-400
@@ -460,11 +499,35 @@ spacing: space-between
 
 -- end: ftd.row
 
--- email-verification: abc@gmail.com
+-- email-verification: $verification.email
+
+-- ftd.column:
+role: $fonts.font-14-19-400
+margin-top.px: 17
+
+-- ftd.container:
+
+-- ftd.text:  Didn’t recived the email? 
+display: inline
+color: $inherited.colors.text
+
+-- ftd.text:  Resend Code
+display: inline
+margin-horizontal.px: 6
+link: $verification.email
+color: $fonts.3fb488
+
+-- end: ftd.container
+
+-- end: ftd.column
 
 -- end: ftd.column
 
 -- end: verification
+
+
+
+
 
 
 
@@ -497,6 +560,14 @@ z-index: 10
 -- end: input
 
 
+
+
+
+
+
+
+
+
 -- component email-verification:
 caption email:
 
@@ -513,7 +584,7 @@ display: inline
 
 -- ftd.text: $email-verification.email
 display: inline
-margin-horizontal.px: 11
+margin-horizontal.px: 6
 
 -- ftd.text: ,Please check the inbox.
 display: inline
@@ -523,4 +594,7 @@ display: inline
 -- end: ftd.row
 
 -- end: email-verification
+
+
+
 
