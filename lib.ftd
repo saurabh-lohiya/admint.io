@@ -6276,6 +6276,10 @@ integer CV-number: 99
 integer expiry-month: 99
 integer expiry-year: 99
 boolean $is-checked: false
+string  holder-name: Card Holder Name
+string  card:  CARD NUMBER
+string cta-text: Proceed
+string cta-url: /
 
 -- ftd.column:
 width.fixed.px: 390
@@ -6295,7 +6299,7 @@ border-color: $inherited.colors.custom.two
 padding-vertical.px: 20
 padding-horizontal.px: 20
 
--- ftd.text: CARD NUMBER
+-- ftd.text: $card-component.card
 role: $fonts.font-14-19-400
 color: $inherited.colors.text
 
@@ -6308,7 +6312,7 @@ border-radius.px: 10
 min-height.fixed.px: 43
 margin-top.px: 8
 
--- ftd.text: Card Holder Name
+-- ftd.text:  $card-component.holder-name
 role: $fonts.font-14-19-400
 color: $inherited.colors.text
 margin-top.px: 24
@@ -6401,7 +6405,7 @@ color: $inherited.colors.text
 
 -- end: ftd.row
 
--- ftd.text: Proceed
+-- ftd.text: $card-component.cta-text
 role: $fonts.font-18-06-600
 color: $inherited.colors.background.step-1
 background.solid: $fonts.3fb488
@@ -6410,6 +6414,7 @@ width: fill-container
 padding-vertical.px: 18
 margin-top.px: 40
 text-align: center
+link: $card-component.cta-url
 
 -- end: ftd.column
 
@@ -6427,13 +6432,17 @@ text-align: center
 
 
 -- component verification:
-optional integer one: 
-optional integer two: 
-optional integer three: 
-optional integer four:
-optional integer five:
-optional integer six:
+integer one: 0
+integer two: 0
+integer three: 0
+integer four: 0
+integer five: 0
+integer six: 0
 string email: abc@gmail.com
+string verification-code:  Verifrication code
+string cta-text: Submit
+string cta-url: /
+
 
 -- ftd.column:
 background.solid: $inherited.colors.background.step-1
@@ -6443,7 +6452,7 @@ border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 2
 
--- ftd.text: Verifrication code
+-- ftd.text: $vertification.vertification-code
 role: $fonts.font-14-19-400
 color: $inherited.colors.text
 
@@ -6492,7 +6501,7 @@ height: fill-container
 align-content: bottom-center
 width: fill-container 
 
--- ftd.text: Submit
+-- ftd.text: $verification.cta-text
 role: $fonts.font-18-06-600
 color: $inherited.colors.background.step-1
 background.solid: $fonts.3fb488
@@ -6501,6 +6510,7 @@ width.fixed.px: 180
 padding-vertical.px: 18
 margin-top.px: 40
 text-align: center
+link: $verification.cta-url
 
 -- end: ftd.column
 
