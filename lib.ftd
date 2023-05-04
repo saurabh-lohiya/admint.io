@@ -6540,7 +6540,7 @@ align-content: center
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 border-width.px: 1
-width.fixed.px: 60
+
 
 -- ftd.text-input:
 padding.px: 6
@@ -6551,6 +6551,7 @@ style: bold
 align-self: center
 border-width.px: 0
 background.solid: transparent
+width.fixed.px: 60
 
 -- end: ftd.column
 
