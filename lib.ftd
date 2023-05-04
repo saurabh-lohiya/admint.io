@@ -4400,7 +4400,7 @@ role: $fonts.size-16-24-600
 border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
-padding-horizontal: 120
+padding-horizontal: 105
 
 -- end: ftd.column
 
@@ -4531,7 +4531,7 @@ spacing.fixed.px: 10
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
 
--- ftd.text: Save 25% with anual plan 
+-- ftd.text: Save 25% with annual plan 
 role: $fonts.size-16-24-600
 
 -- end: ftd.row
@@ -4542,8 +4542,9 @@ role: $fonts.size-16-24-600
 border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
-padding-horizontal: 120
+padding-horizontal: 105
 bg-color: $inherited.colors.background.step-1
+
 -- end: ftd.column
 
 -- end: business-plus-card
@@ -4632,6 +4633,7 @@ align-self: center
 spacing.fixed.px: 54
 margin-top.px: 31
 margin-bottom.px: 154
+padding-horizontal.px: 52
 
 -- end: ftd.row
 

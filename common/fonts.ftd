@@ -1002,7 +1002,7 @@ font-family: $nunito-assets.fonts.Nunito
 -- ftd.type 16-24-600-type:
 line-height.px: 24
 size.px: 16
-letter-spacing.px: 0
+letter-spacing.px: -1
 weight: 600
 font-family: $nunito-assets.fonts.Nunito
 
