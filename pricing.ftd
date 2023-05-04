@@ -3,7 +3,9 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer stage: 2
+-- integer stage: 1
+-- boolean $tos-ischecked: false
+-- boolean $newsletter-ischecked: false
 
 -- lib.page:
 active-page: pricing/
@@ -44,17 +46,18 @@ index: 1
 reset: $lib.current-tab
 show if { stage != 1 }: false
 
--- lib.business-card: BUSINESS
+-- lib.business-card: MONTHLY
 monthly-price: 56.90
 annually-price: 30.90
 
--- lib.business-plus-card: BUSINESS PLUS
+-- lib.business-plus-card: ANNUALLY
 monthly-price: 189.99
 annually-price: 80.99
 
--- lib.business-card: ENTERPRISE
+-- lib.business-card: QUATERLY
 monthly-price: 126.98
 annually-price: 70.98
+plan: 3
 
 -- end: lib.tab-panel
 
@@ -63,17 +66,18 @@ index: 2
 reset: $lib.current-tab
 show if { stage != 1 }: false
 
--- lib.business-card: BUSINESS
+-- lib.business-card: MONTHLY
 monthly-price: 56.90
 annually-price: 30.90
 
--- lib.business-plus-card: BUSINESS PLUS
+-- lib.business-plus-card: ANNUALY
 monthly-price: 189.99
 annually-price: 80.99
 
--- lib.business-card: ENTERPRISE
+-- lib.business-card: QUATERLY
 monthly-price: 126.98
 annually-price: 70.98
+plan: 3
 
 -- end: lib.tab-panel
 
@@ -85,6 +89,7 @@ password-label: Create a Password
 show if { stage == 2 }: true
 show if { stage == 3 }: true
 newsletter: I agree to recive AdMint email newsletter.
+$newsletter-ischecked: $newsletter-ischecked
 cta-label: Create Account
 cta-link: /
 
@@ -93,9 +98,17 @@ cta-link: /
 -- ftd.container:
 margin-top.px: 24
 
+-- ftd.checkbox:
+enabled: true
+checked: $tos-ischecked
+$on-click$: $ftd.set-bool($a = $tos-ischecked, v = $CHECKED)
+height.fixed.px: 16
+width.fixed.px: 16
+margin-right.px: 10
+
 -- ftd.text: I have read and agree to the AdMint’s
 margin-left.px: 4
-color: $inherited.colors.custom.one
+color: $inherited.colors.text
 role: $fonts.size-16-22-400
 display: inline
 
@@ -106,7 +119,7 @@ role: $fonts.size-16-22-400
 display: inline-block
 
 -- ftd.text: and
-color: $inherited.colors.custom.one
+color: $inherited.colors.text
 role: $fonts.size-16-22-400
 margin-horizontal.px: 4
 display: inline
@@ -127,12 +140,12 @@ margin-top.px: 16
 
 -- ftd.text: Referral Id
 color: $fonts.005fbb
-role: $fonts.size-14-19-400
+role: $fonts.size-14-19-700
 display: inline
 
 -- ftd.text: (Optional)
-margin-left.px: 4
-color: $inherited.colors.custom.one
+margin-left.px: 3
+color: $inherited.colors.text
 role: $fonts.size-14-19-400
 display: inline
 
