@@ -6562,7 +6562,6 @@ border-width.px: 1
 min-width.fixed.px: 60
 
 -- ftd.text-input:
-width.fixed.px: 30
 padding.px: 6
 min-height.fixed.px: 52
 placeholder: -
