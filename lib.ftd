@@ -2472,6 +2472,7 @@ border-color: $cta-button.border-color
 padding-vertical.px: $cta-button.padding-vertical
 padding-horizontal.px: $cta-button.padding-horizontal
 align-content: center
+border-width.px: $cta-button.border-width
 
 -- ftd.text: $cta-button.title
 role: $fonts.size-27
@@ -4327,6 +4328,7 @@ src: $why-nft-card.image
 caption title:
 string monthly-price:
 string annually-price:
+integer plan: 1
 optional string id:
 
 -- ftd.column:
@@ -4347,7 +4349,6 @@ id: $business-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 color: $fonts.121a17
-classes: filter-0-6
 
 -- ftd.row.css:
 
@@ -4381,12 +4382,23 @@ spacing.fixed.px: 10
 -- ftd.image:
 src: $assets.files.static.pricing.dark-star.svg
 
--- ftd.text: Launching Soon 
+-- ftd.text: Save 5% with annual plan 
+if: { business-card.plan == 1 }
+role: $fonts.size-16-24-600
+
+-- ftd.text: Save 15% with annual plan 
+if: { business-card.plan == 3 }
 role: $fonts.size-16-24-600
 
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- cta-button: Choose
+border-color: $fonts.3fb488
+text-color: $fonts.3fb488
+align-center: true
+padding-horizontal: 120
 
 -- end: ftd.column
 
@@ -4484,7 +4496,6 @@ width: fill-container
 id: $business-plus-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
-classes: filter-0-6
 
 -- ftd.row.css:
 
@@ -4518,13 +4529,19 @@ spacing.fixed.px: 10
 -- ftd.image:
 src: $assets.files.static.pricing.light-star.svg
 
--- ftd.text: Launching Soon 
+-- ftd.text: Save 25% with anual plan 
 role: $fonts.size-16-24-600
 
 -- end: ftd.row
 
 -- end: ftd.row
 
+-- cta-button: Choose
+border-color: $fonts.3fb488
+text-color: $fonts.3fb488
+align-center: true
+padding-horizontal: 120
+bg-color: $inherited.colors.background.step-1
 -- end: ftd.column
 
 -- end: business-plus-card
@@ -6033,6 +6050,7 @@ ftd.ui list condition2:
 string newsletter:
 string cta-label:
 string cta-link:
+boolean $newsletter-ischecked:
 
 -- ftd.column:
 width: fill-container
@@ -6113,10 +6131,22 @@ margin-top.px: 2
 
 -- account-form.condition1.0:
 
--- ftd.text: $account-form.newsletter
+-- ftd.row: 
 margin-top.px: 18
-color: $inherited.colors.custom.one
+
+-- ftd.checkbox:
+enabled: true
+checked: $account-form.newsletter-ischecked
+$on-click$: $ftd.set-bool($a = $account-form.newsletter-ischecked, v = $CHECKED)
+height.fixed.px: 16
+width.fixed.px: 16
+margin-right.px: 10
+
+-- ftd.text: $account-form.newsletter
+color: $inherited.colors.text
 role: $fonts.size-16-22-400
+
+-- end: ftd.row
 
 -- ftd.column:
 width: fill-container
