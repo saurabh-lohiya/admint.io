@@ -3,51 +3,46 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
-
+-- integer stage: 2
 
 -- lib.page:
 active-page: pricing/
 
 -- lib.business-plan:
+subtitle: Create your first web 3.0 campaign.
 
 -- lib.business-plan.title:
 
 -- ftd.container:
-margin-bottom.px: 89
 
--- ftd.text: The right
-role: $fonts.size-50
-color: $inherited.colors.text
+-- ftd.text: Welcome to Ad
+role: $fonts.font-40-80-700
+color: black
 display: inline
 
--- ftd.text: plan
-role: $fonts.size-50
+-- ftd.text: mint
+role: $fonts.font-40-80-700
 color: $inherited.colors.cta-primary.base
-display: inline
-margin-horizontal.px: 14
-margin-horizontal.px if { ftd.device == "mobile" }: 8
-
--- ftd.text: for your business plan.
-role: $fonts.size-50
-color: $inherited.colors.text
 display: inline
 
 -- end: ftd.container
 
 -- end: lib.business-plan.title
 
--- lib.tab-label: For Agencies
-index: 1
-$active-item: true
+-- lib.pricing-tabs:
+stage: $stage
+tab1-title: Choose a plan
+tab2-title: Create Your account
+tab3-title: Add your card
 
--- lib.tab-label: For Advertisers
-index: 2
+-- end: lib.pricing-tabs
 
 -- end: lib.business-plan
 
 -- lib.tab-panel:
 index: 1
 reset: $lib.current-tab
+show if { stage != 1 }: false
 
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
@@ -66,6 +61,7 @@ annually-price: 70.98
 -- lib.tab-panel:
 index: 2
 reset: $lib.current-tab
+show if { stage != 1 }: false
 
 -- lib.business-card: BUSINESS
 monthly-price: 56.90
@@ -80,5 +76,70 @@ monthly-price: 126.98
 annually-price: 70.98
 
 -- end: lib.tab-panel
+
+-- lib.account-form:
+name-label: Name
+org-label: Organization Name
+email-label: Enter Your Email
+password-label: Create a Password
+show if { stage == 2 }: true
+show if { stage == 3 }: true
+newsletter: I agree to recive AdMint email newsletter.
+cta-label: Create Account
+cta-link: /
+
+-- lib.account-form.condition1:
+
+-- ftd.container:
+margin-top.px: 24
+
+-- ftd.text: I have read and agree to the AdMint’s
+margin-left.px: 4
+color: $inherited.colors.custom.one
+role: $fonts.size-16-22-400
+display: inline
+
+-- ftd.text: Terms of Service
+margin-left.px: 4
+color: $fonts.005fbb
+role: $fonts.size-16-22-400
+display: inline-block
+
+-- ftd.text: and
+color: $inherited.colors.custom.one
+role: $fonts.size-16-22-400
+margin-horizontal.px: 4
+display: inline
+
+-- ftd.text: Privacy Policy
+color: $fonts.005fbb
+role: $fonts.size-16-22-400
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.account-form.condition1
+
+-- lib.account-form.condition2:
+
+-- ftd.container:
+margin-top.px: 16
+
+-- ftd.text: Referral Id
+color: $fonts.005fbb
+role: $fonts.size-14-19-400
+display: inline
+
+-- ftd.text: (Optional)
+margin-left.px: 4
+color: $inherited.colors.custom.one
+role: $fonts.size-14-19-400
+display: inline
+
+-- end: ftd.container
+
+-- end: lib.account-form.condition2
+
+-- end: lib.account-form
 
 -- end: lib.page
