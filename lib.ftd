@@ -6763,6 +6763,7 @@ $on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1
 -- end: ftd.column
 
 -- ftd.image:
+if: { account-form.current-stage == 3 }
 src: $assets.files.static.pricing.next.svg
 height.fixed.px: 20
 
