@@ -2,22 +2,6 @@
 
 -- lib.page:
 
--- lib.plans:
-
-
--- lib.plan-selected:
-
--- lib.QNA: What is an NFT?
-
-An NFT, or non-fungible token, is a unique digital asset that is stored on a
-blockchain. It is a type of digital asset that represents ownership of a
-
--- end: lib.plan-selected
-
--- lib.card-component:
-
--- end: lib.plans
-
 -- end: lib.page
 
 
