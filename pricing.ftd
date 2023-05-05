@@ -3,7 +3,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer stage: 4
+-- integer $stage: 1
 
 -- boolean $tos-ischecked: false
 -- boolean $newsletter-ischecked: false
@@ -45,7 +45,7 @@ tab3-title: Add your card
 -- lib.tab-panel:
 index: 1
 reset: $lib.current-tab
-show if { stage != 1 }: false
+show if { stage == 1 }: true
 
 -- lib.business-card: MONTHLY
 monthly-price: 56.90
@@ -65,7 +65,7 @@ plan: 3
 -- lib.tab-panel:
 index: 2
 reset: $lib.current-tab
-show if { stage != 1 }: false
+show if { stage == 1 }: true
 
 -- lib.business-card: MONTHLY
 monthly-price: 56.90

@@ -3,6 +3,7 @@
 -- import: fifthtry.github.io/admint-typography as typo
 -- import: fifthtry.github.io/admint.io/common
 -- import: fifthtry.github.io/admint.io/assets
+-- import: fifthtry.github.io/admint.io/pricing
 -- import: fastn/processors as pr
 
 -- string $selected-item: Advertiser
@@ -4401,8 +4402,10 @@ border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
+$on-click$: $common.increment-and-clamp($a = $pricing.stage, by = 1, min = 1, max = 4)
 
 -- end: ftd.column
+
 
 -- end: business-card
 
@@ -4565,7 +4568,7 @@ children tab-panel-wrap:
 optional integer index:
 optional integer reset:
 integer width: 1160
-boolean show: true
+boolean show: false
 
 -- ftd.column:
 if: { tab-panel.show }
