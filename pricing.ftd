@@ -3,7 +3,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer stage: 4
+-- integer $stage: 3
 
 -- boolean $tos-ischecked: false
 -- boolean $newsletter-ischecked: false
@@ -45,19 +45,22 @@ tab3-title: Add your card
 -- lib.tab-panel:
 index: 1
 reset: $lib.current-tab
-show if { stage != 1 }: false
+show if { stage == 1 }: true
 
 -- lib.business-card: MONTHLY
 monthly-price: 56.90
 annually-price: 30.90
+$current-stage: $stage
 
 -- lib.business-plus-card: ANNUALLY
 monthly-price: 189.99
 annually-price: 80.99
+$current-stage: $stage
 
 -- lib.business-card: QUATERLY
 monthly-price: 126.98
 annually-price: 70.98
+$current-stage: $stage
 plan: 3
 
 -- end: lib.tab-panel
@@ -65,20 +68,23 @@ plan: 3
 -- lib.tab-panel:
 index: 2
 reset: $lib.current-tab
-show if { stage != 1 }: false
+show if { stage == 1 }: true
 
 -- lib.business-card: MONTHLY
 monthly-price: 56.90
 annually-price: 30.90
+$current-stage: $stage
 
 -- lib.business-plus-card: ANNUALY
 monthly-price: 189.99
 annually-price: 80.99
+$current-stage: $stage
 
 -- lib.business-card: QUATERLY
 monthly-price: 126.98
 annually-price: 70.98
 plan: 3
+$current-stage: $stage
 
 -- end: lib.tab-panel
 
@@ -93,6 +99,7 @@ newsletter: I agree to recive AdMint email newsletter.
 $newsletter-ischecked: $newsletter-ischecked
 cta-label: Create Account
 cta-link: /
+$current-stage: $stage
 
 -- lib.account-form.condition1:
 
@@ -157,6 +164,7 @@ display: inline
 
 -- lib.verification:
 show if { stage == 3 }: true
+$current-stage: $stage
 
 -- end: lib.account-form
 
