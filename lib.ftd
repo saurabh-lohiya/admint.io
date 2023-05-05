@@ -4333,6 +4333,7 @@ string monthly-price:
 string annually-price:
 integer plan: 1
 optional string id:
+integer $current-stage:
 
 -- ftd.column:
 width: fill-container
@@ -4402,7 +4403,7 @@ border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
-$on-click$: $common.increment-and-clamp($a = $pricing.stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $business-card.current-stage, by = 1, min = 1, max = 4)
 
 -- end: ftd.column
 
@@ -4467,6 +4468,7 @@ caption title:
 string monthly-price:
 string annually-price:
 optional string id: 
+integer $current-stage:
 
 -- ftd.column:
 width: fill-container
@@ -4547,6 +4549,7 @@ text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
 bg-color: $inherited.colors.background.step-1
+$on-click$: $common.increment-and-clamp($a = $business-plus-card.current-stage, by = 1, min = 1, max = 4)
 
 -- end: ftd.column
 
@@ -6134,6 +6137,7 @@ spacing.fixed.px: 50
 max-width.fixed.px: 1160
 align-self: center
 padding-bottom.px: 90
+margin-top.px:  50
 
 -- end: ftd.row
 
@@ -6473,15 +6477,14 @@ integer six: 0
 string email: abc@gmail.com
 string verification-code: Verifrication code
 string cta-text: Submit
-string cta-url: /
 boolean show: false
-
+integer $current-stage:
 
 -- ftd.column:
 if: { verification.show }
 background.solid: $inherited.colors.background.step-1
 padding.px: 16
-height.fixed.px: 457
+height: fill-container
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 2
@@ -6544,7 +6547,7 @@ width.fixed.px: 180
 padding-vertical.px: 18
 margin-top.px: 40
 text-align: center
-link: $verification.cta-url
+$on-click$: $common.increment-and-clamp($a = $verification.current-stage, by = 1, min = 3, max = 4)
 
 -- end: ftd.column
 
@@ -6569,11 +6572,11 @@ align-content: center
 border-color: $inherited.colors.custom.two
 border-radius.px: 10
 border-width.px: 1
-min-width.fixed.px: 60
 
 -- ftd.text-input:
-padding.px: 6
+padding-horizontal.px: 20
 min-height.fixed.px: 52
+max-width.fixed.px: 60
 placeholder: -
 role: $inherited.types.heading-small
 style: bold
@@ -6647,20 +6650,24 @@ string cta-label:
 string cta-link:
 children child:
 boolean $newsletter-ischecked:
+integer $current-stage:
 
 -- ftd.column:
 width: fill-container
 align-content: center
 
 -- ftd.row:
+if: { account-form.show }
 width: fill-container
 max-width.fixed.px: 1160
 padding-vertical.px: 60
+spacing: space-between
+align-content: center
 
 -- ftd.column:
-if: { account-form.show }
 width: fill-container
-max-width.fixed.px: 500
+min-width.fixed.px if { ftd.device == "desktop" }: 500
+max-width.fixed.px if { ftd.device == "desktop" }: 500
 padding.px: 16
 background.solid: $inherited.colors.background.step-1
 
@@ -6749,13 +6756,18 @@ width: fill-container
 align-content: center
 
 -- button: $account-form.cta-label
-link: $account-form.cta-link
+$on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1, min = 1, max = 4)
 
 -- end: ftd.column
 
 -- end: ftd.column
+
+-- ftd.image:
+src: $assets.files.static.pricing.next.svg
+height.fixed.px: 20
 
 -- ftd.column:
+height: fill-container
 children: $account-form.child
 
 
