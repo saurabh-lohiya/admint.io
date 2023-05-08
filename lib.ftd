@@ -4581,10 +4581,13 @@ margin-top.px: 57
 
 -- ftd.column:
 background.solid: $inherited.colors.background.step-1
-if: { tab-panel.index == tab-panel.reset }
 width: fill-container
 padding-bottom.px: 56
 max-width.fixed.px: $tab-panel.width
+
+-- ftd.column:
+if: { tab-panel.index == tab-panel.reset }
+width: fill-container
 align-self: center
 
 -- ftd.row:
@@ -4592,6 +4595,7 @@ spacing: space-between
 padding-bottom.px: 38
 align-content: center
 width: fill-container
+wrap: true 
 
 -- ftd.row:
 
@@ -4607,6 +4611,9 @@ index: 2
 -- ftd.row:
 align-content: center
 padding-right.px: 14
+width if { ftd.device == "mobile" }: fill-container
+margin-top.px if { ftd.device == "mobile" }: 24
+margin-left.px if { ftd.device == "mobile" }: 20
 
 -- ftd.text: Monthly
 role: $fonts.size-24-36-600
@@ -4649,6 +4656,9 @@ children: $tab-panel.tab-panel-wrap
 width: fill-container
 spacing.fixed.px: 20
 margin-bottom.px: 24
+padding-horizontal.px: 20
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4764,14 +4774,16 @@ width: fill-container
 -- ftd.column:
 width: fill-container
 padding-top.px: 56
-max-width.fixed.px if { ftd.device != "mobile" }: $business-plan.width
 align-self: center
+max-width.fixed.px if { ftd.device != "mobile" }: $business-plan.width
+padding-horizontal.px if { ftd.device == "mobile" }: 10
 
 -- business-plan.title.0:
 
 -- ftd.text: $business-plan.subtitle
 role: $fonts.nunito-24-48-500
 color: $inherited.colors.text
+margin-top.px if { ftd.device == "mobile" }: 20
 
 -- ftd.row:
 align-content: center
@@ -4805,9 +4817,11 @@ integer index:
 $on-click$: $ftd.toggle($a = $tab-label.active-item)
 $on-click$: $ftd.set-integer($a = $current-tab, v = $tab-label.index)
 padding-horizontal.px: 24
+padding-horizontal.px if { ftd.device == "mobile" }: 6
 height.fixed.px: 100
 height.fixed.px if { ftd.device == "mobile" }: 86
 width.fixed.px: 217
+width.fixed.px if { ftd.device == "mobile" }: 180
 align-content: center
 align-self: center
 
@@ -4823,6 +4837,7 @@ if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
 height.fixed.px: 135
 width.fixed.px: 217
+width.fixed.px if { ftd.device == "mobile" }: 180
 height.fixed.px if { ftd.device == "mobile" }: 100
 width.fixed.px if { ftd.device == "mobile" }: 182
 
@@ -5937,11 +5952,12 @@ common.benefits-record list benefits: $common.benefits
 caption title: Plan Selected
 string plan: Business+
 string plan-select: Annually Billed
-integer amount: 239
+string amount: 245.90
 children wrap:
 
 -- ftd.column:
 width.fixed.px: 720
+wrap: true
 
 -- ftd.text: $plan-selected.title
 role: $fonts.font-18-24-600
@@ -5950,7 +5966,7 @@ margin-bottom.px: 8
 
 -- ftd.column:
 width: fill-container
-height.fixed.px: 457
+min-height.fixed.px: 457
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 2
 border-width.px: 1
@@ -5964,10 +5980,11 @@ background.solid: $fonts.c3d9ee
 padding-horizontal.px: 20
 padding-vertical.px: 20
 width: fill-container
+spacing: space-between
+wrap: true
 
 -- ftd.column:
 spacing.fixed.px: 16
-width.fixed.percent: 60
 
 -- ftd.row:
 spacing.fixed.px: 6
@@ -5995,7 +6012,7 @@ role: $fonts.font-16-98-700
 
 -- ftd.text: \$
 
--- ftd.integer: $plan-selected.amount
+-- ftd.text: $plan-selected.amount
 
 -- end: ftd.row
 
@@ -6008,7 +6025,6 @@ border-radius.px: 10
 padding-vertical.px: 11
 padding-horizontal.px: 11
 align-self: end
-width.fixed.percent:  40
 height: fill-container
 
 -- ftd.row:
@@ -6125,6 +6141,15 @@ inprogress if { pricing-tabs.stage == 4 }: true
 -- end: pricing-tabs
 
 
+
+
+
+
+
+
+
+
+
 -- component plans:
 children wrap:
 boolean show: false
@@ -6138,6 +6163,7 @@ max-width.fixed.px: 1160
 align-self: center
 padding-bottom.px: 90
 margin-top.px:  50
+wrap: true
 
 -- end: ftd.row
 
@@ -6484,7 +6510,7 @@ integer $current-stage:
 if: { verification.show }
 background.solid: $inherited.colors.background.step-1
 padding.px: 16
-height: fill-container
+height if { ftd.device == "desktop" }: fill-container
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 2
@@ -6575,8 +6601,10 @@ border-width.px: 1
 
 -- ftd.text-input:
 padding-horizontal.px: 20
+padding-horizontal.px if { ftd.device == "mobile" }: 15
 min-height.fixed.px: 52
 max-width.fixed.px: 60
+max-width.fixed.px if { ftd.device == "mobile" }: 45
 placeholder: -
 role: $inherited.types.heading-small
 style: bold
@@ -6615,9 +6643,9 @@ display: inline
 
 -- ftd.text: $email-verification.email
 display: inline
-margin-horizontal.px: 4
+margin-left.px: 4
 
--- ftd.text: ,Please check the inbox.
+-- ftd.text: , Please check the inbox.
 display: inline
 
 -- end: ftd.container
@@ -6661,8 +6689,10 @@ if: { account-form.show }
 width: fill-container
 max-width.fixed.px: 1160
 padding-vertical.px: 60
+padding-vertical.px if { ftd.device == "mobile" }: 30
 spacing: space-between
 align-content: center
+wrap: true
 
 -- ftd.column:
 width: fill-container
@@ -6763,11 +6793,12 @@ $on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1
 -- end: ftd.column
 
 -- ftd.image:
-if: { account-form.current-stage == 3 }
+if: { account-form.current-stage == 3 && ftd.device == "desktop" }
 src: $assets.files.static.pricing.next.svg
 height.fixed.px: 20
 
 -- ftd.column:
+margin-top.px if { ftd.device == "mobile" }: 40
 height: fill-container
 children: $account-form.child
 
