@@ -3,7 +3,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer $stage: 1
+-- integer $stage: 4
 
 -- boolean $tos-ischecked: false
 -- boolean $newsletter-ischecked: false
@@ -13,6 +13,7 @@ active-page: pricing/
 
 -- lib.business-plan:
 subtitle: Create your first web 3.0 campaign.
+show if { stage >= 1 && stage <= 4}: true
 
 -- lib.business-plan.title:
 
@@ -181,9 +182,16 @@ blockchain. It is a type of digital asset that represents ownership of a
 -- end: lib.plan-selected
 
 -- lib.card-component:
+$current-stage: $stage
 
 -- end: lib.plans
 
-
+-- lib.all-set: Awesome all set! You can start creating your first web 3.0 campaign
+show if { stage == 5 }: true
+cta-label1: Go to the dashboard
+cta-link1: /admint.io
+cta-label2: Watch demo videos
+cta-link2: /admint.io
+src: $assets.files.static.pricing.all-set.png
 
 -- end: lib.page

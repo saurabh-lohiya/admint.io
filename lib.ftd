@@ -4403,7 +4403,7 @@ border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
-$on-click$: $common.increment-and-clamp($a = $business-card.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $business-card.current-stage, by = 1, min = 1, max = 2)
 
 -- end: ftd.column
 
@@ -4549,7 +4549,7 @@ text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
 bg-color: $inherited.colors.background.step-1
-$on-click$: $common.increment-and-clamp($a = $business-plus-card.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $business-plus-card.current-stage, by = 1, min = 1, max = 2)
 
 -- end: ftd.column
 
@@ -4581,10 +4581,13 @@ margin-top.px: 57
 
 -- ftd.column:
 background.solid: $inherited.colors.background.step-1
-if: { tab-panel.index == tab-panel.reset }
 width: fill-container
 padding-bottom.px: 56
 max-width.fixed.px: $tab-panel.width
+
+-- ftd.column:
+if: { tab-panel.index == tab-panel.reset }
+width: fill-container
 align-self: center
 
 -- ftd.row:
@@ -4592,6 +4595,7 @@ spacing: space-between
 padding-bottom.px: 38
 align-content: center
 width: fill-container
+wrap: true 
 
 -- ftd.row:
 
@@ -4607,6 +4611,9 @@ index: 2
 -- ftd.row:
 align-content: center
 padding-right.px: 14
+width if { ftd.device == "mobile" }: fill-container
+margin-top.px if { ftd.device == "mobile" }: 24
+margin-left.px if { ftd.device == "mobile" }: 20
 
 -- ftd.text: Monthly
 role: $fonts.size-24-36-600
@@ -4649,6 +4656,9 @@ children: $tab-panel.tab-panel-wrap
 width: fill-container
 spacing.fixed.px: 20
 margin-bottom.px: 24
+padding-horizontal.px: 20
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -4757,21 +4767,25 @@ ftd.ui list title:
 string subtitle:
 children tabs-wrap:
 integer width: 1160
+boolean show: false
 
 -- ftd.column:
+if: { business-plan.show }
 width: fill-container
 
 -- ftd.column:
 width: fill-container
 padding-top.px: 56
-max-width.fixed.px if { ftd.device != "mobile" }: $business-plan.width
 align-self: center
+max-width.fixed.px if { ftd.device != "mobile" }: $business-plan.width
+padding-horizontal.px if { ftd.device == "mobile" }: 10
 
 -- business-plan.title.0:
 
 -- ftd.text: $business-plan.subtitle
 role: $fonts.nunito-24-48-500
 color: $inherited.colors.text
+margin-top.px if { ftd.device == "mobile" }: 20
 
 -- ftd.row:
 align-content: center
@@ -4805,9 +4819,11 @@ integer index:
 $on-click$: $ftd.toggle($a = $tab-label.active-item)
 $on-click$: $ftd.set-integer($a = $current-tab, v = $tab-label.index)
 padding-horizontal.px: 24
+padding-horizontal.px if { ftd.device == "mobile" }: 6
 height.fixed.px: 100
 height.fixed.px if { ftd.device == "mobile" }: 86
 width.fixed.px: 217
+width.fixed.px if { ftd.device == "mobile" }: 180
 align-content: center
 align-self: center
 
@@ -4823,6 +4839,7 @@ if: { current-tab == $tab-label.index }
 src: $assets.files.static.pricing.tab-highlight.svg
 height.fixed.px: 135
 width.fixed.px: 217
+width.fixed.px if { ftd.device == "mobile" }: 180
 height.fixed.px if { ftd.device == "mobile" }: 100
 width.fixed.px if { ftd.device == "mobile" }: 182
 
@@ -5798,10 +5815,14 @@ is-active: $footer-list.is-active
 caption title:
 ftd.image-src thumbnail:
 string link: /
+boolean $hover: false
 
 -- ftd.column:
 margin-bottom.px: 20
 padding-bottom.px: 36
+shadow if { article-thumbnail.hover }: $fonts.help-banner-1
+$on-mouse-enter$: $ftd.set-bool($a = $article-thumbnail.hover, v=true)
+$on-mouse-leave$: $ftd.set-bool($a = $article-thumbnail.hover, v=false)
 
 -- ftd.image:
 src: $article-thumbnail.thumbnail
@@ -5937,11 +5958,12 @@ common.benefits-record list benefits: $common.benefits
 caption title: Plan Selected
 string plan: Business+
 string plan-select: Annually Billed
-integer amount: 239
+string amount: 245.90
 children wrap:
 
 -- ftd.column:
 width.fixed.px: 720
+wrap: true
 
 -- ftd.text: $plan-selected.title
 role: $fonts.font-18-24-600
@@ -5950,7 +5972,7 @@ margin-bottom.px: 8
 
 -- ftd.column:
 width: fill-container
-height.fixed.px: 457
+min-height.fixed.px: 457
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 2
 border-width.px: 1
@@ -5964,10 +5986,11 @@ background.solid: $fonts.c3d9ee
 padding-horizontal.px: 20
 padding-vertical.px: 20
 width: fill-container
+spacing: space-between
+wrap: true
 
 -- ftd.column:
 spacing.fixed.px: 16
-width.fixed.percent: 60
 
 -- ftd.row:
 spacing.fixed.px: 6
@@ -5995,7 +6018,7 @@ role: $fonts.font-16-98-700
 
 -- ftd.text: \$
 
--- ftd.integer: $plan-selected.amount
+-- ftd.text: $plan-selected.amount
 
 -- end: ftd.row
 
@@ -6008,7 +6031,6 @@ border-radius.px: 10
 padding-vertical.px: 11
 padding-horizontal.px: 11
 align-self: end
-width.fixed.percent:  40
 height: fill-container
 
 -- ftd.row:
@@ -6125,6 +6147,15 @@ inprogress if { pricing-tabs.stage == 4 }: true
 -- end: pricing-tabs
 
 
+
+
+
+
+
+
+
+
+
 -- component plans:
 children wrap:
 boolean show: false
@@ -6138,6 +6169,7 @@ max-width.fixed.px: 1160
 align-self: center
 padding-bottom.px: 90
 margin-top.px:  50
+wrap: true
 
 -- end: ftd.row
 
@@ -6313,6 +6345,7 @@ string cta-text: Proceed
 string cta-url: /
 string placeholder-name: Enter name
 string placeholder-number: Enter value
+integer $current-stage:
 
 -- ftd.column:
 width.fixed.px: 390
@@ -6450,7 +6483,7 @@ width: fill-container
 padding-vertical.px: 18
 margin-top.px: 40
 text-align: center
-link: $card-component.cta-url
+$on-click$: $common.increment-and-clamp($a = $card-component.current-stage, by = 1, min = 4, max = 5)
 
 -- end: ftd.column
 
@@ -6484,7 +6517,7 @@ integer $current-stage:
 if: { verification.show }
 background.solid: $inherited.colors.background.step-1
 padding.px: 16
-height: fill-container
+height if { ftd.device == "desktop" }: fill-container
 border-color: $inherited.colors.custom.two
 border-width.px: 1
 border-radius.px: 2
@@ -6575,8 +6608,10 @@ border-width.px: 1
 
 -- ftd.text-input:
 padding-horizontal.px: 20
+padding-horizontal.px if { ftd.device == "mobile" }: 15
 min-height.fixed.px: 52
 max-width.fixed.px: 60
+max-width.fixed.px if { ftd.device == "mobile" }: 45
 placeholder: -
 role: $inherited.types.heading-small
 style: bold
@@ -6615,9 +6650,9 @@ display: inline
 
 -- ftd.text: $email-verification.email
 display: inline
-margin-horizontal.px: 4
+margin-left.px: 4
 
--- ftd.text: ,Please check the inbox.
+-- ftd.text: , Please check the inbox.
 display: inline
 
 -- end: ftd.container
@@ -6661,8 +6696,10 @@ if: { account-form.show }
 width: fill-container
 max-width.fixed.px: 1160
 padding-vertical.px: 60
+padding-vertical.px if { ftd.device == "mobile" }: 30
 spacing: space-between
 align-content: center
+wrap: true
 
 -- ftd.column:
 width: fill-container
@@ -6756,18 +6793,19 @@ width: fill-container
 align-content: center
 
 -- button: $account-form.cta-label
-$on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1, min = 2, max = 3)
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- ftd.image:
-if: { account-form.current-stage == 3 }
+if: { account-form.current-stage == 3 && ftd.device == "desktop" }
 src: $assets.files.static.pricing.next.svg
 height.fixed.px: 20
 
 -- ftd.column:
+margin-top.px if { ftd.device == "mobile" }: 40
 height: fill-container
 children: $account-form.child
 
@@ -6779,3 +6817,86 @@ children: $account-form.child
 -- end: ftd.column
 
 -- end: account-form
+
+
+
+
+
+
+
+
+
+
+-- component all-set:
+caption title:
+string cta-label1:
+string cta-link1:
+string cta-label2:
+string cta-link2:
+integer width: 880
+ftd.image-src src:
+boolean show: false
+
+-- ftd.column:
+if: { all-set.show }
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $all-set.width
+align-content: center
+margin-top.px: 85
+margin-top.px if { ftd.device == "mobile" }: 40
+
+-- ftd.text: $all-set.title
+role: $fonts.font-40-60-700
+text-align: center
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+wrap: true
+width: fill-container
+
+-- cta-button: $all-set.cta-label1
+link: $all-set.cta-link1
+text-color: $inherited.colors.cta-primary.text
+bg-color: $fonts.3fb488
+
+-- cta-button: $all-set.cta-label2
+link: $all-set.cta-link2
+text-color: $fonts.3fb488
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+margin-top.px: 100
+margin-top.px if { ftd.device == "mobile" }: 40
+spacing.fixed.px: 20
+width: fill-container
+align-content: center
+
+-- cta-button: $all-set.cta-label1
+link: $all-set.cta-link1
+text-color: $inherited.colors.cta-primary.text
+bg-color: $fonts.3fb488
+
+-- cta-button: $all-set.cta-label2
+link: $all-set.cta-link2
+text-color: $fonts.3fb488
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $all-set.src
+margin-top.px: 173
+margin-bottom.px: 30
+margin-top.px if { ftd.device == "mobile" }: 73
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: all-set
