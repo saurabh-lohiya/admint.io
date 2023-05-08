@@ -6854,9 +6854,9 @@ role: $fonts.font-40-60-700
 text-align: center
 
 -- ftd.row:
-margin-top.px: 100
-margin-top.px if { ftd.device == "mobile" }: 40
-spacing.fixed.px: 20
+if: { ftd.device == "desktop" }
+wrap: true
+width: fill-container
 
 -- cta-button: $all-set.cta-label1
 link: $all-set.cta-link1
@@ -6869,11 +6869,31 @@ text-color: $fonts.3fb488
 
 -- end: ftd.row
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+margin-top.px: 100
+margin-top.px if { ftd.device == "mobile" }: 40
+spacing.fixed.px: 20
+width: fill-container
+align-content: center
+
+-- cta-button: $all-set.cta-label1
+link: $all-set.cta-link1
+text-color: $inherited.colors.cta-primary.text
+bg-color: $fonts.3fb488
+
+-- cta-button: $all-set.cta-label2
+link: $all-set.cta-link2
+text-color: $fonts.3fb488
+
+-- end: ftd.column
+
 -- ftd.image:
 src: $all-set.src
 margin-top.px: 173
 margin-bottom.px: 30
 margin-top.px if { ftd.device == "mobile" }: 73
+width: fill-container
 
 -- end: ftd.column
 
