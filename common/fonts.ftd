@@ -292,6 +292,28 @@ desktop: $font-40-80-700-desktop
 
 
 
+-- ftd.type font-40-60-700-desktop:
+line-height.px: 60
+size.px: 40
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.type font-32-44-700-mobile:
+line-height.px: 44
+size.px: 32
+letter-spacing.px: 0
+weight: 700
+font-family: $nunito-assets.fonts.Nunito
+
+-- ftd.responsive-type font-40-60-700: 
+mobile: $font-32-44-700-mobile
+desktop: $font-40-60-700-desktop
+
+
+
+
+
 -- ftd.type font-18-600-27-type:
 line-height.px: 27
 size.px: 18

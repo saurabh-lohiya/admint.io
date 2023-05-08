@@ -4403,7 +4403,7 @@ border-color: $fonts.3fb488
 text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
-$on-click$: $common.increment-and-clamp($a = $business-card.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $business-card.current-stage, by = 1, min = 1, max = 2)
 
 -- end: ftd.column
 
@@ -4549,7 +4549,7 @@ text-color: $fonts.3fb488
 align-center: true
 padding-horizontal: 105
 bg-color: $inherited.colors.background.step-1
-$on-click$: $common.increment-and-clamp($a = $business-plus-card.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $business-plus-card.current-stage, by = 1, min = 1, max = 2)
 
 -- end: ftd.column
 
@@ -4767,8 +4767,10 @@ ftd.ui list title:
 string subtitle:
 children tabs-wrap:
 integer width: 1160
+boolean show: false
 
 -- ftd.column:
+if: { business-plan.show }
 width: fill-container
 
 -- ftd.column:
@@ -5813,10 +5815,14 @@ is-active: $footer-list.is-active
 caption title:
 ftd.image-src thumbnail:
 string link: /
+boolean $hover: false
 
 -- ftd.column:
 margin-bottom.px: 20
 padding-bottom.px: 36
+shadow if { article-thumbnail.hover }: $fonts.help-banner-1
+$on-mouse-enter$: $ftd.set-bool($a = $article-thumbnail.hover, v=true)
+$on-mouse-leave$: $ftd.set-bool($a = $article-thumbnail.hover, v=false)
 
 -- ftd.image:
 src: $article-thumbnail.thumbnail
@@ -6339,6 +6345,7 @@ string cta-text: Proceed
 string cta-url: /
 string placeholder-name: Enter name
 string placeholder-number: Enter value
+integer $current-stage:
 
 -- ftd.column:
 width.fixed.px: 390
@@ -6476,7 +6483,7 @@ width: fill-container
 padding-vertical.px: 18
 margin-top.px: 40
 text-align: center
-link: $card-component.cta-url
+$on-click$: $common.increment-and-clamp($a = $card-component.current-stage, by = 1, min = 4, max = 5)
 
 -- end: ftd.column
 
@@ -6786,7 +6793,7 @@ width: fill-container
 align-content: center
 
 -- button: $account-form.cta-label
-$on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1, min = 1, max = 4)
+$on-click$: $common.increment-and-clamp($a = $account-form.current-stage, by = 1, min = 2, max = 3)
 
 -- end: ftd.column
 
@@ -6810,3 +6817,66 @@ children: $account-form.child
 -- end: ftd.column
 
 -- end: account-form
+
+
+
+
+
+
+
+
+
+
+-- component all-set:
+caption title:
+string cta-label1:
+string cta-link1:
+string cta-label2:
+string cta-link2:
+integer width: 880
+ftd.image-src src:
+boolean show: false
+
+-- ftd.column:
+if: { all-set.show }
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $all-set.width
+align-content: center
+margin-top.px: 85
+margin-top.px if { ftd.device == "mobile" }: 40
+
+-- ftd.text: $all-set.title
+role: $fonts.font-40-60-700
+text-align: center
+
+-- ftd.row:
+margin-top.px: 100
+margin-top.px if { ftd.device == "mobile" }: 40
+spacing.fixed.px: 20
+
+-- cta-button: $all-set.cta-label1
+link: $all-set.cta-link1
+text-color: $inherited.colors.cta-primary.text
+bg-color: $fonts.3fb488
+
+-- cta-button: $all-set.cta-label2
+link: $all-set.cta-link2
+text-color: $fonts.3fb488
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $all-set.src
+margin-top.px: 173
+margin-bottom.px: 30
+margin-top.px if { ftd.device == "mobile" }: 73
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: all-set
