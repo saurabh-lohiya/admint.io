@@ -4353,6 +4353,7 @@ id: $business-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
 color: $fonts.121a17
+classes: filter-0-6
 
 -- ftd.row.css:
 
@@ -4503,6 +4504,7 @@ width: fill-container
 id: $business-plus-card.id
 spacing.fixed.px: 10
 role: $fonts.font-40-700-60
+classes: filter-0-6
 
 -- ftd.row.css:
 
@@ -4582,7 +4584,6 @@ margin-top.px: 57
 -- ftd.column:
 background.solid: $inherited.colors.background.step-1
 width: fill-container
-padding-bottom.px: 56
 max-width.fixed.px: $tab-panel.width
 
 -- ftd.column:
