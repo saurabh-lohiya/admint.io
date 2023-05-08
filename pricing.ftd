@@ -3,7 +3,7 @@
 -- import: fifthtry.github.io/admint.io/common/fonts
 
 
--- integer $stage: 4
+-- integer $stage: 1
 
 -- boolean $tos-ischecked: false
 -- boolean $newsletter-ischecked: false

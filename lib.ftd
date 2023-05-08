@@ -6855,8 +6855,10 @@ text-align: center
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
+margin-top.px: 100
+margin-top.px if { ftd.device == "mobile" }: 40
+spacing.fixed.px: 20
 wrap: true
-width: fill-container
 
 -- cta-button: $all-set.cta-label1
 link: $all-set.cta-link1
@@ -6894,6 +6896,7 @@ margin-top.px: 173
 margin-bottom.px: 30
 margin-top.px if { ftd.device == "mobile" }: 73
 width: fill-container
+width.fixed.px if { ftd.device == "desktop" }: 500
 
 -- end: ftd.column
 
